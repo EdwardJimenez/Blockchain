@@ -1,54 +1,52 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="WABlockchain.WebForm.Test" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/PaginaMaestra/MPInicio.Master" CodeBehind="MainPage.aspx.cs" Inherits="WABlockchain.WebForm.Test" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<link href="../Estilo/SNotificacion.css" rel="stylesheet" />
+<style type="text/css">
+    .auto-style1 {
+        height: 25px;
+    }
+    .auto-style2 {
+        /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+        font-size: 11px; /* font-style: italic; */;
+        padding: 6px;
+        margin: 5px;
+        height: 25px;
+        width: 114px;
+    }
+</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+	<form id="form1" runat="server">
+    <div>
+	 <table style="width: 100%" align="center" >
+	  <tr>
+	   <td>
+	    <fieldset style="width: 800px" align="center">
+			<legend style="text-align: left"></legend>
+			<table width="800px">
+				<tr id="ContentPlaceHolder1_CURecursosEstudiante_TRMenu">
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-        <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/styleInicio.css" type="text/css" rel="stylesheet" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link type="text/css" href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
-    <title>Inicio</title>
-</head>
-<body>
- <div class="container py-4">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="h-100 p-5 bg-danger bg-gradient rounded-3">
-                    <div class="gadget">
-                        <h2 class="star"><span>Utiles</span></h2>
-                        <div class="clr"></div>
-                        <ul class="ex_menu">
-                            <li>
-                                <a href="#">Registrar Titulos</a><br />
-                            </li>
-                            <li>
-                                <a href="#">Registrar Usuarios</a><br />
-                            </li>
-
-                            <li>
-                                <a href="#">Contacto</a><br />
-                            </li>
-                            <li>
-                                <a href="#">Novedades</a><br />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 p-5 text-white  bg-danger bg-gradient rounded-3">
-                    <h2><span>BlockChain Page</span></h2>
-                    <div class="clr"></div>
-                    <p class="post-data"><span class="date">Octubre 18, 2021</span> &nbsp;|&nbsp; Posteado por <a href="#">Owner</a> &nbsp;|&nbsp; Aprobado por <a href="#">Licencias</a>, <a href="#">internet</a></p>
-                    <p>Fundada el 4 de octubre de 1988; Univalle se ha proyectado como sinónimo de excelencia académica a nivel Latinoamérica con más de 32 carreras a nivel de licenciatura.</p>
-                    <p>En Univalle pensamos en ti y tu futuro, por ello innovamos continuamente nuestra oferta académica para que siempre responda a los cambios sociales, laborales, científicos y tecnológicos.</p>
-                    <p class="spec"><a href="#" class="com fr">Comments (5)</a> <a href="#" class="rm fl">Read more</a></p>
-                    <div class="clr"></div>
-                </div>
-            </div>
-        </div>
-     </div>
-</body>
-</html>
+					<td style="width: 70%; height: 100%; vertical-align: top">
+                        <asp:TextBox ID="TextBox1" runat="server" Width="280px"></asp:TextBox>
+                        <asp:Button ID="btnBuscar" runat="server" BackColor="#681E3C" ForeColor="White" Text="Buscar" Width="117px" />
+                        <asp:GridView ID="GridView1" runat="server" Height="375px" Width="574px">
+                        </asp:GridView>
+                    </td>
+				</tr>
+				<tr>
+					<td style="width: 100%; vertical-align: top" colspan="2"></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center">
+						<span id="ContentPlaceHolder1_CURecursosEstudiante_LBLError" class="LabelMensajeError"></span>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	   </td>
+	  </tr>
+	 </table>
+	</div>
+</form>
+</asp:Content>
