@@ -9,7 +9,6 @@ namespace WABlockchain.WebForm
 {
     public partial class FormularioRegistroUsuariosLocales : System.Web.UI.Page
     {
-        SWLNItercambioClient swLNIntercambioCliente = new SWLNItercambioClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,10 +19,7 @@ namespace WABlockchain.WebForm
 
         protected void btnRegistrar_Click(Object sender, EventArgs e)
         {
-            if (codigoCarta.Text)
-            {
 
-            }
         }
 
 
