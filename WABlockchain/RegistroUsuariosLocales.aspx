@@ -24,16 +24,16 @@
                             <label for="">Estudiante :<input  runat="server" type="text" id="codigoCarta" name="codigoCarta"></label><br>
                             &nbsp;</div>
                         <div>
-                            <label for="">Apellidos :<input  runat="server" ID="fechaActual" name="fechaActual" type="text" onchange="handler(event);" min="2021-06-27" max="2040-06-27"></label><br>
+                            <label for="">Apellidos :<input  runat="server" ID="fechaActual" name="fechaActual" type="text" onchange="handler(event);"></label><br>
                             &nbsp;</div>
                         <div>
-                            <label for="">CI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<input  runat="server" ID="text" name="fechaActual" type="text" onchange="handler(event);" min="2021-06-27" max="2040-06-27"></label><br>
+                            <label for="">CI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<input  runat="server" ID="text" name="fechaActual" type="text" onchange="handler(event);" ></label><br>
                             &nbsp;</div>
                         <div>
-                            <label for="">Correo :<input  runat="server" ID="Date2" name="fechaActual" type="text" onchange="handler(event);" min="2021-06-27" max="2040-06-27"></label><br>
+                            <label for="">Correo :<input  runat="server" ID="Date2" name="fechaActual" type="text" onchange="handler(event);" ></label><br>
                             &nbsp;</div>
                         <div>
-                            <label for="">Teléfonos :<input  runat="server" ID="Date3" name="fechaActual" type="text" onchange="handler(event);" min="2021-06-27" max="2040-06-27"></label><br>
+                            <label for="">Teléfonos :<input  runat="server" ID="Date3" name="fechaActual" type="text" onchange="handler(event);" ></label><br>
                             &nbsp;</div>
                         <div>
                             <label for="">Fecha de Creación :<input runat="server" ID="fechaPlazo" name="fechaPlazo" type="date" value="2021-06-27"></label><br>
