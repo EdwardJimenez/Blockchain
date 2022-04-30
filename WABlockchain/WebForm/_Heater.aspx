@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainWindos.aspx.cs" Inherits="WABlockchain.WebForm.MainWindos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="_Heater.aspx.cs" Inherits="WABlockchain.WebForm._Heater" %>
 
 <!DOCTYPE html>
 
@@ -8,8 +8,9 @@
     <title></title>
 </head>
 <body>
-   
-
-
+    <form id="form1" runat="server">
+        <div>
+        </div>
+    </form>
 </body>
 </html>

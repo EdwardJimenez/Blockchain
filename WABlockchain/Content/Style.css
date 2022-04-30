@@ -1,0 +1,85 @@
+﻿
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #b43c6c, #9f0342);
+    height: 00vh;
+    overflow: hidden;
+    color: #adadad;
+}
+
+html, .main {
+    padding: 0;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+h2 {
+    font: normal 24px Arial, Helvetica, sans-serif;
+    padding: 8px 0;
+    margin: 0;
+    color: white;
+}
+
+p {
+    margin: 8px 0;
+    padding: 0 0 8px 0;
+    font: normal 16px/1.8em Arial, Helvetica, sans-serif;
+    color: #d2cfd0;
+}
+
+.content {
+    padding: 30px 0;
+    margin: 0 auto;
+    width: 970px;
+}
+
+.mainbar {
+    margin: 0;
+    padding: 0;
+    float: right;
+    width: 100px;
+}
+
+    .mainbar .post-data a {
+        color: #d2cfd0;
+    }
+
+.sidebar {
+    padding: 0;
+    float: left;
+    color: #d2cfd0;
+    width: 600px;
+}
+
+    .sidebar .gadget {
+        margin: 0;
+        padding: 10px 15px;
+    }
+
+ul.sb_menu, ul.ex_menu {
+    margin: 0;
+    padding: 0;
+    color: white;
+    list-style: none;
+}
+
+    ul.ex_menu li {
+        padding: 4px 0 8px 15px;
+    }
+
+        ul.sb_menu li a, ul.ex_menu li a {
+            color: #939393;
+            text-decoration: none;
+            margin-left: -15px;
+            padding-left: 15px;
+            background: url(images/menu_link.gif) no-repeat left center;
+        }
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
