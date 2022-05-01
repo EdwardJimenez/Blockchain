@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using Microsoft.Practices.EnterpriseLibrary.Data;
+using System.Data.Common;
+using System.Data;
 /// <summary>
 /// Descripción breve de ADBTitle
 /// </summary>
@@ -27,22 +29,22 @@ public class ADBTitle
     /// <summary>
     /// Acceso a datos mediante Id_Carrera
     /// </summary>
-    /// <param name="Id_Carrera"></param>
-    /// <returns Retorna una carrera></returns>
-    public DTOICarrera Obtener_ICarrera_O_CarreraID(string Id_Carrera)
+    /// <param name="idTitle"></param>
+    /// <returns Retorna un titulo></returns>
+    public DTOBTitle Obtener_BTitle_O_idTitle(string idTitle)
     {
-        DTOICarrera dtoICarrera = new DTOICarrera();
+        DTOBTitle dtoBTitle = new DTOBTitle();
         try
         {
             Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
-            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("ICarrera_O_CarreraID");
-            BDSWADNETIntUn.AddInParameter(dbCommand, "CarreraID", DbType.String, Id_Carrera);
-            BDSWADNETIntUn.LoadDataSet(dbCommand, dtoICarrera, "ICarrera");
+            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BTitle_O_idTitle");
+            BDSWADNETIntUn.AddInParameter(dbCommand, "idTitle", DbType.String, idTitle);
+            BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBTitle, "BTitle");
         }
         catch (Exception)
         {
             throw;
         }
-        return dtoICarrera;
+        return dtoBTitle;
     }
 }
