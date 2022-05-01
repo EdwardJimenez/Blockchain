@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Web;
 
@@ -29,7 +31,7 @@ public class ADBTitle
     /// </summary>
     /// <param name="Id_Carrera"></param>
     /// <returns Retorna una carrera></returns>
-    public DTOICarrera Obtener_ICarrera_O_CarreraID(string Id_Carrera)
+    /* public DTOICarrera Obtener_ICarrera_O_CarreraID(string Id_Carrera)
     {
         DTOICarrera dtoICarrera = new DTOICarrera();
         try
@@ -44,5 +46,6 @@ public class ADBTitle
             throw;
         }
         return dtoICarrera;
-    }
+    }*/ 
+    //  Corregir esto!!,esta bien que copies pero no lo subas asi, genera errores en el github
 }
