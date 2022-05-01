@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Practices.EnterpriseLibrary.Common;
+using Microsoft.Practices.EnterpriseLibrary.Data;
 using System.Web;
-
+using System.Data.Common;
+using System.Data;
 
 /// <summary>
 /// Descripción breve de ADBidAudit

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Practices.EnterpriseLibrary.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Web;
 
@@ -25,11 +27,11 @@ public class ADBTitle
         return dTOBTitle;
     }
     /// <summary>
-    /// Acceso a datos mediante Id_Carrera
+    /// Acceso a datos mediante iD
     /// </summary>
     /// <param name="Id_Carrera"></param>
     /// <returns Retorna una carrera></returns>
-    public DTOICarrera Obtener_ICarrera_O_CarreraID(string Id_Carrera)
+    public DTOBTitle Obtener_Title_O_CarreraID(string Id_Carrera)
     {
         DTOICarrera dtoICarrera = new DTOICarrera();
         try

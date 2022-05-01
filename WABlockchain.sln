@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32106.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WABlockchain", "WABlockchain\WABlockchain.csproj", "{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5F063329-2A55-4A83-BAA6-C3A4B23687C7} = {5F063329-2A55-4A83-BAA6-C3A4B23687C7}
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADBlockchain", "SWADBlockchain\", "{1F3FA1C2-1120-4906-957F-62BF345AC667}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADBlockchain", "SWADBlockchain\", "{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_59383"
@@ -30,7 +30,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADBlockchain", "SWADBlock
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADNetvalle", "SWADNetvalle\", "{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADNetvalle", "SWADNetvalle\", "{DB923C11-0DFC-4E89-948F-AEEA7D7FFF78}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_59389"
@@ -52,7 +52,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADNetvalle", "SWADNetvall
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
-		{1F3FA1C2-1120-4906-957F-62BF345AC667} = {1F3FA1C2-1120-4906-957F-62BF345AC667}
+		{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC} = {6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNBlockchain", "SWLNBlockchain\", "{5F063329-2A55-4A83-BAA6-C3A4B23687C7}"
@@ -77,8 +77,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNBlockchain", "SWLNBlock
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
-		{1F3FA1C2-1120-4906-957F-62BF345AC667} = {1F3FA1C2-1120-4906-957F-62BF345AC667}
-		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8} = {AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}
+		{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC} = {6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}
+		{DB923C11-0DFC-4E89-948F-AEEA7D7FFF78} = {DB923C11-0DFC-4E89-948F-AEEA7D7FFF78}
 	EndProjectSection
 EndProject
 Global
@@ -91,14 +91,14 @@ Global
 		{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C97B07F-0BAB-4126-9FAF-17A11DB3ADCC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{DB923C11-0DFC-4E89-948F-AEEA7D7FFF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB923C11-0DFC-4E89-948F-AEEA7D7FFF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB923C11-0DFC-4E89-948F-AEEA7D7FFF78}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB923C11-0DFC-4E89-948F-AEEA7D7FFF78}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
@@ -108,6 +108,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 		SolutionGuid = {E1FD204E-BC5D-4285-929F-733F6764B615}
 	EndGlobalSection
 EndGlobal
