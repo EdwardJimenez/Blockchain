@@ -11,7 +11,7 @@ namespace WABlockchain.WebForm
 {
 
 
-    public partial class Test
+    public partial class MainPage
     {
 
         /// <summary>

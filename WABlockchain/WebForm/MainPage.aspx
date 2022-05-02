@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/PaginaMaestra/MPInicio.Master" CodeBehind="MainPage.aspx.cs" Inherits="WABlockchain.WebForm.Test" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/PaginaMaestra/MPInicio.Master" CodeBehind="MainPage.aspx.cs" Inherits="WABlockchain.WebForm.MainPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Estilo/SNotificacion.css" rel="stylesheet" />
 <style type="text/css">
