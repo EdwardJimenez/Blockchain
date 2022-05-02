@@ -9,6 +9,6 @@ using System.Web;
 /// </summary>
 public class SBaseDatos
 {
-    public static Database BDSWADNETIntUn = DatabaseFactory.CreateDatabase("BlockchainConnectionString");
+    public static Database BDSWADNETIntUn = DatabaseFactory.CreateDatabase("BDBlockchainFinalConnectionString");
 
 }

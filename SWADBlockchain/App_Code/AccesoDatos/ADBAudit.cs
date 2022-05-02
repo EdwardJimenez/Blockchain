@@ -14,7 +14,7 @@ public class ADBidAudit
 {
     #region
 
-    public DTOBAudit Obtener_Person_O()
+    public DTOBAudit Obtener_Audit_O()
     {
         DTOBAudit dtoBAudit = new DTOBAudit();
         try
@@ -50,13 +50,13 @@ public class ADBidAudit
         return dtoBAudit;
     }
 
-    public void Insertar_BAudit_I_NombreCarrera(EICarrera eICarrera)
+    public void Insertar_BAudit_I_Nombre(EBAudit bAudit)
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntEx;
-            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("ICarrera_I_NombreCarrera");
-            BDSWADNETIntEx.AddInParameter(dbCommand, "NombreCarrera", DbType.String, eICarrera.NombreCarrera);
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BAudit_Nombre");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "NombreCarrera", DbType.String, bAudit.description);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
         catch (Exception)
@@ -65,16 +65,16 @@ public class ADBidAudit
         }
     }
     /// <summary>
-    /// Actualizar Nombre Carrera
+    /// Actualizar Descripción Auditoria
     /// </summary>
-    public void Actualizar_ICarrera_A_CarreraID_NombreCarrera(EICarrera eICarrera)
+    public void Actualizar_ICarrera_A_CarreraID_NombreCarrera(EBAudit bAudit)
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntEx;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("ICarrera_A_CarreraID_NombreCarrera");
-            BDSWADNETIntEx.AddInParameter(dbCommand, "CarreraID", DbType.String, eICarrera.Id_Carrera);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "NombreCarrera", DbType.String, eICarrera.NombreCarrera);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "CarreraID", DbType.String, bAudit.Id_Carrera);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "NombreCarrera", DbType.String, bAudit.NombreCarrera);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
         catch (Exception)
