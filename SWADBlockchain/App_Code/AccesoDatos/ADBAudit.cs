@@ -59,7 +59,7 @@ public class ADBidAudit
         {
             Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BAudit_Nombre");
-            BDSWADNETIntEx.AddInParameter(dbCommand, "NombreCarrera", DbType.String, bAudit.description);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "description", DbType.String, bAudit.description);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
         catch (Exception)
@@ -70,14 +70,14 @@ public class ADBidAudit
     /// <summary>
     /// Actualizar Descripción Auditoria
     /// </summary>
-    public void Actualizar_ICarrera_A_CarreraID_NombreCarrera(EBAudit bAudit)
+    public void Actualizar_BAudit_A_idAudit_Descripción(EBAudit bAudit)
     {
         try
         {
             Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
-            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("ICarrera_A_CarreraID_NombreCarrera");
-            BDSWADNETIntEx.AddInParameter(dbCommand, "CarreraID", DbType.String, bAudit.Id_Carrera);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "NombreCarrera", DbType.String, bAudit.NombreCarrera);
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BAudit_A_idAudit_Descripción");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idAudit", DbType.String, bAudit.IdAudit);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "description", DbType.String, bAudit.description);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
         catch (Exception)

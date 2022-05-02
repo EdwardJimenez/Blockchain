@@ -49,4 +49,37 @@ public class ADBUser
         }
         return dtoBUser;
     }
+
+    public void Insertar_BUser_I_idUser_email(EBUser bUser)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title
+    /// </summary>
+    public void Actualizar_BUser_I_idUser_email(EBUser bUser)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idUser", DbType.String, bUser.IdUser);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }

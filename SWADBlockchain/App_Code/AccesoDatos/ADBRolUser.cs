@@ -12,7 +12,7 @@ using System.Data;
 /// </summary>
 public class ADBRolUser
 {
-    #region Métodos
+    #region MÉTODOS CRUD PROCEDIMIENTOS ALMACENADOS - ROLUSER
 
     public DTOBRoluser Obtener_RolUser_O()
     {
@@ -34,14 +34,14 @@ public class ADBRolUser
         return dTOBRolUser;
     }
 
-    public DTOBRoluser Obtener_BRolUser_O_idrolUser(string Id_Carrera)
+    public DTOBRoluser Obtener_BRolUser_O_idrolUser(string Id_RolUser)
     {
         DTOBRoluser dtoBRolUser = new DTOBRoluser();
         try
         {
             Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BRolUser_O_idrolUser");
-            BDSWADNETIntUn.AddInParameter(dbCommand, "idrolUser", DbType.String, Id_Carrera);
+            BDSWADNETIntUn.AddInParameter(dbCommand, "idrolUser", DbType.String, Id_RolUser);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBRolUser, "BRolUser");
         }
         catch (Exception)
@@ -50,5 +50,38 @@ public class ADBRolUser
         }
         return dtoBRolUser;
     }
-    #endregion
-}
+
+    public void Insertar_BRolUser_A_idrolUser_name(EBRoluser brolUser)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BRolUser_A_idrolUser_name");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "name", DbType.String, brolUser);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar RolUser
+    /// </summary>
+    public void Actualizar_BRolUser_A_idrolUser_name(EBRoluser brolUser)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BRolUser_A_idrolUser_name");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idrolUser", DbType.String, brolUser.idrolUser);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "name", DbType.String, brolUser.name);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+        #endregion
+    }

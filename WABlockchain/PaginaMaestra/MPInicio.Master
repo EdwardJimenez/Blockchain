@@ -13,6 +13,8 @@
     </asp:ContentPlaceHolder>
     <link href="../Estilo/SEstilo.css" rel="stylesheet" />
     <link href="../Estilo/SEstiloFormulario.css" rel="stylesheet" />
+    <link href="../Estilo/Estilo.css" rel="stylesheet" />
+    <link href="../Estilo/EstiloUsuariosLocales.css" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">

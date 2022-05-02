@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Estilo\SEstilo.css" />
+    <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <None Include="Connected Services\SWLNBlockChain\SWLNBlockchain.disco" />
     <None Include="Connected Services\SWLNBlockChain\configuration91.svcinfo" />
@@ -116,6 +117,13 @@
       <DependentUpon>MPInicio.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.cs">
+      <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.designer.cs">
+      <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.cs">
       <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
