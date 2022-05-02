@@ -13,5 +13,11 @@ namespace WABlockchain.WebForm
         {
 
         }
+
+        protected void btnRegistrar_Click(Object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form id="form1" runat="server">
+        <div>
+            <div class="">
     <div class="center_content">
     <div class="">
         <div class="form-style-10">
@@ -34,4 +37,7 @@
                             
                             <asp:Button  class="btn" ID="btnEnviar"  runat="server" Text="Registrar" OnClick="btnRegistrar_Click" Height="38px" style="margin-left: 21px; margin-top: 25px" Width="375px" />
                 
+                    </div>
+                </form>
 </asp:Content>
+
