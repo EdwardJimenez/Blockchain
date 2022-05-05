@@ -9,6 +9,16 @@ using System.Text;
 [ServiceContract]
 public interface ISWADNetValle
 {
+    #region Tabla : Person
     [OperationContract]
-    void DoWork();
+    List<ENPersona> Obtener_Persona_O();
+    [OperationContract]
+    ENPersona Obtener_Persona_O_ID(string IDPerson);
+    [OperationContract]
+    List<ENPersona> Obtener_Persona_O_Estudiante();
+    [OperationContract]
+    ENPersona Obtener_Persona_O_Rol(string Rol);
+    [OperationContract]
+    ENPersona Obtener_Persona_O_Account(string Mail, string Password)
+    #endregion
 }
