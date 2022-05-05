@@ -11,4 +11,10 @@ public interface ISWLNBlockchain
 {
     [OperationContract]
     void DoWork();
+
+
+    #region BPersonInsertUserNetvalle
+    [OperationContract]
+    List<BSolicitudCompleja> Obtener_BSolicitudCompleja_O(string Name, string Phone, DateTime registerDate, string CI, string Mail);
+    #endregion
 }
