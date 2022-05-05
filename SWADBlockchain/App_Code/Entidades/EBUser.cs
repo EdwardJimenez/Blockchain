@@ -22,21 +22,26 @@ public class EBUser
     [DataMember]
     public string UserNetvalle { get; set; }
     [DataMember]
+    public string IdRolUser { get; set; }
+    [DataMember]
     public string IdTitle { get; set; }
     [DataMember]
     public DateTime registerDate { get; set; }
     [DataMember]
     public DateTime lastUpdate { get; set; }
 
-    public EBUser(string idUser, string email, string password, string status, string userNetvalle, string idTitle, DateTime registerDate, DateTime lastUpdate)
+
+    public EBUser()
     {
-        IdUser = idUser;
+
+    }
+    public EBUser(string email, string password, string userNetvalle, string idRolUser, string idTitle)
+    {
+
         Email = email;
         Password = password;
-        this.status = status;
         UserNetvalle = userNetvalle;
+        IdRolUser = idRolUser;
         IdTitle = idTitle;
-        this.registerDate = registerDate;
-        this.lastUpdate = lastUpdate;
     }
 }
