@@ -22,6 +22,7 @@ public class ADBUser
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
+
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BUser"); //Select * from User
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBUser, "BUser");
         }
@@ -56,8 +57,13 @@ public class ADBUser
         {
             Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
-            BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "password", DbType.String, bUser.Password);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "userNetvalle", DbType.String, bUser.UserNetvalle);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "IdrolUser", DbType.String, bUser.IdRolUser);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "Tittle_IdTittles", DbType.String, bUser.IdTitle);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+            
         }
         catch (Exception)
         {

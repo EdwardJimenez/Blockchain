@@ -45,6 +45,6 @@ public class SWADNetValle : ISWADNetValle
         CNPerson cNPerson = new CNPerson();
         ENPersona eNPersona = new ENPersona();
         eNPersona = cNPerson.Obtener_Persona_O_Rol(Rol);
-        return eNPersona; ;
+        return eNPersona;
     }
 }
