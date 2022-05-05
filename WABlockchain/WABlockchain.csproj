@@ -72,6 +72,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WebForm\ILogin.aspx" />
+    <Content Include="WebForm\WebForm1.aspx" />
     <None Include="Connected Services\ServiceReference1\SWADNETBlockchain.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -86,8 +88,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Estilo\EstiloLogin.css" />
+    <Content Include="Estilo\EstiloMasterPage\EstiloMPLogin.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloMenuPrincipal.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloRegistroTitulo.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloRegistroUsuario.css" />
     <Content Include="Estilo\SEstilo.css" />
+    <Content Include="Imagenes\logoLogin.PNG" />
+    <Content Include="Imagenes\lupa1.jpg" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
+    <Content Include="WebForm\IMenuPrincipal.aspx" />
+    <Content Include="WebForm\IRegistroTitulo.aspx" />
+    <Content Include="WebForm\IRegistroUsuario.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <None Include="Connected Services\ServiceReference1\SWADNETBlockchain.wsdl" />
     <None Include="Connected Services\ServiceReference1\SWADNETBlockchain.xsd">
@@ -147,12 +159,47 @@
     <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm\ILogin.aspx.cs">
+      <DependentUpon>ILogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\ILogin.aspx.designer.cs">
+      <DependentUpon>ILogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\IMenuPrincipal.aspx.cs">
+      <DependentUpon>IMenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\IMenuPrincipal.aspx.designer.cs">
+      <DependentUpon>IMenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\IRegistroTitulo.aspx.cs">
+      <DependentUpon>IRegistroTitulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\IRegistroTitulo.aspx.designer.cs">
+      <DependentUpon>IRegistroTitulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\IRegistroUsuario.aspx.cs">
+      <DependentUpon>IRegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\IRegistroUsuario.aspx.designer.cs">
+      <DependentUpon>IRegistroUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm\MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
