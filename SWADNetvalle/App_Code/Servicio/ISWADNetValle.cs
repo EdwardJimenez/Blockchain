@@ -19,6 +19,6 @@ public interface ISWADNetValle
     [OperationContract]
     ENPersona Obtener_Persona_O_Rol(string Rol);
     [OperationContract]
-    ENPersona Obtener_Persona_O_Account(string Mail, string Password)
+    ENPersona Obtener_Persona_O_Account(string Mail, string Password);
     #endregion
 }
