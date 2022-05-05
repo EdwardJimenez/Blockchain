@@ -6,7 +6,7 @@
      <form id="form1" runat="server">
         <div class="boton">
             <br />
-        <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" OnClick="btnBuscar_Click" Width="187px" />
+        <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Width="187px" />
             &nbsp;<asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="42px" />
             <asp:TextBox ID="txtBuscador" runat="server" Width="537px"></asp:TextBox>
        </div>

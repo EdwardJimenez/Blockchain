@@ -51,7 +51,7 @@
 
                 </div>
                 <div>
-                    <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="false"></asp:Label>
+                    <asp:Label ID="lblMensajeTitulo" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="False"></asp:Label>
                 </div>
             </div>
         </fieldset>

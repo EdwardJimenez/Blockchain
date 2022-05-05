@@ -14,7 +14,7 @@
                             <asp:Label Text="Nombre: " runat="server" Font-Bold="True" />
                         </td>
                         <td class="cel">
-                            <asp:TextBox runat="server" ID="txtNombreEstudiante" />
+                            <asp:TextBox runat="server" ID="txtNombreEstudiante" OnTextChanged="txtNombreEstudiante_TextChanged" />
                         </td>
                     </tr>
                     <tr>
@@ -80,14 +80,14 @@
             <div class="contein">
 
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR USUARIO" />
+                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR USUARIO" OnClick="btnRegistrar_Click" />
                 </div>
                 <div>
-                    <asp:Label runat="server" CssClass="msj" Text="El programa se registró exitosamente" Visible="false"></asp:Label>
+                    <asp:Label runat="server" CssClass="msj" Text="El programa se registró exitosamente" Visible="False" ID="lblMensaje"></asp:Label>
                 </div>
             </div>
               <div>
-                    <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" Visible="false"></asp:Label>
+                    <asp:Label ID="lblMensajeUsuario" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" Visible="False"></asp:Label>
                 </div>
         </fieldset>
 
