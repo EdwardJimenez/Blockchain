@@ -8,10 +8,11 @@ using System.Web;
 /// </summary>
 public class ASNetIntUser
 {
+    #region Variables miembro
+    private SWADBlockChain swADNETIntEx;
+    #endregion
     public ASNetIntUser()
     {
-        //
-        // TODO: Agregar aquí la lógica del constructor
-        //
+        as
     }
 }
