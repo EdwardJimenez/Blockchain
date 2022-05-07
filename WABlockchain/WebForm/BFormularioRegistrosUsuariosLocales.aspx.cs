@@ -24,6 +24,7 @@ namespace WABlockchain.WebForm
             string UsuarioNetvalle = "a";
             string RolUser = "U";
             string Title = "j";
+            string d = "d";
             if (Email != string.Empty && Password != string.Empty && UsuarioNetvalle != string.Empty && RolUser != string.Empty && Title != string.Empty )
             {
                 try
@@ -36,8 +37,6 @@ namespace WABlockchain.WebForm
                         cliente.Insertar_BUser_I_idUser_email(eBUser);
                         
                     }
-
-                        //RegistrarProgramaRequerimiento();
                         lblMensaje.Text = "Registro de Usuario Exitoso!!!";
                     
                 }

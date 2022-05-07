@@ -43,7 +43,7 @@
                     </div>
                             
                             <asp:Button  class="btn" ID="btnEnviar"  runat="server" Text="Registrar" OnClick="btnRegistrar_Click" Height="38px" style="margin-left: 21px; margin-top: 25px" Width="375px" />
-               <asp:Label runat="server" CssClass="msj" ID="lblMensaje" Text="El suario se registro correctamente" Visible="false"></asp:Label>
+               <asp:Label runat="server" CssClass="msj" ID="lblMensaje" Text="..." ></asp:Label>
         </div>
     </form>
 </asp:Content>

@@ -17,18 +17,18 @@ public class EBUser
     public string Email { get; set; }
     [DataMember]
     public string Password { get; set; }
-    [DataMember]
-    public string status { get; set; }
+    //[DataMember]
+    //public string status { get; set; }
     [DataMember]
     public string UserNetvalle { get; set; }
     [DataMember]
     public string IdRolUser { get; set; }
     [DataMember]
     public string IdTitle { get; set; }
-    [DataMember]
-    public DateTime registerDate { get; set; }
-    [DataMember]
-    public DateTime lastUpdate { get; set; }
+    //[DataMember]
+    //public DateTime registerDate { get; set; }
+    //[DataMember]
+    //public DateTime lastUpdate { get; set; }
 
 
     public EBUser()
