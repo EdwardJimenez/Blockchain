@@ -3,24 +3,83 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ISWADNETBlockchain_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="ISWADNETBlockchain_Obtener_User_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_User_O" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETBlockchain_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="ISWADNETBlockchain_Obtener_User_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_User_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Obtener_BUser_O_iduser_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_BUser_O_iduser" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Obtener_BUser_O_iduser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_BUser_O_iduserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Insertar_BUser_I_idUser_email_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I_idUser_email" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Insertar_BUser_I_idUser_email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I_idUser_emailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BUser_I_idUser_email" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BUser_I_idUser_emailResponse" />
   </wsdl:message>
   <wsdl:portType name="ISWADNETBlockchain">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/DoWork" message="tns:ISWADNETBlockchain_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/DoWorkResponse" message="tns:ISWADNETBlockchain_DoWork_OutputMessage" />
+    <wsdl:operation name="Obtener_User_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_User_O" message="tns:ISWADNETBlockchain_Obtener_User_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_User_OResponse" message="tns:ISWADNETBlockchain_Obtener_User_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_BUser_O_iduser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_BUser_O_iduser" message="tns:ISWADNETBlockchain_Obtener_BUser_O_iduser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_BUser_O_iduserResponse" message="tns:ISWADNETBlockchain_Obtener_BUser_O_iduser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I_idUser_email">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Insertar_BUser_I_idUser_email" message="tns:ISWADNETBlockchain_Insertar_BUser_I_idUser_email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Insertar_BUser_I_idUser_emailResponse" message="tns:ISWADNETBlockchain_Insertar_BUser_I_idUser_email_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BUser_I_idUser_email">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_BUser_I_idUser_email" message="tns:ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_BUser_I_idUser_emailResponse" message="tns:ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWADNETBlockchain" type="tns:ISWADNETBlockchain">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/DoWork" style="document" />
+    <wsdl:operation name="Obtener_User_O">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Obtener_User_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_BUser_O_iduser">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Obtener_BUser_O_iduser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I_idUser_email">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Insertar_BUser_I_idUser_email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BUser_I_idUser_email">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Actualizar_BUser_I_idUser_email" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
