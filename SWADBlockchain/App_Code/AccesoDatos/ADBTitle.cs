@@ -16,7 +16,7 @@ public class ADBTitle
         DTOBTitle dTOBTitle = new DTOBTitle();
         try
         {
-            Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTitle"); //Select * from Title
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "Title");
         }
@@ -37,7 +37,7 @@ public class ADBTitle
         DTOBTitle dtoBTitle = new DTOBTitle();
         try
         {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BTitle_O_idTitle");
             BDSWADNETIntUn.AddInParameter(dbCommand, "idTitle", DbType.String, Id_title);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBTitle, "BTitle");
@@ -54,7 +54,7 @@ public class ADBTitle
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTitle_I_idTitle_faculty");
             BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
@@ -71,7 +71,7 @@ public class ADBTitle
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTitle_A_idTitle_faculty");
             BDSWADNETIntEx.AddInParameter(dbCommand, "idTitle", DbType.String, bTitle.IdTittles);
             BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle.faculty);

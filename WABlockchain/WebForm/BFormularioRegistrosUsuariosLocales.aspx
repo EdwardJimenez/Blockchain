@@ -26,7 +26,7 @@
                             &nbsp;</div>
                         <div>
                            <%-- <label for="">Correo :<input  runat="server" ID="Date2" name="fechaActual" type="text" onchange="handler(event);" ></label><br>--%>
-                            <label for="">Rol Usuario :<asp:DropDownList ID="ddlPlaza" runat="server" Height="16px" style="margin-left: 0px" Width="129px"></asp:DropDownList></label><br>
+                            <label for="">Rol Usuario :<asp:DropDownList ID="ddlRolUser" runat="server" Height="16px" style="margin-left: 0px" Width="129px"></asp:DropDownList></label><br>
                             &nbsp;</div>
                         <div>
                            <%-- <label for="">Teléfonos :<input  runat="server" ID="Date3" name="fechaActual" type="text" onchange="handler(event);" ></label><br>--%>
@@ -40,10 +40,15 @@
                             <%--<label for="">Descripción :<input  runat="server" ID="Date5" name="fechaActual" type="text" onchange="handler(event);" ></label><br>--%>
                             <label for="">Descripción :<asp:TextBox runat="server" ID="txtDescripcion" /></label><br>
                             &nbsp;</div>
-                    </div>
-                            
+                    </div>       
                             <asp:Button  class="btn" ID="btnEnviar"  runat="server" Text="Registrar" OnClick="btnRegistrar_Click" Height="38px" style="margin-left: 21px; margin-top: 25px" Width="375px" />
                <asp:Label runat="server" CssClass="msj" ID="lblMensaje" Text="..." ></asp:Label>
         </div>
+                </div>
+            </div>
+         </div>
+             </div>
+                 </div>
+             </div>
     </form>
 </asp:Content>

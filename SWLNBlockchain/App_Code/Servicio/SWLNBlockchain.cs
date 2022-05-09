@@ -45,10 +45,10 @@ public class SWLNBlockchain : ISWLNBlockchain
     public List<EBRoluser> Obtener_RolUser_O()
     {
         
-        List<EBRoluser> lstEbRolUser = new List<EBRoluser>();
-        CUserBlockchain cRolUser = new CUserBlockchain();
-        lstEbRolUser = cRolUser.Obtener_RolUser_O();
-        return lstEbRolUser;
+        List<EBRoluser> eBRoluser = new List<EBRoluser>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBRoluser = cUserBlockchain.Obtener_RolUser_O().ToList();
+        return eBRoluser;
     }
     #endregion
 

@@ -18,7 +18,7 @@ public class ADBQr
         DTOBQrt dTOBQr = new DTOBQrt();
         try
         {
-            Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BQr"); //Select * from QR
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBQr, "BQr");
         }
@@ -35,7 +35,7 @@ public class ADBQr
         DTOBQrt dTOBQr = new DTOBQrt();
         try
         {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BQr_O_idQR");
             BDSWADNETIntUn.AddInParameter(dbCommand, "idQR", DbType.String, Id_Qr);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dTOBQr, "BQr");
@@ -51,7 +51,7 @@ public class ADBQr
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BQr_I_Qr");
             BDSWADNETIntEx.AddInParameter(dbCommand, "registerDate", DbType.DateTime, bQr.registerDate);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
@@ -68,7 +68,7 @@ public class ADBQr
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BQr_A_idQR_registerDate");
             BDSWADNETIntEx.AddInParameter(dbCommand, "idQR", DbType.String, bQR.IdQR);
             BDSWADNETIntEx.AddInParameter(dbCommand, "registerDate", DbType.DateTime, bQR.registerDate);

@@ -86,11 +86,11 @@ public class ASBlockchain
     #region RolUser
     public List<EBRoluser> Obtener_RolUser_O()
     {
-        List<EBRoluser> lstRolUser = new List<EBRoluser>();
+        List<EBRoluser> eBRolusers = new List<EBRoluser>();
         try
         {
-            lstRolUser = swADNETBlockchain.Obtener_RolUser_O().ToList();
-            return lstRolUser;
+            eBRolusers = swADNETBlockchain.Obtener_RolUser_O().ToList();
+            return eBRolusers;
         }
         catch (Exception)
         {

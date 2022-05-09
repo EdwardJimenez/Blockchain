@@ -17,7 +17,7 @@ public class ADBPerson
         DTOBPerson dTOBPerson = new DTOBPerson();
         try
         {
-            Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BPerson"); //Select * from Person
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBPerson, "BPerson");
         }
@@ -34,7 +34,7 @@ public class ADBPerson
         DTOBPerson dtoBPersona = new DTOBPerson();
         try
         {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BPersona_O_idPersona");
             BDSWADNETIntUn.AddInParameter(dbCommand, "idPerson", DbType.String, Id_Person);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBPersona, "BPerson");
@@ -50,7 +50,7 @@ public class ADBPerson
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BPerson_FullName");
             BDSWADNETIntEx.AddInParameter(dbCommand, "FullName", DbType.String, bPerson.fullName);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
@@ -67,7 +67,7 @@ public class ADBPerson
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BPersona_A_idPersona_fullName");
             BDSWADNETIntEx.AddInParameter(dbCommand, "idPerson", DbType.String, bPerson.IdPerson);
             BDSWADNETIntEx.AddInParameter(dbCommand, "fullName", DbType.String, bPerson.fullName);

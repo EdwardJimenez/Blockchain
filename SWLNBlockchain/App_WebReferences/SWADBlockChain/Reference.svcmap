@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a498c430-f8cb-4c77-94a1-ac5668e0c411" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a498c430-f8cb-4c77-94a1-ac5668e0c411" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:59383/SWADNETBlockchain.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SWADNETBlockchain.xsd" MetadataType="Schema" ID="6a2cec4c-be58-4b79-a56d-6e3ed5027808" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd0" />
-    <MetadataFile FileName="SWADNETBlockchain1.xsd" MetadataType="Schema" ID="d8bb0fa1-6b6e-48ad-8561-f45bea4f6fe2" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd1" />
-    <MetadataFile FileName="SWADNETBlockchain.disco" MetadataType="Disco" ID="30e29780-6414-46bb-9a4c-7d51462b239c" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?disco" />
     <MetadataFile FileName="SWADNETBlockchain.wsdl" MetadataType="Wsdl" ID="2cb158ea-8738-43e4-a4d5-acf072664168" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?wsdl" />
+    <MetadataFile FileName="SWADNETBlockchain.disco" MetadataType="Disco" ID="30e29780-6414-46bb-9a4c-7d51462b239c" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?disco" />
+    <MetadataFile FileName="SWADNETBlockchain1.xsd" MetadataType="Schema" ID="d8bb0fa1-6b6e-48ad-8561-f45bea4f6fe2" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWADNETBlockchain.xsd" MetadataType="Schema" ID="6a2cec4c-be58-4b79-a56d-6e3ed5027808" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd0" />
     <MetadataFile FileName="SWADNETBlockchain12.xsd" MetadataType="Schema" ID="07356480-190b-43bb-bc4a-1bcd03c0890f" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>

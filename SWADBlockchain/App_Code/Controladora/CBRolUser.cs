@@ -25,8 +25,8 @@ public class CBRolUser
         {
             eBRoluser = new EBRoluser();
             eBRoluser.idrolUser = drRolUser.IdrolUser.ToString();
-            eBRoluser.name = drRolUser.name.ToString();
-            eBRoluser.status = drRolUser.status.ToString();
+            eBRoluser.name = drRolUser.name;
+            eBRoluser.status = drRolUser.status;
             lstRoluser.Add(eBRoluser);
         }
         return lstRoluser;

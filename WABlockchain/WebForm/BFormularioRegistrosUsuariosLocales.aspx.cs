@@ -17,10 +17,10 @@ namespace WABlockchain.WebForm
         private string _Id_Requerimiento = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
                 CargarRolUser();
+
             }
         }
 
@@ -31,7 +31,6 @@ namespace WABlockchain.WebForm
             string UsuarioNetvalle = "a";
             string RolUser = "U";
             string Title = "j";
-            string d = "d";
             if (Email != string.Empty && Password != string.Empty && UsuarioNetvalle != string.Empty && RolUser != string.Empty && Title != string.Empty )
             {
                 try
@@ -44,7 +43,7 @@ namespace WABlockchain.WebForm
 
                     //}
                     string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("BUser");
-                    swLNBlockchainClient.Insertar_BUser_I_idUser_email(Id_User, Email, Password, UsuarioNetvalle, ddlPlaza.SelectedValue, Title);
+                    swLNBlockchainClient.Insertar_BUser_I_idUser_email(Id_User, Email, Password, UsuarioNetvalle, ddlRolUser.SelectedValue, Title);
                     //RegistrarProgramaRequerimiento();
                    
                     lblMensaje.Text = "Registro de Usuario Exitoso!!!";
@@ -54,24 +53,20 @@ namespace WABlockchain.WebForm
                 {
 
                     lblMensaje.Text = "Registro de Usuario No Insertado";
-                }
-                    
-                
-                
+                }  
             }
-            
         }
         private void CargarRolUser()
         {
-            ddlPlaza.Items.Clear();
+            ddlRolUser.Items.Clear();
 
-            List<EBRoluser> lstPlaza = new List<EBRoluser>();
-            lstPlaza = swLNBlockchainClient.Obtener_RolUser_O().ToList();
-            ddlPlaza.DataSource = lstPlaza;
-            ddlPlaza.DataTextField = "name";
-            ddlPlaza.DataValueField = "IdrolUser";
-            ddlPlaza.DataBind();
-            ddlPlaza.SelectedIndex = 0;
+            List<EBRoluser> lstRol = new List<EBRoluser>();
+            lstRol = swLNBlockchainClient.Obtener_RolUser_O().ToList();
+            ddlRolUser.DataSource = lstRol;
+            ddlRolUser.DataTextField = "name";
+            ddlRolUser.DataValueField = "IdrolUser";
+            ddlRolUser.DataBind();
+            ddlRolUser.SelectedIndex = 0;
         }
     }
 }

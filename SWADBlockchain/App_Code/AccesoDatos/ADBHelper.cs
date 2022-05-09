@@ -23,7 +23,7 @@ public class ADBHelper
         string ultimoID = string.Empty;
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("UltimoID_O_NombreTablaSinElCaracterI");
             BDSWADNETIntEx.AddInParameter(dbCommand, "NombreTabla", DbType.String, NombreTabla);
             IDataReader reader = BDSWADNETIntEx.ExecuteReader(dbCommand);
@@ -48,7 +48,7 @@ public class ADBHelper
         string siguienteID = string.Empty;
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("SiguienteID_O_NombreTablaSinElCaracterI");
             BDSWADNETIntEx.AddInParameter(dbCommand, "NombreTabla", DbType.String, NombreTabla);
             IDataReader reader = BDSWADNETIntEx.ExecuteReader(dbCommand);

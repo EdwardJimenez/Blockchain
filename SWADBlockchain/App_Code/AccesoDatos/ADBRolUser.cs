@@ -22,9 +22,9 @@ public class ADBRolUser
         DTOBRoluser dTOBRolUser = new DTOBRoluser();
         try
         {
-            Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O"); //Select * from RolUser
-            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBRolUser, "BRoluser");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBRolUser, "BRolUser");
         }
         catch (Exception)
         {
@@ -39,7 +39,7 @@ public class ADBRolUser
         DTOBRoluser dtoBRolUser = new DTOBRoluser();
         try
         {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BRolUser_O_idrolUser");
             BDSWADNETIntUn.AddInParameter(dbCommand, "idrolUser", DbType.String, Id_RolUser);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBRolUser, "BRolUser");
@@ -55,7 +55,7 @@ public class ADBRolUser
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BRolUser_A_idrolUser_name");
             BDSWADNETIntEx.AddInParameter(dbCommand, "name", DbType.String, brolUser);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
@@ -72,7 +72,7 @@ public class ADBRolUser
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BRolUser_A_idrolUser_name");
             BDSWADNETIntEx.AddInParameter(dbCommand, "idrolUser", DbType.String, brolUser.idrolUser);
             BDSWADNETIntEx.AddInParameter(dbCommand, "name", DbType.String, brolUser.name);
