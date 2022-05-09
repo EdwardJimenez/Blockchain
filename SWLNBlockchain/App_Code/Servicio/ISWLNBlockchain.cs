@@ -16,12 +16,26 @@ public interface ISWLNBlockchain
     [OperationContract]
     EBUser btener_BUser_O_iduser(string Id_Carrera);
     [OperationContract]
-    void Insertar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser,string idTitle);
+    void Insertar_BUser_I_idUser_email(string Id_User,string Email, string password, string userNetvalle, string idrolUser,string idTitle);
     [OperationContract]
     void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
     #endregion
 
     #region BTittle
+    [OperationContract]
     void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado);
+
+    #endregion
+    #region RolUser
+    [OperationContract]
+    List<EBRoluser> Obtener_RolUser_O();
+
+    #endregion
+
+    #region Helper
+    [OperationContract]
+    string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla);
+    [OperationContract]
+    string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla);
     #endregion
 }

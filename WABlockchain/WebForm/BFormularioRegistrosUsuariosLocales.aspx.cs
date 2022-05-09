@@ -4,17 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WABlockchain.SWADBlockchainService;
+using WABlockchain.SWLNBlockchainService;
+using WABlockchain.Class;
 
 namespace WABlockchain.WebForm
 {
     public partial class BFormularioRegistrosUsuariosLocales : System.Web.UI.Page
     {
-        //SWLNIntercambioClient swLNIntercambioClient = new SWLNIntercambioClient();
-       
+        
+        private static Helper _helper = new Helper();
+        SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
+        private string _Id_Requerimiento = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (!IsPostBack)
+            {
+                CargarRolUser();
+            }
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
@@ -29,15 +36,18 @@ namespace WABlockchain.WebForm
             {
                 try
                 {
-                    //string Id_UsuariosLocales = swLNIntercambioClient.SiguienteID_O_NombreTablaSinElCaracterI("Programa");
-                    //swLNIntercambioClient.Insertar_IPrograma_I(Id_Programa, txtPrograma.Text, ddlPlaza.SelectedValue, DateTime.Parse(txtInicio.Text), DateTime.Parse(txtFin.Text));
-                    using (SWADBlockchainService.SWADNETBlockchainClient cliente=new SWADBlockchainService.SWADNETBlockchainClient())
-                    {
-                        EBUser eBUser = new EBUser(Email,Password,UsuarioNetvalle,RolUser,Title);
-                        cliente.Insertar_BUser_I_idUser_email(eBUser);
-                        
-                    }
-                        lblMensaje.Text = "Registro de Usuario Exitoso!!!";
+
+                    //using ( cliente=new SWADBlockchainService.SWADNETBlockchainClient())
+                    //{
+                    //    EBUser eBUser = new EBUser(Email,Password,UsuarioNetvalle,RolUser,Title);
+                    //    cliente.Insertar_BUser_I_idUser_email(eBUser);
+
+                    //}
+                    string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("BUser");
+                    swLNBlockchainClient.Insertar_BUser_I_idUser_email(Id_User, Email, Password, UsuarioNetvalle, ddlPlaza.SelectedValue, Title);
+                    //RegistrarProgramaRequerimiento();
+                   
+                    lblMensaje.Text = "Registro de Usuario Exitoso!!!";
                     
                 }
                 catch (Exception)
@@ -49,7 +59,19 @@ namespace WABlockchain.WebForm
                 
                 
             }
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "Notificacion()", true);
+            
+        }
+        private void CargarRolUser()
+        {
+            ddlPlaza.Items.Clear();
+
+            List<EBRoluser> lstPlaza = new List<EBRoluser>();
+            lstPlaza = swLNBlockchainClient.Obtener_RolUser_O().ToList();
+            ddlPlaza.DataSource = lstPlaza;
+            ddlPlaza.DataTextField = "name";
+            ddlPlaza.DataValueField = "IdrolUser";
+            ddlPlaza.DataBind();
+            ddlPlaza.SelectedIndex = 0;
         }
     }
 }

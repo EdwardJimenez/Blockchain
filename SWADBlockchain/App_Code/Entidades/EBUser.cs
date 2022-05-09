@@ -30,18 +30,13 @@ public class EBUser
     //[DataMember]
     //public DateTime lastUpdate { get; set; }
 
-
     public EBUser()
     {
-
-    }
-    public EBUser(string email, string password, string userNetvalle, string idRolUser, string idTitle)
-    {
-
-        Email = email;
-        Password = password;
-        UserNetvalle = userNetvalle;
-        IdRolUser = idRolUser;
-        IdTitle = idTitle;
+        IdUser = string.Empty;
+        Email = string.Empty;
+        Password = string.Empty;
+        UserNetvalle = string.Empty;
+        IdRolUser = string.Empty;
+        IdTitle = string.Empty;
     }
 }

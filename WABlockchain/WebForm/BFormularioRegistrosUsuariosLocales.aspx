@@ -26,7 +26,7 @@
                             &nbsp;</div>
                         <div>
                            <%-- <label for="">Correo :<input  runat="server" ID="Date2" name="fechaActual" type="text" onchange="handler(event);" ></label><br>--%>
-                            <label for="">Rol Usuario :<asp:TextBox runat="server" ID="txtCorreo" /></label><br>
+                            <label for="">Rol Usuario :<asp:DropDownList ID="ddlPlaza" runat="server" Height="16px" style="margin-left: 0px" Width="129px"></asp:DropDownList></label><br>
                             &nbsp;</div>
                         <div>
                            <%-- <label for="">Teléfonos :<input  runat="server" ID="Date3" name="fechaActual" type="text" onchange="handler(event);" ></label><br>--%>

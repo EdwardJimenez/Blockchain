@@ -23,8 +23,8 @@ public class ADBRolUser
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser"); //Select * from RolUser
-            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBRolUser, "BRolUser");
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O"); //Select * from RolUser
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBRolUser, "BRoluser");
         }
         catch (Exception)
         {

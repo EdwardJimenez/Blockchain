@@ -34,6 +34,7 @@ public class EBTittle
     [DataMember]
     public string fullNameTitulado { get; set; }
 
+    
     public EBTittle()
     {
         IdTittles = string.Empty;
@@ -48,4 +49,6 @@ public class EBTittle
         idUser = string.Empty;  
         fullNameTitulado = string.Empty;    
     }
+
+    
 }

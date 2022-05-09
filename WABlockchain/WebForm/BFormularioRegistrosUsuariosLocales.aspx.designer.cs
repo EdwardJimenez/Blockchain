@@ -51,13 +51,13 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.TextBox txtCi;
 
         /// <summary>
-        /// Control txtCorreo.
+        /// Control ddlPlaza.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPlaza;
 
         /// <summary>
         /// Control txtTelefonos.

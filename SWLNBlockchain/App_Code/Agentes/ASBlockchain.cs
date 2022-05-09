@@ -31,11 +31,11 @@ public class ASBlockchain
     }
     public EBUser Obtener_BUser_O_iduser(string Id_User)
     {
-        EBUser eiCarrera = new EBUser();
+        EBUser eiUser = new EBUser();
         try
         {
-            eiCarrera = swADNETBlockchain.Obtener_BUser_O_iduser(Id_User);
-            return eiCarrera;
+            eiUser = swADNETBlockchain.Obtener_BUser_O_iduser(Id_User);
+            return eiUser;
         }
         catch (Exception)
         {
@@ -76,6 +76,46 @@ public class ASBlockchain
         try
         {
             swADNETBlockchain.Insertar_BTitle_I_idTitle_faculty(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    #endregion
+    #region RolUser
+    public List<EBRoluser> Obtener_RolUser_O()
+    {
+        List<EBRoluser> lstRolUser = new List<EBRoluser>();
+        try
+        {
+            lstRolUser = swADNETBlockchain.Obtener_RolUser_O().ToList();
+            return lstRolUser;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    #endregion
+
+    #region Helper
+    public string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla)
+    {
+        try
+        {
+            return swADNETBlockchain.UltimoID_O_NombreTablaSinElCaracterI(NombreTabla);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla)
+    {
+        try
+        {
+            return swADNETBlockchain.SiguienteID_O_NombreTablaSinElCaracterI(NombreTabla);
         }
         catch (Exception)
         {

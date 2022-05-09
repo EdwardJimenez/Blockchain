@@ -57,6 +57,7 @@ public class ADBUser
         {
             Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "IdUser", DbType.String, bUser.IdUser);
             BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);
             BDSWADNETIntEx.AddInParameter(dbCommand, "password", DbType.String, bUser.Password);
             BDSWADNETIntEx.AddInParameter(dbCommand, "userNetvalle", DbType.String, bUser.UserNetvalle);

@@ -19,5 +19,25 @@ public interface ISWADNETBlockchain
     void Insertar_BUser_I_idUser_email(EBUser eBUser);
     [OperationContract]
     void Actualizar_BUser_I_idUser_email(EBUser eBUser);
+
     #endregion
+    #region Tabla BTittle
+  
+    [OperationContract]
+    void Insertar_BTitle_I_idTitle_faculty(EBTittle eBTittle);
+
+    #endregion
+
+    #region Helper
+    [OperationContract]
+    string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla);
+    [OperationContract]
+    string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla);
+    #endregion
+
+    #region RolUser
+    [OperationContract]
+    List<EBRoluser> Obtener_RolUser_O();
+    #endregion
+
 }

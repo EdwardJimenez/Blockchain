@@ -17,4 +17,34 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EBUser" nillable="true" type="tns:EBUser" />
+  <xs:complexType name="EBTittle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdTittles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="carreer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dateDelivery" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fullNameTitulado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastUpdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="registerDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="statusDelivery" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="statusTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EBTittle" nillable="true" type="tns:EBTittle" />
+  <xs:complexType name="ArrayOfEBRoluser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EBRoluser" nillable="true" type="tns:EBRoluser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEBRoluser" nillable="true" type="tns:ArrayOfEBRoluser" />
+  <xs:complexType name="EBRoluser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idrolUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EBRoluser" nillable="true" type="tns:EBRoluser" />
 </xs:schema>

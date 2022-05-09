@@ -14,10 +14,21 @@
       <xs:element minOccurs="0" name="IdUser" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UserNetvalle" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="lastUpdate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="registerDate" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EBUser" nillable="true" type="tns:EBUser" />
+  <xs:complexType name="ArrayOfEBRoluser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EBRoluser" nillable="true" type="tns:EBRoluser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEBRoluser" nillable="true" type="tns:ArrayOfEBRoluser" />
+  <xs:complexType name="EBRoluser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idrolUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EBRoluser" nillable="true" type="tns:EBRoluser" />
 </xs:schema>

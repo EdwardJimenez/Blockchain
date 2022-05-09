@@ -19,15 +19,17 @@ public class CUserBlockchain
     #region BUser
    
 
-    public void Insertar_BUser_I_idUser_email(string email,string password, string userNetvalle, string idrolUser)
+    public void Insertar_BUser_I_idUser_email(string Id_User,string email,string password, string userNetvalle, string idrolUser, string idTitle)
     {
         EBUser ebUser = new EBUser();
         try
         {
+            ebUser.IdUser = Id_User;
             ebUser.Email = email;
             ebUser.Password = password;
             ebUser.UserNetvalle = userNetvalle;
             ebUser.IdRolUser = idrolUser;
+            ebUser.IdTitle = idTitle;
             asBlockchain.Insertar_BUser_I_idUser_email(ebUser);
         }
         catch (Exception)
@@ -36,4 +38,71 @@ public class CUserBlockchain
         }
     }
     #endregion
+
+    #region BTitle
+    public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
+    {
+        EBTittle ebTittle = new EBTittle();
+        try
+        {
+            ebTittle.faculty = faculty;
+            ebTittle.carreer = carreer;
+            ebTittle.statusTitle = statusTittle;
+            ebTittle.dateDelivery = dateDelivery;
+            ebTittle.statusDelivery = statusDelivery;
+            ebTittle.idUser = idUser;
+            ebTittle.fullNameTitulado = fullnameTitulado;
+
+
+            asBlockchain.Insertar_BTitle_I_idTitle_faculty(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    #endregion
+
+    #region RolUser
+    public List<EBRoluser> Obtener_RolUser_O()
+    {
+        List<EBRoluser>eBRolUsers = new List<EBRoluser>();
+        try
+        {
+            eBRolUsers = asBlockchain.Obtener_RolUser_O().ToList();
+            return eBRolUsers;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    #endregion
+
+    #region Helper
+    public string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla)
+    {
+        try
+        {
+            return asBlockchain.UltimoID_O_NombreTablaSinElCaracterI(NombreTabla);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla)
+    {
+        try
+        {
+            return asBlockchain.SiguienteID_O_NombreTablaSinElCaracterI(NombreTabla);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    #endregion
+
+
 }

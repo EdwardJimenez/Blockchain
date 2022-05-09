@@ -20,10 +20,10 @@ public class SWLNBlockchain : ISWLNBlockchain
         throw new NotImplementedException();
     }
 
-    public void Insertar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle)
+    public void Insertar_BUser_I_idUser_email(string Id_User,string Email, string password, string userNetvalle, string idrolUser, string idTitle)
     {
         CUserBlockchain cUser = new CUserBlockchain();
-        cUser.Insertar_BUser_I_idUser_email(Email, password, userNetvalle, idrolUser);
+        cUser.Insertar_BUser_I_idUser_email(Id_User,Email, password, userNetvalle, idrolUser, idTitle);
     }
 
     public List<EBUser> Obtener_User_O()
@@ -35,9 +35,33 @@ public class SWLNBlockchain : ISWLNBlockchain
 
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {
-        CTittleBlockchain cTittle = new CTittleBlockchain();
+        CUserBlockchain cTittle = new CUserBlockchain();
         cTittle.Insertar_BTitle_I_idTitle_faculty(faculty, carreer, statusTittle, dateDelivery, statusDelivery, idUser, fullnameTitulado);
     }
 
+    #endregion
+
+    #region RolUser
+    public List<EBRoluser> Obtener_RolUser_O()
+    {
+        
+        List<EBRoluser> lstEbRolUser = new List<EBRoluser>();
+        CUserBlockchain cRolUser = new CUserBlockchain();
+        lstEbRolUser = cRolUser.Obtener_RolUser_O();
+        return lstEbRolUser;
+    }
+    #endregion
+
+    #region Helper
+    public string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla)
+    {
+        CUserBlockchain cSolicitudIntercambio = new CUserBlockchain();
+        return cSolicitudIntercambio.UltimoID_O_NombreTablaSinElCaracterI(NombreTabla);
+    }
+    public string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla)
+    {
+        CUserBlockchain cSolicitudIntercambio = new CUserBlockchain();
+        return cSolicitudIntercambio.SiguienteID_O_NombreTablaSinElCaracterI(NombreTabla);
+    }
     #endregion
 }
