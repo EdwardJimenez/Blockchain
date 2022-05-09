@@ -24,7 +24,9 @@
   <Metadata>
     <MetadataFile FileName="SWADNetValle.wsdl" MetadataType="Wsdl" ID="d6b81646-0fe4-4db8-9405-cd71718ec127" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?wsdl" />
     <MetadataFile FileName="SWADNetValle.xsd" MetadataType="Schema" ID="02493f5d-dd54-41f1-ab34-1af497f470a0" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWADNetValle1.xsd" MetadataType="Schema" ID="cd33bbd3-f262-44e1-be87-e7085afdf567" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?xsd=xsd2" />
     <MetadataFile FileName="SWADNetValle.disco" MetadataType="Disco" ID="1f162fdf-9977-4b9b-b4e4-0d1d2302e37a" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?disco" />
+    <MetadataFile FileName="SWADNetValle12.xsd" MetadataType="Schema" ID="5402b964-fc45-4f1a-b62d-95e51e8a8606" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

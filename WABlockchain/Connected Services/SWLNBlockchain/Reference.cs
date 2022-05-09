@@ -8,44 +8,44 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WABlockchain.ServiceReference1 {
+namespace WABlockchain.SWLNBlockchain {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.ISWADNETBlockchain")]
-    public interface ISWADNETBlockchain {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SWLNBlockchain.ISWLNBlockchain")]
+    public interface ISWLNBlockchain {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWADNETBlockchain/DoWork", ReplyAction="http://tempuri.org/ISWADNETBlockchain/DoWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/DoWork", ReplyAction="http://tempuri.org/ISWLNBlockchain/DoWorkResponse")]
         void DoWork();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWADNETBlockchain/DoWork", ReplyAction="http://tempuri.org/ISWADNETBlockchain/DoWorkResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/DoWork", ReplyAction="http://tempuri.org/ISWLNBlockchain/DoWorkResponse")]
         System.Threading.Tasks.Task DoWorkAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISWADNETBlockchainChannel : WABlockchain.ServiceReference1.ISWADNETBlockchain, System.ServiceModel.IClientChannel {
+    public interface ISWLNBlockchainChannel : WABlockchain.SWLNBlockchain.ISWLNBlockchain, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SWADNETBlockchainClient : System.ServiceModel.ClientBase<WABlockchain.ServiceReference1.ISWADNETBlockchain>, WABlockchain.ServiceReference1.ISWADNETBlockchain {
+    public partial class SWLNBlockchainClient : System.ServiceModel.ClientBase<WABlockchain.SWLNBlockchain.ISWLNBlockchain>, WABlockchain.SWLNBlockchain.ISWLNBlockchain {
         
-        public SWADNETBlockchainClient() {
+        public SWLNBlockchainClient() {
         }
         
-        public SWADNETBlockchainClient(string endpointConfigurationName) : 
+        public SWLNBlockchainClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public SWADNETBlockchainClient(string endpointConfigurationName, string remoteAddress) : 
+        public SWLNBlockchainClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SWADNETBlockchainClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SWLNBlockchainClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SWADNETBlockchainClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SWLNBlockchainClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

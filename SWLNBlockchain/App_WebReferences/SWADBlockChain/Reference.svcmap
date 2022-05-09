@@ -23,8 +23,10 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="SWADNETBlockchain.xsd" MetadataType="Schema" ID="6a2cec4c-be58-4b79-a56d-6e3ed5027808" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd0" />
+    <MetadataFile FileName="SWADNETBlockchain1.xsd" MetadataType="Schema" ID="8127d33e-5f7b-4bdc-bbd5-0989adabb56c" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd1" />
     <MetadataFile FileName="SWADNETBlockchain.disco" MetadataType="Disco" ID="30e29780-6414-46bb-9a4c-7d51462b239c" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?disco" />
     <MetadataFile FileName="SWADNETBlockchain.wsdl" MetadataType="Wsdl" ID="2cb158ea-8738-43e4-a4d5-acf072664168" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?wsdl" />
+    <MetadataFile FileName="SWADNETBlockchain12.xsd" MetadataType="Schema" ID="c3c1da20-0cb8-44ca-a00b-18b0de9d958d" SourceId="1" SourceUrl="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -75,21 +75,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\SWLNBlockchain\SWLNBlockchain.disco" />
+    <None Include="Connected Services\SWLNBlockchain\configuration91.svcinfo" />
+    <None Include="Connected Services\SWLNBlockchain\configuration.svcinfo" />
+    <None Include="Connected Services\SWLNBlockchain\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="WebForm\ILogin.aspx" />
-    <None Include="Connected Services\ServiceReference1\SWADNETBlockchain.disco" />
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain.disco" />
-    <None Include="Connected Services\SWADBlockchainService\configuration91.svcinfo" />
-    <None Include="Connected Services\SWADBlockchainService\configuration.svcinfo" />
-    <None Include="Connected Services\SWADBlockchainService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Estilo\EstiloLogin.css" />
     <Content Include="Estilo\EstiloMasterPage\EstiloMPLogin.css" />
     <Content Include="Estilo\EstiloRegistros\EstiloMenuPrincipal.css" />
@@ -103,10 +96,6 @@
     <Content Include="WebForm\IRegistroTitulo.aspx" />
     <Content Include="WebForm\IRegistroUsuario.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
-    <None Include="Connected Services\ServiceReference1\SWADNETBlockchain.wsdl" />
-    <None Include="Connected Services\ServiceReference1\SWADNETBlockchain.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
     <Content Include="Estilo\SGridView.css" />
@@ -126,12 +115,7 @@
     <Content Include="WebForm\BFormularioRegistroUsuariosLocales.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\SWADBlockchainService\Reference.cs">
+    <Compile Include="Connected Services\SWLNBlockchain\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -198,19 +182,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain.wsdl" />
-    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain.xsd">
+    <None Include="Connected Services\SWLNBlockchain\SWLNBlockchain.wsdl" />
+    <None Include="Connected Services\SWLNBlockchain\SWLNBlockchain.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\SWADBlockchainService\WABlockchain.SWADBlockchainService.EBUser.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="PaginaMaestra\MPInicio.Master" />
     <None Include="Web.Debug.config">
@@ -228,8 +203,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
-    <WCFMetadataStorage Include="Connected Services\SWADBlockchainService\" />
+    <WCFMetadataStorage Include="Connected Services\SWLNBlockchain\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
