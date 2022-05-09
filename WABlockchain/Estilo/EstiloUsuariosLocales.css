@@ -16,6 +16,7 @@
     box-shadow: 0px 0px 10px rgb(0 0 0 / 13%);
     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
     -webkit-box-shadow: 0px 0px 10px rgb(0 0 0 / 13%);
+    height: 663px;
 }
 
     .form-style-10 h1 {
@@ -43,17 +44,19 @@
 .datos {
     display: inline-grid;
     text-align: center;
+    width: 246px;
 }
 
     .datos div {
         margin: 10px 0 0 0;
         height: 34px;
-    }
+    width: 228px;
+}
 
     .datos label {
         margin-left: 20px;
         float: left;
-        width: 186px;
+        width: 225px;
         text-align: initial;
         padding: 5px 0 0 0;
         font-size: 16px;

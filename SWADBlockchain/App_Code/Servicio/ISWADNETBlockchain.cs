@@ -20,9 +20,11 @@ public interface ISWADNETBlockchain
     [OperationContract]
     void Actualizar_BUser_I_idUser_email(EBUser eBUser);
 
+    [OperationContract]
+    void Insertar_BUser_I(EBUser bUser);
     #endregion
     #region Tabla BTittle
-  
+
     [OperationContract]
     void Insertar_BTitle_I_idTitle_faculty(EBTittle eBTittle);
 

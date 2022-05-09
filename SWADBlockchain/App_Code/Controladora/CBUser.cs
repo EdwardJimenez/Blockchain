@@ -19,7 +19,11 @@ public class CBUser
     
     public void Insertar_BUser_I_idUser_email(EBUser eBUser)
     {
-        adBUser.Insertar_BUser_I_idUser_email(eBUser);
+        //adBUser.Insertar_BUser_I_idUser_email(eBUser);
+    }
+    public void Insertar_BUser_I(EBUser bUser)
+    {
+        adBUser.Insertar_BUser_I(bUser);
     }
     //public void Actualizar_ICarrera_A_CarreraID_NombreCarrera(EICarrera eICarrera)
     //{

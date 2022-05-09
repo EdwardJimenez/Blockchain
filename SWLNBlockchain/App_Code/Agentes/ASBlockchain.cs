@@ -54,7 +54,17 @@ public class ASBlockchain
         }
     }
 
-
+    public void Insertar_BUser_I(EBUser bUser)
+    {
+        try
+        {
+            swADNETBlockchain.Insertar_BUser_I(bUser);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
     public void Actualizar_BUser_I_idUser_email(EBUser ebUser)
     {

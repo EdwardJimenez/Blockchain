@@ -20,12 +20,16 @@ public class SWLNBlockchain : ISWLNBlockchain
         throw new NotImplementedException();
     }
 
-    public void Insertar_BUser_I_idUser_email(string Id_User,string Email, string password, string userNetvalle, string idrolUser, string idTitle)
+    public void Insertar_BUser_I_idUser_email(string Id_User, string email, string password,string status ,string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra)
     {
         CUserBlockchain cUser = new CUserBlockchain();
-        cUser.Insertar_BUser_I_idUser_email(Id_User,Email, password, userNetvalle, idrolUser, idTitle);
+        cUser.Insertar_BUser_I_idUser_email(Id_User,email, password,status ,userNetvalle, idrolUser, Fullname,Cellphone, Ci, description,ciExtra);
     }
-
+    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra)
+    {
+        CUserBlockchain cUser = new CUserBlockchain();
+        cUser.Insertar_BUser_I(Id_User,email,password,status,userNetvalle,idrolUser,Fullname,Cellphone,Ci,description,ciExtra);
+    }
     public List<EBUser> Obtener_User_O()
     {
         throw new NotImplementedException();

@@ -31,15 +31,42 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id_User" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="userNetvalle" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="idrolUser" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="idTitle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cellphone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ci" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ciExtra" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Insertar_BUser_I_idUser_emailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_User" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userNetvalle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idrolUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cellphone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ci" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ciExtra" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_IResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

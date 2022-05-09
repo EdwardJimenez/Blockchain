@@ -23,13 +23,25 @@ namespace WABlockchain.SWLNBlockchainService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CIExtraField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CellphoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescripcionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdRolUserField;
+        private string FullnameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdTitleField;
+        private string IdRolUserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IdUserField;
@@ -40,6 +52,9 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UserNetvalleField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string statusField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -47,6 +62,58 @@ namespace WABlockchain.SWLNBlockchainService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CI {
+            get {
+                return this.CIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CIField, value) != true)) {
+                    this.CIField = value;
+                    this.RaisePropertyChanged("CI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CIExtra {
+            get {
+                return this.CIExtraField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CIExtraField, value) != true)) {
+                    this.CIExtraField = value;
+                    this.RaisePropertyChanged("CIExtra");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cellphone {
+            get {
+                return this.CellphoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CellphoneField, value) != true)) {
+                    this.CellphoneField = value;
+                    this.RaisePropertyChanged("Cellphone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion {
+            get {
+                return this.DescripcionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescripcionField, value) != true)) {
+                    this.DescripcionField = value;
+                    this.RaisePropertyChanged("Descripcion");
+                }
             }
         }
         
@@ -64,6 +131,19 @@ namespace WABlockchain.SWLNBlockchainService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fullname {
+            get {
+                return this.FullnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullnameField, value) != true)) {
+                    this.FullnameField = value;
+                    this.RaisePropertyChanged("Fullname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string IdRolUser {
             get {
                 return this.IdRolUserField;
@@ -72,19 +152,6 @@ namespace WABlockchain.SWLNBlockchainService {
                 if ((object.ReferenceEquals(this.IdRolUserField, value) != true)) {
                     this.IdRolUserField = value;
                     this.RaisePropertyChanged("IdRolUser");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IdTitle {
-            get {
-                return this.IdTitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdTitleField, value) != true)) {
-                    this.IdTitleField = value;
-                    this.RaisePropertyChanged("IdTitle");
                 }
             }
         }
@@ -124,6 +191,19 @@ namespace WABlockchain.SWLNBlockchainService {
                 if ((object.ReferenceEquals(this.UserNetvalleField, value) != true)) {
                     this.UserNetvalleField = value;
                     this.RaisePropertyChanged("UserNetvalle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.statusField, value) != true)) {
+                    this.statusField = value;
+                    this.RaisePropertyChanged("status");
                 }
             }
         }
@@ -232,10 +312,16 @@ namespace WABlockchain.SWLNBlockchainService {
         System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBUser> btener_BUser_O_iduserAsync(string Id_Carrera);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_emailResponse")]
-        void Insertar_BUser_I_idUser_email(string Id_User, string Email, string password, string userNetvalle, string idrolUser, string idTitle);
+        void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_emailResponse")]
-        System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string Email, string password, string userNetvalle, string idrolUser, string idTitle);
+        System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
+        void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
+        System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_emailResponse")]
         void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
@@ -313,12 +399,20 @@ namespace WABlockchain.SWLNBlockchainService {
             return base.Channel.btener_BUser_O_iduserAsync(Id_Carrera);
         }
         
-        public void Insertar_BUser_I_idUser_email(string Id_User, string Email, string password, string userNetvalle, string idrolUser, string idTitle) {
-            base.Channel.Insertar_BUser_I_idUser_email(Id_User, Email, password, userNetvalle, idrolUser, idTitle);
+        public void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
+            base.Channel.Insertar_BUser_I_idUser_email(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
         }
         
-        public System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string Email, string password, string userNetvalle, string idrolUser, string idTitle) {
-            return base.Channel.Insertar_BUser_I_idUser_emailAsync(Id_User, Email, password, userNetvalle, idrolUser, idTitle);
+        public System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
+            return base.Channel.Insertar_BUser_I_idUser_emailAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
+        }
+        
+        public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
+            base.Channel.Insertar_BUser_I(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
+        }
+        
+        public System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
+            return base.Channel.Insertar_BUser_IAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
         }
         
         public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle) {

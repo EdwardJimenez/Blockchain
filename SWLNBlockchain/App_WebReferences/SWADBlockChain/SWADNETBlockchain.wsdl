@@ -31,6 +31,12 @@
   <wsdl:message name="ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_BUser_I_idUser_emailResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Insertar_BUser_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Insertar_BUser_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_IResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_Insertar_BTitle_I_idTitle_faculty_InputMessage">
     <wsdl:part name="parameters" element="tns:Insertar_BTitle_I_idTitle_faculty" />
   </wsdl:message>
@@ -71,6 +77,10 @@
     <wsdl:operation name="Actualizar_BUser_I_idUser_email">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_BUser_I_idUser_email" message="tns:ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_BUser_I_idUser_emailResponse" message="tns:ISWADNETBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Insertar_BUser_I" message="tns:ISWADNETBlockchain_Insertar_BUser_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Insertar_BUser_IResponse" message="tns:ISWADNETBlockchain_Insertar_BUser_I_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Insertar_BTitle_I_idTitle_faculty">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Insertar_BTitle_I_idTitle_faculty" message="tns:ISWADNETBlockchain_Insertar_BTitle_I_idTitle_faculty_InputMessage" />
@@ -120,6 +130,15 @@
     </wsdl:operation>
     <wsdl:operation name="Actualizar_BUser_I_idUser_email">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Actualizar_BUser_I_idUser_email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Insertar_BUser_I" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

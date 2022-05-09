@@ -8,12 +8,17 @@
   <xs:element name="ArrayOfEBUser" nillable="true" type="tns:ArrayOfEBUser" />
   <xs:complexType name="EBUser">
     <xs:sequence>
+      <xs:element minOccurs="0" name="CI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CIExtra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cellphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdRolUser" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IdTitle" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdUser" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UserNetvalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EBUser" nillable="true" type="tns:EBUser" />

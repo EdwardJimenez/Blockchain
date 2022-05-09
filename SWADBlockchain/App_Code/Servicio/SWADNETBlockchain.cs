@@ -19,7 +19,11 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         CBUser cBUser = new CBUser();
         cBUser.Insertar_BUser_I_idUser_email(eBUser);
     }
-
+    public void Insertar_BUser_I(EBUser bUser)
+    {
+        CBUser cBUser = new CBUser();
+        cBUser.Insertar_BUser_I(bUser);
+    }
     public EBUser Obtener_BUser_O_iduser(string Id_User)
     {
         throw new NotImplementedException();

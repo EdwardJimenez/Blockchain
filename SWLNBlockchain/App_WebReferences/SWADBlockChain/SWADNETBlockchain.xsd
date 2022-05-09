@@ -51,10 +51,22 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Insertar_BUser_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="bUser" nillable="true" type="q5:EBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Insertar_BTitle_I_idTitle_faculty">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eBTittle" nillable="true" type="q5:EBTittle" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eBTittle" nillable="true" type="q6:EBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -99,7 +111,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q6:ArrayOfEBRoluser" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q7:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

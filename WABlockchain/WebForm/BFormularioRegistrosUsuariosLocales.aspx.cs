@@ -15,6 +15,7 @@ namespace WABlockchain.WebForm
         private static Helper _helper = new Helper();
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         private string _Id_Requerimiento = string.Empty;
+        private string _Id_User = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,34 +27,31 @@ namespace WABlockchain.WebForm
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string Email = txtEstudiante.Text;
-            string Password = txtApellidos.Text;
-            string UsuarioNetvalle = "a";
-            string RolUser = "U";
-            string Title = "j";
-            if (Email != string.Empty && Password != string.Empty && UsuarioNetvalle != string.Empty && RolUser != string.Empty && Title != string.Empty )
+            
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string Fullname = nombre + " " + apellido;
+            string Email = txtEmail.Text;
+            string Password = txtPassword.Text;
+            string Cellphone = txtCellphone.Text;
+            string UsuarioNetvalle = txtUserNetvalle.Text;
+            string CIUser = txtCi.Text;
+            string descripcion = txtDescripcion.Text;
+            string ciExtra = txtCIExtra.Text;
+            string status = "1";
+            try
             {
-                try
-                {
+                string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
+                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRolUser.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
+                //RegistrarProgramaRequerimiento();
 
-                    //using ( cliente=new SWADBlockchainService.SWADNETBlockchainClient())
-                    //{
-                    //    EBUser eBUser = new EBUser(Email,Password,UsuarioNetvalle,RolUser,Title);
-                    //    cliente.Insertar_BUser_I_idUser_email(eBUser);
+                lblMensaje.Text = "Registro de Usuario Exitoso!!!";
 
-                    //}
-                    string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("BUser");
-                    swLNBlockchainClient.Insertar_BUser_I_idUser_email(Id_User, Email, Password, UsuarioNetvalle, ddlRolUser.SelectedValue, Title);
-                    //RegistrarProgramaRequerimiento();
-                   
-                    lblMensaje.Text = "Registro de Usuario Exitoso!!!";
-                    
-                }
-                catch (Exception)
-                {
+            }
+            catch (Exception)
+            {
 
-                    lblMensaje.Text = "Registro de Usuario No Insertado";
-                }  
+                lblMensaje.Text = "Registro de Usuario No Insertado";
             }
         }
         private void CargarRolUser()

@@ -19,7 +19,7 @@ public class CUserBlockchain
     #region BUser
    
 
-    public void Insertar_BUser_I_idUser_email(string Id_User,string email,string password, string userNetvalle, string idrolUser, string idTitle)
+    public void Insertar_BUser_I_idUser_email(string Id_User,string email,string password,string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci , string description, string ciExtra)
     {
         EBUser ebUser = new EBUser();
         try
@@ -27,10 +27,38 @@ public class CUserBlockchain
             ebUser.IdUser = Id_User;
             ebUser.Email = email;
             ebUser.Password = password;
+            ebUser.status = status;
             ebUser.UserNetvalle = userNetvalle;
             ebUser.IdRolUser = idrolUser;
-            ebUser.IdTitle = idTitle;
+            ebUser.Fullname = Fullname;
+            ebUser.Cellphone = Cellphone;
+            ebUser.CI = Ci;
+            ebUser.Descripcion = description;
+            ebUser.CIExtra = ciExtra; 
             asBlockchain.Insertar_BUser_I_idUser_email(ebUser);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra)
+    {
+        EBUser ebUser = new EBUser();
+        try
+        {
+            ebUser.IdUser = Id_User;
+            ebUser.Email = email;
+            ebUser.Password = password;
+            ebUser.status = status;
+            ebUser.UserNetvalle = userNetvalle;
+            ebUser.IdRolUser = idrolUser;
+            ebUser.Fullname = Fullname;
+            ebUser.Cellphone = Cellphone;
+            ebUser.CI = Ci;
+            ebUser.Descripcion = description;
+            ebUser.CIExtra = ciExtra;
+            asBlockchain.Insertar_BUser_I(ebUser);
         }
         catch (Exception)
         {
