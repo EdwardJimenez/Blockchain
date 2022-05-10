@@ -20,5 +20,28 @@ public class CBTitle
     {
         aDBTitle.Insertar_BTitle_I_idTitle_faculty(bTitle);
     }
+
+    public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
+    {
+        aDBTitle.Actualizar_ITitle_statusTitle(ebTitle);
+    }
+
+    public List<EBTittle> Obtener_Title_O()
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.Obtener_Title_O();
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.IdTittles = drTitle.IdTittles.ToString();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
+
     #endregion
 }

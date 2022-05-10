@@ -29,6 +29,8 @@
       <xs:element minOccurs="0" name="dateDelivery" type="xs:dateTime" />
       <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="fullNameTitulado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idQr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idToken" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="idUser" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="lastUpdate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="registerDate" type="xs:dateTime" />
@@ -38,6 +40,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EBTittle" nillable="true" type="tns:EBTittle" />
+  <xs:complexType name="ArrayOfEBTittle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EBTittle" nillable="true" type="tns:EBTittle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEBTittle" nillable="true" type="tns:ArrayOfEBTittle" />
   <xs:complexType name="ArrayOfEBRoluser">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="EBRoluser" nillable="true" type="tns:EBRoluser" />

@@ -81,7 +81,33 @@ public class ASBlockchain
 
     #region BTitle
 
-        public void Insertar_BTitle_I_idTitle_faculty(EBTittle ebTittle)
+    public List<EBTittle> Obtener_Title_O()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Obtener_Title_O().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Insertar_BTitle_I_idTitle_faculty(EBTittle ebTittle)
         {
         try
         {

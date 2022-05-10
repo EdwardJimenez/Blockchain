@@ -33,8 +33,12 @@ public class EBTittle
     public string idUser { get; set; }
     [DataMember]
     public string fullNameTitulado { get; set; }
+    [DataMember]
+    public string idToken { get; set; }
+    [DataMember]
+    public string idQr { get; set; }
 
-    
+
     public EBTittle()
     {
         IdTittles = string.Empty;
@@ -47,7 +51,9 @@ public class EBTittle
         dateDelivery = DateTime.MinValue;
         statusDelivery = string.Empty;
         idUser = string.Empty;  
-        fullNameTitulado = string.Empty;    
+        fullNameTitulado = string.Empty;
+        idToken = string.Empty;
+        idQr = string.Empty;
     }
 
     

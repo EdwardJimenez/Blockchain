@@ -68,6 +68,35 @@ public class CUserBlockchain
     #endregion
 
     #region BTitle
+    public List<EBTittle> Obtener_Title_O()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Obtener_Title_O().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle_statusTitle(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.Actualizar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {
         EBTittle ebTittle = new EBTittle();

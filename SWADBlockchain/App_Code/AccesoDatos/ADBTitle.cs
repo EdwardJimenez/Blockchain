@@ -17,8 +17,8 @@ public class ADBTitle
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTitle"); //Select * from Title
-            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "Title");
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_statusTittle"); //Select * from Title
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
         }
         catch (Exception)
         {
@@ -75,6 +75,23 @@ public class ADBTitle
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTitle_A_idTitle_faculty");
             BDSWADNETIntEx.AddInParameter(dbCommand, "idTitle", DbType.String, bTitle.IdTittles);
             BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle.faculty);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title statusTitleToFive
+    /// </summary>
+    public void Actualizar_ITitle_statusTitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idTittle", DbType.String, bTitle.IdTittles);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
         catch (Exception)

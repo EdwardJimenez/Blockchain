@@ -37,6 +37,20 @@ public class SWLNBlockchain : ISWLNBlockchain
     #endregion
     #region Tittle
 
+    public List<EBTittle> Obtener_Title_O()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Obtener_Title_O().ToList();
+        return eBTitle;
+    }
+    public void Actualizar_ITitle_statusTitle(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_ITitle_statusTitle(Id_Title);
+    }
+
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {
         CUserBlockchain cTittle = new CUserBlockchain();
