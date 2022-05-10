@@ -86,32 +86,33 @@
   <xs:element name="DTOBTitle" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DTOBTitle" msprop:Generator_DataSetName="DTOBTitle">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Title" msprop:Generator_RowEvHandlerName="TitleRowChangeEventHandler" msprop:Generator_RowDeletedName="TitleRowDeleted" msprop:Generator_RowDeletingName="TitleRowDeleting" msprop:Generator_RowEvArgName="TitleRowChangeEvent" msprop:Generator_TablePropName="Title" msprop:Generator_RowChangedName="TitleRowChanged" msprop:Generator_RowChangingName="TitleRowChanging" msprop:Generator_TableClassName="TitleDataTable" msprop:Generator_RowClassName="TitleRow" msprop:Generator_TableVarName="tableTitle" msprop:Generator_UserTableName="Title">
+        <xs:element name="Title" msprop:Generator_RowClassName="TitleRow" msprop:Generator_RowEvHandlerName="TitleRowChangeEventHandler" msprop:Generator_RowDeletedName="TitleRowDeleted" msprop:Generator_RowDeletingName="TitleRowDeleting" msprop:Generator_RowEvArgName="TitleRowChangeEvent" msprop:Generator_TablePropName="Title" msprop:Generator_RowChangedName="TitleRowChanged" msprop:Generator_UserTableName="Title" msprop:Generator_RowChangingName="TitleRowChanging" msprop:Generator_TableClassName="TitleDataTable" msprop:Generator_TableVarName="tableTitle">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdTittles" msprop:Generator_ColumnPropNameInRow="IdTittles" msprop:Generator_ColumnPropNameInTable="IdTittlesColumn" msprop:Generator_ColumnVarNameInTable="columnIdTittles" msprop:Generator_UserColumnName="IdTittles" type="xs:int" />
-              <xs:element name="registerDate" msprop:Generator_ColumnPropNameInRow="registerDate" msprop:Generator_ColumnPropNameInTable="registerDateColumn" msprop:Generator_ColumnVarNameInTable="columnregisterDate" msprop:Generator_UserColumnName="registerDate" type="xs:dateTime" />
-              <xs:element name="registerUpdate" msprop:Generator_ColumnPropNameInRow="registerUpdate" msprop:Generator_ColumnPropNameInTable="registerUpdateColumn" msprop:Generator_ColumnVarNameInTable="columnregisterUpdate" msprop:Generator_UserColumnName="registerUpdate" type="xs:dateTime" />
-              <xs:element name="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_UserColumnName="status" type="xs:unsignedByte" />
-              <xs:element name="faculty" msprop:Generator_ColumnPropNameInRow="faculty" msprop:Generator_ColumnPropNameInTable="facultyColumn" msprop:Generator_ColumnVarNameInTable="columnfaculty" msprop:Generator_UserColumnName="faculty">
+              <xs:element name="IdTittles" msprop:Generator_UserColumnName="IdTittles" msprop:Generator_ColumnPropNameInTable="IdTittlesColumn" msprop:Generator_ColumnPropNameInRow="IdTittles" msprop:Generator_ColumnVarNameInTable="columnIdTittles" type="xs:int" />
+              <xs:element name="registerDate" msprop:Generator_UserColumnName="registerDate" msprop:Generator_ColumnPropNameInTable="registerDateColumn" msprop:Generator_ColumnPropNameInRow="registerDate" msprop:Generator_ColumnVarNameInTable="columnregisterDate" type="xs:dateTime" />
+              <xs:element name="registerUpdate" msprop:Generator_UserColumnName="registerUpdate" msprop:Generator_ColumnPropNameInTable="registerUpdateColumn" msprop:Generator_ColumnPropNameInRow="registerUpdate" msprop:Generator_ColumnVarNameInTable="columnregisterUpdate" type="xs:dateTime" />
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnVarNameInTable="columnstatus" type="xs:unsignedByte" />
+              <xs:element name="faculty" msprop:Generator_UserColumnName="faculty" msprop:Generator_ColumnPropNameInTable="facultyColumn" msprop:Generator_ColumnPropNameInRow="faculty" msprop:Generator_ColumnVarNameInTable="columnfaculty">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="carreer" msprop:Generator_ColumnPropNameInRow="carreer" msprop:Generator_ColumnPropNameInTable="carreerColumn" msprop:Generator_ColumnVarNameInTable="columncarreer" msprop:Generator_UserColumnName="carreer">
+              <xs:element name="carreer" msprop:Generator_UserColumnName="carreer" msprop:Generator_ColumnPropNameInTable="carreerColumn" msprop:Generator_ColumnPropNameInRow="carreer" msprop:Generator_ColumnVarNameInTable="columncarreer">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="statusTittle" msprop:Generator_ColumnPropNameInRow="statusTittle" msprop:Generator_ColumnPropNameInTable="statusTittleColumn" msprop:Generator_ColumnVarNameInTable="columnstatusTittle" msprop:Generator_UserColumnName="statusTittle" type="xs:unsignedByte" />
-              <xs:element name="dateDelivery" msprop:Generator_ColumnPropNameInRow="dateDelivery" msprop:Generator_ColumnPropNameInTable="dateDeliveryColumn" msprop:Generator_ColumnVarNameInTable="columndateDelivery" msprop:Generator_UserColumnName="dateDelivery" type="xs:dateTime" />
-              <xs:element name="statusDelivery" msprop:Generator_ColumnPropNameInRow="statusDelivery" msprop:Generator_ColumnPropNameInTable="statusDeliveryColumn" msprop:Generator_ColumnVarNameInTable="columnstatusDelivery" msprop:Generator_UserColumnName="statusDelivery" type="xs:unsignedByte" />
-              <xs:element name="Impression" msprop:Generator_ColumnPropNameInRow="Impression" msprop:Generator_ColumnPropNameInTable="ImpressionColumn" msprop:Generator_ColumnVarNameInTable="columnImpression" msprop:Generator_UserColumnName="Impression" type="xs:int" />
-              <xs:element name="idUser" msprop:Generator_ColumnPropNameInRow="idUser" msprop:Generator_ColumnPropNameInTable="idUserColumn" msprop:Generator_ColumnVarNameInTable="columnidUser" msprop:Generator_UserColumnName="idUser" type="xs:int" />
+              <xs:element name="statusTittle" msprop:Generator_UserColumnName="statusTittle" msprop:Generator_ColumnPropNameInTable="statusTittleColumn" msprop:Generator_ColumnPropNameInRow="statusTittle" msprop:Generator_ColumnVarNameInTable="columnstatusTittle" type="xs:unsignedByte" />
+              <xs:element name="dateDelivery" msprop:Generator_UserColumnName="dateDelivery" msprop:Generator_ColumnPropNameInTable="dateDeliveryColumn" msprop:Generator_ColumnPropNameInRow="dateDelivery" msprop:Generator_ColumnVarNameInTable="columndateDelivery" type="xs:dateTime" />
+              <xs:element name="statusDelivery" msprop:Generator_UserColumnName="statusDelivery" msprop:Generator_ColumnPropNameInTable="statusDeliveryColumn" msprop:Generator_ColumnPropNameInRow="statusDelivery" msprop:Generator_ColumnVarNameInTable="columnstatusDelivery" type="xs:unsignedByte" />
+              <xs:element name="Impression" msprop:Generator_UserColumnName="Impression" msprop:Generator_ColumnPropNameInTable="ImpressionColumn" msprop:Generator_ColumnPropNameInRow="Impression" msprop:Generator_ColumnVarNameInTable="columnImpression" type="xs:int" />
+              <xs:element name="idUser" msprop:Generator_UserColumnName="idUser" msprop:Generator_ColumnPropNameInTable="idUserColumn" msprop:Generator_ColumnPropNameInRow="idUser" msprop:Generator_ColumnVarNameInTable="columnidUser" type="xs:int" />
+              <xs:element name="fullName" msprop:Generator_ColumnPropNameInRow="fullName" msprop:Generator_ColumnPropNameInTable="fullNameColumn" msprop:Generator_ColumnVarNameInTable="columnfullName" msprop:Generator_UserColumnName="fullName" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

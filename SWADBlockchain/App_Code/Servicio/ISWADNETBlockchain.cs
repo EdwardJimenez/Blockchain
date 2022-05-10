@@ -10,5 +10,8 @@ using System.Text;
 public interface ISWADNETBlockchain
 {
     [OperationContract]
-    void DoWork();
+    List<EBTittle> Obtener_BTitle_O_statusTitle();
+
+    [OperationContract]
+    void Actualizar_BTitle_A_statusTittle(EBTittle eBTittle);
 }

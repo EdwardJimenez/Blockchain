@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="SWADNETBlockchain" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_ISWADNETBlockchain_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISWADNETBlockchain_Obtener_BTitle_O_statusTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_BTitle_O_statusTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Obtener_BTitle_O_statusTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_BTitle_O_statusTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Actualizar_BTitle_A_statusTittle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BTitle_A_statusTittle" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Actualizar_BTitle_A_statusTittle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BTitle_A_statusTittleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISWADNETBlockchain">
+    <wsdl:operation name="Obtener_BTitle_O_statusTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_BTitle_O_statusTitle" message="tns:ISWADNETBlockchain_Obtener_BTitle_O_statusTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_BTitle_O_statusTitleResponse" message="tns:ISWADNETBlockchain_Obtener_BTitle_O_statusTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BTitle_A_statusTittle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_BTitle_A_statusTittle" message="tns:ISWADNETBlockchain_Actualizar_BTitle_A_statusTittle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_BTitle_A_statusTittleResponse" message="tns:ISWADNETBlockchain_Actualizar_BTitle_A_statusTittle_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISWADNETBlockchain" type="tns:ISWADNETBlockchain">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener_BTitle_O_statusTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Obtener_BTitle_O_statusTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BTitle_A_statusTittle">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Actualizar_BTitle_A_statusTittle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_ISWADNETBlockchain" type="tns:ISWADNETBlockchain">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_ISWADNETBlockchain_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener_BTitle_O_statusTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Obtener_BTitle_O_statusTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BTitle_A_statusTittle">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Actualizar_BTitle_A_statusTittle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SWADNETBlockchain">
+    <wsdl:port name="BasicHttpBinding_ISWADNETBlockchain" binding="tns:BasicHttpBinding_ISWADNETBlockchain">
+      <soap:address location="http://localhost:59383/SWADNETBlockchain.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_ISWADNETBlockchain" binding="tns:BasicHttpsBinding_ISWADNETBlockchain">
+      <soap:address location="https://localhost:44370/SWADNETBlockchain.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

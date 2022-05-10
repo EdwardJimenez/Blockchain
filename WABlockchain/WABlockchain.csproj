@@ -72,16 +72,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Estilo\SEstilo.css" />
-    <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
-    <Content Include="WebForm\MainPage.aspx" />
-    <None Include="Connected Services\SWLNBlockChain\SWLNBlockchain.disco" />
-    <None Include="Connected Services\SWLNBlockChain\configuration91.svcinfo" />
-    <None Include="Connected Services\SWLNBlockChain\configuration.svcinfo" />
-    <None Include="Connected Services\SWLNBlockChain\Reference.svcmap">
+    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain.disco" />
+    <None Include="Connected Services\SWADBlockchainService\configuration91.svcinfo" />
+    <None Include="Connected Services\SWADBlockchainService\configuration.svcinfo" />
+    <None Include="Connected Services\SWADBlockchainService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Estilo\SEstilo.css" />
+    <Content Include="WebForm\BFormularioListaTitulos.aspx" />
+    <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
+    <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
     <Content Include="Estilo\SGridView.css" />
@@ -101,7 +102,7 @@
     <Content Include="WebForm\BFormularioRegistroUsuariosLocales.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\SWLNBlockChain\Reference.cs">
+    <Compile Include="Connected Services\SWADBlockchainService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -117,6 +118,13 @@
       <DependentUpon>MPInicio.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm\BFormularioListaTitulos.aspx.cs">
+      <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioListaTitulos.aspx.designer.cs">
+      <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,10 +148,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SWLNBlockChain\SWLNBlockchain.wsdl" />
-    <None Include="Connected Services\SWLNBlockChain\SWLNBlockchain.xsd">
+    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain.wsdl" />
+    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SWADBlockchainService\SWADNETBlockchain2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\SWADBlockchainService\WABlockchain.SWADBlockchainService.EBTittle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="PaginaMaestra\MPInicio.Master" />
     <None Include="Web.Debug.config">
@@ -161,7 +178,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\SWLNBlockChain\" />
+    <WCFMetadataStorage Include="Connected Services\SWADBlockchainService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

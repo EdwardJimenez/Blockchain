@@ -82,4 +82,42 @@ public class ADBTitle
             throw;
         }
     }
+    /// <summary>
+    /// Acceso a datos mediante Id_Carrera
+    /// </summary>
+    /// <param name="statusTitle"></param>
+    /// <returns Retorna los titulos con estado 4 ></returns>
+    public DTOBTitle Obtener_BTitle_O_statusTitle()
+    {
+        DTOBTitle dtoBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BTittle_statusTittle");
+            BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dtoBTitle;
+    }
+
+    /// <summary>
+    /// Actualizar Title statusTittle
+    /// </summary>
+    public void Actualizar_BTitle_A_statusTittle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "IdTittles", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }

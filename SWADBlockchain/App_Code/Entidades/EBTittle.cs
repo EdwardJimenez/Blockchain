@@ -34,7 +34,8 @@ public class EBTittle
     public string impression { get; set; }
     [DataMember]
     public string idUser { get; set; }
-
+    [DataMember]
+    public string fullName { get; set; }
     public EBTittle()
     {
         IdTittles = string.Empty;
@@ -47,6 +48,11 @@ public class EBTittle
         dateDelivery = string.Empty;
         statusDelivery = string.Empty;
         impression = string.Empty;
-        idUser = string.Empty;  
+        idUser = string.Empty;
+        fullName = string.Empty;
+    }
+    public EBTittle(string status)
+    {
+        statusTitle = status;
     }
 }
