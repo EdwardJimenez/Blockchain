@@ -34,7 +34,7 @@ public class CBTitle
         foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
         {
             eBTitle = new EBTittle();
-            eBTitle.IdTittles = drTitle.IdTittles.ToString();
+            eBTitle.IdTittles = drTitle.IdTittle.ToString();
             eBTitle.fullNameTitulado = drTitle.fullNameT;
             eBTitle.faculty = drTitle.faculty;
             eBTitle.carreer = drTitle.carreer;

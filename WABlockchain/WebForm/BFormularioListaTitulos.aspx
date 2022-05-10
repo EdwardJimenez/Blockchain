@@ -8,21 +8,21 @@
 <legend class="sub">Lista de Solicitudes</legend>
 <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
 <Columns>
-<asp:BoundField DataField="Id_Titulo" ItemStyle-CssClass="hidden">
+<asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
 <HeaderStyle CssClass="hidden" />
 <ItemStyle CssClass="hidden" />
 <FooterStyle CssClass="hidden" />
 </asp:BoundField>
-<asp:BoundField DataField="NombreCompleto" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
-<asp:BoundField DataField="Facultad" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
-<asp:BoundField DataField="Carrera" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+<asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
+<asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+<asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button runat="server" OnClick="btn1_Click" CommandName="Enviar" HeaderText="Enviar" ItemStyle-CssClass="btButton" Text="Enviar" />
                         </ItemTemplate>
                     </asp:TemplateField>
 
-    </Columns>
+</Columns>
 </asp:GridView>
 </fieldset>
 </div>

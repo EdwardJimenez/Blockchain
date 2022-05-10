@@ -16,7 +16,6 @@ namespace WABlockchain.WebForm
             if (!IsPostBack)
             {
                 cargarTitulos();
-
             }
         }
         private void cargarTitulos()
@@ -30,8 +29,9 @@ namespace WABlockchain.WebForm
         protected void btn1_Click(object sender, EventArgs e)
         {
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
-            int s = int.Parse(grvTitulos.Rows[id].Cells[1].Text);
+            int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
             swLNBlockchainClient.Actualizar_ITitle_statusTitle(s.ToString());
+            cargarTitulos();
         }
     }
 }
