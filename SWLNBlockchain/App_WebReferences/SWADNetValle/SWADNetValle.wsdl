@@ -3,24 +3,64 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:59389/SWADNetValle.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59389/SWADNetValle.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59389/SWADNetValle.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ISWADNetValle_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="ISWADNetValle_Obtener_Carrerra_O_ID_Pedro_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_Pedro" />
   </wsdl:message>
-  <wsdl:message name="ISWADNetValle_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="ISWADNetValle_Obtener_Carrerra_O_ID_Pedro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_PedroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNetValle_Obtener_Persona_O_EstudianteL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteL" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNetValle_Obtener_Persona_O_EstudianteL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNetValle_Obtener_Persona_O_Estudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_Estudiante" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNetValle_Obtener_Persona_O_Estudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteResponse" />
   </wsdl:message>
   <wsdl:portType name="ISWADNetValle">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNetValle/DoWork" message="tns:ISWADNetValle_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNetValle/DoWorkResponse" message="tns:ISWADNetValle_DoWork_OutputMessage" />
+    <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNetValle/Obtener_Carrerra_O_ID_Pedro" message="tns:ISWADNetValle_Obtener_Carrerra_O_ID_Pedro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNetValle/Obtener_Carrerra_O_ID_PedroResponse" message="tns:ISWADNetValle_Obtener_Carrerra_O_ID_Pedro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_EstudianteL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNetValle/Obtener_Persona_O_EstudianteL" message="tns:ISWADNetValle_Obtener_Persona_O_EstudianteL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNetValle/Obtener_Persona_O_EstudianteLResponse" message="tns:ISWADNetValle_Obtener_Persona_O_EstudianteL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_Estudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNetValle/Obtener_Persona_O_Estudiante" message="tns:ISWADNetValle_Obtener_Persona_O_Estudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNetValle/Obtener_Persona_O_EstudianteResponse" message="tns:ISWADNetValle_Obtener_Persona_O_Estudiante_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWADNetValle" type="tns:ISWADNetValle">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/ISWADNetValle/DoWork" style="document" />
+    <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
+      <soap:operation soapAction="http://tempuri.org/ISWADNetValle/Obtener_Carrerra_O_ID_Pedro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_EstudianteL">
+      <soap:operation soapAction="http://tempuri.org/ISWADNetValle/Obtener_Persona_O_EstudianteL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_Estudiante">
+      <soap:operation soapAction="http://tempuri.org/ISWADNetValle/Obtener_Persona_O_Estudiante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

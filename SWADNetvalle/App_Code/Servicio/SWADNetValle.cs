@@ -8,7 +8,27 @@ using System.Text;
 // NOTA: puede usar el comando "Cambiar nombre" del menú "Refactorizar" para cambiar el nombre de clase "SWADNetValle" en el código, en svc y en el archivo de configuración a la vez.
 public class SWADNetValle : ISWADNetValle
 {
-    public void DoWork()
+    public ENCareer Obtener_Carrerra_O_ID_Pedro(string id)
     {
+        CNCareer cNCareer = new CNCareer();
+        ENCareer eNCareer = new ENCareer();
+        eNCareer = cNCareer.Obtener_Carrerra_O_ID_Pedro(id);
+        return eNCareer;
+    }
+
+    public ENPerson Obtener_Persona_O_Estudiante(string Rol)
+    {
+        CNPerson cNPerson = new CNPerson();
+        ENPerson eNPersona = new ENPerson();
+        eNPersona = cNPerson.Obtener_Persona_O_Estudiante(Rol);
+        return eNPersona;
+    }
+
+    public List<ENPerson> Obtener_Persona_O_EstudianteL(string Rol)
+    {
+        CNPerson cNPerson = new CNPerson();
+        List<ENPerson> lsteNPersona = new List<ENPerson>();
+        lsteNPersona = cNPerson.Obtener_Persona_O_EstudianteL(Rol);
+        return lsteNPersona;
     }
 }

@@ -81,6 +81,7 @@
     </None>
     <Content Include="Estilo\SEstilo.css" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
+    <Content Include="WebForm\BFormularioListaUsuariosNetValle.aspx" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="WebForm\BFormularioListaTitulos.aspx.designer.cs">
       <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioListaUsuariosNetValle.aspx.cs">
+      <DependentUpon>BFormularioListaUsuariosNetValle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioListaUsuariosNetValle.aspx.designer.cs">
+      <DependentUpon>BFormularioListaUsuariosNetValle.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
