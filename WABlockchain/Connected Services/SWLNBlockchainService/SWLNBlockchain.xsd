@@ -60,4 +60,50 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EBRoluser" nillable="true" type="tns:EBRoluser" />
+  <xs:complexType name="ENPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtCI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCareer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rol" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ENPerson" nillable="true" type="tns:ENPerson" />
+  <xs:complexType name="ArrayOfENPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ENPerson" nillable="true" type="tns:ENPerson" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfENPerson" nillable="true" type="tns:ArrayOfENPerson" />
+  <xs:complexType name="ENCareer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CareerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacultyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCareer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SedeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ENCareer" nillable="true" type="tns:ENCareer" />
+  <xs:complexType name="ArrayOfIUserCareerCompleja">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IUserCareerCompleja" nillable="true" type="tns:IUserCareerCompleja" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIUserCareerCompleja" nillable="true" type="tns:ArrayOfIUserCareerCompleja" />
+  <xs:complexType name="IUserCareerCompleja">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CareerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacultyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCareer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SedeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IUserCareerCompleja" nillable="true" type="tns:IUserCareerCompleja" />
 </xs:schema>

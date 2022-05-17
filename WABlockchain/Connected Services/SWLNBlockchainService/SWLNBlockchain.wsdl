@@ -73,6 +73,30 @@
   <wsdl:message name="ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_OutputMessage">
     <wsdl:part name="parameters" element="tns:SiguienteID_O_NombreTablaSinElCaracterIResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_Estudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_Estudiante" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_Estudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_EstudianteL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteL" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_EstudianteL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_Pedro" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_PedroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Est" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_EstResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISWLNBlockchain">
     <wsdl:operation name="Obtener_User_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_User_O" message="tns:ISWLNBlockchain_Obtener_User_O_InputMessage" />
@@ -117,6 +141,22 @@
     <wsdl:operation name="SiguienteID_O_NombreTablaSinElCaracterI">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterI" message="tns:ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterIResponse" message="tns:ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_Estudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Estudiante" message="tns:ISWLNBlockchain_Obtener_Persona_O_Estudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteResponse" message="tns:ISWLNBlockchain_Obtener_Persona_O_Estudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_EstudianteL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL" message="tns:ISWLNBlockchain_Obtener_Persona_O_EstudianteL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteLResponse" message="tns:ISWLNBlockchain_Obtener_Persona_O_EstudianteL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro" message="tns:ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_PedroResponse" message="tns:ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_EstResponse" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWLNBlockchain" type="tns:ISWLNBlockchain">
@@ -213,6 +253,42 @@
     </wsdl:operation>
     <wsdl:operation name="SiguienteID_O_NombreTablaSinElCaracterI">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_Estudiante">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Estudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_EstudianteL">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

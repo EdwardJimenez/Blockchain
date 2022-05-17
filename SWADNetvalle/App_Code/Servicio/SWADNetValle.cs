@@ -16,19 +16,19 @@ public class SWADNetValle : ISWADNetValle
         return eNCareer;
     }
 
-    public ENPerson Obtener_Persona_O_Estudiante(string Rol)
+    public ENPerson Obtener_Persona_O_Estudiante()
     {
         CNPerson cNPerson = new CNPerson();
         ENPerson eNPersona = new ENPerson();
-        eNPersona = cNPerson.Obtener_Persona_O_Estudiante(Rol);
+        eNPersona = cNPerson.Obtener_Persona_O_Estudiante();
         return eNPersona;
     }
 
-    public List<ENPerson> Obtener_Persona_O_EstudianteL(string Rol)
+    public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
         CNPerson cNPerson = new CNPerson();
         List<ENPerson> lsteNPersona = new List<ENPerson>();
-        lsteNPersona = cNPerson.Obtener_Persona_O_EstudianteL(Rol);
+        lsteNPersona = cNPerson.Obtener_Persona_O_EstudianteL();
         return lsteNPersona;
     }
 }

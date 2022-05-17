@@ -16,9 +16,9 @@ public interface ISWADNetValle
 
     [OperationContract]
 
-    List<ENPerson> Obtener_Persona_O_EstudianteL(string id);
+    List<ENPerson> Obtener_Persona_O_EstudianteL();
 
     [OperationContract]
-    ENPerson Obtener_Persona_O_Estudiante(string Rol);
+    ENPerson Obtener_Persona_O_Estudiante();
 
 }

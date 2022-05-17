@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using SWADBlockChain;
+using SWADNetValle;
 
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "ISWLNBlockchain" en el código y en el archivo de configuración a la vez.
 [ServiceContract]
@@ -45,5 +46,21 @@ public interface ISWLNBlockchain
     string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla);
     [OperationContract]
     string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla);
+    #endregion
+
+    #region NUser
+    [OperationContract]
+    ENPerson Obtener_Persona_O_Estudiante();
+
+    [OperationContract]
+    List<ENPerson> Obtener_Persona_O_EstudianteL();
+    #endregion
+    #region NCareerUniversity
+    [OperationContract]
+    ENCareer Obtener_Carrerra_O_ID_Pedro(string id);
+    #endregion
+    #region IUserCareerCompleja
+    [OperationContract]
+    List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est();
     #endregion
 }

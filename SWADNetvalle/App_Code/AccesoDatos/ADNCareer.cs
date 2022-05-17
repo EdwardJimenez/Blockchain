@@ -36,7 +36,7 @@ public class ADNCareer
         {
             Database BDSWADNETIntUn = SBaseDatos.BDSWADNeTValle;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("NetValle_CareerUniversity_O_Id_Pedro");
-            BDSWADNETIntUn.AddInParameter(dbCommand, "IDCareerUniversity", DbType.String, Id_Carrera);
+            BDSWADNETIntUn.AddInParameter(dbCommand, "id", DbType.String, Id_Carrera);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dTONCareer, "CareerUniversity");
         }
         catch (Exception)

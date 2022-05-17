@@ -12,13 +12,7 @@ public class IUserCareerCompleja
     [DataMember]
     public string IDPerson { get; set; }
     [DataMember]
-    public string FirstName { get; set; }
-    [DataMember]
-    public string SecondName { get; set; }
-    [DataMember]
-    public string LastName { get; set; }
-    [DataMember]
-    public string SecondLastName { get; set; }
+    public string Fullname { get; set; }
     //[DataMember]
     //public string Phone { get; set; }
     //[DataMember]
@@ -47,10 +41,7 @@ public class IUserCareerCompleja
     public IUserCareerCompleja()
     {
         IDPerson = string.Empty;
-        FirstName = string.Empty;
-        SecondName = string.Empty;
-        LastName = string.Empty;
-        SecondLastName = string.Empty;
+        Fullname = string.Empty;
         IDCareer = string.Empty;
         CareerName = string.Empty;
         FacultyName = string.Empty;

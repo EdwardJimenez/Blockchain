@@ -30,12 +30,12 @@ public class ASNetValle
         }
     }
 
-    public ENPerson Obtener_Persona_O_Estudiante(string Rol)
+    public ENPerson Obtener_Persona_O_Estudiante()
     {
         ENPerson eNPerson = new ENPerson();
         try
         {
-            eNPerson = swADNetValle.Obtener_Persona_O_Estudiante(Rol);
+            eNPerson = swADNetValle.Obtener_Persona_O_Estudiante();
             return eNPerson;
         }
         catch (Exception)
@@ -44,12 +44,12 @@ public class ASNetValle
             throw;
         }
     }
-    public List<ENPerson> Obtener_Persona_O_EstudianteL(string Rol)
+    public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
         List<ENPerson> lsteNPerson = new List<ENPerson>();
         try
         {
-            lsteNPerson = swADNetValle.Obtener_Persona_O_EstudianteL(Rol).ToList();
+            lsteNPerson = swADNetValle.Obtener_Persona_O_EstudianteL().ToList();
             return lsteNPerson;
         }
         catch (Exception)

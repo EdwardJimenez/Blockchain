@@ -15,11 +15,11 @@ public class CNPerson
     }
 
 
-    public ENPerson Obtener_Persona_O_Estudiante(string Rol)
+    public ENPerson Obtener_Persona_O_Estudiante()
     {
         ENPerson eNPersona = new ENPerson();
         ENPerson NPersona = new ENPerson();
-        DTONPerson dTONPerson = aDNPerson.Obtener_Persona_O_Estudiante(Rol);
+        DTONPerson dTONPerson = aDNPerson.Obtener_Persona_O_Estudiante();
         foreach (DTONPerson.PersonRow drPersona in dTONPerson.Person.Rows)
         {
             eNPersona = new ENPerson();
@@ -34,11 +34,11 @@ public class CNPerson
         return NPersona;
     }
 
-    public List<ENPerson> Obtener_Persona_O_EstudianteL(string Rol)
+    public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
         ENPerson eNPersona = new ENPerson();
         List<ENPerson> lstNPersona = new List<ENPerson>();
-        DTONPerson dTONPerson = aDNPerson.Obtener_Persona_O_Estudiante(Rol);
+        DTONPerson dTONPerson = aDNPerson.Obtener_Persona_O_Estudiante();
         foreach (DTONPerson.PersonRow drPersona in dTONPerson.Person.Rows)
         {
             eNPersona = new ENPerson();

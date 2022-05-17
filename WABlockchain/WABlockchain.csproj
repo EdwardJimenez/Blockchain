@@ -176,6 +176,15 @@
     <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.EBTittle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.IUserCareerCompleja.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.ENCareer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.ENPerson.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="PaginaMaestra\MPInicio.Master" />
     <None Include="Web.Debug.config">

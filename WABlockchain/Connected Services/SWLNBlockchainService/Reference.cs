@@ -532,6 +532,397 @@ namespace WABlockchain.SWLNBlockchainService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ENPerson", Namespace="http://schemas.datacontract.org/2004/07/")]
+    [System.SerializableAttribute()]
+    public partial class ENPerson : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExtCIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FullnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDCareerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RolField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CI {
+            get {
+                return this.CIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CIField, value) != true)) {
+                    this.CIField = value;
+                    this.RaisePropertyChanged("CI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExtCI {
+            get {
+                return this.ExtCIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExtCIField, value) != true)) {
+                    this.ExtCIField = value;
+                    this.RaisePropertyChanged("ExtCI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fullname {
+            get {
+                return this.FullnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullnameField, value) != true)) {
+                    this.FullnameField = value;
+                    this.RaisePropertyChanged("Fullname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IDCareer {
+            get {
+                return this.IDCareerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDCareerField, value) != true)) {
+                    this.IDCareerField = value;
+                    this.RaisePropertyChanged("IDCareer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IDPerson {
+            get {
+                return this.IDPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDPersonField, value) != true)) {
+                    this.IDPersonField = value;
+                    this.RaisePropertyChanged("IDPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mail {
+            get {
+                return this.MailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MailField, value) != true)) {
+                    this.MailField = value;
+                    this.RaisePropertyChanged("Mail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Rol {
+            get {
+                return this.RolField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolField, value) != true)) {
+                    this.RolField = value;
+                    this.RaisePropertyChanged("Rol");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ENCareer", Namespace="http://schemas.datacontract.org/2004/07/")]
+    [System.SerializableAttribute()]
+    public partial class ENCareer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CareerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FacultyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDCareerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SedeNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CareerName {
+            get {
+                return this.CareerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CareerNameField, value) != true)) {
+                    this.CareerNameField = value;
+                    this.RaisePropertyChanged("CareerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FacultyName {
+            get {
+                return this.FacultyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FacultyNameField, value) != true)) {
+                    this.FacultyNameField = value;
+                    this.RaisePropertyChanged("FacultyName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IDCareer {
+            get {
+                return this.IDCareerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDCareerField, value) != true)) {
+                    this.IDCareerField = value;
+                    this.RaisePropertyChanged("IDCareer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SedeName {
+            get {
+                return this.SedeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SedeNameField, value) != true)) {
+                    this.SedeNameField = value;
+                    this.RaisePropertyChanged("SedeName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IUserCareerCompleja", Namespace="http://schemas.datacontract.org/2004/07/")]
+    [System.SerializableAttribute()]
+    public partial class IUserCareerCompleja : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CareerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FacultyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FullnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDCareerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SedeNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CareerName {
+            get {
+                return this.CareerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CareerNameField, value) != true)) {
+                    this.CareerNameField = value;
+                    this.RaisePropertyChanged("CareerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FacultyName {
+            get {
+                return this.FacultyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FacultyNameField, value) != true)) {
+                    this.FacultyNameField = value;
+                    this.RaisePropertyChanged("FacultyName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fullname {
+            get {
+                return this.FullnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullnameField, value) != true)) {
+                    this.FullnameField = value;
+                    this.RaisePropertyChanged("Fullname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IDCareer {
+            get {
+                return this.IDCareerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDCareerField, value) != true)) {
+                    this.IDCareerField = value;
+                    this.RaisePropertyChanged("IDCareer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IDPerson {
+            get {
+                return this.IDPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDPersonField, value) != true)) {
+                    this.IDPersonField = value;
+                    this.RaisePropertyChanged("IDPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SedeName {
+            get {
+                return this.SedeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SedeNameField, value) != true)) {
+                    this.SedeNameField = value;
+                    this.RaisePropertyChanged("SedeName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SWLNBlockchainService.ISWLNBlockchain")]
     public interface ISWLNBlockchain {
@@ -603,6 +994,30 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterI", ReplyAction="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterIRespons" +
             "e")]
         System.Threading.Tasks.Task<string> SiguienteID_O_NombreTablaSinElCaracterIAsync(string NombreTabla);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Estudiante", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteResponse")]
+        WABlockchain.SWLNBlockchainService.ENPerson Obtener_Persona_O_Estudiante();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Estudiante", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson> Obtener_Persona_O_EstudianteAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteLResponse")]
+        WABlockchain.SWLNBlockchainService.ENPerson[] Obtener_Persona_O_EstudianteL();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteLResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_O_EstudianteLAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_PedroResponse")]
+        WABlockchain.SWLNBlockchainService.ENCareer Obtener_Carrerra_O_ID_Pedro(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_PedroResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENCareer> Obtener_Carrerra_O_ID_PedroAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_EstResponse")]
+        WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_EstResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_EstAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -718,6 +1133,38 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task<string> SiguienteID_O_NombreTablaSinElCaracterIAsync(string NombreTabla) {
             return base.Channel.SiguienteID_O_NombreTablaSinElCaracterIAsync(NombreTabla);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.ENPerson Obtener_Persona_O_Estudiante() {
+            return base.Channel.Obtener_Persona_O_Estudiante();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson> Obtener_Persona_O_EstudianteAsync() {
+            return base.Channel.Obtener_Persona_O_EstudianteAsync();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.ENPerson[] Obtener_Persona_O_EstudianteL() {
+            return base.Channel.Obtener_Persona_O_EstudianteL();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_O_EstudianteLAsync() {
+            return base.Channel.Obtener_Persona_O_EstudianteLAsync();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.ENCareer Obtener_Carrerra_O_ID_Pedro(string id) {
+            return base.Channel.Obtener_Carrerra_O_ID_Pedro(id);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENCareer> Obtener_Carrerra_O_ID_PedroAsync(string id) {
+            return base.Channel.Obtener_Carrerra_O_ID_PedroAsync(id);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est() {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_EstAsync() {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_EstAsync();
         }
     }
 }

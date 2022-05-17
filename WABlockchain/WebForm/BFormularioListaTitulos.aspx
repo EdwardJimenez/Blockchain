@@ -6,7 +6,7 @@
 <div>
 <fieldset id="field">
 <legend class="sub">Lista de Solicitudes</legend>
-<asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
+<asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" OnSelectedIndexChanged="grvTitulos_SelectedIndexChanged">
 <Columns>
 <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
 <HeaderStyle CssClass="hidden" />

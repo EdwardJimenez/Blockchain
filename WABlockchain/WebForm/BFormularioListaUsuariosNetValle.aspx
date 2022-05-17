@@ -6,16 +6,20 @@
         <div>
 <fieldset id="field">
 <legend class="sub">Lista de Solicitudes</legend>
-<asp:GridView ID="grvUsersNetvalle" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
+<asp:GridView ID="grvUsersNetvalle" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" OnSelectedIndexChanged="grvUsersNetvalle_SelectedIndexChanged">
 <Columns>
 <asp:BoundField DataField="IDPerson" ItemStyle-CssClass="hidden">
 <HeaderStyle CssClass="hidden" />
 <ItemStyle CssClass="hidden" />
 <FooterStyle CssClass="hidden" />
+
 </asp:BoundField>
-<asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
-<asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
-<asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+<asp:BoundField DataField="Fullname" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
+<asp:BoundField DataField="IDCareer" HeaderStyle-CssClass="id" HeaderText="ID CARRERA" ItemStyle-CssClass="itId" SortExpression="id" />
+<asp:BoundField DataField="CareerName" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+<asp:BoundField DataField="FacultyName" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+<asp:BoundField DataField="SedeName" HeaderStyle-CssClass="sede" HeaderText="SEDE" ItemStyle-CssClass="itSede" SortExpression="sede" />
+
     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button runat="server" OnClick="btn1_Click" CommandName="Enviar" HeaderText="Enviar" ItemStyle-CssClass="btButton" Text="Enviar" />

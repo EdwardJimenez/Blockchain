@@ -1,4 +1,5 @@
 ﻿using SWADBlockChain;
+using SWADNetValle;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,4 +83,37 @@ public class SWLNBlockchain : ISWLNBlockchain
         return cSolicitudIntercambio.SiguienteID_O_NombreTablaSinElCaracterI(NombreTabla);
     }
     #endregion
+
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est()
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est();
+        return lstIUserCareerCompleja;
+
+    }
+
+    public ENPerson Obtener_Persona_O_Estudiante()
+    {
+        ENPerson eNPerson = new ENPerson();
+        CNetValle cNetValle = new CNetValle();
+        cNetValle.Obtener_Persona_O_Estudiante();
+        return eNPerson;
+    }
+
+    public List<ENPerson> Obtener_Persona_O_EstudianteL()
+    {
+        List<ENPerson> ListeNPerson = new List<ENPerson>();
+        CNetValle cNetValle = new CNetValle();
+        cNetValle.Obtener_Persona_O_EstudianteL();
+        return ListeNPerson;
+    }
+
+    public ENCareer Obtener_Carrerra_O_ID_Pedro(string id)
+    {
+        ENCareer eNCareer = new ENCareer();
+        CNetValle cNetValle = new CNetValle();
+        cNetValle.Obtener_Carrerra_O_ID_Pedro(id);
+        return eNCareer;    
+    }
 }

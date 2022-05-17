@@ -14,14 +14,13 @@ public class ADNPerson
 
     //Pedro Conde: Estoy usando un procedimiento almacenado creado por mi para probar
 
-    public DTONPerson Obtener_Persona_O_Estudiante(string rol_person)
+    public DTONPerson Obtener_Persona_O_Estudiante()
     {
         DTONPerson dTONPerson = new DTONPerson();
         try
         {
             Database BDSWADNETIntUn = SBaseDatos.BDSWADNeTValle;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("NetValle_Person_O_Estudent_Pedro");
-            BDSWADNETIntUn.AddInParameter(dbCommand, "Rol_Person", DbType.String, rol_person);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dTONPerson, "Person");
         }
         catch (Exception)
