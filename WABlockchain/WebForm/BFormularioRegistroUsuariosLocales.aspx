@@ -6,8 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="../Estilos/Estilo.css" rel="stylesheet" />
-    <link href="../Estilos/EstiloUsuariosLocales.css" rel="stylesheet" />
+    <link href="../Estilo/Estilo.css" rel="stylesheet" />
+    <link href="../Estilo/EstiloUsuariosLocales.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">

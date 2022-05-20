@@ -9,6 +9,44 @@ using System.Text;
 [ServiceContract]
 public interface ISWADNETBlockchain
 {
+    
+    #region Tabla : BUser
     [OperationContract]
-    void DoWork();
+    List<EBUser> Obtener_User_O();
+    [OperationContract]
+    EBUser Obtener_BUser_O_iduser(string Id_User);
+    [OperationContract]
+    void Insertar_BUser_I_idUser_email(EBUser eBUser);
+    [OperationContract]
+    void Actualizar_BUser_I_idUser_email(EBUser eBUser);
+
+    [OperationContract]
+    void Insertar_BUser_I(EBUser bUser);
+    #endregion
+
+    #region Tabla BTittle
+
+    [OperationContract]
+    void Insertar_BTitle_I_idTitle_faculty(EBTittle eBTittle);
+
+    [OperationContract]
+    List<EBTittle> Obtener_Title_O();
+
+    [OperationContract]
+    void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
+
+    #endregion
+
+    #region Helper
+    [OperationContract]
+    string UltimoID_O_NombreTablaSinElCaracterI(string NombreTabla);
+    [OperationContract]
+    string SiguienteID_O_NombreTablaSinElCaracterI(string NombreTabla);
+    #endregion
+
+    #region RolUser
+    [OperationContract]
+    List<EBRoluser> Obtener_RolUser_O();
+    #endregion
+
 }

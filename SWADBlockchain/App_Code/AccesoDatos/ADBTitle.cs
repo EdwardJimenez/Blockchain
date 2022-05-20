@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Web;
-
+using Microsoft.Practices.EnterpriseLibrary.Common;
+using System.Data;
 /// <summary>
 /// Descripción breve de ADBTitle
 /// </summary>
@@ -15,9 +16,9 @@ public class ADBTitle
         DTOBTitle dTOBTitle = new DTOBTitle();
         try
         {
-            Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTitle"); //Select * from Title
-            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "Title");
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_statusTittle"); //Select * from Title
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
         }
         catch (Exception)
         {
@@ -29,23 +30,73 @@ public class ADBTitle
     /// <summary>
     /// Acceso a datos mediante Id_Carrera
     /// </summary>
-    /// <param name="Id_Carrera"></param>
-    /// <returns Retorna una carrera></returns>
-    /* public DTOICarrera Obtener_ICarrera_O_CarreraID(string Id_Carrera)
+    /// <param name="Id_title"></param>
+    /// <returns Retorna una titulo></returns>
+    public DTOBTitle Obtener_BTitle_O_idTitle(string Id_title)
     {
-        DTOICarrera dtoICarrera = new DTOICarrera();
+        DTOBTitle dtoBTitle = new DTOBTitle();
         try
         {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
-            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("ICarrera_O_CarreraID");
-            BDSWADNETIntUn.AddInParameter(dbCommand, "CarreraID", DbType.String, Id_Carrera);
-            BDSWADNETIntUn.LoadDataSet(dbCommand, dtoICarrera, "ICarrera");
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BTitle_O_idTitle");
+            BDSWADNETIntUn.AddInParameter(dbCommand, "idTitle", DbType.String, Id_title);
+            BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBTitle, "BTitle");
         }
         catch (Exception)
         {
             throw;
         }
-        return dtoICarrera;
-    }*/ 
+        return dtoBTitle;
+    }
     //  Corregir esto!!,esta bien que copies pero no lo subas asi, genera errores en el github
+
+    public void Insertar_BTitle_I_idTitle_faculty(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTitle_I_idTitle_faculty");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title
+    /// </summary>
+    public void Actualizar_BTitle_A_idTitle_faculty(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTitle_A_idTitle_faculty");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idTitle", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle.faculty);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title statusTitleToFive
+    /// </summary>
+    public void Actualizar_ITitle_statusTitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }

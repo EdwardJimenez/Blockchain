@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WABlockchain", "WABlockchain\WABlockchain.csproj", "{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5F063329-2A55-4A83-BAA6-C3A4B23687C7} = {5F063329-2A55-4A83-BAA6-C3A4B23687C7}
+		{1F3FA1C2-1120-4906-957F-62BF345AC667} = {1F3FA1C2-1120-4906-957F-62BF345AC667}
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADBlockchain", "SWADBlockchain\", "{1F3FA1C2-1120-4906-957F-62BF345AC667}"
@@ -109,5 +110,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1FD204E-BC5D-4285-929F-733F6764B615}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
