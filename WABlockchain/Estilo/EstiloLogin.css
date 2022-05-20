@@ -1,0 +1,44 @@
+﻿.IniarSesion {
+    text-align: center;
+    font-size: medium;
+    border-radius: 2px;
+    font-size: xx-small;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    background-color: #64072D;
+    color: #ffffff;
+    border: 1px solid #610827;
+    font-size: 15px;
+    padding: 6px 23px 6px 23px;
+}
+
+.nombre {
+    font-size: medium;
+    margin-top: 50px;
+    border-radius: 6px;
+    border: 1px solid;
+    text-align: center;
+    font-family: Helvetica,Futura,Arial,Verdana,sans-serif;
+}
+
+.password {
+    margin-top: 50px;
+    text-align: center;
+    font-size: medium;
+    border-radius: 6px;
+    border: 1px solid;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+}
+
+.cargar {
+    font-size: small;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-top: 20px;
+    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
+    background-color: #64072D;
+    color: #ffffff;
+}
+
+.botons, password, cargar {
+    text-align: center;
+}

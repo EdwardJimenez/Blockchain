@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WABlockchain</RootNamespace>
     <AssemblyName>WABlockchain</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44370</IISExpressSSLPort>
@@ -79,10 +79,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Estilo\EstiloLogin.css" />
+    <Content Include="Estilo\EstiloMasterPage\EstiloMPLogin.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloMenuPrincipal.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloRegistroTitulo.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloRegistroUsuario.css" />
     <Content Include="Estilo\SEstilo.css" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaUsuariosNetValle.aspx" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
+    <Content Include="WebForm\BLogin.aspx" />
+    <Content Include="WebForm\BMenuPrincipal.aspx" />
+    <Content Include="WebForm\BRegistroUsuario.aspx" />
+    <Content Include="WebForm\BResgistroTitulo.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
@@ -147,6 +156,34 @@
     </Compile>
     <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BLogin.aspx.cs">
+      <DependentUpon>BLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BLogin.aspx.designer.cs">
+      <DependentUpon>BLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BMenuPrincipal.aspx.cs">
+      <DependentUpon>BMenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BMenuPrincipal.aspx.designer.cs">
+      <DependentUpon>BMenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BRegistroUsuario.aspx.cs">
+      <DependentUpon>BRegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BRegistroUsuario.aspx.designer.cs">
+      <DependentUpon>BRegistroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BResgistroTitulo.aspx.cs">
+      <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BResgistroTitulo.aspx.designer.cs">
+      <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
