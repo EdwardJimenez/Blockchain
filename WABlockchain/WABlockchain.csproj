@@ -84,10 +84,14 @@
     <Content Include="Estilo\EstiloRegistros\EstiloMenuPrincipal.css" />
     <Content Include="Estilo\EstiloRegistros\EstiloRegistroTitulo.css" />
     <Content Include="Estilo\EstiloRegistros\EstiloRegistroUsuario.css" />
+    <Content Include="Estilo\Estilos.css" />
+    <Content Include="Estilo\EstilosUsuariosNetvalle.css" />
     <Content Include="Estilo\SEstilo.css" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaUsuariosNetValle.aspx" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
+    <Content Include="WebForm\BFormularioRegistroTitulos.aspx" />
+    <Content Include="WebForm\BFormularioRegistroUsuariosNetvalle.aspx" />
     <Content Include="WebForm\BLogin.aspx" />
     <Content Include="WebForm\BMenuPrincipal.aspx" />
     <Content Include="WebForm\BRegistroUsuario.aspx" />
@@ -150,12 +154,26 @@
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm\BFormularioRegistroTitulos.aspx.cs">
+      <DependentUpon>BFormularioRegistroTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioRegistroTitulos.aspx.designer.cs">
+      <DependentUpon>BFormularioRegistroTitulos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.cs">
       <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioRegistroUsuariosNetvalle.aspx.cs">
+      <DependentUpon>BFormularioRegistroUsuariosNetvalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioRegistroUsuariosNetvalle.aspx.designer.cs">
+      <DependentUpon>BFormularioRegistroUsuariosNetvalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BLogin.aspx.cs">
       <DependentUpon>BLogin.aspx</DependentUpon>
