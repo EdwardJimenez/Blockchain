@@ -1,20 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/PaginaMaestra/MPInicio.Master" CodeBehind="MainPage.aspx.cs" Inherits="WABlockchain.WebForm.MainPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Estilo/SNotificacion.css" rel="stylesheet" />
-<style type="text/css">
-    .auto-style1 {
-        height: 25px;
-    }
-    .auto-style2 {
-        /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
-        font-size: 11px; /* font-style: italic; */;
-        padding: 6px;
-        margin: 5px;
-        height: 25px;
-        width: 114px;
-    }
-</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
@@ -29,8 +15,21 @@
 
 					<td style="width: 70%; height: 100%; vertical-align: top">
                         <asp:TextBox ID="TextBox1" runat="server" Width="280px"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server" BackColor="#681E3C" ForeColor="White" Text="Buscar" Width="117px" />
-                        <asp:GridView ID="GridView1" runat="server" Height="375px" Width="574px">
+                        <asp:Button ID="btnBuscar" runat="server" BackColor="#681E3C" ForeColor="White" Text="Buscar" Width="117px" OnClick="btnBuscar_Click" />
+							<div> 
+								<p></div>
+                        <asp:GridView ID="grvTitulados" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" HorizontalAlign="Center">
+							<Columns>
+								<asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
+								<HeaderStyle CssClass="hidden" />
+								<ItemStyle CssClass="hidden" />
+								<FooterStyle CssClass="hidden" />
+								</asp:BoundField>
+								<asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
+								<asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+								<asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+
+							</Columns>
                         </asp:GridView>
                     </td>
 				</tr>

@@ -45,6 +45,16 @@ public class SWLNBlockchain : ISWLNBlockchain
         eBTitle = cUserBlockchain.Obtener_Title_O().ToList();
         return eBTitle;
     }
+
+    public List<EBTittle> Obtener_Title_O_ListGraduates()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Obtener_Title_O_ListGraduates().ToList();
+        return eBTitle;
+    }
+
     public void Actualizar_ITitle_statusTitle(string Id_Title)
     {
         CUserBlockchain cUserBlockchain = new CUserBlockchain();

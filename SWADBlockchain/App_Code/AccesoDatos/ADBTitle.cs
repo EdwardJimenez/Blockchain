@@ -27,6 +27,24 @@ public class ADBTitle
         }
         return dTOBTitle;
     }
+
+    public DTOBTitle Obtener_Title_O_ListGraduates()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_ListGraduates"); //Select * from Title in general
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dTOBTitle;
+    }
+
+
     /// <summary>
     /// Acceso a datos mediante Id_Carrera
     /// </summary>
@@ -48,7 +66,23 @@ public class ADBTitle
         }
         return dtoBTitle;
     }
-    //  Corregir esto!!,esta bien que copies pero no lo subas asi, genera errores en el github
+
+    public DTOBTitle Obtener_BTitle_O_career(string career)
+    {
+        DTOBTitle dtoBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("Obtener_BTitle_O_career");
+            BDSWADNETIntUn.AddInParameter(dbCommand, "idTitle", DbType.String, career);
+            BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBTitle, "BTitle");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dtoBTitle;
+    }
 
     public void Insertar_BTitle_I_idTitle_faculty(EBTittle bTitle)
     {

@@ -95,6 +95,20 @@ public class ASBlockchain
         }
     }
 
+    public List<EBTittle> Obtener_Title_O_ListGraduates()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Obtener_Title_O_ListGraduates().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         try

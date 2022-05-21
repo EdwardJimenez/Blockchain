@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="8c898466-b98e-4882-83d0-37d35e11d139" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8c898466-b98e-4882-83d0-37d35e11d139" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,9 +22,9 @@
     <MetadataSource Address="http://localhost:59389/SWADNetValle.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="SWADNetValle.wsdl" MetadataType="Wsdl" ID="d6b81646-0fe4-4db8-9405-cd71718ec127" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?wsdl" />
     <MetadataFile FileName="SWADNetValle.xsd" MetadataType="Schema" ID="02493f5d-dd54-41f1-ab34-1af497f470a0" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?xsd=xsd0" />
     <MetadataFile FileName="SWADNetValle.disco" MetadataType="Disco" ID="1f162fdf-9977-4b9b-b4e4-0d1d2302e37a" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?disco" />
-    <MetadataFile FileName="SWADNetValle.wsdl" MetadataType="Wsdl" ID="d6b81646-0fe4-4db8-9405-cd71718ec127" SourceId="1" SourceUrl="http://localhost:59389/SWADNetValle.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

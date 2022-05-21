@@ -31,6 +31,9 @@ public interface ISWLNBlockchain
     List<EBTittle> Obtener_Title_O();
 
     [OperationContract]
+    List<EBTittle> Obtener_Title_O_ListGraduates();
+
+    [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
     #endregion
 

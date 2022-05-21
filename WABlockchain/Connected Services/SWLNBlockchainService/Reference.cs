@@ -578,6 +578,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_OResponse")]
         System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Obtener_Title_OAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduates", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduatesResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O_ListGraduates();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduates", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduatesResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Obtener_Title_O_ListGraduatesAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse")]
         void Actualizar_ITitle_statusTitle(string Id_Title);
         
@@ -686,6 +692,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Obtener_Title_OAsync() {
             return base.Channel.Obtener_Title_OAsync();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O_ListGraduates() {
+            return base.Channel.Obtener_Title_O_ListGraduates();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Obtener_Title_O_ListGraduatesAsync() {
+            return base.Channel.Obtener_Title_O_ListGraduatesAsync();
         }
         
         public void Actualizar_ITitle_statusTitle(string Id_Title) {
