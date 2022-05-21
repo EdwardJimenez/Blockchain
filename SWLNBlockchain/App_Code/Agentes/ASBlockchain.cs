@@ -130,6 +130,17 @@ public class ASBlockchain
             throw;
         }
     }
+    public void Insertar_BTitle(EBTittle ebTittle)
+    {
+        try
+        {
+            swADNETBlockchain.Insertar_BTitle(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     #endregion
     #region RolUser
     public List<EBRoluser> Obtener_RolUser_O()

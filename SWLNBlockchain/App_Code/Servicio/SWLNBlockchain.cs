@@ -64,6 +64,12 @@ public class SWLNBlockchain : ISWLNBlockchain
         cTittle.Insertar_BTitle_I_idTitle_faculty(faculty, carreer, statusTittle, dateDelivery, statusDelivery, idUser, fullnameTitulado);
     }
 
+    public void Insertar_BTitle(string idTittle,string faculty, string carreer, string idUser, string fullnameTitulado)
+    {
+        CUserBlockchain cTittle = new CUserBlockchain();
+        cTittle.Insertar_BTitle(idTittle,faculty, carreer, idUser, fullnameTitulado);
+    }
+
     #endregion
 
     #region RolUser

@@ -30,6 +30,9 @@ public interface ISWADNETBlockchain
     void Insertar_BTitle_I_idTitle_faculty(EBTittle eBTittle);
 
     [OperationContract]
+    void Insertar_BTitle(EBTittle eBTittle);
+
+    [OperationContract]
     List<EBTittle> Obtener_Title_O();
 
     [OperationContract]

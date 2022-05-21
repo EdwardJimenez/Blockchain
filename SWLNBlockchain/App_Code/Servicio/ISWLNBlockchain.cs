@@ -29,6 +29,9 @@ public interface ISWLNBlockchain
     void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado);
 
     [OperationContract]
+    void Insertar_BTitle(string idTittle,string faculty, string carreer, string idUser, string fullnameTitulado);
+
+    [OperationContract]
     List<EBTittle> Obtener_Title_O();
 
     [OperationContract]

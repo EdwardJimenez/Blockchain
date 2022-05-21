@@ -20,6 +20,10 @@ public class CBTitle
     {
         aDBTitle.Insertar_BTitle_I_idTitle_faculty(bTitle);
     }
+    public void Insertar_BTitle(EBTittle bTitle)
+    {
+        aDBTitle.Insertar_BTitle(bTitle);
+    }
 
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {

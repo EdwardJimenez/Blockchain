@@ -975,6 +975,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse")]
         System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitleResponse")]
+        void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitleResponse")]
+        System.Threading.Tasks.Task Actualizar_ITitleAsync(string Id_Title, string carreer, string faculty, string fullName);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse")]
         WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O();
         
@@ -1109,6 +1115,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title) {
             return base.Channel.Actualizar_ITitle_statusTitleAsync(Id_Title);
+        }
+        
+        public void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName) {
+            base.Channel.Actualizar_ITitle(Id_Title, carreer, faculty, fullName);
+        }
+        
+        public System.Threading.Tasks.Task Actualizar_ITitleAsync(string Id_Title, string carreer, string faculty, string fullName) {
+            return base.Channel.Actualizar_ITitleAsync(Id_Title, carreer, faculty, fullName);
         }
         
         public WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O() {

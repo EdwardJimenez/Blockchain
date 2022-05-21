@@ -135,6 +135,25 @@ public class CUserBlockchain
             throw;
         }
     }
+    public void Insertar_BTitle(string id,string faculty, string carreer, string idUser, string fullnameTitulado)
+    {
+        EBTittle ebTittle = new EBTittle();
+        try
+        {
+            ebTittle.IdTittles = id;
+            ebTittle.faculty = faculty;
+            ebTittle.carreer = carreer;
+            ebTittle.idUser = idUser;
+            ebTittle.fullNameTitulado = fullnameTitulado;
+
+
+            asBlockchain.Insertar_BTitle(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     #endregion
 
     #region RolUser
