@@ -23,7 +23,7 @@ public class ADBUser
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
 
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O_Select"); //Select rol from User
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O_Search"); //Select rol from User
             BDSWADBlockchain.AddInParameter(dbCommand, "email", DbType.String, email);
             BDSWADBlockchain.AddInParameter(dbCommand, "password", DbType.String, password);
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBUser, "BUser");
