@@ -99,4 +99,24 @@ public class ADBTitle
             throw;
         }
     }
+    /// <summary>
+    /// Actualizar Title
+    /// </summary>
+    public void Actualizar_ITitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_Update");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle.faculty);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "carreer", DbType.String, bTitle.carreer);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullNameT", DbType.String, bTitle.fullNameTitulado);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }

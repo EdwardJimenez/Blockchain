@@ -17,7 +17,7 @@ public interface ISWLNBlockchain
     [OperationContract]
     EBUser btener_BUser_O_iduser(string Id_Carrera);
     [OperationContract]
-    void Insertar_BUser_I_idUser_email(string Id_User, string email, string password,string status ,string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+    void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     [OperationContract]
     void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     [OperationContract]
@@ -33,6 +33,9 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
+    
+    [OperationContract]
+    void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName);
     #endregion
 
     #region RolUser
@@ -63,4 +66,5 @@ public interface ISWLNBlockchain
     [OperationContract]
     List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est();
     #endregion
+
 }
