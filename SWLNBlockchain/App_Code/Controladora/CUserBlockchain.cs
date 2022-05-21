@@ -17,8 +17,20 @@ public class CUserBlockchain
         asBlockchain = new ASBlockchain();
     }
     #region BUser
-   
 
+    public EBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        EBUser eBUser = new EBUser();
+        try
+        {
+            eBUser = asBlockchain.Obtener_RolUser_O_Search(email, password);
+            return eBUser;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public void Insertar_BUser_I_idUser_email(string Id_User,string email,string password,string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci , string description, string ciExtra)
     {
         EBUser ebUser = new EBUser();

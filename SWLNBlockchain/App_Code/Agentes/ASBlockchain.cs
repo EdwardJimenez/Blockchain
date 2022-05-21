@@ -16,6 +16,19 @@ public class ASBlockchain
     }
 
     #region BUser
+    public EBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        EBUser eUser = new EBUser();
+        try
+        {
+            eUser = swADNETBlockchain.Obtener_RolUser_O_Search(email, password);
+            return eUser;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public List<EBUser> Obtener_User_O()
     {
         List<EBUser> lstEiCarrera = new List<EBUser>();

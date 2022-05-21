@@ -927,6 +927,12 @@ namespace WABlockchain.SWLNBlockchainService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SWLNBlockchainService.ISWLNBlockchain")]
     public interface ISWLNBlockchain {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_Search", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_SearchResponse")]
+        WABlockchain.SWLNBlockchainService.EBUser Obtener_RolUser_O_Search(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_Search", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_SearchResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBUser> Obtener_RolUser_O_SearchAsync(string email, string password);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_User_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_User_OResponse")]
         WABlockchain.SWLNBlockchainService.EBUser[] Obtener_User_O();
         
@@ -1045,6 +1051,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public SWLNBlockchainClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBUser Obtener_RolUser_O_Search(string email, string password) {
+            return base.Channel.Obtener_RolUser_O_Search(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBUser> Obtener_RolUser_O_SearchAsync(string email, string password) {
+            return base.Channel.Obtener_RolUser_O_SearchAsync(email, password);
         }
         
         public WABlockchain.SWLNBlockchainService.EBUser[] Obtener_User_O() {

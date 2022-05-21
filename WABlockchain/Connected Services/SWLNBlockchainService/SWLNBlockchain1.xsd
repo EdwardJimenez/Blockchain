@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:element name="Obtener_RolUser_O_Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_RolUser_O_SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_O_SearchResult" nillable="true" type="q1:EBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_User_O">
     <xs:complexType>
       <xs:sequence />
@@ -9,7 +24,7 @@
   <xs:element name="Obtener_User_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_User_OResult" nillable="true" type="q1:ArrayOfEBUser" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_User_OResult" nillable="true" type="q2:ArrayOfEBUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -23,7 +38,7 @@
   <xs:element name="btener_BUser_O_iduserResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="btener_BUser_O_iduserResult" nillable="true" type="q2:EBUser" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="btener_BUser_O_iduserResult" nillable="true" type="q3:EBUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -113,7 +128,7 @@
   <xs:element name="Obtener_Title_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_OResult" nillable="true" type="q3:ArrayOfEBTittle" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_OResult" nillable="true" type="q4:ArrayOfEBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -137,7 +152,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q4:ArrayOfEBRoluser" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q5:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -177,7 +192,7 @@
   <xs:element name="Obtener_Persona_O_EstudianteResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteResult" nillable="true" type="q5:ENPerson" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteResult" nillable="true" type="q6:ENPerson" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -189,7 +204,7 @@
   <xs:element name="Obtener_Persona_O_EstudianteLResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteLResult" nillable="true" type="q6:ArrayOfENPerson" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteLResult" nillable="true" type="q7:ArrayOfENPerson" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -203,7 +218,7 @@
   <xs:element name="Obtener_Carrerra_O_ID_PedroResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Carrerra_O_ID_PedroResult" nillable="true" type="q7:ENCareer" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Carrerra_O_ID_PedroResult" nillable="true" type="q8:ENCareer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -215,7 +230,7 @@
   <xs:element name="U_Obtener_UserCareerComplejas_O_EstResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_EstResult" nillable="true" type="q8:ArrayOfIUserCareerCompleja" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_EstResult" nillable="true" type="q9:ArrayOfIUserCareerCompleja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

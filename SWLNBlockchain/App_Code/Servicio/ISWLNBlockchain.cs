@@ -13,13 +13,20 @@ public interface ISWLNBlockchain
 {
     #region BUser
     [OperationContract]
+    EBUser Obtener_RolUser_O_Search(string email, string password);
+
+    [OperationContract]
     List<EBUser> Obtener_User_O();
+
     [OperationContract]
     EBUser btener_BUser_O_iduser(string Id_Carrera);
+
     [OperationContract]
     void Insertar_BUser_I_idUser_email(string Id_User, string email, string password,string status ,string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+    
     [OperationContract]
     void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+    
     [OperationContract]
     void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
     #endregion

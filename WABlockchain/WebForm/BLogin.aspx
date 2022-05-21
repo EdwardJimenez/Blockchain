@@ -101,9 +101,10 @@
                 <div class="botons">
                     <asp:TextBox CssClass="nombre" ID="txtNombre" placeholder="User Name" runat="server" Height="37px" Width="202px"></asp:TextBox>
                     <br />
+                    <asp:Label ID="z" runat="server" Text="Label"></asp:Label>
                     <asp:TextBox CssClass="password" ID="txtPassword" placeholder="Password" runat="server" Height="37px" Width="202px"></asp:TextBox>
                     <br />
-                    <asp:Button CssClass="cargar" ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" />
+                    <asp:Button CssClass="cargar" ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" OnClick="btnCargar_Click" />
                 </div>
 
             </div>

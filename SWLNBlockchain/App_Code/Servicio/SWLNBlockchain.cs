@@ -11,6 +11,13 @@ using System.Text;
 public class SWLNBlockchain : ISWLNBlockchain
 {
     #region User
+    public EBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        CUserBlockchain cUser = new CUserBlockchain();
+        EBUser eBUser = new EBUser();
+        eBUser = cUser.Obtener_RolUser_O_Search(email, password);
+        return eBUser;
+    }
     public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle)
     {
         throw new NotImplementedException();

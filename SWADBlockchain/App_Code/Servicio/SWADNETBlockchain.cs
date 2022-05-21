@@ -33,6 +33,14 @@ public class SWADNETBlockchain : ISWADNETBlockchain
     {
         throw new NotImplementedException();
     }
+
+    public EBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        CBUser cBUser = new CBUser();
+        EBUser eBuser = new EBUser();
+        eBuser = cBUser.Obtener_RolUser_O_Search(email, password);
+        return eBuser;
+    }
     #endregion
 
     #region Tabla BTittle
