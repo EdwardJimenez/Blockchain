@@ -4,11 +4,6 @@
     margin-top: 30px;
 }
 
-.Registrar {
-    text-align: center;
-    margin-top: 20px;
-}
-
 .bold {
     font-size: medium;
 }
@@ -26,4 +21,26 @@
 
 .auto-style9 {
     width: 173px;
+}
+
+
+.list {
+    width: 300px;
+    height: 150px;
+    background-color: #64072D;
+    margin-left: 50px;
+    text-align: center;
+}
+.txt{
+    margin: 5px;
+}
+
+.bot {
+    color: white;
+    font-size: 18px;
+    background-color: #64072D;
+    width: 200px;
+    height: 15px;
+    padding: 8px;
+    margin-left: 90px;
 }
