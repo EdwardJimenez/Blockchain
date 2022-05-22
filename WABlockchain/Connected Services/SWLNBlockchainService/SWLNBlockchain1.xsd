@@ -105,6 +105,22 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Insertar_BTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTittle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carreer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fullnameTitulado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_Title_O">
     <xs:complexType>
       <xs:sequence />
@@ -125,6 +141,18 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="Actualizar_ITitle_statusTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitleResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

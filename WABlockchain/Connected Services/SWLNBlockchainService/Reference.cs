@@ -963,6 +963,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_faculty", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_facultyResponse")]
         System.Threading.Tasks.Task Insertar_BTitle_I_idTitle_facultyAsync(string faculty, string carreer, string statusTittle, System.DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitleResponse")]
+        void Insertar_BTitle(string idTittle, string faculty, string carreer, string idUser, string fullnameTitulado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitleResponse")]
+        System.Threading.Tasks.Task Insertar_BTitleAsync(string idTittle, string faculty, string carreer, string idUser, string fullnameTitulado);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_OResponse")]
         WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O();
         
@@ -974,6 +980,12 @@ namespace WABlockchain.SWLNBlockchainService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse")]
         System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitleResponse")]
+        void Eliminar_ITitle_statusTitle(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitleResponse")]
+        System.Threading.Tasks.Task Eliminar_ITitle_statusTitleAsync(string Id_Title);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitleResponse")]
         void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName);
@@ -1101,6 +1113,14 @@ namespace WABlockchain.SWLNBlockchainService {
             return base.Channel.Insertar_BTitle_I_idTitle_facultyAsync(faculty, carreer, statusTittle, dateDelivery, statusDelivery, idUser, fullnameTitulado);
         }
         
+        public void Insertar_BTitle(string idTittle, string faculty, string carreer, string idUser, string fullnameTitulado) {
+            base.Channel.Insertar_BTitle(idTittle, faculty, carreer, idUser, fullnameTitulado);
+        }
+        
+        public System.Threading.Tasks.Task Insertar_BTitleAsync(string idTittle, string faculty, string carreer, string idUser, string fullnameTitulado) {
+            return base.Channel.Insertar_BTitleAsync(idTittle, faculty, carreer, idUser, fullnameTitulado);
+        }
+        
         public WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O() {
             return base.Channel.Obtener_Title_O();
         }
@@ -1115,6 +1135,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title) {
             return base.Channel.Actualizar_ITitle_statusTitleAsync(Id_Title);
+        }
+        
+        public void Eliminar_ITitle_statusTitle(string Id_Title) {
+            base.Channel.Eliminar_ITitle_statusTitle(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task Eliminar_ITitle_statusTitleAsync(string Id_Title) {
+            return base.Channel.Eliminar_ITitle_statusTitleAsync(Id_Title);
         }
         
         public void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName) {

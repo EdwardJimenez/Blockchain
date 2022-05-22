@@ -61,6 +61,12 @@
   <wsdl:message name="ISWADNETBlockchain_Actualizar_ITitle_statusTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_ITitle_statusTitleResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Eliminar_ITitle_statusTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_ITitle_statusTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_Eliminar_ITitle_statusTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_ITitle_statusTitleResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_Actualizar_ITitle_InputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_ITitle" />
   </wsdl:message>
@@ -121,6 +127,10 @@
     <wsdl:operation name="Actualizar_ITitle_statusTitle">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_ITitle_statusTitle" message="tns:ISWADNETBlockchain_Actualizar_ITitle_statusTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_ITitle_statusTitleResponse" message="tns:ISWADNETBlockchain_Actualizar_ITitle_statusTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ITitle_statusTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Eliminar_ITitle_statusTitle" message="tns:ISWADNETBlockchain_Eliminar_ITitle_statusTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Eliminar_ITitle_statusTitleResponse" message="tns:ISWADNETBlockchain_Eliminar_ITitle_statusTitle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Actualizar_ITitle">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_ITitle" message="tns:ISWADNETBlockchain_Actualizar_ITitle_InputMessage" />
@@ -215,6 +225,15 @@
     </wsdl:operation>
     <wsdl:operation name="Actualizar_ITitle_statusTitle">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Actualizar_ITitle_statusTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ITitle_statusTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Eliminar_ITitle_statusTitle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

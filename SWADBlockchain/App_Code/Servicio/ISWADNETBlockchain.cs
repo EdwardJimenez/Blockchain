@@ -37,6 +37,10 @@ public interface ISWADNETBlockchain
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
+
+    [OperationContract]
+    void Eliminar_ITitle_statusTitle(EBTittle ebTitle);
+
     [OperationContract]
     void Actualizar_ITitle(EBTittle ebTitle);
 

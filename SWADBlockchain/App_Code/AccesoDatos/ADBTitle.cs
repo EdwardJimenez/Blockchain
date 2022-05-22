@@ -118,6 +118,23 @@ public class ADBTitle
         }
     }
     /// <summary>
+    /// Eliminar Title statusTitleToFive
+    /// </summary>
+    public void Eliminar_ITitle_statusTitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_Delet_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
     /// Actualizar Title
     /// </summary>
     public void Actualizar_ITitle(EBTittle bTitle)
