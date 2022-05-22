@@ -61,7 +61,7 @@
 <asp:Label runat="server" CssClass="msj" ID="lblMensaje" Text="Mensaje" ></asp:Label>
 <fieldset id="field">
 <legend class="sub">Lista de Titulos</legend>
-<asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" >
+<asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
 <Columns>
 <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
 <HeaderStyle CssClass="hidden" />
@@ -76,7 +76,13 @@
 <asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you sure you want to Logout ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
 </ItemTemplate>
 </asp:TemplateField>
+<asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Actuaizar" />
+</ItemTemplate>
+</asp:TemplateField>
 
+    
 
 
 </Columns>

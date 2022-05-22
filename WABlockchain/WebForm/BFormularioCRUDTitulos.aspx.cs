@@ -13,6 +13,7 @@ namespace WABlockchain.WebForm
     {
         private static Helper _helper = new Helper();
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
+        private static int s;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -57,16 +58,21 @@ namespace WABlockchain.WebForm
             swLNBlockchainClient.Eliminar_ITitle_statusTitle(s.ToString());
             cargarTitulos();
 
-            
         }
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
-            int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
-            //swLNBlockchainClient.Actualizar_ITitle(s.ToString());
+            swLNBlockchainClient.Actualizar_ITitle(txtEmail.Text,txtCarrera.Text,txtFacultad.Text,txtNombreCompleto.Text);
             cargarTitulos();
         }
 
+        protected void Actualizar_Click(object sender, EventArgs e)
+        {
+            int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+            txtNombreCompleto.Text = grvTitulos.Rows[id].Cells[1].Text;
+            txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
+            txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
+            txtEmail.Text= grvTitulos.Rows[id].Cells[0].Text;
+        }
     }
 }

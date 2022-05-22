@@ -37,7 +37,7 @@ public class CBTitle
 
     public void Actualizar_ITitle(EBTittle ebTitle)
     {
-        aDBTitle.Actualizar_ITitle_statusTitle(ebTitle);
+        aDBTitle.Actualizar_ITitle(ebTitle);
     }
 
     public List<EBTittle> Obtener_Title_O()
