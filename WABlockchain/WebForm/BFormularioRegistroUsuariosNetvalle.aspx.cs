@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace WABlockchain.WebForm
 {
-    public partial class BResgistroTitulo : System.Web.UI.Page
+    public partial class BFormularioRegistroUsuariosNetvalle : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected System.Void Page_Load(System.Object sender, System.EventArgs e)
         {
 
         }

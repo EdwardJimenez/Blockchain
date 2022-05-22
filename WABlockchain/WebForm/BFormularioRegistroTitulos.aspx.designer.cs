@@ -11,7 +11,7 @@ namespace WABlockchain.WebForm
 {
 
 
-    public partial class BResgistroTitulo
+    public partial class BFormularioRegistroTitulos
     {
 
         /// <summary>
@@ -24,48 +24,57 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control txbNombre.
+        /// Control dateEm.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbNombre;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dateEm;
 
         /// <summary>
-        /// Control txbCarrera.
+        /// Control tit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbCarrera;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tit;
 
         /// <summary>
-        /// Control txbFacultad.
+        /// Control sede.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbFacultad;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText sede;
 
         /// <summary>
-        /// Control ddlEstado.
+        /// Control ddlMetEntrega.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMetEntrega;
 
         /// <summary>
-        /// Control grvListaTitulos.
+        /// Control btnRegistrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvListaTitulos;
+        protected global::System.Web.UI.WebControls.Button btnRegistrar;
+
+        /// <summary>
+        /// Control btnQr.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnQr;
     }
 }
