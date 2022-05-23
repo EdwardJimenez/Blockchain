@@ -11,6 +11,8 @@ using System.Text;
 public class SWLNBlockchain : ISWLNBlockchain
 {
     #region User
+
+    
     public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle)
     {
         throw new NotImplementedException();
@@ -92,6 +94,13 @@ public class SWLNBlockchain : ISWLNBlockchain
         return lstIUserCareerCompleja;
 
     }
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname)
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est_Bus(Fullname);
+        return lstIUserCareerCompleja;
+    }
 
     public ENPerson Obtener_Persona_O_Estudiante()
     {
@@ -115,5 +124,12 @@ public class SWLNBlockchain : ISWLNBlockchain
         CNetValle cNetValle = new CNetValle();
         cNetValle.Obtener_Carrerra_O_ID_Pedro(id);
         return eNCareer;    
+    }
+
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        List<ENPerson> LsteNPerson = new List<ENPerson>();
+        CNetValle cNetValle = new CNetValle();
+        return LsteNPerson;
     }
 }

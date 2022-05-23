@@ -25,17 +25,28 @@ namespace WABlockchain.WebForm
             grvUsersNetvalle.DataSource = lstProgramaRequerimientoCompleja;
             grvUsersNetvalle.DataBind();
         }
-
         protected void grvUsersNetvalle_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Errorsito jaja By pedro 
         }
+        
         protected void btn1_Click(object sender, EventArgs e)
         {
-            /*int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
-            int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
-            swLNBlockchainClient.Actualizar_ITitle_statusTitle(s.ToString());
-            cargarTitulos();*/
+            int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+            int s = int.Parse(grvUsersNetvalle.Rows[id].Cells[0].Text);
+            Session["idUsuario"] = s;
+            Response.Redirect("BFormularioRegistrosUsuariosLocales.aspx");
+        }
+
+        protected void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            grvUsersNetvalle.DataSource = null;
+            List<IUserCareerCompleja> lstEISolicitud = new List<IUserCareerCompleja>();
+            lstEISolicitud = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_Bus(txtNombre.Text).ToList();
+
+            grvUsersNetvalle.DataSource = lstEISolicitud;
+            grvUsersNetvalle.DataBind();
+            txtNombre.Text = string.Empty;
         }
     }
 }

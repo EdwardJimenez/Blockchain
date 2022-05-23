@@ -39,4 +39,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Obtener_Persona_O_Nombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Persona_O_NombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_NombreResult" nillable="true" type="q4:ArrayOfENPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

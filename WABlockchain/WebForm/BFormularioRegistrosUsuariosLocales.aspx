@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BFormularioRegistrosUsuariosLocales.aspx.cs" Inherits="WABlockchain.WebForm.BFormularioRegistrosUsuariosLocales" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master"  EnableEventValidation="false" AutoEventWireup="true" CodeBehind="BFormularioRegistrosUsuariosLocales.aspx.cs" Inherits="WABlockchain.WebForm.BFormularioRegistrosUsuariosLocales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

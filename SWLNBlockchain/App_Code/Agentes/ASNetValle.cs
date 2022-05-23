@@ -30,6 +30,20 @@ public class ASNetValle
         }
     }
 
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        List<ENPerson> eNPerson = new List<ENPerson>();
+        try
+        {
+            eNPerson = swADNetValle.Obtener_Persona_O_Nombre(Fullname).ToList();
+            return eNPerson;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
     public ENPerson Obtener_Persona_O_Estudiante()
     {
         ENPerson eNPerson = new ENPerson();

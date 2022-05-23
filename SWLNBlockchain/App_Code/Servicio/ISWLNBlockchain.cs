@@ -54,6 +54,9 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     List<ENPerson> Obtener_Persona_O_EstudianteL();
+
+    [OperationContract]
+    List<ENPerson> Obtener_Persona_O_Nombre(string Fullname);
     #endregion
     #region NCareerUniversity
     [OperationContract]
@@ -62,5 +65,8 @@ public interface ISWLNBlockchain
     #region IUserCareerCompleja
     [OperationContract]
     List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est();
+
+    [OperationContract]
+    List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname);
     #endregion
 }

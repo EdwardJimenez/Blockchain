@@ -29,6 +29,22 @@ public class ADNPerson
         }
         return dTONPerson;
     }
+    public DTONPerson Obtener_Persona_O_Nombre(string Fullname)
+    {
+        DTONPerson dTONPerson = new DTONPerson();
+        try
+        {
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADNeTValle;
+            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("IPersona_O_Nombre");
+            BDSWADNETIntUn.AddInParameter(dbCommand, "Nombre", DbType.String, Fullname);
+            BDSWADNETIntUn.LoadDataSet(dbCommand, dTONPerson, "Person");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dTONPerson;
+    }
 
     public DTONPerson Obtener_Person_O()
     {

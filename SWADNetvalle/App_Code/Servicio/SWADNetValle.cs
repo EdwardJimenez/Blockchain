@@ -31,4 +31,11 @@ public class SWADNetValle : ISWADNetValle
         lsteNPersona = cNPerson.Obtener_Persona_O_EstudianteL();
         return lsteNPersona;
     }
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        CNPerson cNPerson = new CNPerson();
+        List<ENPerson> lsteNPersona = new List<ENPerson>();
+        lsteNPersona = cNPerson.Obtener_Persona_O_Nombre(Fullname);
+        return lsteNPersona;
+    }
 }

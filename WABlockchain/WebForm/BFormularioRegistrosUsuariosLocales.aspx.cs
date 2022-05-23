@@ -21,7 +21,10 @@ namespace WABlockchain.WebForm
             if (!IsPostBack)
             {
                 CargarRolUser();
-
+                if (Session["idUsuario"] !=null)
+                {
+                    
+                }
             }
         }
 

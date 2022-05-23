@@ -30,6 +30,20 @@ public class CNetValle
             throw;
         }
     }
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        List<ENPerson> listENPerson = new List<ENPerson>();
+        try
+        {
+            listENPerson = aSNetValle.Obtener_Persona_O_Nombre(Fullname);
+            return listENPerson;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
     public ENPerson Obtener_Persona_O_Estudiante()
     {
         ENPerson eNPerson = new ENPerson();
@@ -93,6 +107,34 @@ public class CNetValle
             throw;
         }
     }
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname)
+    {
+        List<IUserCareerCompleja> lstUserCareerCompleja = new List<IUserCareerCompleja>();
+        List<ENPerson> lstENPerson = new List<ENPerson>();
+        IUserCareerCompleja userCareerCompleja;
+        ENCareer eNCareer = new ENCareer();
+        try
+        {
+            lstENPerson = aSNetValle.Obtener_Persona_O_Nombre(Fullname);
+            foreach (ENPerson eNPerson in lstENPerson)
+            {
+                eNCareer = aSNetValle.Obtener_Carrerra_O_ID_Pedro(eNPerson.IDCareer);
+                userCareerCompleja = new IUserCareerCompleja();
+                userCareerCompleja.IDPerson = eNPerson.IDPerson;
+                userCareerCompleja.Fullname = eNPerson.Fullname;
+                userCareerCompleja.IDCareer = eNCareer.IDCareer;
+                userCareerCompleja.CareerName = eNCareer.CareerName;
+                userCareerCompleja.FacultyName = eNCareer.FacultyName;
+                userCareerCompleja.SedeName = eNCareer.SedeName;
+                lstUserCareerCompleja.Add(userCareerCompleja);
+            }
+            return lstUserCareerCompleja;
+        }
+        catch (Exception)
+        {
 
+            throw;
+        }
+    }
     #endregion
 }
