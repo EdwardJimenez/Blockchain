@@ -109,6 +109,12 @@
   <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_Bus_OutputMessage">
     <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Est_BusResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Est_ID" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Est_IDResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISWLNBlockchain">
     <wsdl:operation name="Obtener_User_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_User_O" message="tns:ISWLNBlockchain_Obtener_User_O_InputMessage" />
@@ -177,6 +183,10 @@
     <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est_Bus">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_Bus" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_Bus_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_BusResponse" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_Bus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_ID" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_IDResponse" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_ID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISWLNBlockchain" type="tns:ISWLNBlockchain">
@@ -327,6 +337,15 @@
     </wsdl:operation>
     <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est_Bus">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_Bus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est_ID">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_ID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -132,4 +132,15 @@ public class SWLNBlockchain : ISWLNBlockchain
         CNetValle cNetValle = new CNetValle();
         return LsteNPerson;
     }
+
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_ID(int ID)
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est_ID(ID);
+        return lstIUserCareerCompleja;
+
+    }
+
+
 }

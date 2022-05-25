@@ -53,4 +53,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Obtener_Persona_O_ID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Persona_O_IDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_IDResult" nillable="true" type="q5:ArrayOfENPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

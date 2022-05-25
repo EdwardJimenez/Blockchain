@@ -45,7 +45,22 @@ public class ADNPerson
         }
         return dTONPerson;
     }
-
+    public DTONPerson Obtener_Persona_O_ID(int ID)
+    {
+        DTONPerson dTONPerson = new DTONPerson();
+        try
+        {
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADNeTValle;
+            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("NetValle_Person_O_ID");
+            BDSWADNETIntUn.AddInParameter(dbCommand, "IDPerson", DbType.String, ID);
+            BDSWADNETIntUn.LoadDataSet(dbCommand, dTONPerson, "Person");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dTONPerson;
+    }
     public DTONPerson Obtener_Person_O()
     {
         DTONPerson dTONPerson = new DTONPerson();
@@ -63,22 +78,7 @@ public class ADNPerson
         return dTONPerson;
     }
 
-    public DTONPerson Obtener_Persona_O_ID(string ID_Person)
-    {
-        DTONPerson dTONPerson = new DTONPerson();
-        try
-        {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNeTValle;
-            DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("NetValle_Persona_O_ID");
-            BDSWADNETIntUn.AddInParameter(dbCommand, "IDPerson", DbType.String, ID_Person);
-            BDSWADNETIntUn.LoadDataSet(dbCommand, dTONPerson, "Person");
-        }
-        catch (Exception)
-        {
-            throw;
-        }
-        return dTONPerson;
-    }
+
 
     public DTONPerson Obtener_Persona_O_Account(string Mail, string Password)
     {

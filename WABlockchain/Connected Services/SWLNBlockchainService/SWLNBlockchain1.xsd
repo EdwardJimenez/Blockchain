@@ -247,4 +247,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="U_Obtener_UserCareerComplejas_O_Est_ID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="U_Obtener_UserCareerComplejas_O_Est_IDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_Est_IDResult" nillable="true" type="q11:ArrayOfIUserCareerCompleja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

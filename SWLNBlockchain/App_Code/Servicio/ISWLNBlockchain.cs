@@ -68,5 +68,8 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname);
+
+    [OperationContract]
+    List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_ID(int ID);
     #endregion
 }

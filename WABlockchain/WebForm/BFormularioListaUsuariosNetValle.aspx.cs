@@ -43,7 +43,6 @@ namespace WABlockchain.WebForm
             grvUsersNetvalle.DataSource = null;
             List<IUserCareerCompleja> lstEISolicitud = new List<IUserCareerCompleja>();
             lstEISolicitud = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_Bus(txtNombre.Text).ToList();
-
             grvUsersNetvalle.DataSource = lstEISolicitud;
             grvUsersNetvalle.DataBind();
             txtNombre.Text = string.Empty;

@@ -13,6 +13,7 @@ namespace WABlockchain.WebForm
     {
         
         private static Helper _helper = new Helper();
+ 
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         private string _Id_Requerimiento = string.Empty;
         private string _Id_User = string.Empty;
@@ -23,7 +24,26 @@ namespace WABlockchain.WebForm
                 CargarRolUser();
                 if (Session["idUsuario"] !=null)
                 {
-                    
+                    try
+                    {
+                        //Esto lo tengo que borrar , no es aqui ,es en la webforms de Registrar titulos Pedro Conde
+                        IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
+                        int IDUser = Convert.ToInt32(Session["idUsuario"]);
+                        iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
+                        txtApellido.Text = iusercompleja.CareerName.ToString();
+                        txtNombre.Text= iusercompleja.Fullname.ToString();
+                        txtCellphone.Text = iusercompleja.FacultyName.ToString();
+                        txtCi.Text = iusercompleja.SedeName.ToString();
+                        
+                        
+                        
+
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }   
                 }
             }
         }

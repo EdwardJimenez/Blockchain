@@ -23,4 +23,6 @@ public interface ISWADNetValle
 
     [OperationContract]
     List<ENPerson> Obtener_Persona_O_Nombre(string Fullname);
+    [OperationContract]
+    List<ENPerson> Obtener_Persona_O_ID(int ID);
 }

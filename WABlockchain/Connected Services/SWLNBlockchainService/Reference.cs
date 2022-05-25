@@ -1032,6 +1032,14 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_Bus", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_BusRespons" +
             "e")]
         System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_BusAsync(string Fullname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_ID", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_IDResponse" +
+            "")]
+        WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est_ID(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_ID", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_IDResponse" +
+            "")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_IDAsync(int ID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1195,6 +1203,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_BusAsync(string Fullname) {
             return base.Channel.U_Obtener_UserCareerComplejas_O_Est_BusAsync(Fullname);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est_ID(int ID) {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est_ID(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_IDAsync(int ID) {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est_IDAsync(ID);
         }
     }
 }
