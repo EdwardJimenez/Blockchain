@@ -52,6 +52,12 @@ public class SWLNBlockchain : ISWLNBlockchain
         cUserBlockchain.Actualizar_ITitle_statusTitle(Id_Title);
     }
 
+    public void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_BTittle_ConfirmarEntrega(fullName, fecha, modo);
+    }
+
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {
         CUserBlockchain cTittle = new CUserBlockchain();

@@ -99,6 +99,18 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q9:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntregaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UltimoID_O_NombreTablaSinElCaracterI">
     <xs:complexType>
       <xs:sequence>
@@ -135,7 +147,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q9:ArrayOfEBRoluser" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q10:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

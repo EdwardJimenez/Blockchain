@@ -35,6 +35,10 @@ public interface ISWADNETBlockchain
     [OperationContract]
     void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
 
+    [OperationContract]
+    void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle);
+    
+
     #endregion
 
     #region Helper
