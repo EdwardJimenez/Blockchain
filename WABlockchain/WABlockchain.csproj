@@ -110,7 +110,6 @@
     <Content Include="Imagenes\Nuevo documento de texto.txt" />
     <Content Include="Imagenes\perfil.png" />
     <Content Include="Web.config" />
-    <Content Include="WebForm\BFormularioRegistroUsuariosLocales.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Helper.cs" />
@@ -157,13 +156,6 @@
     </Compile>
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.cs">
-      <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.designer.cs">
-      <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BLogin.aspx.cs">
       <DependentUpon>BLogin.aspx</DependentUpon>
