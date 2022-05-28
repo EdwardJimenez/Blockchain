@@ -60,5 +60,16 @@ public class CBTitle
         return lstTitle;
     }
 
+    public EBTittle BUser_O_Search(string name)
+    {
+        EBTittle eBtittle = new EBTittle();
+        DTOBTitle dTOBTitle= aDBTitle.BUser_O_Search(name);
+        foreach (DTOBTitle.BTittleRow user in dTOBTitle.BTittle.Rows)
+        {
+            eBtittle = new EBTittle();
+            eBtittle.fullNameTitulado = user.fullNameT.ToString();
+        }
+        return eBtittle;
+    }
     #endregion
 }

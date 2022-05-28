@@ -11,6 +11,28 @@ using System.Data;
 /// </summary>
 public class ADBTitle
 {
+    public DTOBTitle BUser_O_Search(string name)
+    {
+        //
+        //Metodo select por medio del name
+        //
+        DTOBTitle dTOBTittle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BUser_O_Search"); //Select name from tittle
+            BDSWADBlockchain.AddInParameter(dbCommand, "fullNameT", DbType.String, name);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTittle, "BTittle");
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTittle;
+    }
     public DTOBTitle Obtener_Title_O()
     {
         DTOBTitle dTOBTitle = new DTOBTitle();

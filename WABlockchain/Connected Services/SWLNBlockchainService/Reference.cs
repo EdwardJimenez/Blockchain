@@ -590,6 +590,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse")]
         System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BUser_O_Search", ReplyAction="http://tempuri.org/ISWLNBlockchain/BUser_O_SearchResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle BUser_O_Search(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BUser_O_Search", ReplyAction="http://tempuri.org/ISWLNBlockchain/BUser_O_SearchResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle> BUser_O_SearchAsync(string name);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse")]
         WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O();
         
@@ -708,6 +714,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title) {
             return base.Channel.Actualizar_ITitle_statusTitleAsync(Id_Title);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle BUser_O_Search(string name) {
+            return base.Channel.BUser_O_Search(name);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle> BUser_O_SearchAsync(string name) {
+            return base.Channel.BUser_O_SearchAsync(name);
         }
         
         public WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O() {

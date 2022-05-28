@@ -141,6 +141,20 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="BUser_O_Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BUser_O_SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BUser_O_SearchResult" nillable="true" type="q5:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_RolUser_O">
     <xs:complexType>
       <xs:sequence />
@@ -149,7 +163,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q5:ArrayOfEBRoluser" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q6:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

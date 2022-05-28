@@ -38,6 +38,9 @@ public interface ISWADNETBlockchain
     [OperationContract]
     List<EBTittle> Obtener_Title_O_ListGraduates();
 
+    [OperationContract]
+    EBTittle BUser_O_Search(string name);
+
     #endregion
 
     #region Helper

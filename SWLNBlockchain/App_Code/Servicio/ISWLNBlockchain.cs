@@ -35,6 +35,10 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
+
+
+    [OperationContract]
+    EBTittle BUser_O_Search(string name);
     #endregion
 
     #region RolUser

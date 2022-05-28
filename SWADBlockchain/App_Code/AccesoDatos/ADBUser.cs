@@ -13,6 +13,8 @@ using System.Data;
 /// </summary>
 public class ADBUser
 {
+    
+
     public DTOBUser Obtener_User_O()
     {
         //

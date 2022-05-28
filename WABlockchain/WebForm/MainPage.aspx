@@ -17,7 +17,12 @@
                         <asp:TextBox ID="TextBox1" runat="server" Width="280px"></asp:TextBox>
                         <asp:Button ID="btnBuscar" runat="server" BackColor="#681E3C" ForeColor="White" Text="Buscar" Width="117px" OnClick="btnBuscar_Click" />
 							<div> 
-								<p></div>
+								<p>
+                                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="180px">
+                                    </asp:DropDownList>
+                                    <asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="221px">
+                                    </asp:DropDownList>
+                        </div>
                         <asp:GridView ID="grvTitulados" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" HorizontalAlign="Center">
 							<Columns>
 								<asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">

@@ -15,10 +15,7 @@ namespace WABlockchain.WebForm
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-            //    ListarTituladosGeneral();
-            //}
+                ListarTituladosGeneral();
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -28,9 +25,8 @@ namespace WABlockchain.WebForm
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            {
-                ListarTituladosGeneral();
-            }
+            EBTittle eBTittle = new EBTittle();
+            eBTittle = swLNBlockchainClient.BUser_O_Search(TextBox1.Text);
         }
 
         private void ListarTituladosGeneral()

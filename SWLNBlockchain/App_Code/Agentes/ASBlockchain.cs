@@ -132,6 +132,20 @@ public class ASBlockchain
             throw;
         }
     }
+    
+    public EBTittle BUser_O_Search(string name)
+    {
+        EBTittle eTittle = new EBTittle();
+        try
+        {
+            eTittle = swADNETBlockchain.BUser_O_Search(name);
+            return eTittle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     #endregion
     #region RolUser
     public List<EBRoluser> Obtener_RolUser_O()

@@ -64,6 +64,13 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         return lstTitle;
     }
 
+    public EBTittle BUser_O_Search(string name)
+    {
+        CBTitle cTittle = new CBTitle();
+        EBTittle eBTittle = new EBTittle();
+        eBTittle = cTittle.BUser_O_Search(name);
+        return eBTittle;
+    }
     #endregion
 
     #region Helper

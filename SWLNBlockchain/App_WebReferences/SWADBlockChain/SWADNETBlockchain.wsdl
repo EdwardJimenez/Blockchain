@@ -61,6 +61,12 @@
   <wsdl:message name="ISWADNETBlockchain_Obtener_Title_O_ListGraduates_OutputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Title_O_ListGraduatesResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BUser_O_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:BUser_O_Search" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BUser_O_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BUser_O_SearchResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_UltimoID_O_NombreTablaSinElCaracterI_InputMessage">
     <wsdl:part name="parameters" element="tns:UltimoID_O_NombreTablaSinElCaracterI" />
   </wsdl:message>
@@ -115,6 +121,10 @@
     <wsdl:operation name="Obtener_Title_O_ListGraduates">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_Title_O_ListGraduates" message="tns:ISWADNETBlockchain_Obtener_Title_O_ListGraduates_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_Title_O_ListGraduatesResponse" message="tns:ISWADNETBlockchain_Obtener_Title_O_ListGraduates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BUser_O_Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BUser_O_Search" message="tns:ISWADNETBlockchain_BUser_O_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BUser_O_SearchResponse" message="tns:ISWADNETBlockchain_BUser_O_Search_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UltimoID_O_NombreTablaSinElCaracterI">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/UltimoID_O_NombreTablaSinElCaracterI" message="tns:ISWADNETBlockchain_UltimoID_O_NombreTablaSinElCaracterI_InputMessage" />
@@ -205,6 +215,15 @@
     </wsdl:operation>
     <wsdl:operation name="Obtener_Title_O_ListGraduates">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Obtener_Title_O_ListGraduates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BUser_O_Search">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BUser_O_Search" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

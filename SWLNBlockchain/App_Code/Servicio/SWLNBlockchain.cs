@@ -36,7 +36,13 @@ public class SWLNBlockchain : ISWLNBlockchain
     }
     #endregion
     #region Tittle
-
+    public EBTittle BUser_O_Search(string name)
+    {
+        CUserBlockchain cUser = new CUserBlockchain();
+        EBTittle eTittle = new EBTittle();
+        eTittle = cUser.BUser_O_Search(name);
+        return eTittle;
+    }
     public List<EBTittle> Obtener_Title_O()
     {
 
