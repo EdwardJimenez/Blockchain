@@ -39,6 +39,12 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     EBTittle BUser_O_Search(string name);
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_Faculty(string faculty);
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_CARREER(string carreer);
     #endregion
 
     #region RolUser

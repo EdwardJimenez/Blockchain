@@ -122,7 +122,7 @@ public class ASBlockchain
     }
 
     public void Insertar_BTitle_I_idTitle_faculty(EBTittle ebTittle)
-        {
+    {
         try
         {
             swADNETBlockchain.Insertar_BTitle_I_idTitle_faculty(ebTittle);
@@ -132,7 +132,7 @@ public class ASBlockchain
             throw;
         }
     }
-    
+
     public EBTittle BUser_O_Search(string name)
     {
         EBTittle eTittle = new EBTittle();
@@ -140,6 +140,34 @@ public class ASBlockchain
         {
             eTittle = swADNETBlockchain.BUser_O_Search(name);
             return eTittle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> BTittle_O_Faculty(string faculty)
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_Faculty(faculty).ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> BTittle_O_CARREER(string carreer)
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_CARREER(carreer).ToList();
+            return lstEbTitle;
         }
         catch (Exception)
         {

@@ -147,6 +147,34 @@ public class CUserBlockchain
             throw;
         }
     }
+
+    public List<EBTittle> BTittle_O_Faculty(string faculty)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_Faculty(faculty).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> BTittle_O_CARREER(string carreer)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_CARREER(carreer).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     #endregion
 
     #region RolUser

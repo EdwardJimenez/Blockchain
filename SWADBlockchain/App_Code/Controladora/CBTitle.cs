@@ -68,8 +68,42 @@ public class CBTitle
         {
             eBtittle = new EBTittle();
             eBtittle.fullNameTitulado = user.fullNameT.ToString();
+            eBtittle.faculty = user.faculty;
+            eBtittle.carreer = user.carreer;
         }
         return eBtittle;
+    }
+
+    public List<EBTittle> BTittle_O_Faculty(string faculty)
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.BTittle_O_Faculty(faculty);
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
+
+    public List<EBTittle> BTittle_O_CARREER(string carreer)
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.BTittle_O_CARREER(carreer);
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
     }
     #endregion
 }

@@ -125,6 +125,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="BTittle_O_Faculty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_FacultyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_FacultyResult" nillable="true" type="q11:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_CARREER">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="carreer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_CARREERResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_CARREERResult" nillable="true" type="q12:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UltimoID_O_NombreTablaSinElCaracterI">
     <xs:complexType>
       <xs:sequence>
@@ -161,7 +189,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q11:ArrayOfEBRoluser" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q13:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

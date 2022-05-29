@@ -66,5 +66,10 @@ namespace WABlockchain.WebForm
             ddlRolUser.DataBind();
             ddlRolUser.SelectedIndex = 0;
         }
+
+        protected void ddlRolUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

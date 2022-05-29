@@ -71,6 +71,22 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         eBTittle = cTittle.BUser_O_Search(name);
         return eBTittle;
     }
+
+    public List<EBTittle> BTittle_O_Faculty(string faculty)
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_Faculty(faculty);
+        return lstTitle;
+    }
+
+    public List<EBTittle> BTittle_O_CARREER(string carreer)
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_CARREER(carreer);
+        return lstTitle;
+    }
     #endregion
 
     #region Helper

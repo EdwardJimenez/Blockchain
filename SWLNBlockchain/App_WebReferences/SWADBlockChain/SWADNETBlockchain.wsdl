@@ -67,6 +67,18 @@
   <wsdl:message name="ISWADNETBlockchain_BUser_O_Search_OutputMessage">
     <wsdl:part name="parameters" element="tns:BUser_O_SearchResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_Faculty_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_Faculty" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_Faculty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_FacultyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_CARREER_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_CARREER" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_CARREER_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_CARREERResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_UltimoID_O_NombreTablaSinElCaracterI_InputMessage">
     <wsdl:part name="parameters" element="tns:UltimoID_O_NombreTablaSinElCaracterI" />
   </wsdl:message>
@@ -125,6 +137,14 @@
     <wsdl:operation name="BUser_O_Search">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BUser_O_Search" message="tns:ISWADNETBlockchain_BUser_O_Search_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BUser_O_SearchResponse" message="tns:ISWADNETBlockchain_BUser_O_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_Faculty">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_Faculty" message="tns:ISWADNETBlockchain_BTittle_O_Faculty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_FacultyResponse" message="tns:ISWADNETBlockchain_BTittle_O_Faculty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_CARREER">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_CARREER" message="tns:ISWADNETBlockchain_BTittle_O_CARREER_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_CARREERResponse" message="tns:ISWADNETBlockchain_BTittle_O_CARREER_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UltimoID_O_NombreTablaSinElCaracterI">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/UltimoID_O_NombreTablaSinElCaracterI" message="tns:ISWADNETBlockchain_UltimoID_O_NombreTablaSinElCaracterI_InputMessage" />
@@ -224,6 +244,24 @@
     </wsdl:operation>
     <wsdl:operation name="BUser_O_Search">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BUser_O_Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_Faculty">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_Faculty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_CARREER">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_CARREER" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

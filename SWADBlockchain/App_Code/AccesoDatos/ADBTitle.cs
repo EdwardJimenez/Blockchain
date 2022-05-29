@@ -22,7 +22,53 @@ public class ADBTitle
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
 
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BUser_O_Search"); //Select name from tittle
-            BDSWADBlockchain.AddInParameter(dbCommand, "fullNameT", DbType.String, name);
+            BDSWADBlockchain.AddInParameter(dbCommand, "fullname", DbType.String, name);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTittle, "BTittle");
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTittle;
+    }
+
+    public DTOBTitle BTittle_O_Faculty(string faculty)
+    {
+        //
+        //Metodo select por medio del name
+        //
+        DTOBTitle dTOBTittle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_Faculty"); //Select name from tittle
+            BDSWADBlockchain.AddInParameter(dbCommand, "faculty", DbType.String, faculty);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTittle, "BTittle");
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTittle;
+    }
+
+    public DTOBTitle BTittle_O_CARREER(string carreer)
+    {
+        //
+        //Metodo select por medio del name
+        //
+        DTOBTitle dTOBTittle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_CARREER"); //Select name from tittle
+            BDSWADBlockchain.AddInParameter(dbCommand, "carreer", DbType.String, carreer);
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTittle, "BTittle");
 
         }
@@ -34,6 +80,23 @@ public class ADBTitle
         return dTOBTittle;
     }
     public DTOBTitle Obtener_Title_O()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_statusTittle"); //Select * from Title
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+    //se debe terminar esto
+    public DTOBTitle BTittle_O_Select_Faculty()
     {
         DTOBTitle dTOBTitle = new DTOBTitle();
         try

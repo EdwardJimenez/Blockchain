@@ -155,6 +155,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="BTittle_O_Faculty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_FacultyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_FacultyResult" nillable="true" type="q6:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_CARREER">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="carreer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_CARREERResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_CARREERResult" nillable="true" type="q7:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_RolUser_O">
     <xs:complexType>
       <xs:sequence />
@@ -163,7 +191,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q6:ArrayOfEBRoluser" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q8:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

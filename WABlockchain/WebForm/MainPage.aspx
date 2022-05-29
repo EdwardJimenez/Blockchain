@@ -16,11 +16,13 @@
 					<td style="width: 70%; height: 100%; vertical-align: top">
                         <asp:TextBox ID="TextBox1" runat="server" Width="280px"></asp:TextBox>
                         <asp:Button ID="btnBuscar" runat="server" BackColor="#681E3C" ForeColor="White" Text="Buscar" Width="117px" OnClick="btnBuscar_Click" />
+                        <asp:Button ID="btnrecargar" runat="server" BackColor="#681E3C" ForeColor="White" Text="Recargar" Width="117px" OnClick="btnrecargar_Click"  />
+						<br/> 
 							<div> 
 								<p>
-                                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="180px">
+                                    <asp:DropDownList ID="D1" runat="server" Height="16px" Width="180px" OnSelectedIndexChanged="D1_SelectedIndexChanged">
                                     </asp:DropDownList>
-                                    <asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="221px">
+                                    <asp:DropDownList ID="D2" runat="server" Height="16px" Width="221px" OnSelectedIndexChanged="D2_SelectedIndexChanged">
                                     </asp:DropDownList>
                         </div>
                         <asp:GridView ID="grvTitulados" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" HorizontalAlign="Center">
