@@ -38,7 +38,13 @@ public interface ISWLNBlockchain
     List<EBTittle> Obtener_Title_1();
 
     [OperationContract]
+    List<EBTittle> Obtener_Title_2();
+
+    [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
+
+    [OperationContract]
+    void Actualizar_ITitle_statusTitle_2(string Id_Title);
 
     [OperationContract]
     void Eliminar_ITitle_statusTitle(string Id_Title);

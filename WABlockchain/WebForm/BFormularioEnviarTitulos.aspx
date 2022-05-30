@@ -39,6 +39,41 @@
 </fieldset>
 
     </div>
+
+
+    <div class="caja">
+    <fieldset id="field2">
+<legend class="sub">Lista de Titulos</legend>
+<asp:GridView ID="grvTitulos2" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
+<Columns>
+<asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
+<HeaderStyle CssClass="hidden" />
+<ItemStyle CssClass="hidden" />
+<FooterStyle CssClass="hidden" />
+</asp:BoundField>
+<asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
+<asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+<asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+<asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="Enviar_Click" CommandName="Cancelar" HeaderText="Cancelar" ItemStyle-CssClass="btButton" Text="Cancelar" />
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField>
+<ItemTemplate>
+</ItemTemplate>
+</asp:TemplateField>
+
+   
+
+</Columns>
+</asp:GridView>
+</fieldset>
+
+    </div>
+
+
+
 </div>
 </div>
 

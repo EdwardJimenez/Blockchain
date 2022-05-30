@@ -14,6 +14,7 @@ namespace WABlockchain.WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
             cargarTitulos();
+            cargarTituloEstado2();
         }
         private void cargarTitulos()
         {
@@ -24,12 +25,22 @@ namespace WABlockchain.WebForm
             grvTitulos.SelectedIndex = 0;
         }
 
+        private void cargarTituloEstado2()
+        {
+            List<EBTittle> lstTitle = new List<EBTittle>();
+            lstTitle = swLNBlockchainClient.Obtener_Title_2().ToList();
+            grvTitulos2.DataSource = lstTitle;
+            grvTitulos2.DataBind();
+            grvTitulos2.SelectedIndex = 0;
+        }
+
         protected void Enviar_Click(object sender, EventArgs e)
         {
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
-            swLNBlockchainClient.Actualizar_ITitle_statusTitle(s.ToString());
+            swLNBlockchainClient.Actualizar_ITitle_statusTitle_2(s.ToString());
             cargarTitulos();
+            cargarTituloEstado2();
         }
     }
 }

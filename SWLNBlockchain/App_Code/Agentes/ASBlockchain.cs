@@ -109,11 +109,37 @@ public class ASBlockchain
         }
     }
 
+    public List<EBTittle> Obtener_Title_2()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Obtener_Title_2().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         try
         {
             swADNETBlockchain.Actualizar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle_statusTitle_2(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_ITitle_statusTitle_2(ebTitle);
         }
         catch (Exception)
         {

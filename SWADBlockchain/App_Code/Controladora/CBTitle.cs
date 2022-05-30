@@ -29,6 +29,10 @@ public class CBTitle
     {
         aDBTitle.Actualizar_ITitle_statusTitle(ebTitle);
     }
+    public void Actualizar_ITitle_statusTitle_2(EBTittle ebTitle)
+    {
+        aDBTitle.Actualizar_ITitle_statusTitle_2(ebTitle);
+    }
 
     public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
     {
@@ -45,6 +49,23 @@ public class CBTitle
         EBTittle eBTitle = new EBTittle();
         List<EBTittle> lstTitle = new List<EBTittle>();
         DTOBTitle dTOBTitle = aDBTitle.Obtener_Title_O();
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.IdTittles = drTitle.IdTittle.ToString();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
+
+    public List<EBTittle> Obtener_Title_2()
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.Obtener_Title_2();
         foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
         {
             eBTitle = new EBTittle();

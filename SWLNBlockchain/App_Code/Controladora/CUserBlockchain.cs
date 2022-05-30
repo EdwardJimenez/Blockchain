@@ -96,6 +96,20 @@ public class CUserBlockchain
         }
     }
 
+    public List<EBTittle> Obtener_Title_2()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Obtener_Title_2().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Actualizar_ITitle_statusTitle(string Id_Title)
     {
         EBTittle ebTitle = new EBTittle();
@@ -103,6 +117,20 @@ public class CUserBlockchain
         {
             ebTitle.IdTittles = Id_Title;
             asBlockchain.Actualizar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle_statusTitle_2(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.Actualizar_ITitle_statusTitle_2(ebTitle);
         }
         catch (Exception)
         {

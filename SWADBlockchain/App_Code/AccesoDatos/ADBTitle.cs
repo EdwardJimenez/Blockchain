@@ -43,6 +43,24 @@ public class ADBTitle
         }
         return dTOBTitle;
     }
+
+    public DTOBTitle Obtener_Title_2()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_statusTittle_2");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+
     /// <summary>
     /// Acceso a datos mediante Id_Carrera
     /// </summary>
@@ -125,6 +143,23 @@ public class ADBTitle
         {
             Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title statusTitle to 2
+    /// </summary>
+    public void Actualizar_ITitle_statusTitle_2(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle_2");
             BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
