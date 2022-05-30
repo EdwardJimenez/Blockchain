@@ -27,6 +27,22 @@ public class ADBTitle
         }
         return dTOBTitle;
     }
+    public DTOBTitle Obtener_Title_1()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_statusTittle_1");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
     /// <summary>
     /// Acceso a datos mediante Id_Carrera
     /// </summary>

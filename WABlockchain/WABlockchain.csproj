@@ -88,6 +88,7 @@
     <Content Include="Estilo\EstilosUsuariosNetvalle.css" />
     <Content Include="Estilo\SEstilo.css" />
     <Content Include="WebForm\BFormularioCRUDTitulos.aspx" />
+    <Content Include="WebForm\BFormularioEnviarTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaUsuariosNetValle.aspx" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
@@ -139,6 +140,13 @@
     </Compile>
     <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.designer.cs">
       <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioEnviarTitulos.aspx.cs">
+      <DependentUpon>BFormularioEnviarTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioEnviarTitulos.aspx.designer.cs">
+      <DependentUpon>BFormularioEnviarTitulos.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BFormularioListaTitulos.aspx.cs">
       <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>

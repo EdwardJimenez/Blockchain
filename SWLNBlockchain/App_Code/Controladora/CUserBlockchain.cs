@@ -82,6 +82,20 @@ public class CUserBlockchain
         }
     }
 
+    public List<EBTittle> Obtener_Title_1()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Obtener_Title_1().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Actualizar_ITitle_statusTitle(string Id_Title)
     {
         EBTittle ebTitle = new EBTittle();

@@ -36,6 +36,9 @@ public interface ISWADNETBlockchain
     List<EBTittle> Obtener_Title_O();
 
     [OperationContract]
+    List<EBTittle> Obtener_Title_1();
+
+    [OperationContract]
     void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
 
     [OperationContract]
