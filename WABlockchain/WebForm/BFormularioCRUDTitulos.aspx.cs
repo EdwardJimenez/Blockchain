@@ -19,7 +19,16 @@ namespace WABlockchain.WebForm
             if (!IsPostBack)
             {
                 cargarTitulos();
+                deshabilitarTextbox();
             }
+        }
+        private void deshabilitarTextbox()
+        {
+            this.txtEmail.Visible = false;
+            this.txtPassword.Visible = false;
+            this.txtCi.Visible = false;
+            this.txtDescripcion.Visible = false;
+            this.txtCIExtra.Visible = false;
         }
         private void cargarTitulos()
         {
@@ -39,11 +48,12 @@ namespace WABlockchain.WebForm
 
             try
             {
-                string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
+                string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
+                //string Id_Titulo = swLNBlockchainClient.UltimoID_O_NombreTablaSinElCaracterI("User");
                 swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad, Carrera, "1", Fullname);
 
 
-
+                cargarTitulos();
                 lblMensaje.Text = "Registro de Título Exitoso!!!";
             }
             catch (Exception)
