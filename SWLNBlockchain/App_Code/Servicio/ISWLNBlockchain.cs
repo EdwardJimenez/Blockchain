@@ -47,6 +47,9 @@ public interface ISWLNBlockchain
     void Actualizar_ITitle_statusTitle_2(string Id_Title);
 
     [OperationContract]
+    void Actualizar_ITitle_statusTitle_1(string Id_Title);
+
+    [OperationContract]
     void Eliminar_ITitle_statusTitle(string Id_Title);
 
     [OperationContract]

@@ -13,8 +13,11 @@ namespace WABlockchain.WebForm
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarTitulos();
-            cargarTituloEstado2();
+            if (!IsPostBack)
+            {
+                cargarTitulos();
+                cargarTituloEstado2();
+            }
         }
         private void cargarTitulos()
         {
@@ -39,6 +42,15 @@ namespace WABlockchain.WebForm
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
             swLNBlockchainClient.Actualizar_ITitle_statusTitle_2(s.ToString());
+            cargarTitulos();
+            cargarTituloEstado2();
+        }
+
+        protected void Cancelar_Click(object sender, EventArgs e)
+        {
+            int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+            int s = int.Parse(grvTitulos2.Rows[id].Cells[0].Text);
+            swLNBlockchainClient.Actualizar_ITitle_statusTitle_1(s.ToString());
             cargarTitulos();
             cargarTituloEstado2();
         }

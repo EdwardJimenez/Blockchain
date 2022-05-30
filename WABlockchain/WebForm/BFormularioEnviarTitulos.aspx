@@ -41,7 +41,7 @@
     </div>
 
 
-    <div class="caja">
+    <div class="caja2">
     <fieldset id="field2">
 <legend class="sub">Lista de Titulos</legend>
 <asp:GridView ID="grvTitulos2" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
@@ -56,7 +56,7 @@
 <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
 <asp:TemplateField>
 <ItemTemplate>
-<asp:Button runat="server" OnClick="Enviar_Click" CommandName="Cancelar" HeaderText="Cancelar" ItemStyle-CssClass="btButton" Text="Cancelar" />
+<asp:Button runat="server" OnClick="Cancelar_Click" CommandName="Cancelar" HeaderText="Cancelar" ItemStyle-CssClass="btButton" Text="Cancelar" />
 </ItemTemplate>
 </asp:TemplateField>
 <asp:TemplateField>

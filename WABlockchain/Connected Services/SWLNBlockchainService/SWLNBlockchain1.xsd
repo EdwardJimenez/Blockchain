@@ -181,6 +181,18 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Actualizar_ITitle_statusTitle_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitle_statusTitle_1Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Eliminar_ITitle_statusTitle">
     <xs:complexType>
       <xs:sequence>

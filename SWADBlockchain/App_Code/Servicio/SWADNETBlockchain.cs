@@ -59,6 +59,13 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         CBTitle cBTitle = new CBTitle();
         cBTitle.Actualizar_ITitle_statusTitle_2(ebTitle);
     }
+
+    public void Actualizar_ITitle_statusTitle_1(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.Actualizar_ITitle_statusTitle_1(ebTitle);
+    }
+
     public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
     {
         CBTitle cBTitle = new CBTitle();

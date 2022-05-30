@@ -999,6 +999,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle_2", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle_2Response")]
         System.Threading.Tasks.Task Actualizar_ITitle_statusTitle_2Async(string Id_Title);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle_1", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle_1Response")]
+        void Actualizar_ITitle_statusTitle_1(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle_1", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle_1Response")]
+        System.Threading.Tasks.Task Actualizar_ITitle_statusTitle_1Async(string Id_Title);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitleResponse")]
         void Eliminar_ITitle_statusTitle(string Id_Title);
         
@@ -1177,6 +1183,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_ITitle_statusTitle_2Async(string Id_Title) {
             return base.Channel.Actualizar_ITitle_statusTitle_2Async(Id_Title);
+        }
+        
+        public void Actualizar_ITitle_statusTitle_1(string Id_Title) {
+            base.Channel.Actualizar_ITitle_statusTitle_1(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task Actualizar_ITitle_statusTitle_1Async(string Id_Title) {
+            return base.Channel.Actualizar_ITitle_statusTitle_1Async(Id_Title);
         }
         
         public void Eliminar_ITitle_statusTitle(string Id_Title) {

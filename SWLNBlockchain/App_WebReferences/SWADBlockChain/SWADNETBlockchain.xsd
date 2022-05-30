@@ -147,10 +147,22 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Eliminar_ITitle_statusTitle">
+  <xs:element name="Actualizar_ITitle_statusTitle_1">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q13:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitle_statusTitle_1Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q14:EBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -162,7 +174,7 @@
   <xs:element name="Actualizar_ITitle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q14:EBTittle" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q15:EBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -207,7 +219,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q15:ArrayOfEBRoluser" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q16:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

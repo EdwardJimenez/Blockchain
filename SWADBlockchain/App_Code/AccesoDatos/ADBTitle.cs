@@ -151,6 +151,24 @@ public class ADBTitle
             throw;
         }
     }
+
+    /// <summary>
+    /// Actualizar Title statusTitleTo1
+    /// </summary>
+    public void Actualizar_ITitle_statusTitle_1(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_U_statusTittle_1");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     /// <summary>
     /// Actualizar Title statusTitle to 2
     /// </summary>

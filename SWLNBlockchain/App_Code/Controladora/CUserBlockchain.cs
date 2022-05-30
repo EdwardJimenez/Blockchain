@@ -138,6 +138,20 @@ public class CUserBlockchain
         }
     }
 
+    public void Actualizar_ITitle_statusTitle_1(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.Actualizar_ITitle_statusTitle_1(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Eliminar_ITitle_statusTitle(string Id_Title)
     {
         EBTittle ebTitle = new EBTittle();

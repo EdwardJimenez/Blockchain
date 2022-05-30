@@ -34,6 +34,11 @@ public class CBTitle
         aDBTitle.Actualizar_ITitle_statusTitle_2(ebTitle);
     }
 
+    public void Actualizar_ITitle_statusTitle_1(EBTittle ebTitle)
+    {
+        aDBTitle.Actualizar_ITitle_statusTitle_1(ebTitle);
+    }
+
     public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
     {
         aDBTitle.Eliminar_ITitle_statusTitle(ebTitle);

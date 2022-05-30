@@ -76,6 +76,12 @@ public class SWLNBlockchain : ISWLNBlockchain
         cUserBlockchain.Actualizar_ITitle_statusTitle_2(Id_Title);
     }
 
+    public void Actualizar_ITitle_statusTitle_1(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_ITitle_statusTitle_1(Id_Title);
+    }
+
     public void Eliminar_ITitle_statusTitle(string Id_Title)
     {
         CUserBlockchain cUserBlockchain = new CUserBlockchain();

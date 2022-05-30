@@ -147,6 +147,18 @@ public class ASBlockchain
         }
     }
 
+    public void Actualizar_ITitle_statusTitle_1(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_ITitle_statusTitle_1(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
     {
         try
