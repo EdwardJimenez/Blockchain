@@ -35,6 +35,8 @@
                         </td>
                         <td class="cel">
                             <asp:DropDownList ID="ddlMetodoEntrega" class="btn" runat="server">
+                                <asp:ListItem Value="A">Acto de Graduacion</asp:ListItem>
+                                <asp:ListItem Value="S">Solicitud Privada</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -42,7 +44,7 @@
             </div>
             <div class="contein">
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="INSERTAR" />
+                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="INSERTAR" OnClick="btnRegistrar_Click" />
                     &nbsp;&nbsp;
                     <asp:Button ID="btnQr" runat="server" class="btn" Text="ACTUALIZAR" />
                 </div>
