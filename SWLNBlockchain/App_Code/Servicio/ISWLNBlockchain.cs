@@ -33,6 +33,9 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
+
+    [OperationContract]
+    void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo);
     #endregion
 
     #region RolUser

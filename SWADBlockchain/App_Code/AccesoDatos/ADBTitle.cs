@@ -99,4 +99,21 @@ public class ADBTitle
             throw;
         }
     }
+
+    public void Actualizar_BTittle_ConfirmarEntrega(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_U_ConfirmarEntrega");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullname", DbType.String, bTitle.fullNameTitulado);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fecha", DbType.Date, bTitle.dateDelivery);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "modo", DbType.String, bTitle.statusDelivery);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 }
