@@ -52,6 +52,18 @@ public class SWLNBlockchain : ISWLNBlockchain
         cUserBlockchain.Actualizar_ITitle_statusTitle(Id_Title);
     }
 
+    public void Eliminar_ITitle_statusTitle(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Eliminar_ITitle_statusTitle(Id_Title);
+    }
+
+    public void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_ITitle(Id_Title,carreer,faculty,fullName);
+    }
+
     public void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo)
     {
         CUserBlockchain cUserBlockchain = new CUserBlockchain();
@@ -62,6 +74,12 @@ public class SWLNBlockchain : ISWLNBlockchain
     {
         CUserBlockchain cTittle = new CUserBlockchain();
         cTittle.Insertar_BTitle_I_idTitle_faculty(faculty, carreer, statusTittle, dateDelivery, statusDelivery, idUser, fullnameTitulado);
+    }
+
+    public void Insertar_BTitle(string idTittle,string faculty, string carreer, string idUser, string fullnameTitulado)
+    {
+        CUserBlockchain cTittle = new CUserBlockchain();
+        cTittle.Insertar_BTitle(idTittle,faculty, carreer, idUser, fullnameTitulado);
     }
 
     #endregion

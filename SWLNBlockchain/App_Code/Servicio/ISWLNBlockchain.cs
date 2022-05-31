@@ -17,7 +17,7 @@ public interface ISWLNBlockchain
     [OperationContract]
     EBUser btener_BUser_O_iduser(string Id_Carrera);
     [OperationContract]
-    void Insertar_BUser_I_idUser_email(string Id_User, string email, string password,string status ,string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+    void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     [OperationContract]
     void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     [OperationContract]
@@ -29,10 +29,19 @@ public interface ISWLNBlockchain
     void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado);
 
     [OperationContract]
+    void Insertar_BTitle(string idTittle,string faculty, string carreer, string idUser, string fullnameTitulado);
+
+    [OperationContract]
     List<EBTittle> Obtener_Title_O();
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
+
+    [OperationContract]
+    void Eliminar_ITitle_statusTitle(string Id_Title);
+
+    [OperationContract]
+    void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName);
 
     [OperationContract]
     void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo);
@@ -66,4 +75,5 @@ public interface ISWLNBlockchain
     [OperationContract]
     List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est();
     #endregion
+
 }
