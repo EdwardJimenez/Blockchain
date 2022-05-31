@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BRegistroUsuario.aspx.cs" Inherits="WABlockchain.WebForm.BRegistroUsuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BRegistroUsuarioNuevo.aspx.cs" Inherits="WABlockchain.WebForm.BRegistroUsuarioNuevo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Estilo/EstiloRegistros/EstiloRegistroUsuario.css" rel="stylesheet" />
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <form id="form1" runat="server">
@@ -62,6 +63,8 @@
                         <td class="cell">
                             <asp:Label Text="Descripción: " runat="server" Font-Bold="True" />
                         </td>
+                        <asp:Label ID="Label10" runat="server" CssClass="lbl" ></asp:Label>
+
                         <td class="cel">
                             <asp:TextBox runat="server" CssClass="ffin" ID="txtDescripcion" />
                         </td>
@@ -86,9 +89,9 @@
                     <asp:Label runat="server" CssClass="msj" Text="El programa se registró exitosamente" Visible="false"></asp:Label>
                 </div>
             </div>
-              <div>
-                    <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" Visible="false"></asp:Label>
-                </div>
+            <div>
+                <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" Visible="false"></asp:Label>
+            </div>
         </fieldset>
 
     </form>
