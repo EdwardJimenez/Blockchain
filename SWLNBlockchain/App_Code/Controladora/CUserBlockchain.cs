@@ -127,6 +127,23 @@ public class CUserBlockchain
         }
     }
 
+    public void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.fullNameTitulado = fullName;
+            ebTitle.dateDelivery = fecha;
+            ebTitle.statusDelivery = modo;
+            asBlockchain.Actualizar_BTittle_ConfirmarEntrega(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+
 
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {

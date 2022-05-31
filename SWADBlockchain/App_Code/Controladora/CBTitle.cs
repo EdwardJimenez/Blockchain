@@ -57,5 +57,10 @@ public class CBTitle
         return lstTitle;
     }
 
+    public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
+    {
+        aDBTitle.Actualizar_BTittle_ConfirmarEntrega(ebTitle);
+    }
+
     #endregion
 }

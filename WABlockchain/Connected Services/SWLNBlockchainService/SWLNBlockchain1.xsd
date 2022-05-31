@@ -172,6 +172,20 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="modo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntregaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_RolUser_O">
     <xs:complexType>
       <xs:sequence />

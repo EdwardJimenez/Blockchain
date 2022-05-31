@@ -24,20 +24,22 @@
                             <asp:TextBox ID="txtTitulado" runat="server" />
                         </td>
                     </tr>
-                    <tr>
+                    <%--<tr>
                         <td class="cell">
                             <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Sede: " />
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtSede" runat="server" />
                         </td>
-                    </tr>
+                    </tr>--%>
                     <tr>
                         <td class="cell">
                             <asp:Label ID="Label8" runat="server" Font-Bold="True" Text="Metodo de Entrega: " />
                         </td>
                         <td class="cel">
                             <asp:DropDownList ID="ddlMetodoEntrega" runat="server">
+                                <asp:ListItem Value="A">Acto de Graduacion</asp:ListItem>
+                                <asp:ListItem Value="S">Solicitud Privada</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                     </tr>
@@ -45,13 +47,13 @@
             </div>
             <div class="contein">
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="REGISTRAR TITULO" />
+                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="CONFIRMAR ENTREGA" OnClick="btnRegistrar_Click" />
                     &nbsp;&nbsp;
-                    <asp:Button ID="btnQr" runat="server" class="btn" Text="GENERAR CÓDIGO QR" />
+                    <%--<asp:Button ID="btnQr" runat="server" class="btn" Text="GENERAR CÓDIGO QR" />--%>
 
                 </div>
                 <div>
-                    <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="false"></asp:Label>
+                    <asp:Label ID="lblmsg" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="False"></asp:Label>
                 </div>
             </div>
         </fieldset>

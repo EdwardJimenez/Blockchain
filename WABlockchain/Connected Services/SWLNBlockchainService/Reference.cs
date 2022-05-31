@@ -993,6 +993,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitleResponse")]
         System.Threading.Tasks.Task Actualizar_ITitleAsync(string Id_Title, string carreer, string faculty, string fullName);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntregaResponse")]
+        void Actualizar_BTittle_ConfirmarEntrega(string fullName, System.DateTime fecha, string modo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntregaResponse")]
+        System.Threading.Tasks.Task Actualizar_BTittle_ConfirmarEntregaAsync(string fullName, System.DateTime fecha, string modo);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse")]
         WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O();
         
@@ -1151,6 +1157,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_ITitleAsync(string Id_Title, string carreer, string faculty, string fullName) {
             return base.Channel.Actualizar_ITitleAsync(Id_Title, carreer, faculty, fullName);
+        }
+        
+        public void Actualizar_BTittle_ConfirmarEntrega(string fullName, System.DateTime fecha, string modo) {
+            base.Channel.Actualizar_BTittle_ConfirmarEntrega(fullName, fecha, modo);
+        }
+        
+        public System.Threading.Tasks.Task Actualizar_BTittle_ConfirmarEntregaAsync(string fullName, System.DateTime fecha, string modo) {
+            return base.Channel.Actualizar_BTittle_ConfirmarEntregaAsync(fullName, fecha, modo);
         }
         
         public WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O() {
