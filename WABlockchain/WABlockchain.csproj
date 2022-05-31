@@ -72,7 +72,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WebForm\ILogin.aspx" />
+    <Content Include="WebForm\BEntregaTitulos.aspx" />
+    <Content Include="WebForm\BLogin.aspx" />
+    <Content Include="WebForm\BMenuPrincipal.aspx" />
+    <Content Include="WebForm\BRegistroUsuarioNuevo.aspx" />
     <Content Include="WebForm\WebForm1.aspx" />
     <None Include="Connected Services\SWLNBlockchainService\SWLNBlockchain.disco" />
     <None Include="Connected Services\SWLNBlockchainService\configuration91.svcinfo" />
@@ -92,13 +95,7 @@
     <Content Include="Imagenes\logoLogin.PNG" />
     <Content Include="Imagenes\lupa1.jpg" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
-    <Content Include="WebForm\BLogin.aspx" />
-    <Content Include="WebForm\BMenuPrincipal.aspx" />
-    <Content Include="WebForm\BRegistroUsuario.aspx" />
     <Content Include="WebForm\BResgistroTitulo.aspx" />
-    <Content Include="WebForm\IMenuPrincipal.aspx" />
-    <Content Include="WebForm\IRegistroTitulo.aspx" />
-    <Content Include="WebForm\IRegistroUsuario.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
@@ -136,6 +133,13 @@
       <DependentUpon>MPInicio.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm\BEntregaTitulos.aspx.cs">
+      <DependentUpon>BEntregaTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BEntregaTitulos.aspx.designer.cs">
+      <DependentUpon>BEntregaTitulos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\BFormularioListaTitulos.aspx.cs">
       <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,12 +182,12 @@
     <Compile Include="WebForm\BMenuPrincipal.aspx.designer.cs">
       <DependentUpon>BMenuPrincipal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm\BRegistroUsuario.aspx.cs">
-      <DependentUpon>BRegistroUsuario.aspx</DependentUpon>
+    <Compile Include="WebForm\BRegistroUsuarioNuevo.aspx.cs">
+      <DependentUpon>BRegistroUsuarioNuevo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm\BRegistroUsuario.aspx.designer.cs">
-      <DependentUpon>BRegistroUsuario.aspx</DependentUpon>
+    <Compile Include="WebForm\BRegistroUsuarioNuevo.aspx.designer.cs">
+      <DependentUpon>BRegistroUsuarioNuevo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BResgistroTitulo.aspx.cs">
       <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
@@ -191,34 +195,6 @@
     </Compile>
     <Compile Include="WebForm\BResgistroTitulo.aspx.designer.cs">
       <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\ILogin.aspx.cs">
-      <DependentUpon>ILogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\ILogin.aspx.designer.cs">
-      <DependentUpon>ILogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\IMenuPrincipal.aspx.cs">
-      <DependentUpon>IMenuPrincipal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\IMenuPrincipal.aspx.designer.cs">
-      <DependentUpon>IMenuPrincipal.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\IRegistroTitulo.aspx.cs">
-      <DependentUpon>IRegistroTitulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\IRegistroTitulo.aspx.designer.cs">
-      <DependentUpon>IRegistroTitulo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\IRegistroUsuario.aspx.cs">
-      <DependentUpon>IRegistroUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\IRegistroUsuario.aspx.designer.cs">
-      <DependentUpon>IRegistroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>

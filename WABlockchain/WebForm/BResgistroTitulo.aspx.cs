@@ -13,5 +13,10 @@ namespace WABlockchain.WebForm
         {
 
         }
+
+        protected void grvTitulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

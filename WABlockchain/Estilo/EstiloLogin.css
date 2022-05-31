@@ -37,8 +37,10 @@
     font-family: "BBAlpha Sans", "Prelude Medium", "S60 Sans", Tahoma, Verdana, Arial, "Sans-Serif";
     background-color: #64072D;
     color: #ffffff;
+    cursor:pointer;
 }
 
 .botons, password, cargar {
     text-align: center;
+    cursor: pointer;
 }
