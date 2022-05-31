@@ -11,7 +11,7 @@ namespace WABlockchain.WebForm
 {
 
 
-    public partial class ILogin
+    public partial class BLogin
     {
 
         /// <summary>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WABlockchain.WebForm
 {
-    public partial class BLogin : System.Web.UI.Page
+    public partial class BEntregaTitulos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

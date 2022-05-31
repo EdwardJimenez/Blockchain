@@ -17,12 +17,9 @@ namespace WABlockchain.WebForm
 
         }
 
-        protected void btnRegistrar_Click(object sender, EventArgs e)
+        protected void grvTitulos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string titulado = txtTitulado.Text;
-            DateTime fecha = DateTime.Parse(txtFechaEmision.Text);
-            string modo = ddlMetodoEntrega.SelectedValue;
-            swLNBlockchainClient.Actualizar_BTittle_ConfirmarEntrega(titulado,fecha,modo);
+
         }
     }
 }
