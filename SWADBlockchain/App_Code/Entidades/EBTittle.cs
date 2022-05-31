@@ -17,7 +17,6 @@ public class EBTittle
     public DateTime registerDate { get; set; }
     [DataMember]
     public DateTime lastUpdate { get; set; }
-
     [DataMember]
     public string status { get; set; }
     [DataMember]
@@ -27,13 +26,18 @@ public class EBTittle
     [DataMember]
     public string statusTitle { get; set; }
     [DataMember]
-    public string dateDelivery { get; set; }
+    public DateTime dateDelivery { get; set; }
     [DataMember]
     public string statusDelivery { get; set; }
     [DataMember]
-    public string impression { get; set; }
-    [DataMember]
     public string idUser { get; set; }
+    [DataMember]
+    public string fullNameTitulado { get; set; }
+    [DataMember]
+    public string idToken { get; set; }
+    [DataMember]
+    public string idQr { get; set; }
+
 
     public EBTittle()
     {
@@ -44,9 +48,13 @@ public class EBTittle
         faculty = string.Empty;
         carreer = string.Empty;
         statusTitle = string.Empty;
-        dateDelivery = string.Empty;
+        dateDelivery = DateTime.MinValue;
         statusDelivery = string.Empty;
-        impression = string.Empty;
         idUser = string.Empty;  
+        fullNameTitulado = string.Empty;
+        idToken = string.Empty;
+        idQr = string.Empty;
     }
+
+    
 }

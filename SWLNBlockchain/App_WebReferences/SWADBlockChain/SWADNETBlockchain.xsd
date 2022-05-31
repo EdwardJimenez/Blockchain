@@ -1,13 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="DoWork">
+  <xs:import schemaLocation="http://localhost:59383/SWADNETBlockchain.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:element name="Obtener_User_O">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="DoWorkResponse">
+  <xs:element name="Obtener_User_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_User_OResult" nillable="true" type="q1:ArrayOfEBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_BUser_O_iduser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_User" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_BUser_O_iduserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_BUser_O_iduserResult" nillable="true" type="q2:EBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_I_idUser_email">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eBUser" nillable="true" type="q3:EBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_I_idUser_emailResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BUser_I_idUser_email">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eBUser" nillable="true" type="q4:EBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BUser_I_idUser_emailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_I">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="bUser" nillable="true" type="q5:EBUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BUser_IResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BTitle_I_idTitle_faculty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eBTittle" nillable="true" type="q6:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BTitle_I_idTitle_facultyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Title_O">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Title_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_OResult" nillable="true" type="q7:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitle_statusTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q8:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitle_statusTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UltimoID_O_NombreTablaSinElCaracterI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UltimoID_O_NombreTablaSinElCaracterIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UltimoID_O_NombreTablaSinElCaracterIResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SiguienteID_O_NombreTablaSinElCaracterI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SiguienteID_O_NombreTablaSinElCaracterIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiguienteID_O_NombreTablaSinElCaracterIResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_RolUser_O">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_RolUser_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q9:ArrayOfEBRoluser" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

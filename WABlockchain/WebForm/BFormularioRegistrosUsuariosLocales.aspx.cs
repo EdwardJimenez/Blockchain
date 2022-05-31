@@ -4,53 +4,67 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WABlockchain.SWADBlockchainService;
+using WABlockchain.SWLNBlockchainService;
+using WABlockchain.Class;
 
 namespace WABlockchain.WebForm
 {
     public partial class BFormularioRegistrosUsuariosLocales : System.Web.UI.Page
     {
-        //SWLNIntercambioClient swLNIntercambioClient = new SWLNIntercambioClient();
-       
+        
+        private static Helper _helper = new Helper();
+        SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
+        private string _Id_Requerimiento = string.Empty;
+        private string _Id_User = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                CargarRolUser();
 
+            }
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string Email = txtEstudiante.Text;
-            string Password = txtApellidos.Text;
-            string UsuarioNetvalle = "a";
-            string RolUser = "U";
-            string Title = "j";
-            if (Email != string.Empty && Password != string.Empty && UsuarioNetvalle != string.Empty && RolUser != string.Empty && Title != string.Empty )
+            
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string Fullname = nombre + " " + apellido;
+            string Email = txtEmail.Text;
+            string Password = txtPassword.Text;
+            string Cellphone = txtCellphone.Text;
+            string UsuarioNetvalle = txtUserNetvalle.Text;
+            string CIUser = txtCi.Text;
+            string descripcion = txtDescripcion.Text;
+            string ciExtra = txtCIExtra.Text;
+            string status = "1";
+            try
             {
-                try
-                {
-                    //string Id_UsuariosLocales = swLNIntercambioClient.SiguienteID_O_NombreTablaSinElCaracterI("Programa");
-                    //swLNIntercambioClient.Insertar_IPrograma_I(Id_Programa, txtPrograma.Text, ddlPlaza.SelectedValue, DateTime.Parse(txtInicio.Text), DateTime.Parse(txtFin.Text));
-                    using (SWADBlockchainService.SWADNETBlockchainClient cliente=new SWADBlockchainService.SWADNETBlockchainClient())
-                    {
-                        EBUser eBUser = new EBUser(Email,Password,UsuarioNetvalle,RolUser,Title);
-                        cliente.Insertar_BUser_I_idUser_email(eBUser);
-                        
-                    }
+                string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
+                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRolUser.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
+                //RegistrarProgramaRequerimiento();
 
-                        //RegistrarProgramaRequerimiento();
-                        lblMensaje.Text = "Registro de Usuario Exitoso!!!";
-                    
-                }
-                catch (Exception)
-                {
+                lblMensaje.Text = "Registro de Usuario Exitoso!!!";
 
-                    lblMensaje.Text = "Registro de Usuario No Insertado";
-                }
-                    
-                
-                
             }
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "Notificacion()", true);
+            catch (Exception)
+            {
+
+                lblMensaje.Text = "Registro de Usuario No Insertado";
+            }
+        }
+        private void CargarRolUser()
+        {
+            ddlRolUser.Items.Clear();
+
+            List<EBRoluser> lstRol = new List<EBRoluser>();
+            lstRol = swLNBlockchainClient.Obtener_RolUser_O().ToList();
+            ddlRolUser.DataSource = lstRol;
+            ddlRolUser.DataTextField = "name";
+            ddlRolUser.DataValueField = "IdrolUser";
+            ddlRolUser.DataBind();
+            ddlRolUser.SelectedIndex = 0;
         }
     }
 }

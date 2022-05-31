@@ -24,24 +24,28 @@ public class EBUser
     [DataMember]
     public string IdRolUser { get; set; }
     [DataMember]
-    public string IdTitle { get; set; }
+    public string Fullname { get; set; }
     [DataMember]
-    public DateTime registerDate { get; set; }
+    public string Cellphone { get; set; }
     [DataMember]
-    public DateTime lastUpdate { get; set; }
-
+    public string CI { get; set; }
+    [DataMember]
+    public string Descripcion { get; set; }
+    [DataMember]
+    public string CIExtra { get; set; }
 
     public EBUser()
     {
-
-    }
-    public EBUser(string email, string password, string userNetvalle, string idRolUser, string idTitle)
-    {
-
-        Email = email;
-        Password = password;
-        UserNetvalle = userNetvalle;
-        IdRolUser = idRolUser;
-        IdTitle = idTitle;
+        IdUser = string.Empty;
+        Email = string.Empty;
+        Password = string.Empty;
+        status = string.Empty;
+        UserNetvalle = string.Empty;
+        IdRolUser = string.Empty;
+        Fullname = string.Empty;
+        Cellphone = string.Empty;
+        CI = string.Empty;  
+        Descripcion = string.Empty; 
+        CIExtra = string.Empty;
     }
 }

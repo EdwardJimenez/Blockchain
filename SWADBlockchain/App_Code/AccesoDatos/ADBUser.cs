@@ -21,7 +21,7 @@ public class ADBUser
         DTOBUser dTOBUser = new DTOBUser();
         try
         {
-            Database BDSWADBlockchain = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
 
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BUser"); //Select * from User
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBUser, "BUser");
@@ -39,7 +39,7 @@ public class ADBUser
         DTOBUser dtoBUser = new DTOBUser();
         try
         {
-            Database BDSWADNETIntUn = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntUn = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntUn.GetStoredProcCommand("BUser_O_iduser");
             BDSWADNETIntUn.AddInParameter(dbCommand, "iduser", DbType.String, iduser);
             BDSWADNETIntUn.LoadDataSet(dbCommand, dtoBUser, "BUser");
@@ -51,19 +51,51 @@ public class ADBUser
         return dtoBUser;
     }
 
-    public void Insertar_BUser_I_idUser_email(EBUser bUser)
+    /*public void Insertar_BUser_I_idUser_email(EBUser bUser)
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "IdUser", DbType.String, bUser.IdUser);
             BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);
             BDSWADNETIntEx.AddInParameter(dbCommand, "password", DbType.String, bUser.Password);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "status", DbType.String, bUser.status);
             BDSWADNETIntEx.AddInParameter(dbCommand, "userNetvalle", DbType.String, bUser.UserNetvalle);
             BDSWADNETIntEx.AddInParameter(dbCommand, "IdrolUser", DbType.String, bUser.IdRolUser);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "Tittle_IdTittles", DbType.String, bUser.IdTitle);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullName", DbType.String, bUser.Fullname);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "cellphone", DbType.String, bUser.Cellphone);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "ci", DbType.String, bUser.CI);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "descripcion", DbType.String, bUser.Descripcion);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "ciExtra", DbType.String, bUser.CIExtra);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
             
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    */
+    public void Insertar_BUser_I(EBUser bUser)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "Id", DbType.String, bUser.IdUser);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "password", DbType.String, bUser.Password);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "status", DbType.String, bUser.status);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "userNetvalle", DbType.String, bUser.UserNetvalle);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idRol", DbType.String, bUser.IdRolUser);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullName", DbType.String, bUser.Fullname);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "cellphone", DbType.String, bUser.Cellphone);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "CI", DbType.String, bUser.CI);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "descripcion", DbType.String, bUser.Descripcion);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "ciextra", DbType.String, bUser.CIExtra);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+
         }
         catch (Exception)
         {
@@ -77,7 +109,7 @@ public class ADBUser
     {
         try
         {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADNETIntUn;
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
             BDSWADNETIntEx.AddInParameter(dbCommand, "idUser", DbType.String, bUser.IdUser);
             BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);

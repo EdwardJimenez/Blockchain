@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="SWLNBlockchain" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISWLNBlockchain_Obtener_User_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_User_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_User_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_User_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_btener_BUser_O_iduser_InputMessage">
+    <wsdl:part name="parameters" element="tns:btener_BUser_O_iduser" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_btener_BUser_O_iduser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:btener_BUser_O_iduserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_idUser_email_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I_idUser_email" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_idUser_email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I_idUser_emailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_BUser_I_idUser_email_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BUser_I_idUser_email" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BUser_I_idUser_emailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BTitle_I_idTitle_faculty" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BTitle_I_idTitle_facultyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Title_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Title_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_ITitle_statusTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_ITitle_statusTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_ITitle_statusTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_ITitle_statusTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_RolUser_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_RolUser_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_RolUser_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_RolUser_OResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_UltimoID_O_NombreTablaSinElCaracterI_InputMessage">
+    <wsdl:part name="parameters" element="tns:UltimoID_O_NombreTablaSinElCaracterI" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_UltimoID_O_NombreTablaSinElCaracterI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UltimoID_O_NombreTablaSinElCaracterIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_InputMessage">
+    <wsdl:part name="parameters" element="tns:SiguienteID_O_NombreTablaSinElCaracterI" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SiguienteID_O_NombreTablaSinElCaracterIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_Estudiante_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_Estudiante" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_Estudiante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_EstudianteL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteL" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_EstudianteL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O_EstudianteLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_Pedro" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_PedroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Est" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_EstResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISWLNBlockchain">
+    <wsdl:operation name="Obtener_User_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_User_O" message="tns:ISWLNBlockchain_Obtener_User_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_User_OResponse" message="tns:ISWLNBlockchain_Obtener_User_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="btener_BUser_O_iduser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/btener_BUser_O_iduser" message="tns:ISWLNBlockchain_btener_BUser_O_iduser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/btener_BUser_O_iduserResponse" message="tns:ISWLNBlockchain_btener_BUser_O_iduser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I_idUser_email">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email" message="tns:ISWLNBlockchain_Insertar_BUser_I_idUser_email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_emailResponse" message="tns:ISWLNBlockchain_Insertar_BUser_I_idUser_email_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I" message="tns:ISWLNBlockchain_Insertar_BUser_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse" message="tns:ISWLNBlockchain_Insertar_BUser_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BUser_I_idUser_email">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email" message="tns:ISWLNBlockchain_Actualizar_BUser_I_idUser_email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_emailResponse" message="tns:ISWLNBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BTitle_I_idTitle_faculty">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_faculty" message="tns:ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_facultyResponse" message="tns:ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Title_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O" message="tns:ISWLNBlockchain_Obtener_Title_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_OResponse" message="tns:ISWLNBlockchain_Obtener_Title_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ITitle_statusTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle" message="tns:ISWLNBlockchain_Actualizar_ITitle_statusTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse" message="tns:ISWLNBlockchain_Actualizar_ITitle_statusTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_RolUser_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O" message="tns:ISWLNBlockchain_Obtener_RolUser_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse" message="tns:ISWLNBlockchain_Obtener_RolUser_O_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UltimoID_O_NombreTablaSinElCaracterI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/UltimoID_O_NombreTablaSinElCaracterI" message="tns:ISWLNBlockchain_UltimoID_O_NombreTablaSinElCaracterI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/UltimoID_O_NombreTablaSinElCaracterIResponse" message="tns:ISWLNBlockchain_UltimoID_O_NombreTablaSinElCaracterI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SiguienteID_O_NombreTablaSinElCaracterI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterI" message="tns:ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterIResponse" message="tns:ISWLNBlockchain_SiguienteID_O_NombreTablaSinElCaracterI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_Estudiante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Estudiante" message="tns:ISWLNBlockchain_Obtener_Persona_O_Estudiante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteResponse" message="tns:ISWLNBlockchain_Obtener_Persona_O_Estudiante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_EstudianteL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL" message="tns:ISWLNBlockchain_Obtener_Persona_O_EstudianteL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteLResponse" message="tns:ISWLNBlockchain_Obtener_Persona_O_EstudianteL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro" message="tns:ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_PedroResponse" message="tns:ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_EstResponse" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISWLNBlockchain" type="tns:ISWLNBlockchain">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener_User_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_User_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="btener_BUser_O_iduser">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/btener_BUser_O_iduser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I_idUser_email">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BUser_I_idUser_email">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BTitle_I_idTitle_faculty">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_faculty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Title_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ITitle_statusTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_RolUser_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UltimoID_O_NombreTablaSinElCaracterI">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/UltimoID_O_NombreTablaSinElCaracterI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SiguienteID_O_NombreTablaSinElCaracterI">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/SiguienteID_O_NombreTablaSinElCaracterI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_Estudiante">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Estudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O_EstudianteL">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SWLNBlockchain">
+    <wsdl:port name="BasicHttpBinding_ISWLNBlockchain" binding="tns:BasicHttpBinding_ISWLNBlockchain">
+      <soap:address location="http://localhost:53675/SWLNBlockchain.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
