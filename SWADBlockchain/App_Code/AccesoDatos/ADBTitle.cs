@@ -140,6 +140,24 @@ public class ADBTitle
             throw;
         }
     }
+    public void Insertar_BTitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTitle_Insert");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle.faculty);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "carreer", DbType.String, bTitle.carreer);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullNameT", DbType.String, bTitle.fullNameTitulado);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "IdUser", DbType.String, bTitle.idUser);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     /// <summary>
     /// Actualizar Title
     /// </summary>
@@ -168,6 +186,60 @@ public class ADBTitle
             Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle");
             BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Eliminar Title statusTitleToFive
+    /// </summary>
+    public void Eliminar_ITitle_statusTitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_Delet_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title
+    /// </summary>
+    public void Actualizar_ITitle(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_Update");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "faculty", DbType.String, bTitle.faculty);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "carreer", DbType.String, bTitle.carreer);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullNameT", DbType.String, bTitle.fullNameTitulado);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_BTittle_ConfirmarEntrega(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_U_ConfirmarEntrega");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fullname", DbType.String, bTitle.fullNameTitulado);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "fecha", DbType.Date, bTitle.dateDelivery);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "modo", DbType.String, bTitle.statusDelivery);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }
         catch (Exception)

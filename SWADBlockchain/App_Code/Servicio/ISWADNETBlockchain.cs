@@ -36,10 +36,13 @@ public interface ISWADNETBlockchain
     void Insertar_BTitle_I_idTitle_faculty(EBTittle eBTittle);
 
     [OperationContract]
+    void Insertar_BTitle(EBTittle eBTittle);
+
+    [OperationContract]
     List<EBTittle> Obtener_Title_O();
 
     [OperationContract]
-    void Actualizar_ITitle_statusTitle(EBTittle ebTitle); 
+    void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
 
     [OperationContract]
     List<EBTittle> BTittle_O_State5();
@@ -55,6 +58,19 @@ public interface ISWADNETBlockchain
 
     [OperationContract]
     void BTittle_update_statusTittle_7(EBTittle ebTitle);
+
+
+
+    [OperationContract]
+    void Eliminar_ITitle_statusTitle(EBTittle ebTitle);
+
+    [OperationContract]
+    void Actualizar_ITitle(EBTittle ebTitle);
+
+    [OperationContract]
+    void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle);
+    
+
     #endregion
 
     #region Helper

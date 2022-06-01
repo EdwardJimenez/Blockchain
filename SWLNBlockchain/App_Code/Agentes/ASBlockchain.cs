@@ -159,6 +159,30 @@ public class ASBlockchain
         }
     }
 
+    public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Eliminar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_ITitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Insertar_BTitle_I_idTitle_faculty(EBTittle ebTittle)
         {
         try
@@ -170,6 +194,7 @@ public class ASBlockchain
             throw;
         }
     }
+
     public void BTittle_update_statusTittle_7(EBTittle ebTitle)
     {
         try
@@ -186,6 +211,30 @@ public class ASBlockchain
         try
         {
             swADNETBlockchain.BTittle_update_statusTittle_6(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Insertar_BTitle(EBTittle ebTittle)
+    {
+        try
+        {
+            swADNETBlockchain.Insertar_BTitle(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_BTittle_ConfirmarEntrega(ebTitle);
         }
         catch (Exception)
         {

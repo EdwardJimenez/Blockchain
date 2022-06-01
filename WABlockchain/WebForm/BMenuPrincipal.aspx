@@ -3,29 +3,30 @@
     <link href="../Estilo/EstiloRegistros/EstiloMenuPrincipal.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <form id="form1" runat="server">
+      <form id="form1" runat="server">
         <div class="boton">
             <br />
-        <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" OnClick="btnBuscar_Click" Width="187px" />
-            &nbsp;<asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="42px" />
-            <asp:TextBox ID="txtBuscador" runat="server" Width="537px"></asp:TextBox>
-       </div>
-            <br />
+            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="38px" />
+            <asp:TextBox ID="txtBuscador" runat="server" Width="557px"></asp:TextBox>
+        </div>
+        <br />
         <div class="ddls">
-            <asp:DropDownList ID="ddlSede" runat="server"></asp:DropDownList>
-            &nbsp;<asp:DropDownList ID="ddlGestion" runat="server"></asp:DropDownList>
-            &nbsp;<asp:DropDownList ID="ddlCarrera" runat="server"></asp:DropDownList>
-            &nbsp;<asp:DropDownList ID="ddlEstadoTitulo" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="ddlSede" CssClass="btn" runat="server"></asp:DropDownList>
+            &nbsp;<asp:DropDownList ID="ddlGestion" CssClass="btn" runat="server"></asp:DropDownList>
+            &nbsp;<asp:DropDownList ID="ddlCarrera" CssClass="btn" runat="server"></asp:DropDownList>
+            &nbsp;<asp:DropDownList ID="ddlEstadoTitulo" CssClass="btn" runat="server"></asp:DropDownList>
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server" Height="330px" Width="476px">
             </asp:GridView>
-        </div>
-        <div class="botons">
+            <br />
+            <br />
+            <div >
+                <asp:Button ID="btnRegistrarUsuario" CssClass="btn"  runat="server"  Text="REGISTRAR USUARIO" Width="187px" />
+                <asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="REGISTRAR TITULO" Width="187px" />
+            </div>
 
-        <asp:Button ID="btnRegistrarUsuario" runat="server" Text="REGISTRAR USUARIO" Width="187px" />
-        &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnRegistrarTitulo" runat="server" Text="REGISTRAR TITULO" Width="187px" />
         </div>
 
     </form>

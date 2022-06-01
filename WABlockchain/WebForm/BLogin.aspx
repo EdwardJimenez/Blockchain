@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BLogin.aspx.cs" Inherits="WABlockchain.WebForm.ILogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BLogin.aspx.cs" Inherits="WABlockchain.WebForm.BLogin" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <title></title>
 </head>
 <body>
-  <form id="form1" runat="server">
+   <form id="form1" runat="server">
 
         <div id="wrapper">
             <div id="main_container">
@@ -106,6 +106,7 @@
                     <asp:TextBox CssClass="password" ID="txtPassword" placeholder="Password" runat="server" Height="37px" Width="202px"></asp:TextBox>
                     <asp:Label ID="LRol" runat="server" Text="Label" Visible="False"></asp:Label>
                     <br />
+                    <asp:Button  CssClass="cargar"   ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" />
                     <asp:Button CssClass="cargar" ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" OnClick="btnCargar_Click" />
                 </div>
 

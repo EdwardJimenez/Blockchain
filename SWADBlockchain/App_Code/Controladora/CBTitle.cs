@@ -20,10 +20,24 @@ public class CBTitle
     {
         aDBTitle.Insertar_BTitle_I_idTitle_faculty(bTitle);
     }
+    public void Insertar_BTitle(EBTittle bTitle)
+    {
+        aDBTitle.Insertar_BTitle(bTitle);
+    }
 
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         aDBTitle.Actualizar_ITitle_statusTitle(ebTitle);
+    }
+
+    public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
+    {
+        aDBTitle.Eliminar_ITitle_statusTitle(ebTitle);
+    }
+
+    public void Actualizar_ITitle(EBTittle ebTitle)
+    {
+        aDBTitle.Actualizar_ITitle(ebTitle);
     }
 
     public List<EBTittle> Obtener_Title_O()
@@ -41,6 +55,12 @@ public class CBTitle
             lstTitle.Add(eBTitle);
         }
         return lstTitle;
+    }
+
+
+    public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
+    {
+        aDBTitle.Actualizar_BTittle_ConfirmarEntrega(ebTitle);
     }
     public List<EBTittle> BTittle_O_State5()
     {
@@ -98,6 +118,5 @@ public class CBTitle
     {
         aDBTitle.BTittle_update_statusTittle_7(ebTitle);
     }
-    
     #endregion
 }

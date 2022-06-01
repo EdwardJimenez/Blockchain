@@ -8,7 +8,7 @@ using WABlockchain.SWLNBlockchainService;
 
 namespace WABlockchain.WebForm
 {
-    public partial class ILogin : System.Web.UI.Page
+    public partial class BLogin : System.Web.UI.Page
     {
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         static int a = 1; //Son variables predeterminadas para igualar el rol obtenido y así asignarle uno
