@@ -11,30 +11,46 @@ namespace WABlockchain.WebForm
     public partial class ILogin : System.Web.UI.Page
     {
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
+        static int a = 1; //Son variables predeterminadas para igualar el rol obtenido y así asignarle uno
+        static int b = 2;
+        static int c = 3;
         private void CargarRolUser()
         {
-            int a = 1;
-            int b = 2;
-            int c = 3;
+            
             EBUser Rol = new EBUser();
             Rol = swLNBlockchainClient.Obtener_RolUser_O_Search(txtNombre.Text, txtPassword.Text);
 
-            z.Text = Rol.IdRolUser;
-            if (a== Convert.ToInt32(z.Text))
+            this.LRol.Text = Rol.IdRolUser;
+            if(txtNombre.Text=="" || txtPassword.Text=="")
             {
-                z0.Text = "ReadOnly";
-            }
-            else if (b == Convert.ToInt32(z.Text))
-            {
-                z0.Text = "Admin";
-            }else if(c == Convert.ToInt32(z.Text))
-            {
-                z0.Text = "Secretaria";
+                //Son labels que cumplirán la función de validar los campos
+                LC1.Text = "Falta llenarse un campo";
+                LRol.Text = "Falta llenarse un campo";
             }
             else
             {
-                z0.Text = "VRA";
+                if (a == Convert.ToInt32(this.LRol.Text))
+                {
+                    z0.Text = "ReadOnly";
+                    Session["IdRol"] = "1";
+                }
+                else if (b == Convert.ToInt32(this.LRol.Text))
+                {
+                    z0.Text = "Admin";
+                    Session["IdRol"] = "2";
+                }
+                else if (c == Convert.ToInt32(this.LRol.Text))
+                {
+                    z0.Text = "Secretaria";
+                    Session["IdRol"] = "3";
+                }
+                else
+                {
+                    z0.Text = "VRA";
+                    Session["IdRol"] = "4";
+                }
             }
+            
             
         }
         protected void Page_Load(object sender, EventArgs e)

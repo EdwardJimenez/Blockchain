@@ -80,6 +80,71 @@ public class CUserBlockchain
     #endregion
 
     #region BTitle
+    public void BTittle_update_statusTittle_7(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.BTittle_update_statusTittle_7(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_6(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.BTittle_update_statusTittle_6(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State7()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_State7().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State6()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_State6().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State5()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_State5().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public List<EBTittle> Obtener_Title_O()
     {
         List<EBTittle> eBTitle = new List<EBTittle>();
@@ -93,6 +158,7 @@ public class CUserBlockchain
             throw;
         }
     }
+    
 
     public void Actualizar_ITitle_statusTitle(string Id_Title)
     {

@@ -40,6 +40,24 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
+
+    
+    [OperationContract]
+    void BTittle_update_statusTittle_6(string Id_Title);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_7(string Id_Title);
+
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State5();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State6();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State7();
+
     #endregion
 
     #region RolUser

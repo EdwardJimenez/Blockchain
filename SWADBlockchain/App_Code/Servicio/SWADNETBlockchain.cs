@@ -49,11 +49,20 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         CBTitle cBTittle = new CBTitle();
         cBTittle.Insertar_BTitle_I_idTitle_faculty(eBTittle);
     }
-
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         CBTitle cBTitle = new CBTitle();
         cBTitle.Actualizar_ITitle_statusTitle(ebTitle);
+    }
+    public void BTittle_update_statusTittle_7(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.BTittle_update_statusTittle_7(ebTitle);
+    }
+    public void BTittle_update_statusTittle_6(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.BTittle_update_statusTittle_6(ebTitle);
     }
 
     public List<EBTittle> Obtener_Title_O()
@@ -63,7 +72,28 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         lstTitle = cBTitle.Obtener_Title_O();
         return lstTitle;
     }
-
+    
+    public List<EBTittle> BTittle_O_State5()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_State5();
+        return lstTitle;
+    }
+    public List<EBTittle> BTittle_O_State6()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_State6();
+        return lstTitle;
+    }
+    public List<EBTittle> BTittle_O_State7()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_State7();
+        return lstTitle;
+    }
     #endregion
 
     #region Helper

@@ -42,6 +42,62 @@ public class CBTitle
         }
         return lstTitle;
     }
-
+    public List<EBTittle> BTittle_O_State5()
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.BTittle_O_State5();
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.IdTittles = drTitle.IdTittle.ToString();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
+    public List<EBTittle> BTittle_O_State6()
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.BTittle_O_State6();
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.IdTittles = drTitle.IdTittle.ToString();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
+    public List<EBTittle> BTittle_O_State7()
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.BTittle_O_State7();
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.IdTittles = drTitle.IdTittle.ToString();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
+    public void BTittle_update_statusTittle_6(EBTittle ebTitle)
+    {
+        aDBTitle.BTittle_update_statusTittle_6(ebTitle);
+    }
+    public void BTittle_update_statusTittle_7(EBTittle ebTitle)
+    {
+        aDBTitle.BTittle_update_statusTittle_7(ebTitle);
+    }
+    
     #endregion
 }

@@ -93,7 +93,45 @@ public class ASBlockchain
     #endregion
 
     #region BTitle
-
+    public List<EBTittle> BTittle_O_State5()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_State5().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State6()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_State6().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State7()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_State7().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public List<EBTittle> Obtener_Title_O()
     {
         List<EBTittle> lstEbTitle = new List<EBTittle>();
@@ -107,6 +145,7 @@ public class ASBlockchain
             throw;
         }
     }
+    
 
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
@@ -125,6 +164,28 @@ public class ASBlockchain
         try
         {
             swADNETBlockchain.Insertar_BTitle_I_idTitle_faculty(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_7(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.BTittle_update_statusTittle_7(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_6(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.BTittle_update_statusTittle_6(ebTitle);
         }
         catch (Exception)
         {
