@@ -9,6 +9,16 @@ using System.Text;
 [ServiceContract]
 public interface ISWADNetValle
 {
+
+
     [OperationContract]
-    void DoWork();
+    ENCareer Obtener_Carrerra_O_ID_Pedro(string id);
+
+    [OperationContract]
+
+    List<ENPerson> Obtener_Persona_O_EstudianteL();
+
+    [OperationContract]
+    ENPerson Obtener_Persona_O_Estudiante();
+
 }

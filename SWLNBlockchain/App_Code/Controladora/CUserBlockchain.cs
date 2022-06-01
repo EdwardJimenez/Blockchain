@@ -110,6 +110,54 @@ public class CUserBlockchain
         }
     }
 
+    public void Eliminar_ITitle_statusTitle(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.Eliminar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle(string Id_Title,string carreer,string faculty,string fullName)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            ebTitle.carreer = carreer;
+            ebTitle.faculty = faculty;
+            ebTitle.fullNameTitulado = fullName;
+            asBlockchain.Actualizar_ITitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.fullNameTitulado = fullName;
+            ebTitle.dateDelivery = fecha;
+            ebTitle.statusDelivery = modo;
+            asBlockchain.Actualizar_BTittle_ConfirmarEntrega(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+
 
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {
@@ -126,6 +174,25 @@ public class CUserBlockchain
 
 
             asBlockchain.Insertar_BTitle_I_idTitle_faculty(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void Insertar_BTitle(string id,string faculty, string carreer, string idUser, string fullnameTitulado)
+    {
+        EBTittle ebTittle = new EBTittle();
+        try
+        {
+            ebTittle.IdTittles = id;
+            ebTittle.faculty = faculty;
+            ebTittle.carreer = carreer;
+            ebTittle.idUser = idUser;
+            ebTittle.fullNameTitulado = fullnameTitulado;
+
+
+            asBlockchain.Insertar_BTitle(ebTittle);
         }
         catch (Exception)
         {

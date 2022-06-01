@@ -20,9 +20,9 @@
 						<br/> 
 							<div> 
 								<p>
-                                    <asp:DropDownList ID="D1" runat="server" Height="16px" Width="180px" OnSelectedIndexChanged="D1_SelectedIndexChanged">
+                                    <asp:DropDownList ID="D1" runat="server" Height="16px" Width="180px" >
                                     </asp:DropDownList>
-                                    <asp:DropDownList ID="D2" runat="server" Height="16px" Width="221px" OnSelectedIndexChanged="D2_SelectedIndexChanged">
+                                    <asp:DropDownList ID="D2" runat="server" Height="16px" Width="221px" >
                                     </asp:DropDownList>
                         </div>
                         <asp:GridView ID="grvTitulados" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" HorizontalAlign="Center">

@@ -75,6 +75,18 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Insertar_BTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="eBTittle" nillable="true" type="q7:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_Title_O">
     <xs:complexType>
       <xs:sequence />
@@ -83,14 +95,14 @@
   <xs:element name="Obtener_Title_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_OResult" nillable="true" type="q7:ArrayOfEBTittle" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_OResult" nillable="true" type="q8:ArrayOfEBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Actualizar_ITitle_statusTitle">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q8:EBTittle" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q9:EBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -107,7 +119,7 @@
   <xs:element name="Obtener_Title_O_ListGraduatesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_O_ListGraduatesResult" nillable="true" type="q9:ArrayOfEBTittle" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Title_O_ListGraduatesResult" nillable="true" type="q10:ArrayOfEBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -121,7 +133,7 @@
   <xs:element name="BUser_O_SearchResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BUser_O_SearchResult" nillable="true" type="q10:EBTittle" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BUser_O_SearchResult" nillable="true" type="q11:EBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -135,7 +147,7 @@
   <xs:element name="BTittle_O_FacultyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_FacultyResult" nillable="true" type="q11:ArrayOfEBTittle" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_FacultyResult" nillable="true" type="q12:ArrayOfEBTittle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -149,8 +161,44 @@
   <xs:element name="BTittle_O_CARREERResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_CARREERResult" nillable="true" type="q12:ArrayOfEBTittle" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_CARREERResult" nillable="true" type="q13:ArrayOfEBTittle" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q14:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q15:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ebTitle" nillable="true" type="q16:EBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntregaResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="UltimoID_O_NombreTablaSinElCaracterI">
@@ -189,7 +237,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q13:ArrayOfEBRoluser" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q17:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

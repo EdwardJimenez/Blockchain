@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WABlockchain</RootNamespace>
     <AssemblyName>WABlockchain</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44370</IISExpressSSLPort>
@@ -72,6 +72,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WebForm\BEntregaTitulos.aspx" />
+    <Content Include="WebForm\BLogin.aspx" />
+    <Content Include="WebForm\BMenuPrincipal.aspx" />
+    <Content Include="WebForm\BRegistroUsuarioNuevo.aspx" />
     <None Include="Connected Services\SWLNBlockchainService\SWLNBlockchain.disco" />
     <None Include="Connected Services\SWLNBlockchainService\configuration91.svcinfo" />
     <None Include="Connected Services\SWLNBlockchainService\configuration.svcinfo" />
@@ -79,9 +83,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Estilo\EstiloLogin.css" />
+    <Content Include="Estilo\EstiloMasterPage\EstiloMPLogin.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloMenuPrincipal.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloRegistroTitulo.css" />
+    <Content Include="Estilo\EstiloRegistros\EstiloRegistroUsuario.css" />
     <Content Include="Estilo\SEstilo.css" />
+    <Content Include="WebForm\BFormularioCRUDTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
+    <Content Include="WebForm\BFormularioListaUsuariosNetValle.aspx" />
+    <Content Include="Imagenes\logoLogin.PNG" />
+    <Content Include="Imagenes\lupa1.jpg" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
+    <Content Include="WebForm\BResgistroTitulo.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
@@ -99,7 +113,6 @@
     <Content Include="Imagenes\Nuevo documento de texto.txt" />
     <Content Include="Imagenes\perfil.png" />
     <Content Include="Web.config" />
-    <Content Include="WebForm\BFormularioRegistroUsuariosLocales.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Helper.cs" />
@@ -119,12 +132,33 @@
       <DependentUpon>MPInicio.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm\BEntregaTitulos.aspx.cs">
+      <DependentUpon>BEntregaTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BEntregaTitulos.aspx.designer.cs">
+      <DependentUpon>BEntregaTitulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.cs">
+      <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.designer.cs">
+      <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\BFormularioListaTitulos.aspx.cs">
       <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm\BFormularioListaTitulos.aspx.designer.cs">
       <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioListaUsuariosNetValle.aspx.cs">
+      <DependentUpon>BFormularioListaUsuariosNetValle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioListaUsuariosNetValle.aspx.designer.cs">
+      <DependentUpon>BFormularioListaUsuariosNetValle.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
@@ -133,12 +167,33 @@
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.cs">
-      <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
+    <Compile Include="WebForm\BLogin.aspx.cs">
+      <DependentUpon>BLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm\BFormularioRegistroUsuariosLocales.aspx.designer.cs">
-      <DependentUpon>BFormularioRegistroUsuariosLocales.aspx</DependentUpon>
+    <Compile Include="WebForm\BLogin.aspx.designer.cs">
+      <DependentUpon>BLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BMenuPrincipal.aspx.cs">
+      <DependentUpon>BMenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BMenuPrincipal.aspx.designer.cs">
+      <DependentUpon>BMenuPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BRegistroUsuarioNuevo.aspx.cs">
+      <DependentUpon>BRegistroUsuarioNuevo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BRegistroUsuarioNuevo.aspx.designer.cs">
+      <DependentUpon>BRegistroUsuarioNuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BResgistroTitulo.aspx.cs">
+      <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BResgistroTitulo.aspx.designer.cs">
+      <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
@@ -166,6 +221,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.EBTittle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.IUserCareerCompleja.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.ENCareer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SWLNBlockchainService\WABlockchain.SWLNBlockchainService.ENPerson.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="packages.config" />

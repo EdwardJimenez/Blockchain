@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed442834-3605-460f-8658-d8f782da2be1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ed442834-3605-460f-8658-d8f782da2be1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:53675/SWLNBlockchain.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SWLNBlockchain.xsd" MetadataType="Schema" ID="29b5fa01-a539-46e6-a171-a862b4e8cdcc" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd2" />
-    <MetadataFile FileName="SWLNBlockchain.wsdl" MetadataType="Wsdl" ID="14447763-e8c2-483b-88a2-93d15eb023f5" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?wsdl" />
-    <MetadataFile FileName="SWLNBlockchain1.xsd" MetadataType="Schema" ID="05db076a-f6d3-40b6-b51f-a6d367cb0146" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd0" />
     <MetadataFile FileName="SWLNBlockchain2.xsd" MetadataType="Schema" ID="cd7adb8a-b7e6-44f8-9922-276239572828" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd1" />
+    <MetadataFile FileName="SWLNBlockchain.xsd" MetadataType="Schema" ID="29b5fa01-a539-46e6-a171-a862b4e8cdcc" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd2" />
+    <MetadataFile FileName="SWLNBlockchain1.xsd" MetadataType="Schema" ID="05db076a-f6d3-40b6-b51f-a6d367cb0146" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?xsd=xsd0" />
     <MetadataFile FileName="SWLNBlockchain.disco" MetadataType="Disco" ID="2e842c54-e368-420d-a1e3-a991a780710b" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?disco" />
+    <MetadataFile FileName="SWLNBlockchain.wsdl" MetadataType="Wsdl" ID="14447763-e8c2-483b-88a2-93d15eb023f5" SourceId="1" SourceUrl="http://localhost:53675/SWLNBlockchain.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

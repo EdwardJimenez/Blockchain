@@ -33,5 +33,10 @@ namespace WABlockchain.WebForm
             swLNBlockchainClient.Actualizar_ITitle_statusTitle(s.ToString());
             cargarTitulos();
         }
+
+        protected void grvTitulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Errorsito by pedro jaja :(
+        }
     }
 }

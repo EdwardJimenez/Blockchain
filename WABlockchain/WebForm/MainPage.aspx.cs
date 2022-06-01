@@ -17,7 +17,7 @@ namespace WABlockchain.WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
             ListarTituladosGeneral();
-            CargarFacultad();
+            //CargarFacultad();
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,26 +51,16 @@ namespace WABlockchain.WebForm
             ListarTituladosGeneral();
             TextBox1.Text = "";
         }
+        //private void CargarFacultad()
+        //{
+        //    D1.Items.Clear();
 
-        protected void D1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void D2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void CargarFacultad()
-        {
-            D1.Items.Clear();
-
-            List<EBTittle> lstT = new List<EBTittle>();
-            lstT = swLNBlockchainClient.BTittle_O_Faculty(D1.Text).ToList();
-            D1.DataSource = lstT;
-            D1.DataTextField = "faculty";            
-            D1.DataBind();
-            D1.SelectedIndex = 0;
-        }
+        //    List<EBTittle> lstT = new List<EBTittle>();
+        //    lstT = swLNBlockchainClient.BTittle_O_Faculty(D1.Text).ToList();
+        //    D1.DataSource = lstT;
+        //    D1.DataTextField = "faculty";            
+        //    D1.DataBind();
+        //    D1.SelectedIndex = 0;
+        //}
     }
 }
