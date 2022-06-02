@@ -11,7 +11,7 @@ namespace WABlockchain.WebForm
 {
 
 
-    public partial class BEstado5
+    public partial class BEstado3
     {
 
         /// <summary>

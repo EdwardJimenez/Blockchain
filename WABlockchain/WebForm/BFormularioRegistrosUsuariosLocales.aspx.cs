@@ -42,7 +42,7 @@ namespace WABlockchain.WebForm
             try
             {
                 string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRolUser.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
+                //swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRolUser.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
                 //RegistrarProgramaRequerimiento();
 
                 lblMensaje.Text = "Registro de Usuario Exitoso!!!";

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BEstado5.aspx.cs" Inherits="WABlockchain.WebForm.BEstado5" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BEstado6.aspx.cs" Inherits="WABlockchain.WebForm.BEstado6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -18,7 +18,7 @@
 <div class="datos">
 <div>
 <fieldset id="field">
-<legend class="sub">Solicitar titulos de la sede
+<legend class="sub">Lista de títulos solicitados a la espera de ser enviados
     </legend>
 
 <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
@@ -34,7 +34,7 @@
 
 <asp:TemplateField>
 <ItemTemplate>
-<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Solicitar" />
+<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Envíar título solicitado" />
 </ItemTemplate>
 </asp:TemplateField>
 

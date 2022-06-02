@@ -11,6 +11,48 @@ using System.Data;
 /// </summary>
 public class ADBTitle
 {
+    public void BTittle_update_statusTittle_3(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle_3");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idTittle", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_4(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle_4");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idTittle", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_5(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle_5");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "idTittle", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public void BTittle_update_statusTittle_7(EBTittle bTitle)
     {
         try
@@ -38,6 +80,70 @@ public class ADBTitle
         {
             throw;
         }
+    }
+    public DTOBTitle BTittle_O_TO_Upload()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_TO_Upload");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+    public DTOBTitle BTittle_O_State2()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_State2"); //Select * from Title where status=5
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+    public DTOBTitle BTittle_O_State3()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_State3"); //Select * from Title where status=5
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+    public DTOBTitle BTittle_O_State4()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_State4"); //Select * from Title where status=5
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
     }
     public DTOBTitle BTittle_O_State5()
     {

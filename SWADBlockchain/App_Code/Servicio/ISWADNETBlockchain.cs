@@ -45,6 +45,15 @@ public interface ISWADNETBlockchain
     void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
 
     [OperationContract]
+    List<EBTittle> BTittle_O_State2();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State3();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State4();
+
+    [OperationContract]
     List<EBTittle> BTittle_O_State5();
 
     [OperationContract]
@@ -54,11 +63,23 @@ public interface ISWADNETBlockchain
     List<EBTittle> BTittle_O_State7();
 
     [OperationContract]
+    void BTittle_update_statusTittle_3(EBTittle ebTitle);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_4(EBTittle ebTitle);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_5(EBTittle ebTitle);
+
+    [OperationContract]
     void BTittle_update_statusTittle_6(EBTittle ebTitle);
 
     [OperationContract]
     void BTittle_update_statusTittle_7(EBTittle ebTitle);
 
+    [OperationContract]
+    List<EBTittle> BTittle_O_TO_Upload();
+    
 
 
     [OperationContract]

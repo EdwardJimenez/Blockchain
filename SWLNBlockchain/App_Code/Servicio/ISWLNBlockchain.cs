@@ -24,8 +24,8 @@ public interface ISWLNBlockchain
     [OperationContract]
     void Insertar_BUser_I_idUser_email(string Id_User, string email, string password,string status ,string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     
-    void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
-    [OperationContract]
+    /*void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+    [OperationContract]*/
     void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     
     [OperationContract]
@@ -45,13 +45,30 @@ public interface ISWLNBlockchain
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
 
-    
+
+    [OperationContract]
+    void BTittle_update_statusTittle_3(string Id_Title);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_4(string Id_Title);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_5(string Id_Title);
+
     [OperationContract]
     void BTittle_update_statusTittle_6(string Id_Title);
 
     [OperationContract]
     void BTittle_update_statusTittle_7(string Id_Title);
 
+    [OperationContract]
+    List<EBTittle> BTittle_O_State2();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State3();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State4();
 
     [OperationContract]
     List<EBTittle> BTittle_O_State5();
@@ -60,7 +77,10 @@ public interface ISWLNBlockchain
     List<EBTittle> BTittle_O_State6();
 
     [OperationContract]
-    List<EBTittle> BTittle_O_State7();
+    List<EBTittle> BTittle_O_State7(); 
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_TO_Upload();
 
 
     [OperationContract]

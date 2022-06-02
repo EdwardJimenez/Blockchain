@@ -92,7 +92,59 @@ public class ASBlockchain
     }
     #endregion
 
-    #region BTitle
+    #region BTitle 
+    public List<EBTittle> BTittle_O_TO_Upload()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_TO_Upload().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State2()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_State2().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State3()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_State3().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State4()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.BTittle_O_State4().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public List<EBTittle> BTittle_O_State5()
     {
         List<EBTittle> lstEbTitle = new List<EBTittle>();
@@ -217,7 +269,40 @@ public class ASBlockchain
             throw;
         }
     }
-
+    public void BTittle_update_statusTittle_5(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.BTittle_update_statusTittle_5(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_4(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.BTittle_update_statusTittle_4(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_3(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.BTittle_update_statusTittle_3(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    
     public void Insertar_BTitle(EBTittle ebTittle)
     {
         try

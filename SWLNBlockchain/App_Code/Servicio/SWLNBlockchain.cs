@@ -54,6 +54,45 @@ public class SWLNBlockchain : ISWLNBlockchain
         CUserBlockchain cUserBlockchain = new CUserBlockchain();
         cUserBlockchain.BTittle_update_statusTittle_6(Id_Title);
     }
+    public void BTittle_update_statusTittle_5(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_5(Id_Title);
+    }
+    public void BTittle_update_statusTittle_4(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_4(Id_Title);
+    }
+    public void BTittle_update_statusTittle_3(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_3(Id_Title);
+    }
+    public List<EBTittle> BTittle_O_State2()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State2().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State3()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State3().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State4()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State4().ToList();
+        return eBTitle;
+    }
     public List<EBTittle> BTittle_O_State5()
     {
 
@@ -78,7 +117,15 @@ public class SWLNBlockchain : ISWLNBlockchain
         eBTitle = cUserBlockchain.BTittle_O_State7().ToList();
         return eBTitle;
     }
-    public List<EBTittle> Obtener_Title_O()
+    public List<EBTittle> BTittle_O_TO_Upload()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_TO_Upload().ToList();
+        return eBTitle;
+    }
+public List<EBTittle> Obtener_Title_O()
     {
 
         List<EBTittle> eBTitle = new List<EBTittle>();

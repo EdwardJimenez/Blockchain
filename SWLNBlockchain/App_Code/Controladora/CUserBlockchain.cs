@@ -106,12 +106,65 @@ public class CUserBlockchain
             throw;
         }
     }
+    public void BTittle_update_statusTittle_5(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.BTittle_update_statusTittle_5(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_4(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.BTittle_update_statusTittle_4(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public void BTittle_update_statusTittle_3(string Id_Title)
+    {
+        EBTittle ebTitle = new EBTittle();
+        try
+        {
+            ebTitle.IdTittles = Id_Title;
+            asBlockchain.BTittle_update_statusTittle_3(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     public List<EBTittle> BTittle_O_State7()
     {
         List<EBTittle> eBTitle = new List<EBTittle>();
         try
         {
             eBTitle = asBlockchain.BTittle_O_State7().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        
+    }
+    public List<EBTittle> BTittle_O_TO_Upload()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_TO_Upload().ToList();
             return eBTitle;
         }
         catch (Exception)
@@ -138,6 +191,45 @@ public class CUserBlockchain
         try
         {
             eBTitle = asBlockchain.BTittle_O_State5().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State4()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_State4().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State3()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_State3().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    public List<EBTittle> BTittle_O_State2()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.BTittle_O_State2().ToList();
             return eBTitle;
         }
         catch (Exception)

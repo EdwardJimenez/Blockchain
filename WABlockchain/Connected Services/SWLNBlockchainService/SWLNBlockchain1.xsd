@@ -64,28 +64,6 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Insertar_BUser_I">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id_User" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="userNetvalle" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="idrolUser" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Cellphone" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Ci" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="ciExtra" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Insertar_BUser_IResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Actualizar_BUser_I_idUser_email">
     <xs:complexType>
       <xs:sequence>
@@ -160,6 +138,150 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="BTittle_update_statusTittle_3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_3Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_4Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_5">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_5Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_6Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_7">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_update_statusTittle_7Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State2">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State2Result" nillable="true" type="q5:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State3">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State3Result" nillable="true" type="q6:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State4">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State4Result" nillable="true" type="q7:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State5">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State5Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State5Result" nillable="true" type="q8:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State6">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State6Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State6Result" nillable="true" type="q9:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State7">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_State7Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State7Result" nillable="true" type="q10:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_TO_Upload">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BTittle_O_TO_UploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_TO_UploadResult" nillable="true" type="q11:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Eliminar_ITitle_statusTitle">
     <xs:complexType>
       <xs:sequence>
@@ -201,66 +323,6 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="BTittle_update_statusTittle_6">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_update_statusTittle_6Response">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_update_statusTittle_7">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_update_statusTittle_7Response">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_O_State5">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_O_State5Response">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State5Result" nillable="true" type="q5:ArrayOfEBTittle" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_O_State6">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_O_State6Response">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State6Result" nillable="true" type="q6:ArrayOfEBTittle" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_O_State7">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BTittle_O_State7Response">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="BTittle_O_State7Result" nillable="true" type="q7:ArrayOfEBTittle" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Obtener_RolUser_O">
     <xs:complexType>
       <xs:sequence />
@@ -269,7 +331,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q8:ArrayOfEBRoluser" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q12:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -309,7 +371,7 @@
   <xs:element name="Obtener_Persona_O_EstudianteResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteResult" nillable="true" type="q9:ENPerson" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteResult" nillable="true" type="q13:ENPerson" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -321,7 +383,7 @@
   <xs:element name="Obtener_Persona_O_EstudianteLResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteLResult" nillable="true" type="q10:ArrayOfENPerson" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_O_EstudianteLResult" nillable="true" type="q14:ArrayOfENPerson" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -335,7 +397,7 @@
   <xs:element name="Obtener_Carrerra_O_ID_PedroResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Carrerra_O_ID_PedroResult" nillable="true" type="q11:ENCareer" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Carrerra_O_ID_PedroResult" nillable="true" type="q15:ENCareer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -347,7 +409,7 @@
   <xs:element name="U_Obtener_UserCareerComplejas_O_EstResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_EstResult" nillable="true" type="q12:ArrayOfIUserCareerCompleja" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_EstResult" nillable="true" type="q16:ArrayOfIUserCareerCompleja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -71,6 +71,21 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         CBTitle cBTitle = new CBTitle();
         cBTitle.BTittle_update_statusTittle_6(ebTitle);
     }
+    public void BTittle_update_statusTittle_5(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.BTittle_update_statusTittle_5(ebTitle);
+    }
+    public void BTittle_update_statusTittle_4(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.BTittle_update_statusTittle_4(ebTitle);
+    }
+    public void BTittle_update_statusTittle_3(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.BTittle_update_statusTittle_3(ebTitle);
+    }
     public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
     {
         CBTitle cBTitle = new CBTitle();
@@ -96,7 +111,27 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         lstTitle = cBTitle.Obtener_Title_O();
         return lstTitle;
     }
-    
+    public List<EBTittle> BTittle_O_State2()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_State2();
+        return lstTitle;
+    }
+    public List<EBTittle> BTittle_O_State3()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_State3();
+        return lstTitle;
+    }
+    public List<EBTittle> BTittle_O_State4()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_State4();
+        return lstTitle;
+    }
     public List<EBTittle> BTittle_O_State5()
     {
         CBTitle cBTitle = new CBTitle();
@@ -116,6 +151,13 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         CBTitle cBTitle = new CBTitle();
         List<EBTittle> lstTitle = new List<EBTittle>();
         lstTitle = cBTitle.BTittle_O_State7();
+        return lstTitle; 
+    }
+    public List<EBTittle> BTittle_O_TO_Upload()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.BTittle_O_TO_Upload();
         return lstTitle;
     }
     #endregion

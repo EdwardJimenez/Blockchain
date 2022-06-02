@@ -38,6 +38,7 @@ public class CBUser
         {
             eBuser = new EBUser();
             eBuser.IdRolUser = user.IdrolUser.ToString();
+
         }
         return eBuser;
     }

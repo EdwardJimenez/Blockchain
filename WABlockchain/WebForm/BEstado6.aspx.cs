@@ -9,7 +9,7 @@ using WABlockchain.Class;
 
 namespace WABlockchain.WebForm
 {
-    public partial class BEstado5 : System.Web.UI.Page
+    public partial class BEstado6 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace WABlockchain.WebForm
         private void cargarTitulos()
         {
             List<EBTittle> lstTitle = new List<EBTittle>();
-            lstTitle = swLNBlockchainClient.BTittle_O_State5().ToList();
+            lstTitle = swLNBlockchainClient.BTittle_O_State6().ToList();
             grvTitulos.DataSource = lstTitle;
             grvTitulos.DataBind();
             grvTitulos.SelectedIndex = 0;
@@ -44,8 +44,8 @@ namespace WABlockchain.WebForm
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
 
-            swLNBlockchainClient.BTittle_update_statusTittle_6(s.ToString());
-             cargarTitulos();
+            swLNBlockchainClient.BTittle_update_statusTittle_7(s.ToString());
+            cargarTitulos();
         }
     }
 }

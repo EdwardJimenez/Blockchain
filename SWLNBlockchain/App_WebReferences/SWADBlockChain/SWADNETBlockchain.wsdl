@@ -67,6 +67,24 @@
   <wsdl:message name="ISWADNETBlockchain_Actualizar_ITitle_statusTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_ITitle_statusTitleResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_State2_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_State2" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_State2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_State2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_State3_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_State3" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_State3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_State3Response" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_State4_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_State4" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_State4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_State4Response" />
+  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_BTittle_O_State5_InputMessage">
     <wsdl:part name="parameters" element="tns:BTittle_O_State5" />
   </wsdl:message>
@@ -85,6 +103,24 @@
   <wsdl:message name="ISWADNETBlockchain_BTittle_O_State7_OutputMessage">
     <wsdl:part name="parameters" element="tns:BTittle_O_State7Response" />
   </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_3_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_3" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_3Response" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_4_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_4" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_4Response" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_5_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_5" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_5Response" />
+  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_6_InputMessage">
     <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_6" />
   </wsdl:message>
@@ -96,6 +132,12 @@
   </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_BTittle_update_statusTittle_7_OutputMessage">
     <wsdl:part name="parameters" element="tns:BTittle_update_statusTittle_7Response" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_TO_Upload_InputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_TO_Upload" />
+  </wsdl:message>
+  <wsdl:message name="ISWADNETBlockchain_BTittle_O_TO_Upload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BTittle_O_TO_UploadResponse" />
   </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_Eliminar_ITitle_statusTitle_InputMessage">
     <wsdl:part name="parameters" element="tns:Eliminar_ITitle_statusTitle" />
@@ -174,6 +216,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_ITitle_statusTitle" message="tns:ISWADNETBlockchain_Actualizar_ITitle_statusTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Actualizar_ITitle_statusTitleResponse" message="tns:ISWADNETBlockchain_Actualizar_ITitle_statusTitle_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="BTittle_O_State2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State2" message="tns:ISWADNETBlockchain_BTittle_O_State2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State2Response" message="tns:ISWADNETBlockchain_BTittle_O_State2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_State3">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State3" message="tns:ISWADNETBlockchain_BTittle_O_State3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State3Response" message="tns:ISWADNETBlockchain_BTittle_O_State3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_State4">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State4" message="tns:ISWADNETBlockchain_BTittle_O_State4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State4Response" message="tns:ISWADNETBlockchain_BTittle_O_State4_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="BTittle_O_State5">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State5" message="tns:ISWADNETBlockchain_BTittle_O_State5_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State5Response" message="tns:ISWADNETBlockchain_BTittle_O_State5_OutputMessage" />
@@ -186,6 +240,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State7" message="tns:ISWADNETBlockchain_BTittle_O_State7_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State7Response" message="tns:ISWADNETBlockchain_BTittle_O_State7_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="BTittle_update_statusTittle_3">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_3" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_3Response" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_update_statusTittle_4">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_4" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_4Response" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_update_statusTittle_5">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_5" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_5Response" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_5_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="BTittle_update_statusTittle_6">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_6" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_6_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_6Response" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_6_OutputMessage" />
@@ -193,6 +259,10 @@
     <wsdl:operation name="BTittle_update_statusTittle_7">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_7" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_7_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_7Response" message="tns:ISWADNETBlockchain_BTittle_update_statusTittle_7_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_TO_Upload">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_TO_Upload" message="tns:ISWADNETBlockchain_BTittle_O_TO_Upload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/BTittle_O_TO_UploadResponse" message="tns:ISWADNETBlockchain_BTittle_O_TO_Upload_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Eliminar_ITitle_statusTitle">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Eliminar_ITitle_statusTitle" message="tns:ISWADNETBlockchain_Eliminar_ITitle_statusTitle_InputMessage" />
@@ -311,6 +381,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BTittle_O_State2">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_State3">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_State4">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="BTittle_O_State5">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_State5" style="document" />
       <wsdl:input>
@@ -338,6 +435,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BTittle_update_statusTittle_3">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_update_statusTittle_4">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_update_statusTittle_5">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="BTittle_update_statusTittle_6">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_6" style="document" />
       <wsdl:input>
@@ -349,6 +473,15 @@
     </wsdl:operation>
     <wsdl:operation name="BTittle_update_statusTittle_7">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_update_statusTittle_7" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BTittle_O_TO_Upload">
+      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/BTittle_O_TO_Upload" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
