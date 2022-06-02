@@ -114,7 +114,13 @@ public class SWLNBlockchain : ISWLNBlockchain
         List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
         lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est();
         return lstIUserCareerCompleja;
-
+    }
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname)
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est_Bus(Fullname);
+        return lstIUserCareerCompleja;
     }
 
     public ENPerson Obtener_Persona_O_Estudiante()
@@ -124,7 +130,13 @@ public class SWLNBlockchain : ISWLNBlockchain
         cNetValle.Obtener_Persona_O_Estudiante();
         return eNPerson;
     }
-
+    public List<ENPerson> Obtener_Persona_O()
+    {
+        List<ENPerson> ListeNPerson = new List<ENPerson>();
+        CNetValle cNetValle = new CNetValle();
+        cNetValle.Obtener_Persona_O();
+        return ListeNPerson;
+    }
     public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
         List<ENPerson> ListeNPerson = new List<ENPerson>();
@@ -139,5 +151,26 @@ public class SWLNBlockchain : ISWLNBlockchain
         CNetValle cNetValle = new CNetValle();
         cNetValle.Obtener_Carrerra_O_ID_Pedro(id);
         return eNCareer;    
+    }
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        List<ENPerson> LsteNPerson = new List<ENPerson>();
+        CNetValle cNetValle = new CNetValle();
+        return LsteNPerson;
+    }
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_ID(int ID)
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est_ID(ID);
+        return lstIUserCareerCompleja;
+
+    }
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Person()
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Person();
+        return lstIUserCareerCompleja;
     }
 }
