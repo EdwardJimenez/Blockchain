@@ -13,6 +13,29 @@ using System.Data;
 /// </summary>
 public class ADBUser
 {
+    public DTOBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        //
+        //Metodo select por medio del ID
+        //
+        DTOBUser dTOBUser = new DTOBUser();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O_Search"); //Select rol from User
+            BDSWADBlockchain.AddInParameter(dbCommand, "email", DbType.String, email);
+            BDSWADBlockchain.AddInParameter(dbCommand, "password", DbType.String, password);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBUser, "BUser");
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBUser;
+    }
     public DTOBUser Obtener_User_O()
     {
         //

@@ -11,8 +11,13 @@ using System.Text;
 public class SWLNBlockchain : ISWLNBlockchain
 {
     #region User
-
-    
+    public EBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        CUserBlockchain cUser = new CUserBlockchain();
+        EBUser eBUser = new EBUser();
+        eBUser = cUser.Obtener_RolUser_O_Search(email, password);
+        return eBUser;
+    }
     public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle)
     {
         throw new NotImplementedException();
@@ -39,8 +44,88 @@ public class SWLNBlockchain : ISWLNBlockchain
     }
     #endregion
     #region Tittle
+    public void BTittle_update_statusTittle_7(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_7(Id_Title);
+    }
+    public void BTittle_update_statusTittle_6(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_6(Id_Title);
+    }
+    public void BTittle_update_statusTittle_5(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_5(Id_Title);
+    }
+    public void BTittle_update_statusTittle_4(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_4(Id_Title);
+    }
+    public void BTittle_update_statusTittle_3(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.BTittle_update_statusTittle_3(Id_Title);
+    }
+    public List<EBTittle> BTittle_O_State2()
+    {
 
-    public List<EBTittle> Obtener_Title_O()
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State2().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State3()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State3().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State4()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State4().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State5()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State5().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State6()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State6().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_State7()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_State7().ToList();
+        return eBTitle;
+    }
+    public List<EBTittle> BTittle_O_TO_Upload()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.BTittle_O_TO_Upload().ToList();
+        return eBTitle;
+    }
+public List<EBTittle> Obtener_Title_O()
     {
 
         List<EBTittle> eBTitle = new List<EBTittle>();
