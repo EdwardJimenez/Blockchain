@@ -26,7 +26,7 @@
                             &nbsp;</div>
                         <div >
                             <%--<label for="">Estudiante :<input  runat="server" type="text" id="codigoCarta" name="codigoCarta"></label><br>--%>
-                                             <label for="">Id :       <asp:TextBox runat="server" ID="txtEmail" /></label><br>
+                                             <label for="">Email :       <asp:TextBox runat="server" ID="txtEmail" /></label><br>
                             &nbsp;</div>
                         <div>
                             <%--<label for="">Apellidos :<input  runat="server" ID="fechaActual" name="fechaActual" type="text" onchange="handler(event);"></label><br>--%>

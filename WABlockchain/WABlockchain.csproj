@@ -96,6 +96,7 @@
     <Content Include="Imagenes\lupa1.jpg" />
     <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
     <Content Include="WebForm\BResgistroTitulo.aspx" />
+    <Content Include="WebForm\BVerUsuariosNetValle.aspx" />
     <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="WebForm\BResgistroTitulo.aspx.designer.cs">
       <DependentUpon>BResgistroTitulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BVerUsuariosNetValle.aspx.cs">
+      <DependentUpon>BVerUsuariosNetValle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BVerUsuariosNetValle.aspx.designer.cs">
+      <DependentUpon>BVerUsuariosNetValle.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
