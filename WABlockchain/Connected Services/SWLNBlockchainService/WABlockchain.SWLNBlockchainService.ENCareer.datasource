@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="ENCareer" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>WABlockchain.SWLNBlockchainService.ENCareer</TypeInfo>
+   <TypeInfo>WABlockchain.SWLNBlockchainService.ENCareer, Connected Services.SWLNBlockchainService.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
