@@ -44,12 +44,31 @@
             </div>
             <div class="contein">
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="INSERTAR" OnClick="btnRegistrar_Click" />
+                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="REGISTRAR" OnClick="btnRegistrar_Click" Width="212px" />
                     &nbsp;&nbsp;
-                    <asp:Button ID="btnQr" runat="server" class="btn" Text="ACTUALIZAR" />
                 </div>
                 <div>
-                    <asp:GridView ID="GridView1" CssClass="grid" runat="server" Height="262px" Width="441px"></asp:GridView>
+                    
+<asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" OnSelectedIndexChanged="grvTitulos_SelectedIndexChanged">
+<Columns>
+<asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
+<HeaderStyle CssClass="hidden" />
+<ItemStyle CssClass="hidden" />
+<FooterStyle CssClass="hidden" />
+</asp:BoundField>
+<asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="TITULADO" ItemStyle-CssClass="itName" SortExpression="name" />
+<asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+<asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+
+<asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="Subir_Click" CommandName="Actualizar" HeaderText="Subir" ItemStyle-CssClass="btButton" Text="Registrar entrega" />
+</ItemTemplate>
+</asp:TemplateField>
+</Columns>
+</asp:GridView>
+
+    
                 </div>
                 <div>
                     <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="false"></asp:Label>

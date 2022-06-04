@@ -13,15 +13,21 @@ public interface ISWADNETBlockchain
     #region Tabla : BUser
     [OperationContract]
     List<EBUser> Obtener_User_O();
+    
     [OperationContract]
     EBUser Obtener_BUser_O_iduser(string Id_User);
+    
     [OperationContract]
     void Insertar_BUser_I_idUser_email(EBUser eBUser);
+    
     [OperationContract]
     void Actualizar_BUser_I_idUser_email(EBUser eBUser);
 
     [OperationContract]
     void Insertar_BUser_I(EBUser bUser);
+
+    [OperationContract]
+    EBUser Obtener_RolUser_O_Search(string email, string password);
     #endregion
 
     #region Tabla BTittle
@@ -49,6 +55,44 @@ public interface ISWADNETBlockchain
 
     [OperationContract]
     List<EBTittle> BTittle_O_CARREER(string carreer);
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State2();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State3();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State4();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State5();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State6();
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_State7();
+
+    [OperationContract]
+    void BTittle_update_statusTittle_3(EBTittle ebTitle);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_4(EBTittle ebTitle);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_5(EBTittle ebTitle);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_6(EBTittle ebTitle);
+
+    [OperationContract]
+    void BTittle_update_statusTittle_7(EBTittle ebTitle);
+
+    [OperationContract]
+    List<EBTittle> BTittle_O_TO_Upload();
+    
+
 
     [OperationContract]
     void Eliminar_ITitle_statusTitle(EBTittle ebTitle);

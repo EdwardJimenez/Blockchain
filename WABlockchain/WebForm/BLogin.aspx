@@ -88,6 +88,7 @@
                                         <li id="ContentPlaceHolder1_li1">
                                             <a id="ContentPlaceHolder1_LKBPerfil" title="Revisa tu perfil de usuario" style="display: inline-block; font-size: 13px; height: 50px; width: 110px; padding-left: 15px; padding-right: 15px">
                                                 <asp:Image ID="Image2" runat="server" Style="height: 35px; width: 35px; border: 0 none; margin-top: 5px" ImageUrl="~/Imagenes/perfil.png"/>
+                    <asp:Label ID="z0" runat="server" Text="Label"></asp:Label>
                                             </a>
                                         </li>
                                 </ul>
@@ -100,10 +101,13 @@
                 </div>
                 <div class="botons">
                     <asp:TextBox CssClass="nombre" ID="txtNombre" placeholder="User Name" runat="server" Height="37px" Width="202px"></asp:TextBox>
+                    <asp:Label ID="LC1" runat="server" Text="Label" Visible="False"></asp:Label>
                     <br />
                     <asp:TextBox CssClass="password" ID="txtPassword" placeholder="Password" runat="server" Height="37px" Width="202px"></asp:TextBox>
+                    <asp:Label ID="LRol" runat="server" Text="Label" Visible="False"></asp:Label>
                     <br />
                     <asp:Button  CssClass="cargar"   ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" />
+                    <asp:Button CssClass="cargar" ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" OnClick="btnCargar_Click" />
                 </div>
 
             </div>

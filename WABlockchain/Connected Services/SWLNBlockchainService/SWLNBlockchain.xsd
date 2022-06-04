@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfEBUser">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EBUser" nillable="true" type="tns:EBUser" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEBUser" nillable="true" type="tns:ArrayOfEBUser" />
   <xs:complexType name="EBUser">
     <xs:sequence>
       <xs:element minOccurs="0" name="CI" nillable="true" type="xs:string" />
@@ -22,6 +16,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EBUser" nillable="true" type="tns:EBUser" />
+  <xs:complexType name="ArrayOfEBUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EBUser" nillable="true" type="tns:EBUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEBUser" nillable="true" type="tns:ArrayOfEBUser" />
   <xs:complexType name="ArrayOfEBTittle">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="EBTittle" nillable="true" type="tns:EBTittle" />
@@ -97,11 +97,15 @@
   <xs:element name="ArrayOfIUserCareerCompleja" nillable="true" type="tns:ArrayOfIUserCareerCompleja" />
   <xs:complexType name="IUserCareerCompleja">
     <xs:sequence>
+      <xs:element minOccurs="0" name="CI" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CareerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtCI" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FacultyName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IDCareer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IDPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SedeName" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

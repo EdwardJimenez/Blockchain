@@ -808,7 +808,13 @@ namespace WABlockchain.SWLNBlockchainService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CareerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExtCIField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FacultyNameField;
@@ -821,6 +827,12 @@ namespace WABlockchain.SWLNBlockchainService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IDPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SedeNameField;
@@ -836,6 +848,19 @@ namespace WABlockchain.SWLNBlockchainService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CI {
+            get {
+                return this.CIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CIField, value) != true)) {
+                    this.CIField = value;
+                    this.RaisePropertyChanged("CI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string CareerName {
             get {
                 return this.CareerNameField;
@@ -844,6 +869,19 @@ namespace WABlockchain.SWLNBlockchainService {
                 if ((object.ReferenceEquals(this.CareerNameField, value) != true)) {
                     this.CareerNameField = value;
                     this.RaisePropertyChanged("CareerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExtCI {
+            get {
+                return this.ExtCIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExtCIField, value) != true)) {
+                    this.ExtCIField = value;
+                    this.RaisePropertyChanged("ExtCI");
                 }
             }
         }
@@ -901,6 +939,32 @@ namespace WABlockchain.SWLNBlockchainService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mail {
+            get {
+                return this.MailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MailField, value) != true)) {
+                    this.MailField = value;
+                    this.RaisePropertyChanged("Mail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string SedeName {
             get {
                 return this.SedeNameField;
@@ -927,6 +991,12 @@ namespace WABlockchain.SWLNBlockchainService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SWLNBlockchainService.ISWLNBlockchain")]
     public interface ISWLNBlockchain {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_Search", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_SearchResponse")]
+        WABlockchain.SWLNBlockchainService.EBUser Obtener_RolUser_O_Search(string email, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_Search", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O_SearchResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBUser> Obtener_RolUser_O_SearchAsync(string email, string password);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_User_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_User_OResponse")]
         WABlockchain.SWLNBlockchainService.EBUser[] Obtener_User_O();
         
@@ -944,12 +1014,6 @@ namespace WABlockchain.SWLNBlockchainService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_emailResponse")]
         System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
-        void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
-        System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_emailResponse")]
         void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
@@ -986,6 +1050,78 @@ namespace WABlockchain.SWLNBlockchainService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse")]
         System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_3", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_3Response")]
+        void BTittle_update_statusTittle_3(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_3", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_3Response")]
+        System.Threading.Tasks.Task BTittle_update_statusTittle_3Async(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_4", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_4Response")]
+        void BTittle_update_statusTittle_4(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_4", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_4Response")]
+        System.Threading.Tasks.Task BTittle_update_statusTittle_4Async(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_5", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_5Response")]
+        void BTittle_update_statusTittle_5(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_5", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_5Response")]
+        System.Threading.Tasks.Task BTittle_update_statusTittle_5Async(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_6", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_6Response")]
+        void BTittle_update_statusTittle_6(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_6", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_6Response")]
+        System.Threading.Tasks.Task BTittle_update_statusTittle_6Async(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_7", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_7Response")]
+        void BTittle_update_statusTittle_7(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_7", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_update_statusTittle_7Response")]
+        System.Threading.Tasks.Task BTittle_update_statusTittle_7Async(string Id_Title);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State2", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State2Response")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State2();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State2", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State2Response")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State2Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State3", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State3Response")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State3();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State3", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State3Response")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State3Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State4", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State4Response")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State4();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State4", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State4Response")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State4Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State5", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State5Response")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State5();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State5", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State5Response")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State5Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State6", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State6Response")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State6();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State6", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State6Response")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State6Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State7", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State7Response")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State7();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_State7", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_State7Response")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State7Async();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_TO_Upload", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_TO_UploadResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_TO_Upload();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/BTittle_O_TO_Upload", ReplyAction="http://tempuri.org/ISWLNBlockchain/BTittle_O_TO_UploadResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_TO_UploadAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitleResponse")]
         void Eliminar_ITitle_statusTitle(string Id_Title);
@@ -1055,6 +1191,18 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteL", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_EstudianteLResponse")]
         System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_O_EstudianteLAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Nombre", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_NombreResponse")]
+        WABlockchain.SWLNBlockchainService.ENPerson[] Obtener_Persona_O_Nombre(string Fullname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Nombre", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_NombreResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_O_NombreAsync(string Fullname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_OResponse")]
+        WABlockchain.SWLNBlockchainService.ENPerson[] Obtener_Persona_O();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_OResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_OAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_PedroResponse")]
         WABlockchain.SWLNBlockchainService.ENCareer Obtener_Carrerra_O_ID_Pedro(string id);
         
@@ -1066,6 +1214,30 @@ namespace WABlockchain.SWLNBlockchainService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_EstResponse")]
         System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_EstAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Person", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_PersonResponse" +
+            "")]
+        WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Person();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Person", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_PersonResponse" +
+            "")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_PersonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_Bus", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_BusRespons" +
+            "e")]
+        WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_Bus", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_BusRespons" +
+            "e")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_BusAsync(string Fullname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_ID", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_IDResponse" +
+            "")]
+        WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est_ID(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_ID", ReplyAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_IDResponse" +
+            "")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_IDAsync(int ID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1095,6 +1267,14 @@ namespace WABlockchain.SWLNBlockchainService {
                 base(binding, remoteAddress) {
         }
         
+        public WABlockchain.SWLNBlockchainService.EBUser Obtener_RolUser_O_Search(string email, string password) {
+            return base.Channel.Obtener_RolUser_O_Search(email, password);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBUser> Obtener_RolUser_O_SearchAsync(string email, string password) {
+            return base.Channel.Obtener_RolUser_O_SearchAsync(email, password);
+        }
+        
         public WABlockchain.SWLNBlockchainService.EBUser[] Obtener_User_O() {
             return base.Channel.Obtener_User_O();
         }
@@ -1117,14 +1297,6 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
             return base.Channel.Insertar_BUser_I_idUser_emailAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
-        }
-        
-        public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
-            base.Channel.Insertar_BUser_I(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
-        }
-        
-        public System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
-            return base.Channel.Insertar_BUser_IAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
         }
         
         public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle) {
@@ -1173,6 +1345,102 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_ITitle_statusTitleAsync(string Id_Title) {
             return base.Channel.Actualizar_ITitle_statusTitleAsync(Id_Title);
+        }
+        
+        public void BTittle_update_statusTittle_3(string Id_Title) {
+            base.Channel.BTittle_update_statusTittle_3(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task BTittle_update_statusTittle_3Async(string Id_Title) {
+            return base.Channel.BTittle_update_statusTittle_3Async(Id_Title);
+        }
+        
+        public void BTittle_update_statusTittle_4(string Id_Title) {
+            base.Channel.BTittle_update_statusTittle_4(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task BTittle_update_statusTittle_4Async(string Id_Title) {
+            return base.Channel.BTittle_update_statusTittle_4Async(Id_Title);
+        }
+        
+        public void BTittle_update_statusTittle_5(string Id_Title) {
+            base.Channel.BTittle_update_statusTittle_5(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task BTittle_update_statusTittle_5Async(string Id_Title) {
+            return base.Channel.BTittle_update_statusTittle_5Async(Id_Title);
+        }
+        
+        public void BTittle_update_statusTittle_6(string Id_Title) {
+            base.Channel.BTittle_update_statusTittle_6(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task BTittle_update_statusTittle_6Async(string Id_Title) {
+            return base.Channel.BTittle_update_statusTittle_6Async(Id_Title);
+        }
+        
+        public void BTittle_update_statusTittle_7(string Id_Title) {
+            base.Channel.BTittle_update_statusTittle_7(Id_Title);
+        }
+        
+        public System.Threading.Tasks.Task BTittle_update_statusTittle_7Async(string Id_Title) {
+            return base.Channel.BTittle_update_statusTittle_7Async(Id_Title);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State2() {
+            return base.Channel.BTittle_O_State2();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State2Async() {
+            return base.Channel.BTittle_O_State2Async();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State3() {
+            return base.Channel.BTittle_O_State3();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State3Async() {
+            return base.Channel.BTittle_O_State3Async();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State4() {
+            return base.Channel.BTittle_O_State4();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State4Async() {
+            return base.Channel.BTittle_O_State4Async();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State5() {
+            return base.Channel.BTittle_O_State5();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State5Async() {
+            return base.Channel.BTittle_O_State5Async();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State6() {
+            return base.Channel.BTittle_O_State6();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State6Async() {
+            return base.Channel.BTittle_O_State6Async();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_State7() {
+            return base.Channel.BTittle_O_State7();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_State7Async() {
+            return base.Channel.BTittle_O_State7Async();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] BTittle_O_TO_Upload() {
+            return base.Channel.BTittle_O_TO_Upload();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> BTittle_O_TO_UploadAsync() {
+            return base.Channel.BTittle_O_TO_UploadAsync();
         }
         
         public void Eliminar_ITitle_statusTitle(string Id_Title) {
@@ -1263,6 +1531,22 @@ namespace WABlockchain.SWLNBlockchainService {
             return base.Channel.Obtener_Persona_O_EstudianteLAsync();
         }
         
+        public WABlockchain.SWLNBlockchainService.ENPerson[] Obtener_Persona_O_Nombre(string Fullname) {
+            return base.Channel.Obtener_Persona_O_Nombre(Fullname);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_O_NombreAsync(string Fullname) {
+            return base.Channel.Obtener_Persona_O_NombreAsync(Fullname);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.ENPerson[] Obtener_Persona_O() {
+            return base.Channel.Obtener_Persona_O();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.ENPerson[]> Obtener_Persona_OAsync() {
+            return base.Channel.Obtener_Persona_OAsync();
+        }
+        
         public WABlockchain.SWLNBlockchainService.ENCareer Obtener_Carrerra_O_ID_Pedro(string id) {
             return base.Channel.Obtener_Carrerra_O_ID_Pedro(id);
         }
@@ -1277,6 +1561,30 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_EstAsync() {
             return base.Channel.U_Obtener_UserCareerComplejas_O_EstAsync();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Person() {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Person();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_PersonAsync() {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_PersonAsync();
+        }
+        
+        public WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname) {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est_Bus(Fullname);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_BusAsync(string Fullname) {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est_BusAsync(Fullname);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.IUserCareerCompleja[] U_Obtener_UserCareerComplejas_O_Est_ID(int ID) {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est_ID(ID);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.IUserCareerCompleja[]> U_Obtener_UserCareerComplejas_O_Est_IDAsync(int ID) {
+            return base.Channel.U_Obtener_UserCareerComplejas_O_Est_IDAsync(ID);
         }
     }
 }
