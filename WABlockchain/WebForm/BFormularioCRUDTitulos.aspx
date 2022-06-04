@@ -81,7 +81,11 @@
 <asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Actuaizar" />
 </ItemTemplate>
 </asp:TemplateField>
-
+<asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="btnPDF_Click" CommandName="PDF" HeaderText="PDF" ItemStyle-CssClass="btButton" Text="PDF" />
+</ItemTemplate>
+</asp:TemplateField>
     
 
 
@@ -98,5 +102,5 @@
 </div>
 </div>
 </form>
-
+    
 </asp:Content>
