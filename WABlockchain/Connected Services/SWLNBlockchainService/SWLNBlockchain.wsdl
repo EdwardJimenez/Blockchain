@@ -43,6 +43,12 @@
   <wsdl:message name="ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_OutputMessage">
     <wsdl:part name="parameters" element="tns:Insertar_BTitle_I_idTitle_facultyResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BTitleResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Title_O" />
   </wsdl:message>
@@ -54,6 +60,24 @@
   </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Actualizar_ITitle_statusTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_ITitle_statusTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Eliminar_ITitle_statusTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_ITitle_statusTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Eliminar_ITitle_statusTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar_ITitle_statusTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_ITitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_ITitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_ITitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_ITitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BTittle_ConfirmarEntrega" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar_BTittle_ConfirmarEntregaResponse" />
   </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_RolUser_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_RolUser_O" />
@@ -91,6 +115,12 @@
   <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_Nombre_OutputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Persona_O_NombreResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_O" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Persona_O_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Persona_OResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Carrerra_O_ID_Pedro" />
   </wsdl:message>
@@ -102,6 +132,12 @@
   </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_OutputMessage">
     <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_EstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Person_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Person" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Person_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_PersonResponse" />
   </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_Bus_InputMessage">
     <wsdl:part name="parameters" element="tns:U_Obtener_UserCareerComplejas_O_Est_Bus" />
@@ -140,6 +176,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_faculty" message="tns:ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle_I_idTitle_facultyResponse" message="tns:ISWLNBlockchain_Insertar_BTitle_I_idTitle_faculty_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Insertar_BTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle" message="tns:ISWLNBlockchain_Insertar_BTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitleResponse" message="tns:ISWLNBlockchain_Insertar_BTitle_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Obtener_Title_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O" message="tns:ISWLNBlockchain_Obtener_Title_O_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_OResponse" message="tns:ISWLNBlockchain_Obtener_Title_O_OutputMessage" />
@@ -147,6 +187,18 @@
     <wsdl:operation name="Actualizar_ITitle_statusTitle">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle" message="tns:ISWLNBlockchain_Actualizar_ITitle_statusTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitleResponse" message="tns:ISWLNBlockchain_Actualizar_ITitle_statusTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ITitle_statusTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitle" message="tns:ISWLNBlockchain_Eliminar_ITitle_statusTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitleResponse" message="tns:ISWLNBlockchain_Eliminar_ITitle_statusTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ITitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle" message="tns:ISWLNBlockchain_Actualizar_ITitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitleResponse" message="tns:ISWLNBlockchain_Actualizar_ITitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BTittle_ConfirmarEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega" message="tns:ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntregaResponse" message="tns:ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Obtener_RolUser_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O" message="tns:ISWLNBlockchain_Obtener_RolUser_O_InputMessage" />
@@ -172,6 +224,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_Nombre" message="tns:ISWLNBlockchain_Obtener_Persona_O_Nombre_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O_NombreResponse" message="tns:ISWLNBlockchain_Obtener_Persona_O_Nombre_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O" message="tns:ISWLNBlockchain_Obtener_Persona_O_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_OResponse" message="tns:ISWLNBlockchain_Obtener_Persona_O_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro" message="tns:ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_PedroResponse" message="tns:ISWLNBlockchain_Obtener_Carrerra_O_ID_Pedro_OutputMessage" />
@@ -179,6 +235,10 @@
     <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_EstResponse" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Person">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Person" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Person_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_PersonResponse" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Person_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est_Bus">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est_Bus" message="tns:ISWLNBlockchain_U_Obtener_UserCareerComplejas_O_Est_Bus_InputMessage" />
@@ -245,6 +305,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Insertar_BTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Obtener_Title_O">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O" style="document" />
       <wsdl:input>
@@ -256,6 +325,33 @@
     </wsdl:operation>
     <wsdl:operation name="Actualizar_ITitle_statusTitle">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle_statusTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar_ITitle_statusTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Eliminar_ITitle_statusTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_ITitle">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Actualizar_ITitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_BTittle_ConfirmarEntrega">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -317,6 +413,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Obtener_Persona_O">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Persona_O" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Obtener_Carrerra_O_ID_Pedro">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Carrerra_O_ID_Pedro" style="document" />
       <wsdl:input>
@@ -328,6 +433,15 @@
     </wsdl:operation>
     <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Est">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Est" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_Obtener_UserCareerComplejas_O_Person">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/U_Obtener_UserCareerComplejas_O_Person" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

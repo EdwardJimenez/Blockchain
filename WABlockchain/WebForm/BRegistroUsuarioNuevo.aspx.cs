@@ -5,18 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WABlockchain.SWLNBlockchainService;
-using WABlockchain.Class;
 
 namespace WABlockchain.WebForm
 {
-    public partial class BFormularioRegistrosUsuariosLocales : System.Web.UI.Page
+    public partial class BRegistroUsuarioNuevo : System.Web.UI.Page
     {
-        
-        private static Helper _helper = new Helper();
- 
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
-        private string _Id_Requerimiento = string.Empty;
-        private string _Id_User = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -29,11 +23,11 @@ namespace WABlockchain.WebForm
                         IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
                         int IDUser = Convert.ToInt32(Session["idUsuario"]);
                         iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                        txtNombre.Text = iusercompleja.Fullname.ToString();//validar alguito
-                        txtCellphone.Text = iusercompleja.Phone.ToString();
-                        txtEmail.Text = iusercompleja.Mail.ToString();
+                        txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();//validar alguito
+                        txtTelefonos.Text = iusercompleja.Phone.ToString();
+                        txtCorreo.Text = iusercompleja.Mail.ToString();
                         txtCi.Text = iusercompleja.CI.ToString();
-                        txtCIExtra.Text = iusercompleja.ExtCI.ToString();
+                        txtCiextra.Text = iusercompleja.ExtCI.ToString();
 
                     }
                     catch (Exception)
@@ -48,44 +42,38 @@ namespace WABlockchain.WebForm
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
+            string nombre = txtNombreEstudiante.Text;
+            string apellido = txtApellidos.Text;
             string Fullname = nombre + " " + apellido;
-            string Email = txtEmail.Text;
+            string Email = txtCorreo.Text;
             string Password = txtPassword.Text;
-            string Cellphone = txtCellphone.Text;
-            string UsuarioNetvalle = txtUserNetvalle.Text;
+            string Cellphone = txtTelefonos.Text;
+            string UsuarioNetvalle = txtUsuarioNetvalle.Text;
             string CIUser = txtCi.Text;
             string descripcion = txtDescripcion.Text;
-            string ciExtra = txtCIExtra.Text;
+            string ciExtra = txtCiextra.Text;
             string status = "1";
             try
             {
                 string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRolUser.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
-                //RegistrarProgramaRequerimiento();
-
-                lblMensaje.Text = "Registro de Usuario Exitoso!!!";
+                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRol.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
 
             }
             catch (Exception)
             {
-
-                lblMensaje.Text = "Registro de Usuario No Insertado";
             }
         }
         private void CargarRolUser()
         {
-            ddlRolUser.Items.Clear();
+            ddlRol.Items.Clear();
 
             List<EBRoluser> lstRol = new List<EBRoluser>();
             lstRol = swLNBlockchainClient.Obtener_RolUser_O().ToList();
-            ddlRolUser.DataSource = lstRol;
-            ddlRolUser.DataTextField = "name";
-            ddlRolUser.DataValueField = "IdrolUser";
-            ddlRolUser.DataBind();
-            ddlRolUser.SelectedIndex = 0;
+            ddlRol.DataSource = lstRol;
+            ddlRol.DataTextField = "name";
+            ddlRol.DataValueField = "IdrolUser";
+            ddlRol.DataBind();
+            ddlRol.SelectedIndex = 0;
         }
     }
 }

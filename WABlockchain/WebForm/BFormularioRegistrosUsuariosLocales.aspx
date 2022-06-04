@@ -24,7 +24,7 @@
                             <%--<label for="">Estudiante :<input  runat="server" type="text" id="codigoCarta" name="codigoCarta"></label><br>--%>
                                              <label for="">Celular :       <asp:TextBox runat="server" ID="txtCellphone" /></label><br>
                             &nbsp;</div>
-                        <div>
+                        <div >
                             <%--<label for="">Estudiante :<input  runat="server" type="text" id="codigoCarta" name="codigoCarta"></label><br>--%>
                                              <label for="">Email :       <asp:TextBox runat="server" ID="txtEmail" /></label><br>
                             &nbsp;</div>

@@ -54,10 +54,34 @@ public class SWLNBlockchain : ISWLNBlockchain
         cUserBlockchain.Actualizar_ITitle_statusTitle(Id_Title);
     }
 
+    public void Eliminar_ITitle_statusTitle(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Eliminar_ITitle_statusTitle(Id_Title);
+    }
+
+    public void Actualizar_ITitle(string Id_Title, string carreer, string faculty, string fullName)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_ITitle(Id_Title,carreer,faculty,fullName);
+    }
+
+    public void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_BTittle_ConfirmarEntrega(fullName, fecha, modo);
+    }
+
     public void Insertar_BTitle_I_idTitle_faculty(string faculty, string carreer, string statusTittle, DateTime dateDelivery, string statusDelivery, string idUser, string fullnameTitulado)
     {
         CUserBlockchain cTittle = new CUserBlockchain();
         cTittle.Insertar_BTitle_I_idTitle_faculty(faculty, carreer, statusTittle, dateDelivery, statusDelivery, idUser, fullnameTitulado);
+    }
+
+    public void Insertar_BTitle(string idTittle,string faculty, string carreer, string idUser, string fullnameTitulado)
+    {
+        CUserBlockchain cTittle = new CUserBlockchain();
+        cTittle.Insertar_BTitle(idTittle,faculty, carreer, idUser, fullnameTitulado);
     }
 
     #endregion
@@ -92,7 +116,6 @@ public class SWLNBlockchain : ISWLNBlockchain
         List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
         lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Est();
         return lstIUserCareerCompleja;
-
     }
     public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_Bus(string Fullname)
     {
@@ -109,7 +132,13 @@ public class SWLNBlockchain : ISWLNBlockchain
         cNetValle.Obtener_Persona_O_Estudiante();
         return eNPerson;
     }
-
+    public List<ENPerson> Obtener_Persona_O()
+    {
+        List<ENPerson> ListeNPerson = new List<ENPerson>();
+        CNetValle cNetValle = new CNetValle();
+        cNetValle.Obtener_Persona_O();
+        return ListeNPerson;
+    }
     public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
         List<ENPerson> ListeNPerson = new List<ENPerson>();
@@ -125,14 +154,12 @@ public class SWLNBlockchain : ISWLNBlockchain
         cNetValle.Obtener_Carrerra_O_ID_Pedro(id);
         return eNCareer;    
     }
-
     public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
     {
         List<ENPerson> LsteNPerson = new List<ENPerson>();
         CNetValle cNetValle = new CNetValle();
         return LsteNPerson;
     }
-
     public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Est_ID(int ID)
     {
         CNetValle cNetValle = new CNetValle();
@@ -141,6 +168,11 @@ public class SWLNBlockchain : ISWLNBlockchain
         return lstIUserCareerCompleja;
 
     }
-
-
+    public List<IUserCareerCompleja> U_Obtener_UserCareerComplejas_O_Person()
+    {
+        CNetValle cNetValle = new CNetValle();
+        List<IUserCareerCompleja> lstIUserCareerCompleja = new List<IUserCareerCompleja>();
+        lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Person();
+        return lstIUserCareerCompleja;
+    }
 }

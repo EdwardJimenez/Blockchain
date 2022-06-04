@@ -13,14 +13,14 @@ public class IUserCareerCompleja
     public string IDPerson { get; set; }
     [DataMember]
     public string Fullname { get; set; }
-    //[DataMember]
-    //public string Phone { get; set; }
-    //[DataMember]
-    //public string CI { get; set; }
-    //[DataMember]
-    //public string ExtCI { get; set; }
-    //[DataMember]
-    //public string Mail { get; set; }
+    [DataMember]
+    public string Phone { get; set; }
+    [DataMember]
+    public string CI { get; set; }
+    [DataMember]
+    public string ExtCI { get; set; }
+    [DataMember]
+    public string Mail { get; set; }
     //[DataMember]
     //public string Password { get; set; }
     // [DataMember]
@@ -42,6 +42,10 @@ public class IUserCareerCompleja
     {
         IDPerson = string.Empty;
         Fullname = string.Empty;
+        Phone = string.Empty;
+        CI = string.Empty;
+        ExtCI = string.Empty;
+        Mail = string.Empty;
         IDCareer = string.Empty;
         CareerName = string.Empty;
         FacultyName = string.Empty;

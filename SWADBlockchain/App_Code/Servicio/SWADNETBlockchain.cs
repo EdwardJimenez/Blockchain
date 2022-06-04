@@ -42,10 +42,33 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         cBTittle.Insertar_BTitle_I_idTitle_faculty(eBTittle);
     }
 
+    public void Insertar_BTitle(EBTittle eBTittle)
+    {
+        CBTitle cBTittle = new CBTitle();
+        cBTittle.Insertar_BTitle(eBTittle);
+    }
+
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         CBTitle cBTitle = new CBTitle();
         cBTitle.Actualizar_ITitle_statusTitle(ebTitle);
+    }
+    public void Eliminar_ITitle_statusTitle(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.Eliminar_ITitle_statusTitle(ebTitle);
+    }
+
+    public void Actualizar_ITitle(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.Actualizar_ITitle(ebTitle);
+    }
+
+    public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
+    {
+        CBTitle cBTitle = new CBTitle();
+        cBTitle.Actualizar_BTittle_ConfirmarEntrega(ebTitle);
     }
 
     public List<EBTittle> Obtener_Title_O()
@@ -80,5 +103,7 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         lstRolUser = cBRolUser.Obtener_RolUser_O();
         return lstRolUser;
     }
+
+    
     #endregion
 }

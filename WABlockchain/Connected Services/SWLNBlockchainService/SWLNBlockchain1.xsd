@@ -105,6 +105,22 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Insertar_BTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTittle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carreer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fullnameTitulado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar_BTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_Title_O">
     <xs:complexType>
       <xs:sequence />
@@ -125,6 +141,47 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="Actualizar_ITitle_statusTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar_ITitle_statusTitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id_Title" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="carreer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faculty" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_ITitleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntrega">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="modo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar_BTittle_ConfirmarEntregaResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
@@ -207,6 +264,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Obtener_Persona_O">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Obtener_Persona_OResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Persona_OResult" nillable="true" type="q8:ArrayOfENPerson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Obtener_Carrerra_O_ID_Pedro">
     <xs:complexType>
       <xs:sequence>
@@ -217,7 +286,7 @@
   <xs:element name="Obtener_Carrerra_O_ID_PedroResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Carrerra_O_ID_PedroResult" nillable="true" type="q8:ENCareer" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_Carrerra_O_ID_PedroResult" nillable="true" type="q9:ENCareer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -229,7 +298,19 @@
   <xs:element name="U_Obtener_UserCareerComplejas_O_EstResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_EstResult" nillable="true" type="q9:ArrayOfIUserCareerCompleja" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_EstResult" nillable="true" type="q10:ArrayOfIUserCareerCompleja" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="U_Obtener_UserCareerComplejas_O_Person">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="U_Obtener_UserCareerComplejas_O_PersonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_PersonResult" nillable="true" type="q11:ArrayOfIUserCareerCompleja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -243,7 +324,7 @@
   <xs:element name="U_Obtener_UserCareerComplejas_O_Est_BusResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_Est_BusResult" nillable="true" type="q10:ArrayOfIUserCareerCompleja" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_Est_BusResult" nillable="true" type="q12:ArrayOfIUserCareerCompleja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -257,7 +338,7 @@
   <xs:element name="U_Obtener_UserCareerComplejas_O_Est_IDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_Est_IDResult" nillable="true" type="q11:ArrayOfIUserCareerCompleja" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="U_Obtener_UserCareerComplejas_O_Est_IDResult" nillable="true" type="q13:ArrayOfIUserCareerCompleja" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

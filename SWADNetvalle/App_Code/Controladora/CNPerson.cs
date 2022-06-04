@@ -33,6 +33,26 @@ public class CNPerson
         }
         return NPersona;
     }
+    public List<ENPerson> Obtener_Persona_O()
+    {
+        ENPerson eNPersona = new ENPerson();
+        List<ENPerson> lstNPersona = new List<ENPerson>();
+        DTONPerson dTONPerson = aDNPerson.Obtener_Person_O();
+        foreach (DTONPerson.PersonRow drPersona in dTONPerson.Person.Rows)
+        {
+            eNPersona = new ENPerson();
+            eNPersona.IDPerson = drPersona.IDPerson.ToString().TrimEnd();
+            eNPersona.Fullname = drPersona.Fullname.ToString();
+            eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
+            eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
+            eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
+            eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
+            eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
+            lstNPersona.Add(eNPersona);
+        }
+        return lstNPersona;
+    }
 
     public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
@@ -46,6 +66,27 @@ public class CNPerson
             eNPersona.Fullname = drPersona.Fullname.ToString();
             eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
             eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
+            eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
+            eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
+            eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
+            lstNPersona.Add(eNPersona);
+        }
+        return lstNPersona;
+    }
+    public List<ENPerson> Obtener_Persona_O_L()
+    {
+        ENPerson eNPersona = new ENPerson();
+        List<ENPerson> lstNPersona = new List<ENPerson>();
+        DTONPerson dTONPerson = aDNPerson.Obtener_Person_O();
+        foreach (DTONPerson.PersonRow drPersona in dTONPerson.Person.Rows)
+        {
+            eNPersona = new ENPerson();
+            eNPersona.IDPerson = drPersona.IDPerson.ToString().TrimEnd();
+            eNPersona.Fullname = drPersona.Fullname.ToString();
+            eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
+            eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
             eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
             eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
             eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
@@ -84,6 +125,7 @@ public class CNPerson
             eNPersona.Fullname = drPersona.Fullname.ToString();
             eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
             eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
             eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
             eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
             eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
