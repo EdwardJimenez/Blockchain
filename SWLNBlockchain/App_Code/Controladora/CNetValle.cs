@@ -187,6 +187,10 @@ public class CNetValle
                 userCareerCompleja = new IUserCareerCompleja();
                 userCareerCompleja.IDPerson = eNPerson.IDPerson;
                 userCareerCompleja.Fullname = eNPerson.Fullname;
+                userCareerCompleja.Phone = eNPerson.Phone;
+                userCareerCompleja.CI = eNPerson.CI;
+                userCareerCompleja.ExtCI = eNPerson.ExtCI;
+                userCareerCompleja.Mail = eNPerson.Mail;
                 userCareerCompleja.IDCareer = eNCareer.IDCareer;
                 userCareerCompleja.CareerName = eNCareer.CareerName;
                 userCareerCompleja.FacultyName = eNCareer.FacultyName;
@@ -216,6 +220,10 @@ public class CNetValle
                 userCareerCompleja = new IUserCareerCompleja();
                 userCareerCompleja.IDPerson = eNPerson.IDPerson;
                 userCareerCompleja.Fullname = eNPerson.Fullname;
+                userCareerCompleja.Phone = eNPerson.Phone;
+                userCareerCompleja.CI = eNPerson.CI;
+                userCareerCompleja.ExtCI = eNPerson.ExtCI;
+                userCareerCompleja.Mail = eNPerson.Mail;
                 userCareerCompleja.IDCareer = eNCareer.IDCareer;
                 userCareerCompleja.CareerName = eNCareer.CareerName;
                 userCareerCompleja.FacultyName = eNCareer.FacultyName;
