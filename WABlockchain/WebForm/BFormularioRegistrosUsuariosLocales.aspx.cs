@@ -13,6 +13,7 @@ namespace WABlockchain.WebForm
     {
         
         private static Helper _helper = new Helper();
+ 
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         private string _Id_Requerimiento = string.Empty;
         private string _Id_User = string.Empty;
@@ -21,7 +22,27 @@ namespace WABlockchain.WebForm
             if (!IsPostBack)
             {
                 CargarRolUser();
+                if (Session["idUsuario"] != null)
+                {
+                    try
+                    {
+                        IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
+                        int IDUser = Convert.ToInt32(Session["idUsuario"]);
+                        iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
+                        txtNombre.Text = iusercompleja.Fullname.ToString();//validar alguito
+                        txtCellphone.Text = iusercompleja.Phone.ToString();
+                        txtEmail.Text = iusercompleja.Mail.ToString();
+                        txtCi.Text = iusercompleja.CI.ToString();
+                        txtCIExtra.Text = iusercompleja.ExtCI.ToString();
 
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+
+                }
             }
         }
 

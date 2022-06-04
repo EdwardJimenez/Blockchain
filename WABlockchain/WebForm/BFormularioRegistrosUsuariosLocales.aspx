@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BFormularioRegistrosUsuariosLocales.aspx.cs" Inherits="WABlockchain.WebForm.BFormularioRegistrosUsuariosLocales" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master"  EnableEventValidation="false" AutoEventWireup="true" CodeBehind="BFormularioRegistrosUsuariosLocales.aspx.cs" Inherits="WABlockchain.WebForm.BFormularioRegistrosUsuariosLocales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -26,7 +26,7 @@
                             &nbsp;</div>
                         <div >
                             <%--<label for="">Estudiante :<input  runat="server" type="text" id="codigoCarta" name="codigoCarta"></label><br>--%>
-                                             <label for="">Id :       <asp:TextBox runat="server" ID="txtEmail" /></label><br>
+                                             <label for="">Email :       <asp:TextBox runat="server" ID="txtEmail" /></label><br>
                             &nbsp;</div>
                         <div>
                             <%--<label for="">Apellidos :<input  runat="server" ID="fechaActual" name="fechaActual" type="text" onchange="handler(event);"></label><br>--%>

@@ -46,6 +46,7 @@ public class CNPerson
             eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
             eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
             eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
             eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
             eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
             lstNPersona.Add(eNPersona);
@@ -66,6 +67,7 @@ public class CNPerson
             eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
             eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
             eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
             eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
             eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
             lstNPersona.Add(eNPersona);
@@ -84,6 +86,7 @@ public class CNPerson
             eNPersona.Fullname = drPersona.Fullname.ToString();
             eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
             eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
             eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
             eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
             eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();
@@ -122,6 +125,7 @@ public class CNPerson
             eNPersona.Fullname = drPersona.Fullname.ToString();
             eNPersona.CI = drPersona.CI_Person.ToString().TrimEnd();
             eNPersona.ExtCI = drPersona.Ext_CI_Person.ToString().TrimEnd();
+            eNPersona.Mail = drPersona.Mail_Person.ToString().TrimEnd();
             eNPersona.Phone = drPersona.Phone_Person.ToString().TrimEnd();
             eNPersona.Rol = drPersona.Rol_Person.ToString().TrimEnd();
             eNPersona.IDCareer = drPersona.IDCareer.ToString().TrimEnd();

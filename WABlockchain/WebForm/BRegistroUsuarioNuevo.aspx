@@ -36,6 +36,31 @@
                     </tr>
                     <tr>
                         <td class="cell">
+                            <asp:Label Text="CI Extra: " runat="server" Font-Bold="True" />
+                        </td>
+                        <td class="cel">
+                            <asp:TextBox runat="server" ID="txtCiextra" />
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td class="cell">
+                            <asp:Label Text="Usuario NetValle: " runat="server" Font-Bold="True" />
+                        </td>
+                        <td class="cel">
+                            <asp:TextBox runat="server" ID="txtUsuarioNetvalle" />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="cell">
+                            <asp:Label Text="Password: " runat="server" Font-Bold="True" />
+                        </td>
+                        <td class="cel">
+                            <asp:TextBox runat="server" ID="txtPassword" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">
                             <asp:Label Text="Correo: " runat="server" Font-Bold="True" />
                         </td>
                         <td class="cel">
@@ -51,14 +76,6 @@
                         </td>
                     </tr>
 
-                    <tr>
-                        <td class="cell">
-                            <asp:Label Text="Fecha de creacion: " runat="server" Font-Bold="True" />
-                        </td>
-                        <td class="cel">
-                            <asp:TextBox runat="server" CssClass="finicio" ID="txtFechaCreacion" TextMode="Date" />
-                        </td>
-                    </tr>
                     <tr>
                         <td class="cell">
                             <asp:Label Text="Descripción: " runat="server" Font-Bold="True" />
@@ -83,7 +100,7 @@
             <div class="contein">
 
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR USUARIO" />
+                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR USUARIO" OnClick="btnRegistrar_Click" />
                 </div>
                 <div>
                     <asp:Label runat="server" CssClass="msj" Text="El programa se registró exitosamente" Visible="false"></asp:Label>

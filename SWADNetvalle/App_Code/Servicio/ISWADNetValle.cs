@@ -30,4 +30,5 @@ public interface ISWADNetValle
     [OperationContract]
     List<ENPerson> Obtener_Persona_O_L();
 
+   
 }
