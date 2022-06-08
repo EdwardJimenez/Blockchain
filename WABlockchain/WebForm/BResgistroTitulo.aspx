@@ -17,6 +17,8 @@
                         <td class="cel">
                             <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio" TextMode="Date" />
 
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+
                         </td>
                     </tr>
                    <%-- <asp:Label ID="Label10" runat="server" CssClass="lbl"></asp:Label>--%>
@@ -27,6 +29,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtCarrera" runat="server" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Debe rellenar la carrera" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -37,6 +40,7 @@
 
                         <td class="cel">
                             <asp:TextBox ID="txtNombre" runat="server" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe llenar el nombre" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -45,9 +49,11 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtEmail" runat="server" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="Debe llenar el  email" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Ingrese un Email Valido" ForeColor="#CC0000" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
-                    <tr>
+                    <%-- %><tr>
                         <td class="cell">
                             <asp:Label ID="Label4" runat="server" Font-Bold="True" Text="Password: " />
                         </td>
@@ -55,7 +61,7 @@
                             <asp:TextBox ID="txtContrasenia"  runat="server" />
                         </td>
                     </tr>
-                    <tr>
+                    <%-- %><tr>
                         <td class="cell">
                             <asp:Label ID="Label5" runat="server" Font-Bold="True" Text="CI Usuario: " />
                         </td>
@@ -71,7 +77,7 @@
                             <asp:TextBox ID="txtDescripcion" runat="server" />
                         </td>
                     </tr>--%>
-                    <tr>
+                    <%-- <tr>
                         <td class="cell">
                             <asp:Label ID="Label11" runat="server" Font-Bold="True" Text="Ci Extra: " />
                         </td>
@@ -79,7 +85,7 @@
                             <asp:TextBox ID="txtCiExtra" runat="server" />
                             <br />
                         </td>
-                    </tr>
+                    </tr>--%>
                 </table>
             </div>       
             <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" >

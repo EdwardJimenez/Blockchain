@@ -16,6 +16,8 @@
                         <td class="cel">
                             <asp:TextBox ID="txtFechaEmision" runat="server" CssClass="finicio" TextMode="Date" />
 
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFechaEmision" ErrorMessage="Requiere la Fecha de emision" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+
                         </td>
                         <asp:Label ID="Label2" runat="server" CssClass="lbl"></asp:Label>
                     </tr>
@@ -27,6 +29,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtTitulado" runat="server" />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTitulado" ErrorMessage="Requiere el Titulado" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -38,6 +41,7 @@
                                 <asp:ListItem Value="A">Acto de Graduacion</asp:ListItem>
                                 <asp:ListItem Value="S">Solicitud Privada</asp:ListItem>
                             </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlMetodoEntrega" ErrorMessage="Requiere el Metodo de entrega" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                 </table>

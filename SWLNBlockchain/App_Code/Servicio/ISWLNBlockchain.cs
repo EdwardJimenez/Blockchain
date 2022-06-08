@@ -26,6 +26,7 @@ public interface ISWLNBlockchain
     
     /*void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     [OperationContract]*/
+    [OperationContract]
     void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     
     [OperationContract]
