@@ -31,6 +31,12 @@
   <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_idUser_email_OutputMessage">
     <wsdl:part name="parameters" element="tns:Insertar_BUser_I_idUser_emailResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_I" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Insertar_BUser_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar_BUser_IResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Actualizar_BUser_I_idUser_email_InputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_BUser_I_idUser_email" />
   </wsdl:message>
@@ -240,6 +246,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email" message="tns:ISWLNBlockchain_Insertar_BUser_I_idUser_email_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_emailResponse" message="tns:ISWLNBlockchain_Insertar_BUser_I_idUser_email_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I" message="tns:ISWLNBlockchain_Insertar_BUser_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse" message="tns:ISWLNBlockchain_Insertar_BUser_I_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Actualizar_BUser_I_idUser_email">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email" message="tns:ISWLNBlockchain_Actualizar_BUser_I_idUser_email_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_emailResponse" message="tns:ISWLNBlockchain_Actualizar_BUser_I_idUser_email_OutputMessage" />
@@ -400,6 +410,15 @@
     </wsdl:operation>
     <wsdl:operation name="Insertar_BUser_I_idUser_email">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar_BUser_I">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

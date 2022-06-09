@@ -1015,6 +1015,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I_idUser_emailResponse")]
         System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
+        void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
+        System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_emailResponse")]
         void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
         
@@ -1273,6 +1279,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
             return base.Channel.Insertar_BUser_I_idUser_emailAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
+        }
+        
+        public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
+            base.Channel.Insertar_BUser_I(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
+        }
+        
+        public System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
+            return base.Channel.Insertar_BUser_IAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
         }
         
         public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle) {
