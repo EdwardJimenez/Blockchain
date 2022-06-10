@@ -11,7 +11,25 @@ namespace WABlockchain.WebForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            switch (Session.SessionID)
+            {
+                case "1":
+                    break;
+                case "ReadOnly":
+                    //btn_Users.Visibility = Visibility.Collapsed;
+                    //btnTransacciones.Visibility = Visibility.Collapsed;
+                    break;
+                case "Secretaria":
+                    //btn_Users.Visibility = Visibility.Collapsed;
+                    //btnGanado.Visibility = Visibility.Collapsed;
+                    //btnTransacciones.Visibility = Visibility.Collapsed;
+                    break;
+                case "VRA":
+                    //btn_Users.Visibility = Visibility.Collapsed;
+                    //btnGanado.Visibility = Visibility.Collapsed;
+                    //btnTransacciones.Visibility = Visibility.Collapsed;
+                    break;
+            }
         }
     }
 }

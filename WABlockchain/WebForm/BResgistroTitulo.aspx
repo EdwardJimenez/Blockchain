@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
-        <fieldset>
+        <fieldset style="height: 486px">
             <legend class="bold" style="text-align: center;"> REGISTRO TITULOS</legend>
             <div class="container">
                 <table>
@@ -15,7 +15,7 @@
                             <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Facultad: " />
                         </td>
                         <td class="cel">
-                            <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio" TextMode="Date" />
+                            <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio"  />
 
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
 
@@ -45,12 +45,12 @@
                     </tr>
                     <tr>
                         <td class="cell">
-                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Email: " />
+                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="ID: " />
                         </td>
                         <td class="cel">
-                            <asp:TextBox ID="txtEmail" runat="server" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="Debe llenar el  email" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Ingrese un Email Valido" ForeColor="#CC0000" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                            <asp:TextBox ID="txtId" runat="server" />
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtEmail" ErrorMessage="Debe llenar el  email" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Ingrese un Email Valido" ForeColor="#CC0000" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>--%>
                         </td>
                     </tr>
                     <%-- %><tr>
@@ -88,7 +88,7 @@
                     </tr>--%>
                 </table>
             </div>       
-            <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" >
+            <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="627px" >
                     <Columns>
                         <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
                             <HeaderStyle CssClass="hidden" />
@@ -99,19 +99,30 @@
                         <asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
                         <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
                         <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:Button runat="server"  CommandName="Enviar" HeaderText="Enviar" CssClass="btn" ItemStyle-CssClass="btButton" Text="Enviar" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you sure you want to Logout ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Actualizar" />
+</ItemTemplate>
+</asp:TemplateField>
+<asp:TemplateField>
+<ItemTemplate>
+<asp:Button runat="server" OnClick="btnPDF_Click" CommandName="PDF" HeaderText="PDF" ItemStyle-CssClass="btButton" Text="PDF" />
+</ItemTemplate>
+</asp:TemplateField>
+    
 
                     </Columns>
                 </asp:GridView>
-            <div class="contein">
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="REGISTRAR TITULO" Width="172px" />
+                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="REGISTRAR TITULO" Width="172px" OnClick="btnRegistrar_Click" />
                     &nbsp;&nbsp;
                     <asp:Button ID="btnQr" runat="server" class="btn" Text="ACTUALIZAR" />
                 </div>
+            <div class="contein">
                 <div>
                     <asp:Label ID="lblmsg" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="False"></asp:Label>
                 </div>

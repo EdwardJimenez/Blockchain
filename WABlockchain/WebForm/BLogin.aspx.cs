@@ -38,16 +38,19 @@ namespace WABlockchain.WebForm
                 {
                     z0.Text = "Admin";
                     Session["IdRol"] = "2";
+                    Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else if (c == Convert.ToInt32(this.LRol.Text))
                 {
                     z0.Text = "Secretaria";
                     Session["IdRol"] = "3";
+                    Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else
                 {
                     z0.Text = "VRA";
                     Session["IdRol"] = "4";
+                    Response.Redirect("BMenuPrincipal.aspx");
                 }
             }
             
