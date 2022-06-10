@@ -224,6 +224,20 @@ public class CUserBlockchain
             throw;
         }
     }
+
+    public List<EBTittle> Search_BTitle(string name, string carreer, string faculty)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Search_BTitle(name, carreer, faculty).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     #endregion
 
     #region RolUser

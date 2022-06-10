@@ -49,6 +49,12 @@
   <wsdl:message name="ISWLNBlockchain_Insertar_BTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:Insertar_BTitleResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitleResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Title_O" />
   </wsdl:message>
@@ -167,6 +173,10 @@
     <wsdl:operation name="Insertar_BTitle">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle" message="tns:ISWLNBlockchain_Insertar_BTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitleResponse" message="tns:ISWLNBlockchain_Insertar_BTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle" message="tns:ISWLNBlockchain_Search_BTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitleResponse" message="tns:ISWLNBlockchain_Search_BTitle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Obtener_Title_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O" message="tns:ISWLNBlockchain_Obtener_Title_O_InputMessage" />
@@ -287,6 +297,15 @@
     </wsdl:operation>
     <wsdl:operation name="Insertar_BTitle">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

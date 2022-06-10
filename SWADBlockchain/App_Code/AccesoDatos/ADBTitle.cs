@@ -117,6 +117,33 @@ public class ADBTitle
         }
     }
     /// <summary>
+    /// Busca un titulo con los siguientes parametros
+    /// </summary>
+    /// <param name="fullNameT"></param>
+    /// /// <param name="carreer"></param>
+    /// /// <param name="faculty"></param>
+    /// <returns Retorna los datos de un titulo ></returns>
+    public DTOBTitle Search_BTitle(string name, string carreer, string faculty)
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTitle_S_SearchTitle");
+            BDSWADBlockchain.AddInParameter(dbCommand, "fullNameT", DbType.String, name);
+            BDSWADBlockchain.AddInParameter(dbCommand, "faculty", DbType.String, faculty);
+            BDSWADBlockchain.AddInParameter(dbCommand, "carreer", DbType.String, carreer);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+
+    /// <summary>
     /// Actualizar Title
     /// </summary>
     public void Actualizar_BTitle_A_idTitle_faculty(EBTittle bTitle)

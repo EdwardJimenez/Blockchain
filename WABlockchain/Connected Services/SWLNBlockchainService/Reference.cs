@@ -969,6 +969,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BTitleResponse")]
         System.Threading.Tasks.Task Insertar_BTitleAsync(string idTittle, string faculty, string carreer, string idUser, string fullnameTitulado);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitleResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle(string name, string carreer, string faculty);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitleResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitleAsync(string name, string carreer, string faculty);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_OResponse")]
         WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O();
         
@@ -1143,6 +1149,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Insertar_BTitleAsync(string idTittle, string faculty, string carreer, string idUser, string fullnameTitulado) {
             return base.Channel.Insertar_BTitleAsync(idTittle, faculty, carreer, idUser, fullnameTitulado);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle(string name, string carreer, string faculty) {
+            return base.Channel.Search_BTitle(name, carreer, faculty);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitleAsync(string name, string carreer, string faculty) {
+            return base.Channel.Search_BTitleAsync(name, carreer, faculty);
         }
         
         public WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O() {

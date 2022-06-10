@@ -205,6 +205,20 @@ public class ASBlockchain
             throw;
         }
     }
+
+    public List<EBTittle> Search_BTitle(string name, string carreer, string faculty)
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Search_BTitle(name, carreer, faculty).ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     #endregion
     #region RolUser
     public List<EBRoluser> Obtener_RolUser_O()

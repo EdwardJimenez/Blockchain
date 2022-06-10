@@ -87,6 +87,7 @@
     <Content Include="Estilo\Estilos.css" />
     <Content Include="Estilo\EstilosUsuariosNetvalle.css" />
     <Content Include="Estilo\SEstilo.css" />
+    <Content Include="WebForm\BFormularioBuscarTitulos.aspx" />
     <Content Include="WebForm\BFormularioCRUDTitulos.aspx" />
     <Content Include="WebForm\BFormularioEnviarTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
@@ -134,6 +135,13 @@
       <DependentUpon>MPInicio.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm\BFormularioBuscarTitulos.aspx.cs">
+      <DependentUpon>BFormularioBuscarTitulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioBuscarTitulos.aspx.designer.cs">
+      <DependentUpon>BFormularioBuscarTitulos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.cs">
       <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -106,6 +106,19 @@ public class SWLNBlockchain : ISWLNBlockchain
         cTittle.Insertar_BTitle(idTittle,faculty, carreer, idUser, fullnameTitulado);
     }
 
+    public List<EBTittle> Search_BTitle(string name, string carreer, string faculty)
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        EBTittle tittle = new EBTittle();
+        tittle.faculty = faculty;
+        tittle.fullNameTitulado = name;
+        tittle.carreer = carreer;
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Search_BTitle(name,carreer,faculty).ToList();
+        return eBTitle;
+    }
+
     #endregion
 
     #region RolUser
