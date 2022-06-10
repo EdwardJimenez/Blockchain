@@ -41,6 +41,7 @@
                         <td class="cel">
                             <asp:TextBox runat="server" ID="txtCi" />
                             <asp:RequiredFieldValidator ID="vlcCI" runat="server" ControlToValidate="txtCi" ErrorMessage="Debes Ingresar tu Carnet de Identidad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCi" ErrorMessage="Debes ingresar el formato correcto para el CI : (Ci-[Lugar])" ForeColor="#CC0000" ValidationExpression="[0-9]{7}-[a-zA-Z]{3}"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
