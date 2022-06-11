@@ -29,7 +29,62 @@ public class ASNetValle
             throw;
         }
     }
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        List<ENPerson> eNPerson = new List<ENPerson>();
+        try
+        {
+            eNPerson = swADNetValle.Obtener_Persona_O_Nombre(Fullname).ToList();
+            return eNPerson;
+        }
+        catch (Exception)
+        {
 
+            throw;
+        }
+    }
+    public List<ENPerson> Obtener_Persona_O()
+    {
+        List<ENPerson> eNPerson = new List<ENPerson>();
+        try
+        {
+            eNPerson = swADNetValle.Obtener_Persona_O().ToList();
+            return eNPerson;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+    public List<ENPerson> Obtener_Persona_O_L()
+    {
+        List<ENPerson> eNPerson = new List<ENPerson>();
+        try
+        {
+            eNPerson = swADNetValle.Obtener_Persona_O_L().ToList();
+            return eNPerson;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+    public List<ENPerson> Obtener_Persona_O_ID(int ID)
+    {
+        List<ENPerson> eNPerson = new List<ENPerson>();
+        try
+        {
+            eNPerson = swADNetValle.Obtener_Persona_O_ID(ID).ToList();
+            return eNPerson;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
     public ENPerson Obtener_Persona_O_Estudiante()
     {
         ENPerson eNPerson = new ENPerson();

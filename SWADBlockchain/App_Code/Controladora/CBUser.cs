@@ -29,5 +29,18 @@ public class CBUser
     //{
     //    adICarrera.Actualizar_ICarrera_A_CarreraID_NombreCarrera(eICarrera);
     //}
+
+    public EBUser Obtener_RolUser_O_Search(string email, string password)
+    {
+        EBUser eBuser = new EBUser();
+        DTOBUser dTOBUser = adBUser.Obtener_RolUser_O_Search(email, password);
+        foreach (DTOBUser.BUserRow user in dTOBUser.BUser.Rows)
+        {
+            eBuser = new EBUser();
+            eBuser.IdRolUser = user.IdrolUser.ToString();
+
+        }
+        return eBuser;
+    }
     #endregion
 }

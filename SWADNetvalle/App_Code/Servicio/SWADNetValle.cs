@@ -31,4 +31,36 @@ public class SWADNetValle : ISWADNetValle
         lsteNPersona = cNPerson.Obtener_Persona_O_EstudianteL();
         return lsteNPersona;
     }
+    public List<ENPerson> Obtener_Persona_O()
+    {
+        CNPerson cNPerson = new CNPerson();
+        List<ENPerson> lsteNPersona = new List<ENPerson>();
+        lsteNPersona = cNPerson.Obtener_Persona_O();
+        return lsteNPersona;
+    }
+    public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
+    {
+        CNPerson cNPerson = new CNPerson();
+        List<ENPerson> lsteNPersona = new List<ENPerson>();
+        lsteNPersona = cNPerson.Obtener_Persona_O_Nombre(Fullname);
+        return lsteNPersona;
+    }
+
+
+    public List<ENPerson> Obtener_Persona_O_L()
+    {
+        CNPerson cNPerson = new CNPerson();
+        List<ENPerson> lsteNPersona = new List<ENPerson>();
+        lsteNPersona = cNPerson.Obtener_Persona_O_L();
+        return lsteNPersona;
+    }
+
+    public List<ENPerson> Obtener_Persona_O_ID(int ID)
+    {
+        CNPerson cNPerson = new CNPerson();
+        List<ENPerson> lsteNPersona = new List<ENPerson>();
+        lsteNPersona = cNPerson.Obtener_Persona_O_ID(ID);
+        return lsteNPersona;
+    }
+    
 }
