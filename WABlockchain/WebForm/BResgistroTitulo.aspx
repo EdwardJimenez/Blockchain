@@ -120,13 +120,7 @@
 
                 <div class="Registrar">
                     <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR " OnClick="btnRegistrar_Click" />
-                    <div>
-                        <asp:Label runat="server" CssClass="msj" Text="Registrado" Visible="false"></asp:Label>
-                    </div>
                     <asp:Button ID="btnRegistrar0" class="btn" runat="server" Text="ACTUALIZAR" OnClick="btnRegistrar_Click" />
-                    <div>
-                        <asp:Label runat="server" CssClass="msj" Text="Actualizado" Visible="false"></asp:Label>
-                    </div>
                 </div>
 
             </div>
