@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
         <fieldset style="height: 486px">
-            <legend class="bold" style="text-align: center;"> REGISTRO TITULOS</legend>
+            <legend class="bold" style="text-align: center;">REGISTRO TITULOS</legend>
             <div class="container">
                 <table>
                     <tr>
@@ -15,13 +15,13 @@
                             <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Facultad: " />
                         </td>
                         <td class="cel">
-                            <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio"  />
+                            <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio" />
 
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
 
                         </td>
                     </tr>
-                   <%-- <asp:Label ID="Label10" runat="server" CssClass="lbl"></asp:Label>--%>
+                    <%-- <asp:Label ID="Label10" runat="server" CssClass="lbl"></asp:Label>--%>
 
                     <tr>
                         <td class="cell">
@@ -36,7 +36,7 @@
                         <td class="cell">
                             <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Nombre: " />
                         </td>
-                            <asp:Label  CssClass="label" runat="server" Font-Bold="True"/>
+                        <asp:Label CssClass="label" runat="server" Font-Bold="True" />
 
                         <td class="cel">
                             <asp:TextBox ID="txtNombre" runat="server" />
@@ -87,46 +87,50 @@
                         </td>
                     </tr>--%>
                 </table>
-            </div>       
-            <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="627px" >
-                    <Columns>
-                        <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
-                            <HeaderStyle CssClass="hidden" />
-                            <ItemStyle CssClass="hidden" />
-                            <FooterStyle CssClass="hidden" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
-                        <asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
-                        <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
-                        <asp:TemplateField>
-<ItemTemplate>
-<asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you sure you want to Logout ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
-</ItemTemplate>
-</asp:TemplateField>
-<asp:TemplateField>
-<ItemTemplate>
-<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Actualizar" />
-</ItemTemplate>
-</asp:TemplateField>
-<asp:TemplateField>
-<ItemTemplate>
-<asp:Button runat="server" OnClick="btnPDF_Click" CommandName="PDF" HeaderText="PDF" ItemStyle-CssClass="btButton" Text="PDF" />
-</ItemTemplate>
-</asp:TemplateField>
-    
-
-                    </Columns>
-                </asp:GridView>
-                <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="REGISTRAR TITULO" Width="172px" OnClick="btnRegistrar_Click" />
-                    &nbsp;&nbsp;
-                    <asp:Button ID="btnQr" runat="server" class="btn" Text="ACTUALIZAR" />
-                </div>
-            <div class="contein">
-                <div>
-                    <asp:Label ID="lblmsg" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="False"></asp:Label>
-                </div>
             </div>
+            <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="627px">
+                <Columns>
+                    <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
+                        <HeaderStyle CssClass="hidden" />
+                        <ItemStyle CssClass="hidden" />
+                        <FooterStyle CssClass="hidden" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
+                    <asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+                    <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you sure you want to Logout ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Actualizar" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button runat="server" OnClick="btnPDF_Click" CommandName="PDF" HeaderText="PDF" ItemStyle-CssClass="btButton" Text="PDF" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            <br />
+            <div class="contein">
+
+                <div class="Registrar">
+                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR " OnClick="btnRegistrar_Click" />
+                    <div>
+                        <asp:Label runat="server" CssClass="msj" Text="Registrado" Visible="false"></asp:Label>
+                    </div>
+                    <asp:Button ID="btnRegistrar0" class="btn" runat="server" Text="ACTUALIZAR" OnClick="btnRegistrar_Click" />
+                    <div>
+                        <asp:Label runat="server" CssClass="msj" Text="Actualizado" Visible="false"></asp:Label>
+                    </div>
+                </div>
+
+            </div>
+
         </fieldset>
     </form>
 </asp:Content>
