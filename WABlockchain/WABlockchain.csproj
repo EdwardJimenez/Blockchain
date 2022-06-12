@@ -152,6 +152,7 @@
     <Content Include="WebForm\BEstado3.aspx" />
     <Content Include="WebForm\BEstado6.aspx" />
     <Content Include="WebForm\BEstado7.aspx" />
+    <Content Include="WebForm\BFormularioBuscarTtulo.aspx" />
     <Content Include="WebForm\BLogin.aspx" />
     <Content Include="WebForm\BMenuPrincipal.aspx" />
     <Content Include="WebForm\BRegistroUsuarioNuevo.aspx" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="WebForm\BEstado7.aspx.designer.cs">
       <DependentUpon>BEstado7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioBuscarTtulo.aspx.cs">
+      <DependentUpon>BFormularioBuscarTtulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioBuscarTtulo.aspx.designer.cs">
+      <DependentUpon>BFormularioBuscarTtulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.cs">
       <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
