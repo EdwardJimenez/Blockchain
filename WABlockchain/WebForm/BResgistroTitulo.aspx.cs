@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WABlockchain.SWLNBlockchainService;
 using WABlockchain.Class;
 using WABlockchain.Template.Util;
+using System.Net;
 
 namespace WABlockchain.WebForm
 {
@@ -114,7 +115,17 @@ namespace WABlockchain.WebForm
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             string nombreCompleto = grvTitulos.Rows[id].Cells[1].Text;
             string carrera = grvTitulos.Rows[id].Cells[3].Text;
-            generarPDF.GenerarNuevoPDF(nombreCompleto, carrera);
+            string mostrar = generarPDF.GenerarNuevoPDF(nombreCompleto, carrera);
+
+            WebClient web = new WebClient();
+            Byte[] FileBuffer = web.DownloadData(mostrar);
+
+            if(FileBuffer != null)
+            {
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", FileBuffer.Length.ToString());
+                Response.BinaryWrite(FileBuffer);
+            }
         }
     }
 }
