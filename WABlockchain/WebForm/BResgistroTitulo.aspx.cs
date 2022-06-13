@@ -23,6 +23,7 @@ namespace WABlockchain.WebForm
             {
                 cargarTitulos();
                 deshabilitarTextbox();
+                
                 //if (Session["idUsuario"] != null)
                 //{
                 //    try
@@ -79,11 +80,12 @@ namespace WABlockchain.WebForm
 
 
                 cargarTitulos();
-               //lblMensaje.Text = "Registro de Título Exitoso!!!";
+                lblmensaje.Text = "Registro de Título Exitoso!!!";
+               
             }
             catch (Exception)
             {
-                //lblMensaje.Text = "Registro de Título No Insertado";
+                lblmensaje.Text = "Registro de Título No Insertado";
             }
         }
 
@@ -106,7 +108,7 @@ namespace WABlockchain.WebForm
             txtNombre.Text = grvTitulos.Rows[id].Cells[1].Text;
             txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
             txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
-            txtNombre.Text = grvTitulos.Rows[id].Cells[0].Text;
+            txtId.Text = grvTitulos.Rows[id].Cells[0].Text;
         }
 
         protected void btnPDF_Click(object sender, EventArgs e)

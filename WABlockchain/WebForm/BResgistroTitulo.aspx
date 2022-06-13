@@ -50,7 +50,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtId" runat="server" CssClass="finicio" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtId" ErrorMessage="Campo Requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtId" ErrorMessage="Campo Requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
 
                         </td>
                     </tr>
@@ -63,7 +63,7 @@
                     <asp:Button ID="btnActualizar" class="btn" runat="server" Text="ACTUALIZAR" OnClick="btnActualizar_Click" />
                 </div>
                 <div>
-                    <asp:Label runat="server" CssClass="msj" Text="El Titulo se registró exitosamente" Visible="false"></asp:Label>
+                    <asp:Label runat="server"  ID="lblmensaje" CssClass="msj"></asp:Label>
                 </div>
             </div>
         </fieldset>
