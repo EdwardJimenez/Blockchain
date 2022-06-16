@@ -197,13 +197,64 @@ public class ASBlockchain
             throw;
         }
     }
-    
+
+    public List<EBTittle> Obtener_Title_1()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Obtener_Title_1().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> Obtener_Title_2()
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Obtener_Title_2().ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         try
         {
             swADNETBlockchain.Actualizar_ITitle_statusTitle(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle_statusTitle_2(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_ITitle_statusTitle_2(ebTitle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public void Actualizar_ITitle_statusTitle_1(EBTittle ebTitle)
+    {
+        try
+        {
+            swADNETBlockchain.Actualizar_ITitle_statusTitle_1(ebTitle);
         }
         catch (Exception)
         {
@@ -308,6 +359,20 @@ public class ASBlockchain
         try
         {
             swADNETBlockchain.Insertar_BTitle(ebTittle);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> Search_BTitle(string name, string carreer, string faculty)
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Search_BTitle(name, carreer, faculty).ToList();
+            return lstEbTitle;
         }
         catch (Exception)
         {
