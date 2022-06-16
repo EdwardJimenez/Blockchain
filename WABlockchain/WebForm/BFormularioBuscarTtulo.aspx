@@ -18,7 +18,7 @@
                             <asp:Label Text="Facultad: " runat="server" Font-Bold="True" />
                         </td>
                         <td class="cel">
-                            <asp:TextBox runat="server" ID="txtFacultad" />
+                            <asp:TextBox runat="server" ID="txtFacultad"  />
                             <%-- <asp:RequiredFieldValidator ID="vlcFacultad" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Campo requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
@@ -63,7 +63,10 @@
             <div class="contein">
 
                 <div class="bold">
-                    <asp:Button ID="btnBuscar" class="btn" runat="server" Text="Buscar " />
+                    <asp:Button OnClick="btnBuscar_Click" ID="btnBuscar" class="btn" runat="server" Text="Buscar " />
+                </div>
+                <div class="bold">
+                <asp:Label runat="server" CssClass="msj" ID="lblMensaje" Text="Mensaje" ></asp:Label>
                 </div>
             </div>
 
