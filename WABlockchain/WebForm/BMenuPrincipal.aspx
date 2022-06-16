@@ -7,8 +7,8 @@
         <div class="boton">
             <br />
             <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Text="BUSCAR" Height="29px" Width="104px" />
-            <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="38px" />
-            <asp:TextBox ID="txtBuscador" runat="server" Width="557px"></asp:TextBox>
+            <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="30px" />
+            <asp:TextBox ID="txtBuscador" runat="server" Width="551px"></asp:TextBox>
         </div>
         <br />
         <div class="ddls">
