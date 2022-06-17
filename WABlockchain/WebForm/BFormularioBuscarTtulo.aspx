@@ -5,6 +5,12 @@
     <link href="../Estilo/EstiloRegistros/EstiloRegistroTitulo.css" rel="stylesheet" />
     <link href="../Estilo/EstiloRegistros/EstiloRegistroUsuario.css" rel="stylesheet" />
 
+    <style type="text/css">
+        .auto-style10 {
+            height: 28px;
+        }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server" class="fieldsetForm">
@@ -20,6 +26,7 @@
                         <td class="cel">
                             <asp:TextBox runat="server" ID="txtFacultad"  />
                             <%-- <asp:RequiredFieldValidator ID="vlcFacultad" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Campo requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Ingresa Caracteres Validos" ForeColor="#CC0000" ValidationExpression="[a-zA-Z]{3,50}"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
@@ -29,16 +36,18 @@
                         <td class="cel">
                             <asp:TextBox runat="server" ID="txtCarrera" />
                             <%-- <asp:RequiredFieldValidator ID="vlcCarrera" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Campo requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Ingresa Caracteres Validos" ForeColor="#CC0000" ValidationExpression="[a-zA-Z]{3,50}"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cell">
+                        <td class="auto-style10">
                             <asp:Label Text="Nombres: " runat="server" Font-Bold="True" />
                         </td>
-                        <td class="cel">
+                        <td class="auto-style10">
                             <asp:TextBox runat="server" ID="txtNombrePersona" />
                             <%--<asp:RequiredFieldValidator ID="vlcNombres" runat="server" ControlToValidate="txtNombrePersona" ErrorMessage="Campo requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>--%>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtNombrePersona" ErrorMessage="Ingresa Caracteres Validos" ForeColor="#CC0000" ValidationExpression="[a-zA-Z]{3,50}"></asp:RegularExpressionValidator>
                     </tr>
 
                     <tr>
@@ -48,6 +57,7 @@
                         <td class="auto-style10">
                             <asp:TextBox runat="server" ID="txtPrimerApellido" />
                             <%--    <asp:RequiredFieldValidator ID="vlcPrimerApellido" runat="server" ControlToValidate="txtPrimerApellido" ErrorMessage="Campo requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtPrimerApellido" ErrorMessage="Ingresa Caracteres Validos" ForeColor="#CC0000" ValidationExpression="[a-zA-Z]{3,50}"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
@@ -56,6 +66,7 @@
                         </td>
                         <td class="auto-style10">
                             <asp:TextBox runat="server" ID="txtSegundoApellido" />
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtSegundoApellido" ErrorMessage="Ingresa Caracteres Validos" ForeColor="#CC0000" ValidationExpression="[a-zA-Z]{3,50}"></asp:RegularExpressionValidator>
                         </td>
 
                 </table>

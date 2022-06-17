@@ -20,10 +20,11 @@ namespace WABlockchain.WebForm
                 {
                     try
                     {
+                        txtUsuarioNetvalle.Text = "SI";
                         IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
                         int IDUser = Convert.ToInt32(Session["idUsuario"]);
                         iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                        txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();//validar alguito
+                        txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();
                         txtTelefonos.Text = iusercompleja.Phone.ToString();
                         txtCorreo.Text = iusercompleja.Mail.ToString();
                         txtCi.Text = iusercompleja.CI.ToString();
@@ -57,7 +58,15 @@ namespace WABlockchain.WebForm
             {
                 string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
                 swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRol.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
-
+                txtNombreEstudiante.Text = "";
+                txtApellidos.Text = "";
+                txtCorreo.Text = "";
+                txtPassword.Text = "";
+                txtCorreo.Text = "";
+                txtUsuarioNetvalle.Text = "SI";
+                txtCi.Text = "";
+                txtDescripcion.Text = "";
+                txtCiextra.Text = "";
             }
             catch (Exception)
             {
