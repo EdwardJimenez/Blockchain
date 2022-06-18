@@ -9,6 +9,8 @@
             <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Onclick="btnBuscar_Click1" Text="BUSCAR" Height="29px" Width="104px" />
             <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="24px" />
             <asp:TextBox ID="txtBuscador" runat="server" Width="551px" ></asp:TextBox>
+            <asp:TextBox ID="txtFechaInicio" runat="server" Width="156px" ></asp:TextBox>
+            <asp:TextBox ID="txtFechaFin" runat="server" Width="150px" ></asp:TextBox>
         </div>
         <br />
         <div class="ddls">
