@@ -23,7 +23,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                      <tr>
@@ -32,7 +32,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtCarrera" runat="server" CssClass="finicio" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Debe rellenar la Carrera" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Debe rellenar la Carrera" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>
@@ -41,7 +41,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtNombre" runat="server" CssClass="finicio" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe rellenar el nombre" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe rellenar el nombre" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>

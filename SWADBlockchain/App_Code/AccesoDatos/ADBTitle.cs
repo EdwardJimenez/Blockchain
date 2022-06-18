@@ -325,6 +325,27 @@ public class ADBTitle
         return dTOBTitle;
     }
 
+    public DTOBTitle Search_BTitle_Faculty_Carrer_Date( string txt)
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        { 
+
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_S_Search_Faculty_Carreer_Date");
+           // BDSWADBlockchain.AddInParameter(dbCommand, "fullNameT", DbType.String, txt);
+            BDSWADBlockchain.AddInParameter(dbCommand, "txt", DbType.String, txt);
+            //BDSWADBlockchain.AddInParameter(dbCommand, "carreer", DbType.String, txt);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+    
     /// <summary>
     /// Actualizar Title
     /// </summary>

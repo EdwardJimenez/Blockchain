@@ -43,6 +43,11 @@ public interface ISWLNBlockchain
     [OperationContract]
     List<EBTittle> Search_BTitle(string name, string carreer, string faculty);
 
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt);
+    
+
     [OperationContract]
     List<EBTittle> Obtener_Title_O();
 

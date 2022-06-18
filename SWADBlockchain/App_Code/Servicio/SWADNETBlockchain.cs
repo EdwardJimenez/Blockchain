@@ -62,6 +62,15 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         lstTitle = cBTitle.Search_BTitle(name,carreer,faculty);
         return lstTitle;
     }
+
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.Search_BTitle_Faculty_Carrer_Date(txt);
+        return lstTitle;
+    }
+    
     public void Actualizar_ITitle_statusTitle(EBTittle ebTitle)
     {
         CBTitle cBTitle = new CBTitle();

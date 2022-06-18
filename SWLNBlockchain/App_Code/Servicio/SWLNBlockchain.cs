@@ -212,6 +212,19 @@ public List<EBTittle> Obtener_Title_O()
         return eBTitle;
     }
 
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        EBTittle tittle = new EBTittle();
+        tittle.faculty = txt;
+        //tittle.fullNameTitulado = txt;
+        //tittle.carreer = txt;
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Search_BTitle_Faculty_Carrer_Date(txt).ToList();
+        return eBTitle;
+    }
+    
     #endregion
 
     #region RolUser

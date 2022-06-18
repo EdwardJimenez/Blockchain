@@ -380,6 +380,20 @@ public class ASBlockchain
         }
     }
 
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Search_BTitle_Faculty_Carrer_Date(txt).ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    
     public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
     {
         try

@@ -6,9 +6,9 @@
       <form id="form1" runat="server">
         <div class="boton">
             <br />
-            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Text="BUSCAR" Height="29px" Width="104px" />
-            <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="30px" />
-            <asp:TextBox ID="txtBuscador" runat="server" Width="551px"></asp:TextBox>
+            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Onclick="btnBuscar_Click1" Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="24px" />
+            <asp:TextBox ID="txtBuscador" runat="server" Width="551px" ></asp:TextBox>
         </div>
         <br />
         <div class="ddls">
@@ -18,10 +18,22 @@
             &nbsp;<asp:DropDownList ID="ddlEstadoTitulo" CssClass="btn" runat="server"></asp:DropDownList>
             <br />
             <br />
-            <asp:GridView ID="GridView1" runat="server" Height="330px" Width="476px">
+            <asp:GridView ID="GridView1" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False"  Height="330px" Width="476px">
+                <Columns>
+                    <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
+                        <HeaderStyle CssClass="hidden" />
+                        <ItemStyle CssClass="hidden" />
+                        <FooterStyle CssClass="hidden" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
+                    <asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+                    <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+                    <asp:BoundField DataField="registerDate" HeaderStyle-CssClass="program" HeaderText="FECHA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+                </Columns>
             </asp:GridView>
             <br />
             <br />
+            <asp:Label ID="lblmensaje" Text="..." runat="server" Font-Bold="True" />
             <div >
                 <asp:Button ID="btnRegistrarUsuario" CssClass="btn"  runat="server"  Text="REGISTRAR USUARIO" Width="187px" />
                 <asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="REGISTRAR TITULO" Width="187px" />
