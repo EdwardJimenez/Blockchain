@@ -74,9 +74,9 @@ public class CBTitle
         {
             eBTitle = new EBTittle();
             eBTitle.IdTittles = drTitle.IdTittle.ToString();
-            //eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
             eBTitle.faculty = drTitle.faculty;
-            //eBTitle.carreer = drTitle.carreer;
+            eBTitle.carreer = drTitle.carreer;
             lstTitle.Add(eBTitle);
         }
         return lstTitle;
