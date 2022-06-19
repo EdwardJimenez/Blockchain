@@ -16,8 +16,22 @@ namespace WABlockchain.WebForm
         {
             if (!IsPostBack)
             {
-                cargarTitulos();
-                CamposDeshabilitados();
+                if (Session["Rol"] != null)
+                {
+                    if (Session["Rol"].ToString() == "Secretaria")
+                    {
+                        cargarTitulos();
+                        CamposDeshabilitados();
+                    }
+                    else
+                    {
+                        Response.Redirect("BMenuPrincipal.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("BLogin.aspx");
+                }
             }
         }
 

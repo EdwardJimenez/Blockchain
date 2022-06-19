@@ -32,29 +32,28 @@ namespace WABlockchain.WebForm
                 if (a == Convert.ToInt32(this.LRol.Text))
                 {
                     z0.Text = "ReadOnly";
-                    Session["IdRol"] = "1";
+                    Session["Rol"] = "ReadOnly";
+                    Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else if (b == Convert.ToInt32(this.LRol.Text))
                 {
                     z0.Text = "Admin";
-                    Session["IdRol"] = "2";
+                    Session["Rol"] = "Admin";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else if (c == Convert.ToInt32(this.LRol.Text))
                 {
                     z0.Text = "Secretaria";
-                    Session["IdRol"] = "3";
+                    Session["Rol"] = "Secretaria";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else
                 {
                     z0.Text = "VRA";
-                    Session["IdRol"] = "4";
+                    Session["Rol"] = "VRA";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
             }
-            
-            
         }
         protected void Page_Load(object sender, EventArgs e)
         {

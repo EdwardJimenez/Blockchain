@@ -5,9 +5,8 @@
     <link href="../Estilo/EstiloRegistros/EstiloRegistroTitulo.css" rel="stylesheet" />
     <link href="../Estilo/EstiloRegistros/EstiloRegistroUsuario.css" rel="stylesheet" />
     <style type="text/css">
-        .auto-style10 {
-            text-align: center;
-            margin-left: 78px;
+        .auto-style11 {
+            height: 31px;
         }
     </style>
 </asp:Content>
@@ -27,10 +26,10 @@
                         </td>
                     </tr>
                      <tr>
-                        <td class="cell">
+                        <td class="auto-style11">
                             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Carrera: " />
                         </td>
-                        <td class="cel">
+                        <td class="auto-style11">
                             <asp:TextBox ID="txtCarrera" runat="server" CssClass="finicio" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Debe rellenar la Carrera" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>

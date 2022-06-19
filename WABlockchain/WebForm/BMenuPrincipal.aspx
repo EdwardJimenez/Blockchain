@@ -23,8 +23,8 @@
             <br />
             <br />
             <div >
-                <asp:Button ID="btnRegistrarUsuario" CssClass="btn"  runat="server"  Text="REGISTRAR USUARIO" Width="187px" />
-                <asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="REGISTRAR TITULO" Width="187px" />
+                <asp:Button ID="btnRegistrarUsuario" CssClass="btn"  runat="server"  Text="REGISTRAR USUARIO" Width="187px" OnClick="btnRegistrarUsuario_Click" />
+                <asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="REGISTRAR TITULO" Width="187px" OnClick="btnRegistrarTitulo_Click" />
             </div>
 
         </div>
