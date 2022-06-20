@@ -393,7 +393,21 @@ public class ASBlockchain
             throw;
         }
     }
-    
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        List<EBTittle> lstEbTitle = new List<EBTittle>();
+        try
+        {
+            lstEbTitle = swADNETBlockchain.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+            return lstEbTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
     {
         try
@@ -406,6 +420,7 @@ public class ASBlockchain
         }
     }
     #endregion
+
     #region RolUser
     public List<EBRoluser> Obtener_RolUser_O()
     {

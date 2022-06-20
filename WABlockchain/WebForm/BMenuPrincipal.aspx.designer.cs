@@ -51,22 +51,31 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.TextBox txtBuscador;
 
         /// <summary>
-        /// Control txtFechaInicio.
+        /// Control btnBuscarPorFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaInicio;
+        protected global::System.Web.UI.WebControls.Button btnBuscarPorFecha;
 
         /// <summary>
-        /// Control txtFechaFin.
+        /// Control FechaInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaFin;
+        protected global::System.Web.UI.WebControls.Calendar FechaInicio;
+
+        /// <summary>
+        /// Control FechaFin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar FechaFin;
 
         /// <summary>
         /// Control ddlSede.

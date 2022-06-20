@@ -46,6 +46,11 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin);
+
     
 
     [OperationContract]

@@ -340,12 +340,32 @@ public class ADBTitle
         }
         catch (Exception)
         {
-
             throw;
         }
         return dTOBTitle;
     }
-    
+
+    public DTOBTitle Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_S_Search_Date");
+            
+            BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime, fechaInicio);
+            BDSWADBlockchain.AddInParameter(dbCommand, "Fin", DbType.DateTime, fechaFin);
+          
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dTOBTitle;
+    }
+
     /// <summary>
     /// Actualizar Title
     /// </summary>

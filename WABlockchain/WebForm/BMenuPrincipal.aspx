@@ -9,8 +9,9 @@
             <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Onclick="btnBuscar_Click1" Text="BUSCAR" Height="29px" Width="104px" />
             <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="24px" />
             <asp:TextBox ID="txtBuscador" runat="server" Width="551px" ></asp:TextBox>
-            <asp:TextBox ID="txtFechaInicio" runat="server" Width="156px" ></asp:TextBox>
-            <asp:TextBox ID="txtFechaFin" runat="server" Width="150px" ></asp:TextBox>
+            <asp:Button ID="btnBuscarPorFecha" runat="server" CssClass="btn" Onclick="btnBuscarPorFecha_Click" Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Calendar ID="FechaInicio" runat="server" Width="156px" Height="83px" ></asp:Calendar>
+            <asp:Calendar ID="FechaFin" runat="server" Width="150px" ></asp:Calendar>
         </div>
         <br />
         <div class="ddls">
@@ -20,7 +21,7 @@
             &nbsp;<asp:DropDownList ID="ddlEstadoTitulo" CssClass="btn" runat="server"></asp:DropDownList>
             <br />
             <br />
-            <asp:GridView ID="GridView1" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False"  Height="330px" Width="476px">
+            <asp:GridView ID="GridView1" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="476px">
                 <Columns>
                     <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
                         <HeaderStyle CssClass="hidden" />

@@ -16,6 +16,7 @@ public class CUserBlockchain
     {
         asBlockchain = new ASBlockchain();
     }
+
     #region BUser
 
     public EBUser Obtener_RolUser_O_Search(string email, string password)
@@ -439,7 +440,21 @@ public class CUserBlockchain
             throw;
         }
     }
-    
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
     #endregion
 
     #region RolUser

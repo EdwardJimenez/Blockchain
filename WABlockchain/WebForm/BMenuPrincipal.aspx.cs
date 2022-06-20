@@ -36,57 +36,79 @@ namespace WABlockchain.WebForm
             }
         }
 
-        //protected void btnBuscar_Click(object sender, EventArgs e)
-        //{
-        //    EBTittle tittle = new EBTittle();
-
-        //    GridView1.DataSource = null;
-        //    GridView1.DataBind();
-        //    try
-        //    {
-        //        string nombreEst;
-        //        if (txtSegundoApellido.Text != "")
-        //        {
-        //            nombreEst = (txtNombrePersona.Text).Trim() + " " + (txtPrimerApellido.Text).Trim() + " " + (txtSegundoApellido.Text).Trim();
-        //        }
-        //        else
-        //        {
-        //            nombreEst = (txtNombrePersona.Text).Trim() + " " + (txtPrimerApellido.Text).Trim();
-        //        }
-        //        List<EBTittle> lstTitle = new List<EBTittle>();
-        //        lstTitle = swLNBlockchainClient.Search_BTitle(nombreEst, txtCarrera.Text, txtFacultad.Text).ToList();
-        //        if (lstTitle.Count() == 0)
-        //        {
-        //            lblMensaje.Text = "No se encontro el titulo verifica tus datos";
-        //        }
-        //        else
-        //        {
-        //            grvTitulos.DataSource = lstTitle;
-        //            grvTitulos.DataBind();
-        //            grvTitulos.SelectedIndex = 0;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        lblMensaje.Text = "No se encontro el titulo verifica tus datos" + ex.Message;
-        //    }
-        //}
+        
 
         protected void btnBuscar_Click1(object sender, EventArgs e)
         {
             EBTittle tittle = new EBTittle();
             string faculty = txtBuscador.Text;
+            DateTime fechaInicio = FechaInicio.SelectedDate.Date;
+            DateTime fechaFin = FechaFin.SelectedDate.Date;
             GridView1.DataSource = null;
             GridView1.DataBind();
-            //.SelectedIndex = 0;
-            //GridView1.Rows[id].Cells[0];
+           
 
             try
             {
                 List<EBTittle> lstTitle = new List<EBTittle>();
-                //int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
-                lstTitle = swLNBlockchainClient.Search_BTitle_Faculty_Carrer_Date(faculty).ToList();
-                if (lstTitle.Count()==0)
+
+                //if (faculty!="" && fechaInicio==null && fechaFin==null)
+                //{
+                    lstTitle = swLNBlockchainClient.Search_BTitle_Faculty_Carrer_Date(faculty).ToList();
+                    if (lstTitle.Count() == 0)
+                    {
+                        lblmensaje.Text = "No se encontro el título";
+                    }
+                    else
+                    {
+                        GridView1.DataSource = lstTitle;
+                        GridView1.DataBind();
+                        GridView1.SelectedIndex = 0;
+                        lblmensaje.Text = "Título encontrado";
+                    }
+                //}
+                //else
+                //{
+                //    if(faculty == "" && fechaInicio != null && fechaFin != null)
+                //        lstTitle = swLNBlockchainClient.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+                //        if (lstTitle.Count() == 0)
+                //        {
+                //            lblmensaje.Text = "No se encontro el título";
+                //        }
+                //        else
+                //        {
+                //            GridView1.DataSource = lstTitle;
+                //            GridView1.DataBind();
+                //            GridView1.SelectedIndex = 0;
+                //            lblmensaje.Text = "Título encontrado";
+                //        }
+                    
+                //}
+                
+            }
+            catch (Exception ex)
+            {
+
+                lblmensaje.Text = ex.Message;
+            }
+        }
+
+        protected void btnBuscarPorFecha_Click(object sender, EventArgs e)
+        {
+            EBTittle tittle = new EBTittle();
+            DateTime fechaInicio = FechaInicio.SelectedDate.Date;
+            DateTime fechaFin = FechaFin.SelectedDate.Date;
+            GridView1.DataSource = null;
+            GridView1.DataBind();
+
+
+            try
+            {
+                List<EBTittle> lstTitle = new List<EBTittle>();
+
+
+                lstTitle = swLNBlockchainClient.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+                if (lstTitle.Count() == 0)
                 {
                     lblmensaje.Text = "No se encontro el título";
                 }
@@ -95,9 +117,11 @@ namespace WABlockchain.WebForm
                     GridView1.DataSource = lstTitle;
                     GridView1.DataBind();
                     GridView1.SelectedIndex = 0;
-                    //GridView1.Rows[id].Cells[0].Visible=false;
                     lblmensaje.Text = "Título encontrado";
                 }
+
+
+
             }
             catch (Exception ex)
             {

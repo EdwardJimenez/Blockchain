@@ -81,7 +81,24 @@ public class CBTitle
         }
         return lstTitle;
     }
-  
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        EBTittle eBTitle = new EBTittle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        DTOBTitle dTOBTitle = aDBTitle.Search_BTitle_Date(fechaInicio, fechaFin);
+        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
+        {
+            eBTitle = new EBTittle();
+            eBTitle.IdTittles = drTitle.IdTittle.ToString();
+            eBTitle.fullNameTitulado = drTitle.fullNameT;
+            eBTitle.faculty = drTitle.faculty;
+            eBTitle.carreer = drTitle.carreer;
+            //eBTitle.registerDate = drTitle.registerDate;
+            lstTitle.Add(eBTitle);
+        }
+        return lstTitle;
+    }
 
     public List<EBTittle> Obtener_Title_O()
     {
@@ -222,7 +239,7 @@ public class CBTitle
         aDBTitle.BTittle_update_statusTittle_7(ebTitle);
     }
     
-        public List<EBTittle> BTittle_O_TO_Upload()
+    public List<EBTittle> BTittle_O_TO_Upload()
         {
             EBTittle eBTitle = new EBTittle();
             List<EBTittle> lstTitle = new List<EBTittle>();

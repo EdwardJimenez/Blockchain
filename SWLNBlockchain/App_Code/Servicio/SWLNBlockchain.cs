@@ -224,7 +224,17 @@ public List<EBTittle> Obtener_Title_O()
         eBTitle = cUserBlockchain.Search_BTitle_Faculty_Carrer_Date(txt).ToList();
         return eBTitle;
     }
-    
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        EBTittle tittle = new EBTittle();
+        tittle.registerDate = fechaInicio;
+        tittle.registerDate = fechaFin;
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+        return eBTitle;
+    }
     #endregion
 
     #region RolUser
@@ -316,4 +326,6 @@ public List<EBTittle> Obtener_Title_O()
         lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Person();
         return lstIUserCareerCompleja;
     }
+
+    
 }

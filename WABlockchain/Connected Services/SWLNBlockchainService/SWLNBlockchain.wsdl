@@ -67,6 +67,12 @@
   <wsdl:message name="ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_OutputMessage">
     <wsdl:part name="parameters" element="tns:Search_BTitle_Faculty_Carrer_DateResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_Date_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle_Date" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_Date_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle_DateResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Title_O" />
   </wsdl:message>
@@ -306,6 +312,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date" message="tns:ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_DateResponse" message="tns:ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Search_BTitle_Date">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date" message="tns:ISWLNBlockchain_Search_BTitle_Date_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse" message="tns:ISWLNBlockchain_Search_BTitle_Date_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Obtener_Title_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O" message="tns:ISWLNBlockchain_Obtener_Title_O_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_OResponse" message="tns:ISWLNBlockchain_Obtener_Title_O_OutputMessage" />
@@ -524,6 +534,15 @@
     </wsdl:operation>
     <wsdl:operation name="Search_BTitle_Faculty_Carrer_Date">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle_Date">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
