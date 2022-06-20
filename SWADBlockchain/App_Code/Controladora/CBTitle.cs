@@ -94,7 +94,7 @@ public class CBTitle
             eBTitle.fullNameTitulado = drTitle.fullNameT;
             eBTitle.faculty = drTitle.faculty;
             eBTitle.carreer = drTitle.carreer;
-            //eBTitle.registerDate = drTitle.registerDate;
+            eBTitle.registerDate = drTitle.registerDate;
             lstTitle.Add(eBTitle);
         }
         return lstTitle;

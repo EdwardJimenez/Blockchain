@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using WABlockchain.Class;
 using WABlockchain.SWLNBlockchainService;
+using System.Globalization;
 
 namespace WABlockchain.WebForm
 {
@@ -36,17 +37,16 @@ namespace WABlockchain.WebForm
             }
         }
 
-        
+
 
         protected void btnBuscar_Click1(object sender, EventArgs e)
         {
             EBTittle tittle = new EBTittle();
             string faculty = txtBuscador.Text;
-            DateTime fechaInicio = FechaInicio.SelectedDate.Date;
-            DateTime fechaFin = FechaFin.SelectedDate.Date;
+
             GridView1.DataSource = null;
             GridView1.DataBind();
-           
+
 
             try
             {
@@ -54,18 +54,18 @@ namespace WABlockchain.WebForm
 
                 //if (faculty!="" && fechaInicio==null && fechaFin==null)
                 //{
-                    lstTitle = swLNBlockchainClient.Search_BTitle_Faculty_Carrer_Date(faculty).ToList();
-                    if (lstTitle.Count() == 0)
-                    {
-                        lblmensaje.Text = "No se encontro el título";
-                    }
-                    else
-                    {
-                        GridView1.DataSource = lstTitle;
-                        GridView1.DataBind();
-                        GridView1.SelectedIndex = 0;
-                        lblmensaje.Text = "Título encontrado";
-                    }
+                lstTitle = swLNBlockchainClient.Search_BTitle_Faculty_Carrer_Date(faculty).ToList();
+                if (lstTitle.Count() == 0)
+                {
+                    lblmensaje.Text = "No se encontro el título";
+                }
+                else
+                {
+                    GridView1.DataSource = lstTitle;
+                    GridView1.DataBind();
+                    GridView1.SelectedIndex = 0;
+                    lblmensaje.Text = "Título encontrado";
+                }
                 //}
                 //else
                 //{
@@ -82,9 +82,9 @@ namespace WABlockchain.WebForm
                 //            GridView1.SelectedIndex = 0;
                 //            lblmensaje.Text = "Título encontrado";
                 //        }
-                    
+
                 //}
-                
+
             }
             catch (Exception ex)
             {
@@ -96,38 +96,87 @@ namespace WABlockchain.WebForm
         protected void btnBuscarPorFecha_Click(object sender, EventArgs e)
         {
             EBTittle tittle = new EBTittle();
-            DateTime fechaInicio = FechaInicio.SelectedDate.Date;
-            DateTime fechaFin = FechaFin.SelectedDate.Date;
-            GridView1.DataSource = null;
-            GridView1.DataBind();
+            //DateTime fechaInicio = DateTime.Parse(FechaInicio.SelectedDate.ToString("YYYYmmdd"));
+            string fechaInicio = FechaInicio.SelectedDate.ToLongDateString();
+           // string fech =fechaInicio.ToString("yyyy - MM - dd HH: mm:ss");
+            string fechaFin = FechaFin.SelectedDate.ToString();
+
+            //DateTime fechaFin = DateTime.Parse(FechaFin.SelectedDate.ToString("YYYYmmdd"));
+
+            //DateTime fechaIw = DateTime.Parse(fechaInicio);
+            //DateTime fechaI = DateTime.ParseExact(fechaInicio, "yyyy-MM-dd", null);
+            //lblmensaje.Text = fechaI.Day + "" + fechaI.Month + "" + fechaI.Year;
 
 
-            try
+            //string dateString = "10/16/2018";
+
+            //DateTime dt = Convert.ToDateTime(fechaInicio, CultureInfo.InvariantCulture);
+
+            string format = "MM/dd/yyyy";
+
+            //DateTime dateTime = DateTime.ParseExact(fechaInicio, format, CultureInfo.InvariantCulture);
+            //lblmensaje.Text = ""+fechaI;
+            
+
+            string fecha = "10/16/2018";
+            string formato = "yyyy/MM/dd HH: mm: ss";//MM representa Mes, dd día e yyyy año
+
+  bool result = DateTime.TryParseExact(fechaInicio, formato, null, System.Globalization.DateTimeStyles.None, out DateTime dt);
+
+            //En caso de que result sea verdadero, implica que la fecha alojada en el string es válida.
+            if (result)
             {
-                List<EBTittle> lstTitle = new List<EBTittle>();
-
-
-                lstTitle = swLNBlockchainClient.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
-                if (lstTitle.Count() == 0)
-                {
-                    lblmensaje.Text = "No se encontro el título";
-                }
-                else
-                {
-                    GridView1.DataSource = lstTitle;
-                    GridView1.DataBind();
-                    GridView1.SelectedIndex = 0;
-                    lblmensaje.Text = "Título encontrado";
-                }
-
-
-
+                //Console.WriteLine("La fecha es correcta y es {0}", dt.ToShortDateString());
+                lblmensaje.Text = ""+dt.ToShortDateString();
             }
-            catch (Exception ex)
+            //Caso contrario, la fecha es invalida.
+            else
             {
-
-                lblmensaje.Text = ex.Message;
+                //Console.WriteLine("El formato de la fecha ingresada es incorrecta.");
+                lblmensaje.Text = "El formato de la fecha ingresada es incorrecta.";
             }
+
+
+
+            //Console.WriteLine(dateTime);
+
+            //fechaInicio.ToString("yyyymmdd");
+            //fechaFin.ToString("yyyymmdd");
+            //DateTime fechaRecepMuestra = Convert.ToDateTime(FechaFin.ToString());
+            //fechaRecepMuestra.Date.ToString();
+            //fechaInicio.ToString("yyyy-MM-dd");
+            //fechaFin.ToString("yyyy-MM-dd");
+
+            //    GridView1.DataSource = null;
+            //    GridView1.DataBind();
+
+
+            //    try
+            //    {
+            //        List<EBTittle> lstTitle = new List<EBTittle>();
+
+
+            //        lstTitle = swLNBlockchainClient.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+            //        if (lstTitle.Count() == 0)
+            //        {
+            //            lblmensaje.Text = "No se encontro el título";
+            //        }
+            //        else
+            //        {
+            //            GridView1.DataSource = lstTitle;
+            //            GridView1.DataBind();
+            //            GridView1.SelectedIndex = 0;
+            //            lblmensaje.Text = "Título encontrado";
+            //        }
+
+
+
+            //    }
+            //    catch (Exception ex)
+            //    {
+
+            //        lblmensaje.Text = ex.Message;
+            //    }
         }
     }
 }

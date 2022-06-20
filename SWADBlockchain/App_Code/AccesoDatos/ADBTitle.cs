@@ -354,7 +354,8 @@ public class ADBTitle
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_S_Search_Date");
             
-            BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime, fechaInicio);
+           // BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime, fechaInicio.Date.ToString("yyyyMMdd"));
+            BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime,fechaInicio);
             BDSWADBlockchain.AddInParameter(dbCommand, "Fin", DbType.DateTime, fechaFin);
           
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
