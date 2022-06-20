@@ -65,41 +65,7 @@ public class CBTitle
         }
         return lstTitle;
     }
-    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
-    {
-        EBTittle eBTitle = new EBTittle();
-        List<EBTittle> lstTitle = new List<EBTittle>();
-        DTOBTitle dTOBTitle = aDBTitle.Search_BTitle_Faculty_Carrer_Date(txt);
-        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
-        {
-            eBTitle = new EBTittle();
-            eBTitle.IdTittles = drTitle.IdTittle.ToString();
-            eBTitle.fullNameTitulado = drTitle.fullNameT;
-            eBTitle.faculty = drTitle.faculty;
-            eBTitle.carreer = drTitle.carreer;
-            lstTitle.Add(eBTitle);
-        }
-        return lstTitle;
-    }
-
-    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
-    {
-        EBTittle eBTitle = new EBTittle();
-        List<EBTittle> lstTitle = new List<EBTittle>();
-        DTOBTitle dTOBTitle = aDBTitle.Search_BTitle_Date(fechaInicio, fechaFin);
-        foreach (DTOBTitle.BTittleRow drTitle in dTOBTitle.BTittle.Rows)
-        {
-            eBTitle = new EBTittle();
-            eBTitle.IdTittles = drTitle.IdTittle.ToString();
-            eBTitle.fullNameTitulado = drTitle.fullNameT;
-            eBTitle.faculty = drTitle.faculty;
-            eBTitle.carreer = drTitle.carreer;
-            eBTitle.registerDate = drTitle.registerDate;
-            lstTitle.Add(eBTitle);
-        }
-        return lstTitle;
-    }
-
+    
     public List<EBTittle> Obtener_Title_O()
     {
         EBTittle eBTitle = new EBTittle();

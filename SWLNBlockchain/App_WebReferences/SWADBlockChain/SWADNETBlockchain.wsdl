@@ -61,18 +61,6 @@
   <wsdl:message name="ISWADNETBlockchain_Search_BTitle_OutputMessage">
     <wsdl:part name="parameters" element="tns:Search_BTitleResponse" />
   </wsdl:message>
-  <wsdl:message name="ISWADNETBlockchain_Search_BTitle_Faculty_Carrer_Date_InputMessage">
-    <wsdl:part name="parameters" element="tns:Search_BTitle_Faculty_Carrer_Date" />
-  </wsdl:message>
-  <wsdl:message name="ISWADNETBlockchain_Search_BTitle_Faculty_Carrer_Date_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Search_BTitle_Faculty_Carrer_DateResponse" />
-  </wsdl:message>
-  <wsdl:message name="ISWADNETBlockchain_Search_BTitle_Date_InputMessage">
-    <wsdl:part name="parameters" element="tns:Search_BTitle_Date" />
-  </wsdl:message>
-  <wsdl:message name="ISWADNETBlockchain_Search_BTitle_Date_OutputMessage">
-    <wsdl:part name="parameters" element="tns:Search_BTitle_DateResponse" />
-  </wsdl:message>
   <wsdl:message name="ISWADNETBlockchain_Obtener_Title_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_Title_O" />
   </wsdl:message>
@@ -254,14 +242,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Search_BTitle" message="tns:ISWADNETBlockchain_Search_BTitle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Search_BTitleResponse" message="tns:ISWADNETBlockchain_Search_BTitle_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Search_BTitle_Faculty_Carrer_Date">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Search_BTitle_Faculty_Carrer_Date" message="tns:ISWADNETBlockchain_Search_BTitle_Faculty_Carrer_Date_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Search_BTitle_Faculty_Carrer_DateResponse" message="tns:ISWADNETBlockchain_Search_BTitle_Faculty_Carrer_Date_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Search_BTitle_Date">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Search_BTitle_Date" message="tns:ISWADNETBlockchain_Search_BTitle_Date_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Search_BTitle_DateResponse" message="tns:ISWADNETBlockchain_Search_BTitle_Date_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="Obtener_Title_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_Title_O" message="tns:ISWADNETBlockchain_Obtener_Title_O_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWADNETBlockchain/Obtener_Title_OResponse" message="tns:ISWADNETBlockchain_Obtener_Title_O_OutputMessage" />
@@ -435,24 +415,6 @@
     </wsdl:operation>
     <wsdl:operation name="Search_BTitle">
       <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Search_BTitle" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Search_BTitle_Faculty_Carrer_Date">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Search_BTitle_Faculty_Carrer_Date" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Search_BTitle_Date">
-      <soap:operation soapAction="http://tempuri.org/ISWADNETBlockchain/Search_BTitle_Date" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
