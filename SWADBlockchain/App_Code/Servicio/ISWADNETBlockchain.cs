@@ -46,7 +46,15 @@ public interface ISWADNETBlockchain
 
     [OperationContract]
     void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle);
-    
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin);
+
 
     #endregion
 

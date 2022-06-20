@@ -79,6 +79,23 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         return lstTitle;
     }
 
+
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.Search_BTitle_Faculty_Carrer_Date(txt);
+        return lstTitle;
+    }
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.Search_BTitle_Date(fechaInicio, fechaFin);
+        return lstTitle;
+    }
+
     #endregion
 
     #region Helper
