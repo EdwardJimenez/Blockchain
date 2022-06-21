@@ -23,29 +23,6 @@ namespace WABlockchain.WebForm
             {
                 cargarTitulos();
                 deshabilitarTextbox();
-                
-                //if (Session["idUsuario"] != null)
-                //{
-                //    try
-                //    {
-                //        //Esto lo tengo que borrar , no es aqui ,es en la webforms de Registrar titulos Pedro Conde
-                //        IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
-                //        int IDUser = Convert.ToInt32(Session["idUsuario"]);
-                //        iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                //        txtFacultad.Text = iusercompleja.FacultyName.ToString();
-                //        txtCarrera.Text = iusercompleja.CareerName.ToString();
-                //        txtNombreCompleto.Text = iusercompleja.Fullname.ToString();
-                //        txtEmail.Text = iusercompleja.Mail.ToString();
-                //        txtCi.Text = iusercompleja.CI.ToString();
-                //        txtCIExtra.Text = iusercompleja.ExtCI.ToString();
-
-                //    }
-                //    catch (Exception)
-                //    {
-
-                //        throw;
-                //    }
-                //}
             }
         }
         private void deshabilitarTextbox()
@@ -65,17 +42,18 @@ namespace WABlockchain.WebForm
 
         private void LimpiarTitulos()
         {
-            string NombreCompleto = txtNombre.Text;
+            txtFacultad.Text = string.Empty;
+            txtCarrera.Text = string.Empty;
+            txtNombre.Text = string.Empty;
 
+        }
 
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             string Facultad = txtFacultad.Text;
             string Carrera = txtCarrera.Text;
-            string Fullname = txtNombre.Text;
-
-
+            string NombreCompleto = txtNombre.Text;
 
             try
             {
