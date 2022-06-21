@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Estilo/EstiloRegistros/EstiloMenuPrincipal.css" rel="stylesheet" />
     <style type="text/css">
-        
         .auto-style2 {
             text-align: center;
             width: 545px;
@@ -21,9 +20,11 @@
         </div>
         <div class="calendar2">
             <div class="cal1">
-                <asp:Calendar ID="FechaInicio"  runat="server" Width="255px" Height="16px"></asp:Calendar>
+            <asp:Label CssClass="lblfechas" runat="server" Text="Fecha Inicio :"></asp:Label>
+                <asp:Calendar ID="FechaInicio" runat="server" Width="255px" Height="16px"></asp:Calendar>
             </div>
             <div class="cal1">
+            <asp:Label CssClass="lblfechas" runat="server" Text="Fecha Fin :"></asp:Label>
                 <asp:Calendar ID="FechaFin" runat="server" Width="254px" Height="111px"></asp:Calendar>
             </div>
             <br />
@@ -47,19 +48,19 @@
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:Label CssClass="lblmensaje" ID="lblmensaje"  runat="server" Text="Label"></asp:Label>
+            <asp:Label CssClass="lblmensaje" ID="lblmensaje"  runat="server"></asp:Label>
             <br />
             <div class="auto-style2">
                 <asp:Button ID="btnRegistrarUsuario" CssClass="btn" runat="server" Text="Registrar Usuario" Width="135px" />
-                &nbsp;<asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btn" runat="server" Text="Registrar Usuario Netvalle" Width="198px" />
-                &nbsp;<asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="Registrar Titulo" Width="135px" />
-                <br />
-                <br />
-                <asp:Button ID="btnConfirmarTitulo" CssClass="btn" runat="server" Text="Confirmar " Width="135px" />
-                &nbsp;<asp:Button ID="btnSolicitarTitulo" CssClass="btn" runat="server" Text="Solicitar" Width="135px" />
-                &nbsp;<asp:Button ID="btnRecibirTitulo" CssClass="btn" runat="server" Text="Recibido" Width="135px" />
+                <asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btnsep" runat="server" Text="Registrar Usuario Netvalle" Width="198px" />
+                <asp:Button ID="btnRegistrarTitulo" CssClass="btnsep" runat="server" Text="Registrar Titulo" Width="135px" />   
+                <asp:Button ID="btnConfirmarTitulo" CssClass="btnsep" runat="server" Text="Confirmar " Width="135px" />
+                <asp:Button ID="btnSolicitarTitulo" CssClass="btnsep" runat="server" Text="Solicitar" Width="135px" />
+                <asp:Button ID="btnImprimirTitulo" CssClass="btnsep" runat="server" Text="Imprimir" Width="135px" />
+                <asp:Button ID="Button2" CssClass="btnsep" runat="server" Text="Enviar" Width="135px" />
+                <asp:Button ID="btnRecibirTitulo" CssClass="btnsep" runat="server" Text="Recibido" Width="135px" />
             </div>
         </div>
-        <br />
+        <br/>
     </form>
 </asp:Content>

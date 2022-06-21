@@ -12,7 +12,9 @@
     margin-top: 70px;
     margin-left: 280px;
 }
-
+.lblfechas {
+    margin-left: 100px;
+}
 .btn {
     cursor: pointer;
 }
@@ -20,14 +22,15 @@
 .botonesRegistro, btbFecha {
     text-align: center;
 }
-
+.btnsep {
+    margin-bottom: 5px;
+}
 .calendar2 {
     display: flex;
     width: 100%;
-    padding:5px;
-    justify-content:center;
-    align-items:center;
-
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
 .lblmensaje{
     justify-content:center;
