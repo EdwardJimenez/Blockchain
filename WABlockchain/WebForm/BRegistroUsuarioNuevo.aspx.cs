@@ -13,6 +13,7 @@ namespace WABlockchain.WebForm
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblmsg.Visible = false;
             if (!IsPostBack)
             {
                 if (Session["Rol"] != null)
@@ -32,7 +33,7 @@ namespace WABlockchain.WebForm
                                 txtCorreo.Text = iusercompleja.Mail.ToString();
                                 txtCi.Text = iusercompleja.CI.ToString();
                                 txtCiextra.Text = iusercompleja.ExtCI.ToString();
-
+                                txtSede.Text = iusercompleja.SedeName.ToString();
                             }
                             catch (Exception)
                             {
@@ -66,10 +67,12 @@ namespace WABlockchain.WebForm
             string descripcion = txtDescripcion.Text;
             string ciExtra = txtCiextra.Text;
             string status = "1";
+            string sede = txtSede.Text;
             try
             {
                 string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRol.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
+                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRol.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra, sede);
+                lblmsg.Visible = true;
             }
             catch (Exception)
             {

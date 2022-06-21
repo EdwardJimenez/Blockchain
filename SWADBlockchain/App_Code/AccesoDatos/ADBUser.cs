@@ -116,7 +116,8 @@ public class ADBUser
             BDSWADNETIntEx.AddInParameter(dbCommand, "cellphone", DbType.String, bUser.Cellphone);
             BDSWADNETIntEx.AddInParameter(dbCommand, "CI", DbType.String, bUser.CI);
             BDSWADNETIntEx.AddInParameter(dbCommand, "descripcion", DbType.String, bUser.Descripcion);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "ciextra", DbType.String, bUser.CIExtra);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "ciExtra", DbType.String, bUser.CIExtra);
+            BDSWADNETIntEx.AddInParameter(dbCommand, "sede", DbType.String, bUser.Sede);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
 
         }

@@ -62,7 +62,7 @@
                     <asp:Button ID="btnActualizar" class="btn" runat="server" Text="ACTUALIZAR" OnClick="btnActualizar_Click" />
                 </div>
                 <div>
-                    <asp:Label runat="server"  ID="lblmensaje" CssClass="msj"></asp:Label>
+                    <asp:Label runat="server"  ID="lblmensaje" CssClass="msj" ForeColor="#CC0000"></asp:Label>
                 </div>
             </div>
         </fieldset>

@@ -55,7 +55,7 @@ public class CUserBlockchain
             throw;
         }
     }
-    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra)
+    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede)
     {
         EBUser ebUser = new EBUser();
         try
@@ -71,6 +71,7 @@ public class CUserBlockchain
             ebUser.CI = Ci;
             ebUser.Descripcion = description;
             ebUser.CIExtra = ciExtra;
+            ebUser.Sede = sede;
             asBlockchain.Insertar_BUser_I(ebUser);
         }
         catch (Exception)
