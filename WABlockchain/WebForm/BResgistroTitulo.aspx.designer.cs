@@ -42,6 +42,15 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.TextBox txtFacultad;
 
         /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -87,16 +96,15 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control txtId.
+        /// Control txtId1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
+        protected global::System.Web.UI.WebControls.TextBox txtId1;
 
         /// <summary>
-<<<<<<< HEAD
         /// Control RegularExpressionValidator1.
         /// </summary>
         /// <remarks>
@@ -106,17 +114,15 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
-        /// Control grvTitulos.
+        /// Control txtId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvTitulos;
+        protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
-=======
->>>>>>> d664f499cd7a6c463ded8eae03ec9d043577ff84
         /// Control btnRegistrar.
         /// </summary>
         /// <remarks>
@@ -144,12 +150,12 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Label lblmensaje;
 
         /// <summary>
-        /// Control grvTitulos.
+        /// Control grvTitulosL.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvTitulos;
+        protected global::System.Web.UI.WebControls.GridView grvTitulosL;
     }
 }

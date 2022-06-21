@@ -11,9 +11,11 @@
 .lbl {
     margin-left:20px;
 }
-
-.gridview{
-    text-align:center;
+grvTitulosLista{
+    justify-content:center;
+}
+.gridview {
+    text-align: center;
 }
 .auto-style7 {
     width: 547px;
