@@ -105,9 +105,6 @@ namespace WABlockchain.WebForm
         {
             try
             {
-                RequiredFieldValidator1.Enabled = false;
-                RequiredFieldValidator2.Enabled = false;
-                RequiredFieldValidator3.Enabled=false;
 
                 int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
                 string nombreCompleto = grvTitulos.Rows[id].Cells[1].Text;
@@ -126,11 +123,24 @@ namespace WABlockchain.WebForm
             }
             catch (Exception)
             {
-
                 throw;
             }
+        }
 
-            
+        public string GeneratePassword()
+        {
+            Random ran = new Random();
+            string characteres = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            int longth = characteres.Length;
+            char letter;
+            int digit = 10;
+            string dom = string.Empty;
+            for (int i = 0; i < digit; i++)
+            {
+                letter = characteres[ran.Next(longth)];
+                dom += letter.ToString();
+            }
+            return dom;
         }
     }
 }

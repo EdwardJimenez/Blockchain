@@ -11,48 +11,54 @@ namespace WABlockchain.WebForm
     public partial class BLogin : System.Web.UI.Page
     {
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
-        static int a = 1; //Son variables predeterminadas para igualar el rol obtenido y así asignarle uno
-        static int b = 2;
-        static int c = 3;
+        static int only = 1; //Son variables predeterminadas para igualar el rol obtenido y así asignarle uno
+        static int admin = 2;
+        static int secretaria = 3;
+        static int vra = 4;
         private void CargarRolUser()
         {
-            
+            lblError.Visible = false;
             EBUser Rol = new EBUser();
             Rol = swLNBlockchainClient.Obtener_RolUser_O_Search(txtNombre.Text, txtPassword.Text);
 
             this.LRol.Text = Rol.IdRolUser;
             if(txtNombre.Text=="" || txtPassword.Text=="")
             {
-                //Son labels que cumplirán la función de validar los campos
-                LC1.Text = "Falta llenarse un campo";
-                LRol.Text = "Falta llenarse un campo";
+                lblError.Visible = false;
             }
             else
             {
-                if (a == Convert.ToInt32(this.LRol.Text))
+                int rolUser = this.LRol.Text != "" ? Convert.ToInt32(this.LRol.Text) : 0;
+                if (only == rolUser)
                 {
-                    z0.Text = "ReadOnly";
+                   
                     Session["Rol"] = "ReadOnly";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
-                else if (b == Convert.ToInt32(this.LRol.Text))
+                else if (admin == rolUser)
                 {
-                    z0.Text = "Admin";
+                    
                     Session["Rol"] = "Admin";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
-                else if (c == Convert.ToInt32(this.LRol.Text))
+                else if (secretaria == rolUser)
                 {
-                    z0.Text = "Secretaria";
+                    
                     Session["Rol"] = "Secretaria";
+                    Response.Redirect("BMenuPrincipal.aspx");
+                }
+                else if (vra == rolUser)
+                {
+                    
+                    Session["Rol"] = "VRA";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else
                 {
-                    z0.Text = "VRA";
-                    Session["Rol"] = "VRA";
-                    Response.Redirect("BMenuPrincipal.aspx");
+                    lblError.Visible = true;
+                    lblError.Text = "Credenciales Incorrecto";
                 }
+                    
             }
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -62,6 +68,7 @@ namespace WABlockchain.WebForm
 
         protected void btnCargar_Click(object sender, EventArgs e)
         {
+            lblError.Visible = false;
             CargarRolUser();            
         }
     }
