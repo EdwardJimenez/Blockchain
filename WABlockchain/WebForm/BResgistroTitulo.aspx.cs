@@ -13,7 +13,6 @@ namespace WABlockchain.WebForm
 {
     public partial class BResgistroTitulo : System.Web.UI.Page
     {
-        //SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         private static Helper _helper = new Helper();
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         GenerarPDF generarPDF = new GenerarPDF();
@@ -46,7 +45,6 @@ namespace WABlockchain.WebForm
             this.Label3.Visible = false;
         }
 
-        
         private void cargarTitulos()
         {
             List<EBTittle> lstTitle = new List<EBTittle>();
@@ -56,28 +54,40 @@ namespace WABlockchain.WebForm
             grvTitulos.SelectedIndex = 0;
         }
 
-       
+        private void LimpiarTitulos()
+        {
+            txtFacultad.Text = string.Empty;
+            txtCarrera.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+
+        }
+
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             string Facultad = txtFacultad.Text;
             string Carrera = txtCarrera.Text;
-            string Fullname = txtNombre.Text;
+            string NombreCompleto = txtNombre.Text;
 
             try
             {
-                string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
-                //string Id_Titulo = swLNBlockchainClient.UltimoID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", Fullname.ToUpper());
-
-
-                cargarTitulos();
-                lblmensaje.Text = "Registro de Título Exitoso!!!";
+                if (Facultad.Equals("") || Carrera.Equals("") || NombreCompleto.Equals(""))
+                {
+                    lblmensaje.Text = "Lo campos no deben estar vacíos!!!";
+                }
+                else
+                {
+                    string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
+                    swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", NombreCompleto.ToUpper());
+                    cargarTitulos();
+                    lblmensaje.Text = "Registro de Título Exitoso!!!";
+                    LimpiarTitulos();
+                }
                
             }
             catch (Exception)
             {
-                lblmensaje.Text = "Registro de Título No Insertado";
+                lblmensaje.Text = "Registro de Título No Insertado !!!";
             }
         }
 
@@ -87,22 +97,29 @@ namespace WABlockchain.WebForm
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
             swLNBlockchainClient.Eliminar_ITitle_statusTitle(s.ToString());
             cargarTitulos();
-
+            lblmensaje.Text = "Registro Eliminado con Éxito !!!";
         }
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text.ToUpper(), txtFacultad.Text.ToUpper(), txtNombre.Text.ToUpper());
-            cargarTitulos();
+            try
+            {
+                swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text.ToUpper(), txtFacultad.Text.ToUpper(), txtNombre.Text.ToUpper());
+                cargarTitulos();
+                LimpiarTitulos();
+            }
+            catch (Exception)
+            {
+                lblmensaje.Text = "Error al Actualizar!!!";
+            }
         }
         protected void Actualizar_Click(object sender, EventArgs e)
         {
-            int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
-            
-            txtNombre.Text = grvTitulos.Rows[id].Cells[1].Text;
-            txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
-            txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
-            txtId.Text = grvTitulos.Rows[id].Cells[0].Text;
-            //string NombreEstudiante = (txtNombre.Text).ToUpper();
+                int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+
+                txtNombre.Text = grvTitulos.Rows[id].Cells[1].Text;
+                txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
+                txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
+                txtId.Text = grvTitulos.Rows[id].Cells[0].Text;
         }
 
         protected void btnPDF_Click(object sender, EventArgs e)
