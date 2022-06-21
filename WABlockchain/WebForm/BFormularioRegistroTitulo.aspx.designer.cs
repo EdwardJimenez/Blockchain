@@ -11,7 +11,7 @@ namespace WABlockchain.WebForm
 {
 
 
-    public partial class BResgistroTitulo
+    public partial class BFormularioRegistroTitulo
     {
 
         /// <summary>
@@ -123,22 +123,13 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
-        /// Control RegularExpressionValidator1.
+        /// Control RequiredFieldValidator4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-
-        /// <summary>
-        /// Control grvTitulos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvTitulos;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
         /// Control btnRegistrar.
@@ -150,12 +141,12 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Button btnRegistrar;
 
         /// <summary>
-        /// Control btnRegistrar0.
+        /// Control grvTitulos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistrar0;
+        protected global::System.Web.UI.WebControls.GridView grvTitulos;
     }
 }

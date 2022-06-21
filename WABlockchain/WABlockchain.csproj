@@ -153,6 +153,7 @@
     <Content Include="WebForm\BEstado6.aspx" />
     <Content Include="WebForm\BEstado7.aspx" />
     <Content Include="WebForm\BFormularioBuscarTtulo.aspx" />
+    <Content Include="WebForm\BFormularioRegistroTitulo.aspx" />
     <Content Include="WebForm\BLogin.aspx" />
     <Content Include="WebForm\BMenuPrincipal.aspx" />
     <Content Include="WebForm\BRegistroUsuarioNuevo.aspx" />
@@ -285,6 +286,13 @@
     </Compile>
     <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.designer.cs">
       <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm\BFormularioRegistroTitulo.aspx.cs">
+      <DependentUpon>BFormularioRegistroTitulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm\BFormularioRegistroTitulo.aspx.designer.cs">
+      <DependentUpon>BFormularioRegistroTitulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BLogin.aspx.cs">
       <DependentUpon>BLogin.aspx</DependentUpon>
