@@ -48,14 +48,14 @@
             </asp:GridView>
             <br />
             <div class="auto-style2">
-                <asp:Button ID="btnRegistrarUsuario" CssClass="btn" runat="server" Text="Registrar Usuario" Width="135px" />
-                &nbsp;<asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btn" runat="server" Text="Registrar Usuario Netvalle" Width="198px" />
-                &nbsp;<asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="Registrar Titulo" Width="135px" />
+                <asp:Button ID="btnRegistrarUsuario" CssClass="btn" runat="server" Text="Registrar Usuario" Width="135px" OnClick="btnRegistrarUsuario_Click"/>
+                &nbsp;<asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btn" runat="server" Text="Registrar Usuario Netvalle" Width="198px" OnClick="btnRegistrarUsuarioNetvalle_Click" />
+                &nbsp;<asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="Registrar Titulo" Width="135px" OnClick="btnRegistrarTitulo_Click"/>
                 <br />
                 <br />
-                <asp:Button ID="btnConfirmarTitulo" CssClass="btn" runat="server" Text="Confirmar " Width="135px" />
-                &nbsp;<asp:Button ID="btnSolicitarTitulo" CssClass="btn" runat="server" Text="Solicitar" Width="135px" />
-                &nbsp;<asp:Button ID="btnRecibirTitulo" CssClass="btn" runat="server" Text="Recibido" Width="135px" />
+                <asp:Button ID="btnConfirmarTitulo" CssClass="btn" runat="server" Text="Confirmar " Width="135px" OnClick="btnConfirmarTitulo_Click" />
+                &nbsp;<asp:Button ID="btnSolicitarTitulo" CssClass="btn" runat="server" Text="Solicitar" Width="135px" OnClick="btnSolicitarTitulo_Click" />
+                &nbsp;<asp:Button ID="btnRecibirTitulo" CssClass="btn" runat="server" Text="Recibido" Width="135px" OnClick="btnRecibirTitulo_Click" />
             </div>
         </div>
         <br />

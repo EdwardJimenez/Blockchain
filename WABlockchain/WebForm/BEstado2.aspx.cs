@@ -15,7 +15,21 @@ namespace WABlockchain.WebForm
         {
             if (!IsPostBack)
             {
-                cargarTitulos();                
+                if (Session["Rol"] != null)
+                {
+                    if (Session["Rol"].ToString() == "VRA")
+                    {
+                        cargarTitulos();
+                    }
+                    else 
+                    {
+                        Response.Redirect("BMenuPrincipal.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("BLogin.aspx");
+                }             
             }
         }
         private static Helper _helper = new Helper();

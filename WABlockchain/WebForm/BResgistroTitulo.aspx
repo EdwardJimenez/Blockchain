@@ -23,24 +23,16 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtFacultad" runat="server" CssClass="finicio" />
-<<<<<<< HEAD
-
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
-=======
-                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
-                        </td>
-                    </tr>
-                     <tr>
->>>>>>> d664f499cd7a6c463ded8eae03ec9d043577ff84
                         <td class="cell">
                             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Carrera: " />
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtCarrera" runat="server" CssClass="finicio" />
-                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Debe rellenar la Carrera" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCarrera" ErrorMessage="Debe rellenar la Carrera" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -49,7 +41,7 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtNombre" runat="server" CssClass="finicio" />
-                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe rellenar el nombre" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe rellenar el nombre" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -57,19 +49,10 @@
                             <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="ID: " />
                         </td>
                         <td class="cel">
-<<<<<<< HEAD
-                            <asp:TextBox ID="txtId" runat="server" />
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Ingrese un Email Valido" ForeColor="#CC0000" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>--%>
-                        </td>
-                    </tr>
-                
-=======
                             <asp:TextBox ID="txtId" runat="server" CssClass="finicio" />
-                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtId" ErrorMessage="Campo Requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>--%>
-
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtId" ErrorMessage="Campo Requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
->>>>>>> d664f499cd7a6c463ded8eae03ec9d043577ff84
                 </table>
             </div>
             <div class="contein">

@@ -13,7 +13,24 @@ namespace WABlockchain.WebForm
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarTitulos();
+            if (!IsPostBack)
+            {
+                if (Session["Rol"] != null)
+                {
+                    if (Session["Rol"].ToString() == "Secretaria")
+                    {
+                        cargarTitulos();
+                    }
+                    else
+                    {
+                        Response.Redirect("BMenuPrincipal.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("BLogin.aspx");
+                }
+            }
         }
 
         protected void Actualizar_Click(object sender, EventArgs e)
