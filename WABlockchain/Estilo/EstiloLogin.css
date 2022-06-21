@@ -41,6 +41,6 @@
 }
 
 .botons, password, cargar {
-    text-align: center;
     cursor: pointer;
+    justify-content:center;
 }

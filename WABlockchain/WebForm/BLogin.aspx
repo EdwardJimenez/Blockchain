@@ -88,7 +88,7 @@
                                         <li id="ContentPlaceHolder1_li1">
                                             <a id="ContentPlaceHolder1_LKBPerfil" title="Revisa tu perfil de usuario" style="display: inline-block; font-size: 13px; height: 50px; width: 110px; padding-left: 15px; padding-right: 15px">
                                                 <asp:Image ID="Image2" runat="server" Style="height: 35px; width: 35px; border: 0 none; margin-top: 5px" ImageUrl="~/Imagenes/perfil.png"/>
-                    <asp:Label ID="z0" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="z0" runat="server"></asp:Label>
                                             </a>
                                         </li>
                                 </ul>
