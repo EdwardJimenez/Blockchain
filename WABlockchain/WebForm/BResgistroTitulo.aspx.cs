@@ -45,10 +45,12 @@ namespace WABlockchain.WebForm
             this.txtId.Visible = false;
             this.Label3.Visible = false;
         }
+
+        
         private void cargarTitulos()
         {
             List<EBTittle> lstTitle = new List<EBTittle>();
-            lstTitle = swLNBlockchainClient.Obtener_Title_O().ToList();
+            lstTitle = swLNBlockchainClient.Obtener_Title_1().ToList();
             grvTitulos.DataSource = lstTitle;
             grvTitulos.DataBind();
             grvTitulos.SelectedIndex = 0;
@@ -89,16 +91,18 @@ namespace WABlockchain.WebForm
         }
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text, txtFacultad.Text, txtNombre.Text);
+            swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text.ToUpper(), txtFacultad.Text.ToUpper(), txtNombre.Text.ToUpper());
             cargarTitulos();
         }
         protected void Actualizar_Click(object sender, EventArgs e)
         {
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+            
             txtNombre.Text = grvTitulos.Rows[id].Cells[1].Text;
             txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
             txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
             txtId.Text = grvTitulos.Rows[id].Cells[0].Text;
+            //string NombreEstudiante = (txtNombre.Text).ToUpper();
         }
 
         protected void btnPDF_Click(object sender, EventArgs e)

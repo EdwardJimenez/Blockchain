@@ -65,7 +65,7 @@ public class CBTitle
         }
         return lstTitle;
     }
-
+    
     public List<EBTittle> Obtener_Title_O()
     {
         EBTittle eBTitle = new EBTittle();
@@ -205,7 +205,7 @@ public class CBTitle
         aDBTitle.BTittle_update_statusTittle_7(ebTitle);
     }
     
-        public List<EBTittle> BTittle_O_TO_Upload()
+    public List<EBTittle> BTittle_O_TO_Upload()
         {
             EBTittle eBTitle = new EBTittle();
             List<EBTittle> lstTitle = new List<EBTittle>();

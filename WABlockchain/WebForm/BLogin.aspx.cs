@@ -22,7 +22,7 @@ namespace WABlockchain.WebForm
             Rol = swLNBlockchainClient.Obtener_RolUser_O_Search(txtNombre.Text, txtPassword.Text);
 
             this.LRol.Text = Rol.IdRolUser;
-            if(txtNombre.Text=="" || txtPassword.Text=="")
+            if(txtNombre.Text=="" && txtPassword.Text=="")
             {
                 lblError.Visible = false;
             }
@@ -63,12 +63,12 @@ namespace WABlockchain.WebForm
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblError.Visible = false;
         }
 
         protected void btnCargar_Click(object sender, EventArgs e)
         {
-            lblError.Visible = false;
+            
             CargarRolUser();            
         }
     }

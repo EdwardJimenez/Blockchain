@@ -16,6 +16,7 @@ public class CUserBlockchain
     {
         asBlockchain = new ASBlockchain();
     }
+
     #region BUser
 
     public EBUser Obtener_RolUser_O_Search(string email, string password)
@@ -425,6 +426,8 @@ public class CUserBlockchain
             throw;
         }
     }
+
+    
     #endregion
 
     #region RolUser

@@ -25,7 +25,7 @@
                     <div id="closeSession">
                         <ul>
                             <li>
-                                <a href="../WebForm/BLogin.aspx">Cerrar Sesion</a>
+                                <a id="finishSession" href="../WebForm/BLogin.aspx" runat="server" onserverclick="btnCloseSession_Click">Cerrar Sesion</a>
                             </li>
                         </ul>
                     </div>
@@ -113,7 +113,7 @@
         <div class="footer_image_left">
         </div>
         <h5 class="home_footer" dir="ltr">
-            <span id="LBLAnio">2021</span> Netvalle - Universidad Privada del Valle - Bolivia
+            <span id="LBLAnio">2022</span> Netvalle - Universidad Privada del Valle - Bolivia
         </h5>
         <div class="footer_image_right">
         </div>

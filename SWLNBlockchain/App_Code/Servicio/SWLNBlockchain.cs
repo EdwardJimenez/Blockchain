@@ -212,6 +212,7 @@ public List<EBTittle> Obtener_Title_O()
         return eBTitle;
     }
 
+   
     #endregion
 
     #region RolUser
@@ -303,4 +304,6 @@ public List<EBTittle> Obtener_Title_O()
         lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Person();
         return lstIUserCareerCompleja;
     }
+
+    
 }

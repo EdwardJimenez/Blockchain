@@ -380,6 +380,7 @@ public class ASBlockchain
         }
     }
 
+    
     public void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle)
     {
         try
@@ -392,6 +393,7 @@ public class ASBlockchain
         }
     }
     #endregion
+
     #region RolUser
     public List<EBRoluser> Obtener_RolUser_O()
     {
