@@ -29,6 +29,9 @@
     align-items:center;
 
 }
-.cal1{
-    margin:10px;
+.lblmensaje{
+    justify-content:center;
+}
+.cal1 {
+    margin: 10px;
 }

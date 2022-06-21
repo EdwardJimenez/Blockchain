@@ -47,6 +47,8 @@
                 </Columns>
             </asp:GridView>
             <br />
+            <asp:Label ID="Label1" class runat="server" Text="Label"></asp:Label>
+            <br />
             <div class="auto-style2">
                 <asp:Button ID="btnRegistrarUsuario" CssClass="btn" runat="server" Text="Registrar Usuario" Width="135px" />
                 &nbsp;<asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btn" runat="server" Text="Registrar Usuario Netvalle" Width="198px" />
