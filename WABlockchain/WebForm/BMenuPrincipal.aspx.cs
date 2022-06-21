@@ -41,7 +41,7 @@ namespace WABlockchain.WebForm
             {
                 if (searchFacultyCarreer.Equals(""))
                 {
-                    lblmensaje.Text = "Ingrese Facultad o Carrera, Imbécil !!!";
+                    lblmensaje.Text = "Ingrese Facultad o Carrera !!!";
                 }
                 else
                 {
