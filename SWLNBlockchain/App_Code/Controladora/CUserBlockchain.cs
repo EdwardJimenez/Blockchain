@@ -427,7 +427,35 @@ public class CUserBlockchain
         }
     }
 
-    
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Search_BTitle_Faculty_Carrer_Date(txt).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+
     #endregion
 
     #region RolUser

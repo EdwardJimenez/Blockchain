@@ -112,6 +112,15 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin);
+
     #endregion
 
     #region RolUser

@@ -15,27 +15,40 @@ namespace WABlockchain.WebForm
         {
             if (!IsPostBack)
             {
-                CargarRolUser();
-                if (Session["idUsuario"] != null)
+                if (Session["Rol"] != null)
                 {
-                    try
+                    if (Session["Rol"].ToString() == "Admin")
                     {
-                        IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
-                        int IDUser = Convert.ToInt32(Session["idUsuario"]);
-                        iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                        txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();//validar alguito
-                        txtTelefonos.Text = iusercompleja.Phone.ToString();
-                        txtCorreo.Text = iusercompleja.Mail.ToString();
-                        txtCi.Text = iusercompleja.CI.ToString();
-                        txtCiextra.Text = iusercompleja.ExtCI.ToString();
+                        CargarRolUser();
+                        if (Session["idUsuario"] != null)
+                        {
+                            try
+                            {
+                                IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
+                                int IDUser = Convert.ToInt32(Session["idUsuario"]);
+                                iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
+                                txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();//validar alguito
+                                txtTelefonos.Text = iusercompleja.Phone.ToString();
+                                txtCorreo.Text = iusercompleja.Mail.ToString();
+                                txtCi.Text = iusercompleja.CI.ToString();
+                                txtCiextra.Text = iusercompleja.ExtCI.ToString();
 
+                            }
+                            catch (Exception)
+                            {
+
+                                throw;
+                            }
+                        }
                     }
-                    catch (Exception)
+                    else
                     {
-
-                        throw;
+                        Response.Redirect("BMenuPrincipal.aspx");
                     }
-
+                }
+                else
+                {
+                    Response.Redirect("BLogin.aspx");
                 }
             }
         }
@@ -57,7 +70,6 @@ namespace WABlockchain.WebForm
             {
                 string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
                 swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRol.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra);
-
             }
             catch (Exception)
             {

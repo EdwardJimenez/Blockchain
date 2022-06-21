@@ -1171,6 +1171,18 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntregaResponse")]
         System.Threading.Tasks.Task Actualizar_BTittle_ConfirmarEntregaAsync(string fullName, System.DateTime fecha, string modo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_DateResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Faculty_Carrer_Date(string txt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_DateResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_Faculty_Carrer_DateAsync(string txt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Date(System.DateTime fechaInicio, System.DateTime fechaFin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_DateAsync(System.DateTime fechaInicio, System.DateTime fechaFin);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse")]
         WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O();
         
@@ -1517,6 +1529,22 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_BTittle_ConfirmarEntregaAsync(string fullName, System.DateTime fecha, string modo) {
             return base.Channel.Actualizar_BTittle_ConfirmarEntregaAsync(fullName, fecha, modo);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Faculty_Carrer_Date(string txt) {
+            return base.Channel.Search_BTitle_Faculty_Carrer_Date(txt);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_Faculty_Carrer_DateAsync(string txt) {
+            return base.Channel.Search_BTitle_Faculty_Carrer_DateAsync(txt);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Date(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            return base.Channel.Search_BTitle_Date(fechaInicio, fechaFin);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_DateAsync(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            return base.Channel.Search_BTitle_DateAsync(fechaInicio, fechaFin);
         }
         
         public WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O() {

@@ -14,23 +14,14 @@
     <form id="form1" runat="server">
         <div class="boton">
             <br />
-            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Text="Buscar Titulo" Height="29px" Width="104px" />
-            &nbsp;<asp:TextBox ID="txtBuscador" runat="server" Width="617px"></asp:TextBox>
-            <br />
-            <br />
+            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Onclick="btnSearch_Click1" Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="24px" />
+            <asp:TextBox ID="txtBuscador" runat="server" Width="551px" ></asp:TextBox>
+            <asp:Button ID="btnBuscarPorFecha" runat="server" CssClass="btn" Onclick="btnSearchDate_Click"  Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Calendar ID="FechaInicio" runat="server" Width="156px" Height="83px" ></asp:Calendar>
+            <asp:Calendar ID="FechaFin" runat="server" Width="150px" ></asp:Calendar>
         </div>
-        <div class="calendar2">
-            <div class="cal1">
-                <asp:Calendar ID="FechaInicio"  runat="server" Width="255px" Height="16px"></asp:Calendar>
-            </div>
-            <div class="cal1">
-                <asp:Calendar ID="FechaFin" runat="server" Width="254px" Height="111px"></asp:Calendar>
-            </div>
-            <br />
-        </div>
-        <div class="botonesRegistro">
-            &nbsp;<asp:Button ID="btnBuscarPorFecha" CssClass="btn" runat="server" Text="Buscar" Width="135px" />
-        </div>
+        <br />
         <div class="ddls">
 
             <asp:GridView ID="GridView1" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="536px" Height="208px">
@@ -47,6 +38,7 @@
                 </Columns>
             </asp:GridView>
             <br />
+            <asp:Label ID="lblmensaje" Text="..." runat="server" Font-Bold="True" />
             <div class="auto-style2">
                 <asp:Button ID="btnRegistrarUsuario" CssClass="btn" runat="server" Text="Registrar Usuario" Width="135px" OnClick="btnRegistrarUsuario_Click"/>
                 &nbsp;<asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btn" runat="server" Text="Registrar Usuario Netvalle" Width="198px" OnClick="btnRegistrarUsuarioNetvalle_Click" />
@@ -61,3 +53,4 @@
         <br />
     </form>
 </asp:Content>
+
