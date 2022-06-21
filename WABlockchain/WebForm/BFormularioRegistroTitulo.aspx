@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BResgistroTitulo.aspx.cs" Inherits="WABlockchain.WebForm.BResgistroTitulo" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BFormularioRegistroTitulo.aspx.cs" Inherits="WABlockchain.WebForm.BFormularioRegistroTitulo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Estilo/EstiloRegistros/EstiloRegistroUsuario.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFacultad" ErrorMessage="Debe rellenar la Facultad" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
-                    <tr>
+                     <tr>
                         <td class="cell">
                             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Carrera: " />
                         </td>
@@ -51,6 +51,7 @@
                         <td class="cel">
                             <asp:TextBox ID="txtId" runat="server" CssClass="finicio" />
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtId" ErrorMessage="Campo Requerido" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+
                         </td>
                     </tr>
                 </table>
@@ -58,17 +59,16 @@
             <div class="contein">
 
                 <div class="Registrar">
-                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR" OnClick="btnRegistrar_Click" />
-                    <asp:Button ID="btnActualizar" class="btn" runat="server" Text="ACTUALIZAR" OnClick="btnActualizar_Click" />
+                    <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR USUARIO" OnClick="btnRegistrar_Click" />
                 </div>
                 <div>
-                    <asp:Label runat="server"  ID="lblmensaje" CssClass="msj"></asp:Label>
+                    <asp:Label runat="server" CssClass="msj" Text="El Titulo se registró exitosamente" Visible="false"></asp:Label>
                 </div>
             </div>
         </fieldset>
         <fieldset>
             <legend class="bold">LISTA TITULOS</legend>
-            <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="627px">
+              <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="627px">
                 <Columns>
                     <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
                         <HeaderStyle CssClass="hidden" />
@@ -80,7 +80,7 @@
                     <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Desea Eliminar este Registro ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
+                            <asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you sure you want to Logout ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField>
@@ -98,3 +98,4 @@
         </fieldset>
     </form>
 </asp:Content>
+  
