@@ -81,7 +81,7 @@
                     <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Are you sure you want to Logout ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
+                            <asp:Button runat="server" OnClick="btnEliminar_Click" OnClientClick="return confirm('Desea Eliminar este Registro ?');" CommandName="Eliminar" HeaderText="Eliminar" ItemStyle-CssClass="btButton" Text="Eliminar" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField>
