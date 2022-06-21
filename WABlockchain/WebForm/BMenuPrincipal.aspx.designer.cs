@@ -33,15 +33,6 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
-        /// Control Image3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image3;
-
-        /// <summary>
         /// Control txtBuscador.
         /// </summary>
         /// <remarks>
@@ -51,22 +42,22 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.TextBox txtBuscador;
 
         /// <summary>
-        /// Control Calendar3.
+        /// Control FechaInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar3;
+        protected global::System.Web.UI.WebControls.Calendar FechaInicio;
 
         /// <summary>
-        /// Control Calendar1.
+        /// Control FechaFin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.Calendar FechaFin;
 
         /// <summary>
         /// Control btnBuscarPorFecha.
