@@ -18,13 +18,19 @@
             &nbsp;<asp:DropDownList ID="ddlEstadoTitulo" CssClass="btn" runat="server"></asp:DropDownList>
             <br />
             <br />
-            <asp:GridView ID="GridView1" runat="server" Height="330px" Width="476px">
+            <asp:GridView ID="GridView1" CssClass="grid" runat="server" Height="330px" Width="476px">
             </asp:GridView>
             <br />
             <br />
             <div >
-                <asp:Button ID="btnRegistrarUsuario" CssClass="btn"  runat="server"  Text="REGISTRAR USUARIO" Width="187px" />
-                <asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="REGISTRAR TITULO" Width="187px" />
+                <asp:Button ID="btnRegistrarUsuario" CssClass="btn"  runat="server"  Text="Registrar Usuario" Width="187px" />
+                <asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="Registrar Titulo" Width="187px" />
+            </div>
+             <div >
+                <asp:Button ID="btnConfirmarTitulo" CssClass="btn"  runat="server"  Text="Confirmar " Width="80px" />
+                <asp:Button ID="btnSolicitarTitulo" CssClass="btn" runat="server" Text="Solicitar" Width="80px" />
+                <asp:Button ID="btnRecibirTitulo" CssClass="btn" runat="server" Text="Recibido" Width="80px" />
+
             </div>
 
         </div>

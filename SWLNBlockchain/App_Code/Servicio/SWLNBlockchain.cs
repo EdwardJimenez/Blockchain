@@ -133,10 +133,40 @@ public List<EBTittle> Obtener_Title_O()
         eBTitle = cUserBlockchain.Obtener_Title_O().ToList();
         return eBTitle;
     }
+
+    public List<EBTittle> Obtener_Title_1()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Obtener_Title_1().ToList();
+        return eBTitle;
+    }
+
+    public List<EBTittle> Obtener_Title_2()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Obtener_Title_2().ToList();
+        return eBTitle;
+    }
     public void Actualizar_ITitle_statusTitle(string Id_Title)
     {
         CUserBlockchain cUserBlockchain = new CUserBlockchain();
         cUserBlockchain.Actualizar_ITitle_statusTitle(Id_Title);
+    }
+
+    public void Actualizar_ITitle_statusTitle_2(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_ITitle_statusTitle_2(Id_Title);
+    }
+
+    public void Actualizar_ITitle_statusTitle_1(string Id_Title)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        cUserBlockchain.Actualizar_ITitle_statusTitle_1(Id_Title);
     }
 
     public void Eliminar_ITitle_statusTitle(string Id_Title)
@@ -169,6 +199,20 @@ public List<EBTittle> Obtener_Title_O()
         cTittle.Insertar_BTitle(idTittle,faculty, carreer, idUser, fullnameTitulado);
     }
 
+    public List<EBTittle> Search_BTitle(string name, string carreer, string faculty)
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        EBTittle tittle = new EBTittle();
+        tittle.faculty = faculty;
+        tittle.fullNameTitulado = name;
+        tittle.carreer = carreer;
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Search_BTitle(name,carreer,faculty).ToList();
+        return eBTitle;
+    }
+
+   
     #endregion
 
     #region RolUser
@@ -260,4 +304,6 @@ public List<EBTittle> Obtener_Title_O()
         lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Person();
         return lstIUserCareerCompleja;
     }
+
+    
 }

@@ -74,7 +74,7 @@ namespace WABlockchain.WebForm
             {
                 string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
                 //string Id_Titulo = swLNBlockchainClient.UltimoID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad, Carrera, "1", Fullname);
+                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", Fullname.ToUpper());
 
 
                 cargarTitulos();

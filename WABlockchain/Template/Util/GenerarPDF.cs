@@ -17,7 +17,7 @@ namespace WABlockchain.Template.Util
 
         public string GenerarNuevoPDF(string fullname, string carreer)
         {
-            string filePath = @"D:\Taller Inf2\Versionamiento\Blockchain\WABlockchain\Template\";
+            string filePath = HttpContext.Current.Request.MapPath("~/Template/");
 
             string fileNameExisting = @"TITULOPROFESIONAL.pdf";
 

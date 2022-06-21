@@ -41,7 +41,21 @@ public interface ISWLNBlockchain
     void Insertar_BTitle(string idTittle,string faculty, string carreer, string idUser, string fullnameTitulado);
 
     [OperationContract]
+    List<EBTittle> Search_BTitle(string name, string carreer, string faculty);
+
+
+   
+
+    
+
+    [OperationContract]
     List<EBTittle> Obtener_Title_O();
+
+    [OperationContract]
+    List<EBTittle> Obtener_Title_1();
+
+    [OperationContract]
+    List<EBTittle> Obtener_Title_2();
 
     [OperationContract]
     void Actualizar_ITitle_statusTitle(string Id_Title);
@@ -83,6 +97,12 @@ public interface ISWLNBlockchain
     [OperationContract]
     List<EBTittle> BTittle_O_TO_Upload();
 
+
+    [OperationContract]
+    void Actualizar_ITitle_statusTitle_2(string Id_Title);
+
+    [OperationContract]
+    void Actualizar_ITitle_statusTitle_1(string Id_Title);
 
     [OperationContract]
     void Eliminar_ITitle_statusTitle(string Id_Title);

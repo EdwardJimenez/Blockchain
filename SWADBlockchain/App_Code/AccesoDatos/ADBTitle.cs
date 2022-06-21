@@ -209,6 +209,40 @@ public class ADBTitle
         }
         return dTOBTitle;
     }
+    public DTOBTitle Obtener_Title_1()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_statusTittle_1");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+
+    public DTOBTitle Obtener_Title_2()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_statusTittle_2");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+
     /// <summary>
     /// Acceso a datos mediante Id_Carrera
     /// </summary>
@@ -265,6 +299,35 @@ public class ADBTitle
         }
     }
     /// <summary>
+    /// Busca un titulo con los siguientes parametros
+    /// </summary>
+    /// <param name="fullNameT"></param>
+    /// /// <param name="carreer"></param>
+    /// /// <param name="faculty"></param>
+    /// <returns Retorna los datos de un titulo ></returns>
+    public DTOBTitle Search_BTitle(string name, string carreer, string faculty)
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTitle_S_SearchTitle");
+            BDSWADBlockchain.AddInParameter(dbCommand, "fullNameT", DbType.String, name);
+            BDSWADBlockchain.AddInParameter(dbCommand, "faculty", DbType.String, faculty);
+            BDSWADBlockchain.AddInParameter(dbCommand, "carreer", DbType.String, carreer);
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        return dTOBTitle;
+    }
+
+    
+
+    /// <summary>
     /// Actualizar Title
     /// </summary>
     public void Actualizar_BTitle_A_idTitle_faculty(EBTittle bTitle)
@@ -291,6 +354,41 @@ public class ADBTitle
         {
             Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Actualizar Title statusTitleTo1
+    /// </summary>
+    public void Actualizar_ITitle_statusTitle_1(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_U_statusTittle_1");
+            BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
+            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    /// <summary>
+    /// Actualizar Title statusTitle to 2
+    /// </summary>
+    public void Actualizar_ITitle_statusTitle_2(EBTittle bTitle)
+    {
+        try
+        {
+            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BTittle_update_statusTittle_2");
             BDSWADNETIntEx.AddInParameter(dbCommand, "id", DbType.String, bTitle.IdTittles);
             BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
         }

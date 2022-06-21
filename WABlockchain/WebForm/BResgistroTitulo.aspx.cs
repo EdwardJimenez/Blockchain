@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WABlockchain.SWLNBlockchainService;
 using WABlockchain.Class;
 using WABlockchain.Template.Util;
+using System.Net;
 
 namespace WABlockchain.WebForm
 {
@@ -23,6 +24,7 @@ namespace WABlockchain.WebForm
             {
                 cargarTitulos();
                 deshabilitarTextbox();
+                
                 //if (Session["idUsuario"] != null)
                 //{
                 //    try
@@ -52,10 +54,12 @@ namespace WABlockchain.WebForm
             this.txtId.Visible = false;
             this.Label3.Visible = false;
         }
+
+        
         private void cargarTitulos()
         {
             List<EBTittle> lstTitle = new List<EBTittle>();
-            lstTitle = swLNBlockchainClient.Obtener_Title_O().ToList();
+            lstTitle = swLNBlockchainClient.Obtener_Title_1().ToList();
             grvTitulos.DataSource = lstTitle;
             grvTitulos.DataBind();
             grvTitulos.SelectedIndex = 0;
@@ -75,15 +79,16 @@ namespace WABlockchain.WebForm
             {
                 string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
                 //string Id_Titulo = swLNBlockchainClient.UltimoID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad, Carrera, "1", Fullname);
+                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", Fullname.ToUpper());
 
 
                 cargarTitulos();
-               //lblMensaje.Text = "Registro de Título Exitoso!!!";
+                lblmensaje.Text = "Registro de Título Exitoso!!!";
+               
             }
             catch (Exception)
             {
-                //lblMensaje.Text = "Registro de Título No Insertado";
+                lblmensaje.Text = "Registro de Título No Insertado";
             }
         }
 
@@ -97,16 +102,18 @@ namespace WABlockchain.WebForm
         }
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text, txtFacultad.Text, txtNombre.Text);
+            swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text.ToUpper(), txtFacultad.Text.ToUpper(), txtNombre.Text.ToUpper());
             cargarTitulos();
         }
         protected void Actualizar_Click(object sender, EventArgs e)
         {
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+            
             txtNombre.Text = grvTitulos.Rows[id].Cells[1].Text;
             txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
             txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
-            txtNombre.Text = grvTitulos.Rows[id].Cells[0].Text;
+            txtId.Text = grvTitulos.Rows[id].Cells[0].Text;
+            //string NombreEstudiante = (txtNombre.Text).ToUpper();
         }
 
         protected void btnPDF_Click(object sender, EventArgs e)
@@ -114,7 +121,17 @@ namespace WABlockchain.WebForm
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             string nombreCompleto = grvTitulos.Rows[id].Cells[1].Text;
             string carrera = grvTitulos.Rows[id].Cells[3].Text;
-            generarPDF.GenerarNuevoPDF(nombreCompleto, carrera);
+            string mostrar = generarPDF.GenerarNuevoPDF(nombreCompleto, carrera);
+
+            WebClient web = new WebClient();
+            Byte[] FileBuffer = web.DownloadData(mostrar);
+
+            if(FileBuffer != null)
+            {
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", FileBuffer.Length.ToString());
+                Response.BinaryWrite(FileBuffer);
+            }
         }
     }
 }

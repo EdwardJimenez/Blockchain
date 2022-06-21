@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WABlockchain.Class;
 using WABlockchain.SWLNBlockchainService;
+using WABlockchain.Class;
 
 namespace WABlockchain.WebForm
 {
-    public partial class BFormularioBuscarTtulo : System.Web.UI.Page
+    
+    public partial class BFormularioBuscarTitulos : System.Web.UI.Page
     {
         private static Helper _helper = new Helper();
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
@@ -20,18 +21,17 @@ namespace WABlockchain.WebForm
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             EBTittle tittle = new EBTittle();
-            grvTitulos.DataSource = null;
-            grvTitulos.DataBind();
+
             try
             {
                 string nombreEst;
-                if (txtSegundoApellido.Text != "")
+                if(txtSegundo.Text != "")
                 {
-                    nombreEst = (txtNombrePersona.Text).Trim() + " " + (txtPrimerApellido.Text).Trim() + " " + (txtSegundoApellido.Text).Trim();
+                    nombreEst = (txtNombreEstudiante.Text).Trim() + " " + (txtPrimero.Text).Trim() + " " + (txtSegundo.Text).Trim();
                 }
                 else
                 {
-                    nombreEst = (txtNombrePersona.Text).Trim() + " " + (txtPrimerApellido.Text).Trim();
+                    nombreEst = (txtNombreEstudiante.Text).Trim()+" "+(txtPrimero.Text).Trim();
                 }
                 List<EBTittle> lstTitle = new List<EBTittle>();
                 lstTitle = swLNBlockchainClient.Search_BTitle(nombreEst, txtCarrera.Text, txtFacultad.Text).ToList();
@@ -48,7 +48,7 @@ namespace WABlockchain.WebForm
             }
             catch (Exception ex)
             {
-                lblMensaje.Text = "No se encontro el titulo verifica tus datos" + ex.Message;
+                lblMensaje.Text = "No se encontro el titulo verifica tus datos"+ ex.Message;
             }
         }
     }
