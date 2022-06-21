@@ -370,6 +370,35 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Search_BTitle_Faculty_Carrer_Date">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search_BTitle_Faculty_Carrer_DateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Search_BTitle_Faculty_Carrer_DateResult" nillable="true" type="q31:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search_BTitle_Date">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search_BTitle_DateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Search_BTitle_DateResult" nillable="true" type="q32:ArrayOfEBTittle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UltimoID_O_NombreTablaSinElCaracterI">
     <xs:complexType>
       <xs:sequence>
@@ -406,7 +435,7 @@
   <xs:element name="Obtener_RolUser_OResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q31:ArrayOfEBRoluser" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="Obtener_RolUser_OResult" nillable="true" type="q33:ArrayOfEBRoluser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

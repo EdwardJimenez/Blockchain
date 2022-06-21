@@ -1,6 +1,6 @@
 ﻿.ddls {
     margin-top: 15px;
-    margin-left: 250px;
+    margin-left: 150px;
 }
 
 .boton {
@@ -13,6 +13,10 @@
     margin-left: 280px;
 }
 
+.lblfechas {
+    text-align: center;
+}
+
 .btn {
     cursor: pointer;
 }
@@ -21,14 +25,22 @@
     text-align: center;
 }
 
+.btnsep {
+    margin-bottom: 5px;
+}
+
 .calendar2 {
     display: flex;
     width: 100%;
-    padding:5px;
-    justify-content:center;
-    align-items:center;
-
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
-.cal1{
-    margin:10px;
+
+.lblmensaje {
+    justify-content: center;
+}
+
+.cal1 {
+    margin: 10px;
 }

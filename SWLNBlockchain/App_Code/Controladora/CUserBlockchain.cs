@@ -55,7 +55,7 @@ public class CUserBlockchain
             throw;
         }
     }
-    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra)
+    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede)
     {
         EBUser ebUser = new EBUser();
         try
@@ -71,6 +71,7 @@ public class CUserBlockchain
             ebUser.CI = Ci;
             ebUser.Descripcion = description;
             ebUser.CIExtra = ciExtra;
+            ebUser.Sede = sede;
             asBlockchain.Insertar_BUser_I(ebUser);
         }
         catch (Exception)
@@ -427,7 +428,35 @@ public class CUserBlockchain
         }
     }
 
-    
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Search_BTitle_Faculty_Carrer_Date(txt).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+
     #endregion
 
     #region RolUser

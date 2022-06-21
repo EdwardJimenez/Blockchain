@@ -21,8 +21,22 @@ namespace WABlockchain.WebForm
         {
             if (!IsPostBack)
             {
-                cargarTitulos();
-                deshabilitarTextbox();
+                if (Session["Rol"] != null)
+                {
+                    if (Session["Rol"].ToString() == "Secretaria")
+                    {
+                        cargarTitulos();
+                        deshabilitarTextbox();
+                    }
+                    else
+                    {
+                        Response.Redirect("BMenuPrincipal.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("BLogin.aspx");
+                }
             }
         }
         private void deshabilitarTextbox()

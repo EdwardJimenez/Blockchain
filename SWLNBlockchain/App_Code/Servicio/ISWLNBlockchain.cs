@@ -27,7 +27,7 @@ public interface ISWLNBlockchain
     /*void Insertar_BUser_I_idUser_email(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
     [OperationContract]*/
     [OperationContract]
-    void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+    void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede);
     
     [OperationContract]
     void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
@@ -112,6 +112,15 @@ public interface ISWLNBlockchain
 
     [OperationContract]
     void Actualizar_BTittle_ConfirmarEntrega(string fullName, DateTime fecha, string modo);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin);
+
     #endregion
 
     #region RolUser

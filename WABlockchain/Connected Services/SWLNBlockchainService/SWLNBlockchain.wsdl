@@ -187,6 +187,18 @@
   <wsdl:message name="ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_OutputMessage">
     <wsdl:part name="parameters" element="tns:Actualizar_BTittle_ConfirmarEntregaResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle_Faculty_Carrer_Date" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle_Faculty_Carrer_DateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_Date_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle_Date" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Search_BTitle_Date_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Search_BTitle_DateResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_RolUser_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_RolUser_O" />
   </wsdl:message>
@@ -379,6 +391,14 @@
     <wsdl:operation name="Actualizar_BTittle_ConfirmarEntrega">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega" message="tns:ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntregaResponse" message="tns:ISWLNBlockchain_Actualizar_BTittle_ConfirmarEntrega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle_Faculty_Carrer_Date">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date" message="tns:ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_DateResponse" message="tns:ISWLNBlockchain_Search_BTitle_Faculty_Carrer_Date_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle_Date">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date" message="tns:ISWLNBlockchain_Search_BTitle_Date_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse" message="tns:ISWLNBlockchain_Search_BTitle_Date_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Obtener_RolUser_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O" message="tns:ISWLNBlockchain_Obtener_RolUser_O_InputMessage" />
@@ -694,6 +714,24 @@
     </wsdl:operation>
     <wsdl:operation name="Actualizar_BTittle_ConfirmarEntrega">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle_Faculty_Carrer_Date">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_BTitle_Date">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

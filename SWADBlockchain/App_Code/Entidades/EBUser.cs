@@ -33,6 +33,8 @@ public class EBUser
     public string Descripcion { get; set; }
     [DataMember]
     public string CIExtra { get; set; }
+    [DataMember]
+    public string Sede { get; set; }
 
     public EBUser()
     {
@@ -47,5 +49,6 @@ public class EBUser
         CI = string.Empty;  
         Descripcion = string.Empty; 
         CIExtra = string.Empty;
+        Sede = string.Empty;
     }
 }

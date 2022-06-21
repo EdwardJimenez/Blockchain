@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Estilo/EstiloRegistros/EstiloMenuPrincipal.css" rel="stylesheet" />
     <style type="text/css">
-        
         .auto-style2 {
             text-align: center;
             width: 545px;
@@ -14,22 +13,24 @@
     <form id="form1" runat="server">
         <div class="boton">
             <br />
-            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Text="Buscar Titulo" Height="29px" Width="104px" />
+            <asp:Button ID="btnBuscar" OnClick="btnSearch_Click1" runat="server" CssClass="btn" Text="Buscar Titulo" Height="29px" Width="104px" />
             &nbsp;<asp:TextBox ID="txtBuscador" runat="server" Width="617px"></asp:TextBox>
             <br />
             <br />
         </div>
         <div class="calendar2">
             <div class="cal1">
-                <asp:Calendar ID="FechaInicio"  runat="server" Width="255px" Height="16px"></asp:Calendar>
+            <asp:Label CssClass="lblfechas" runat="server" Text="Fecha Inicio :"></asp:Label>
+                <asp:Calendar ID="FechaInicio" runat="server" Width="255px" Height="16px"></asp:Calendar>
             </div>
             <div class="cal1">
+            <asp:Label CssClass="lblfechas" runat="server" Text="Fecha Fin :"></asp:Label>
                 <asp:Calendar ID="FechaFin" runat="server" Width="254px" Height="111px"></asp:Calendar>
             </div>
             <br />
         </div>
         <div class="botonesRegistro">
-            &nbsp;<asp:Button ID="btnBuscarPorFecha" CssClass="btn" runat="server" Text="Buscar" Width="135px" />
+            &nbsp;<asp:Button ID="btnBuscarPorFecha" OnClick="btnSearchDate_Click" CssClass="btn" runat="server" Text="Buscar" Width="135px" />
         </div>
         <div class="ddls">
 
@@ -47,17 +48,19 @@
                 </Columns>
             </asp:GridView>
             <br />
+            <asp:Label CssClass="lblmensaje" ID="lblmensaje"  runat="server" ForeColor="#CC0000"></asp:Label>
+            <br />
             <div class="auto-style2">
-                <asp:Button ID="btnRegistrarUsuario" CssClass="btn" runat="server" Text="Registrar Usuario" Width="135px" OnClick="btnRegistrarUsuario_Click"/>
-                &nbsp;<asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btn" runat="server" Text="Registrar Usuario Netvalle" Width="198px" OnClick="btnRegistrarUsuarioNetvalle_Click" />
-                &nbsp;<asp:Button ID="btnRegistrarTitulo" CssClass="btn" runat="server" Text="Registrar Titulo" Width="135px" OnClick="btnRegistrarTitulo_Click"/>
-                <br />
-                <br />
-                <asp:Button ID="btnConfirmarTitulo" CssClass="btn" runat="server" Text="Confirmar " Width="135px" OnClick="btnConfirmarTitulo_Click" />
-                &nbsp;<asp:Button ID="btnSolicitarTitulo" CssClass="btn" runat="server" Text="Solicitar" Width="135px" OnClick="btnSolicitarTitulo_Click" />
-                &nbsp;<asp:Button ID="btnRecibirTitulo" CssClass="btn" runat="server" Text="Recibido" Width="135px" OnClick="btnRecibirTitulo_Click" />
+                <asp:Button ID="btnRegistrarUsuario" CssClass="btnsep" runat="server" Text="Registrar Usuario" Width="135px" OnClick="btnRegistrarUsuario_Click"/>
+                <asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btnsep" runat="server" Text="Registrar Usuario Netvalle" Width="198px" OnClick="btnRegistrarUsuarioNetvalle_Click"/>
+                <asp:Button ID="btnRegistrarTitulo" CssClass="btnsep" runat="server" Text="Registrar Titulo" Width="135px" OnClick="btnRegistrarTitulo_Click"/>   
+                <asp:Button ID="btnConfirmarTitulo" CssClass="btnsep" runat="server" Text="Confirmar " Width="135px" OnClick="btnConfirmarTitulo_Click"/>
+                <asp:Button ID="btnSolicitarTitulo" CssClass="btnsep" runat="server" Text="Solicitar" Width="135px" OnClick="btnSolicitarTitulo_Click"/>
+                <asp:Button ID="btnImprimirTitulo" CssClass="btnsep" runat="server" Text="Imprimir" Width="135px" OnClick="btnImprimirTitulo_Click"/>
+                <asp:Button ID="btnEnviarTitulos" CssClass="btnsep" runat="server" Text="Enviar" Width="135px" OnClick="btnEnviarTitulos_Click"/>
+                <asp:Button ID="btnRecibirTitulo" CssClass="btnsep" runat="server" Text="Recibido" Width="135px" OnClick="btnRecibirTitulo_Click"/>
             </div>
         </div>
-        <br />
+        <br/>
     </form>
 </asp:Content>

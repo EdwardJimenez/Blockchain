@@ -50,6 +50,9 @@ namespace WABlockchain.SWLNBlockchainService {
         private string PasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SedeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UserNetvalleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -178,6 +181,19 @@ namespace WABlockchain.SWLNBlockchainService {
                 if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
                     this.PasswordField = value;
                     this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sede {
+            get {
+                return this.SedeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SedeField, value) != true)) {
+                    this.SedeField = value;
+                    this.RaisePropertyChanged("Sede");
                 }
             }
         }
@@ -1016,10 +1032,10 @@ namespace WABlockchain.SWLNBlockchainService {
         System.Threading.Tasks.Task Insertar_BUser_I_idUser_emailAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
-        void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+        void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_I", ReplyAction="http://tempuri.org/ISWLNBlockchain/Insertar_BUser_IResponse")]
-        System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra);
+        System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_email", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BUser_I_idUser_emailResponse")]
         void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle);
@@ -1171,6 +1187,18 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntrega", ReplyAction="http://tempuri.org/ISWLNBlockchain/Actualizar_BTittle_ConfirmarEntregaResponse")]
         System.Threading.Tasks.Task Actualizar_BTittle_ConfirmarEntregaAsync(string fullName, System.DateTime fecha, string modo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_DateResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Faculty_Carrer_Date(string txt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Faculty_Carrer_DateResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_Faculty_Carrer_DateAsync(string txt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Date(System.DateTime fechaInicio, System.DateTime fechaFin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_DateAsync(System.DateTime fechaInicio, System.DateTime fechaFin);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse")]
         WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O();
         
@@ -1311,12 +1339,12 @@ namespace WABlockchain.SWLNBlockchainService {
             return base.Channel.Insertar_BUser_I_idUser_emailAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
         }
         
-        public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
-            base.Channel.Insertar_BUser_I(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
+        public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede) {
+            base.Channel.Insertar_BUser_I(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra, sede);
         }
         
-        public System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra) {
-            return base.Channel.Insertar_BUser_IAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra);
+        public System.Threading.Tasks.Task Insertar_BUser_IAsync(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede) {
+            return base.Channel.Insertar_BUser_IAsync(Id_User, email, password, status, userNetvalle, idrolUser, Fullname, Cellphone, Ci, description, ciExtra, sede);
         }
         
         public void Actualizar_BUser_I_idUser_email(string Email, string password, string userNetvalle, string idrolUser, string idTitle) {
@@ -1517,6 +1545,22 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task Actualizar_BTittle_ConfirmarEntregaAsync(string fullName, System.DateTime fecha, string modo) {
             return base.Channel.Actualizar_BTittle_ConfirmarEntregaAsync(fullName, fecha, modo);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Faculty_Carrer_Date(string txt) {
+            return base.Channel.Search_BTitle_Faculty_Carrer_Date(txt);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_Faculty_Carrer_DateAsync(string txt) {
+            return base.Channel.Search_BTitle_Faculty_Carrer_DateAsync(txt);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Search_BTitle_Date(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            return base.Channel.Search_BTitle_Date(fechaInicio, fechaFin);
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_DateAsync(System.DateTime fechaInicio, System.DateTime fechaFin) {
+            return base.Channel.Search_BTitle_DateAsync(fechaInicio, fechaFin);
         }
         
         public WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O() {
