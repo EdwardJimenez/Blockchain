@@ -33,15 +33,6 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
-        /// Control Image3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image3;
-
-        /// <summary>
         /// Control txtBuscador.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace WABlockchain.WebForm
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBuscador;
-
-        /// <summary>
-        /// Control btnBuscarPorFecha.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarPorFecha;
 
         /// <summary>
         /// Control FechaInicio.
@@ -78,40 +60,13 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Calendar FechaFin;
 
         /// <summary>
-        /// Control ddlSede.
+        /// Control btnBuscarPorFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSede;
-
-        /// <summary>
-        /// Control ddlGestion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGestion;
-
-        /// <summary>
-        /// Control ddlCarrera.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
-
-        /// <summary>
-        /// Control ddlEstadoTitulo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEstadoTitulo;
+        protected global::System.Web.UI.WebControls.Button btnBuscarPorFecha;
 
         /// <summary>
         /// Control GridView1.
@@ -141,6 +96,15 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Button btnRegistrarUsuario;
 
         /// <summary>
+        /// Control btnRegistrarUsuarioNetvalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegistrarUsuarioNetvalle;
+
+        /// <summary>
         /// Control btnRegistrarTitulo.
         /// </summary>
         /// <remarks>
@@ -148,5 +112,50 @@ namespace WABlockchain.WebForm
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegistrarTitulo;
+
+        /// <summary>
+        /// Control btnConfirmarTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmarTitulo;
+
+        /// <summary>
+        /// Control btnSolicitarTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSolicitarTitulo;
+
+        /// <summary>
+        /// Control btnImprimirTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnImprimirTitulo;
+
+        /// <summary>
+        /// Control Button2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
+        /// Control btnRecibirTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRecibirTitulo;
     }
 }
