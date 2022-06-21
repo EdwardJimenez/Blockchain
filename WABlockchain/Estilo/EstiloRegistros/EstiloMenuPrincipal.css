@@ -1,6 +1,6 @@
 ﻿.ddls {
     margin-top: 15px;
-    margin-left: 250px;
+    margin-left: 150px;
 }
 .boton {
     margin-top: 10px;
@@ -13,4 +13,10 @@
 }
 .btn{
     cursor:pointer;
+}
+.botonesRegistro, btbFecha {
+    text-align: center;
+}
+.calendar {
+    margin-left: 100px;
 }
