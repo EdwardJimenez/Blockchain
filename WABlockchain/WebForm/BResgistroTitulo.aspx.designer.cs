@@ -96,6 +96,27 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
+<<<<<<< HEAD
+        /// Control RegularExpressionValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+
+        /// <summary>
+        /// Control grvTitulos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grvTitulos;
+
+        /// <summary>
+=======
+>>>>>>> d664f499cd7a6c463ded8eae03ec9d043577ff84
         /// Control btnRegistrar.
         /// </summary>
         /// <remarks>
