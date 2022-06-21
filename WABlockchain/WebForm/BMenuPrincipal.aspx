@@ -6,10 +6,10 @@
       <form id="form1" runat="server">
         <div class="boton">
             <br />
-            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Onclick="btnSearch_Click1" Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Button ID="btnBuscar" runat="server" CssClass="btn" Onclick="btnBuscar_Click1" Text="BUSCAR" Height="29px" Width="104px" />
             <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="24px" />
             <asp:TextBox ID="txtBuscador" runat="server" Width="551px" ></asp:TextBox>
-            <asp:Button ID="btnBuscarPorFecha" runat="server" CssClass="btn" Onclick="btnSearchDate_Click"  Text="BUSCAR" Height="29px" Width="104px" />
+            <asp:Button ID="btnBuscarPorFecha" runat="server" CssClass="btn" Onclick="btnBuscarPorFecha_Click" Text="BUSCAR" Height="29px" Width="104px" />
             <asp:Calendar ID="FechaInicio" runat="server" Width="156px" Height="83px" ></asp:Calendar>
             <asp:Calendar ID="FechaFin" runat="server" Width="150px" ></asp:Calendar>
         </div>
@@ -46,4 +46,3 @@
 
     </form>
 </asp:Content>
-
