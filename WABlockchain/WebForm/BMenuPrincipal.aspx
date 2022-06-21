@@ -10,8 +10,8 @@
             <asp:Image ID="Image3" ImageUrl="~/Imagenes/lupa1.jpg" runat="server" Height="21px" Width="24px" />
             <asp:TextBox ID="txtBuscador" runat="server" Width="551px" ></asp:TextBox>
             <asp:Button ID="btnBuscarPorFecha" runat="server" CssClass="btn" Onclick="btnBuscarPorFecha_Click" Text="BUSCAR" Height="29px" Width="104px" />
-            <asp:Calendar ID="FechaInicio" runat="server" Width="156px" Height="83px" ></asp:Calendar>
-            <asp:Calendar ID="FechaFin" runat="server" Width="150px" ></asp:Calendar>
+            <asp:Calendar ID="FechaInicio" runat="server" Width="416px" Height="83px" style="margin-left: 227px" ></asp:Calendar>
+            <asp:Calendar ID="FechaFin" runat="server" Width="410px" style="margin-left: 231px" ></asp:Calendar>
         </div>
         <br />
         <div class="ddls">
