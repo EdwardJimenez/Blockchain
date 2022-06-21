@@ -30,29 +30,35 @@ namespace WABlockchain.WebForm
             }
         }
 
-        protected void btnBuscar_Click1(object sender, EventArgs e)
+        protected void btnSearch_Click1(object sender, EventArgs e)
         {
-            EBTittle tittle = new EBTittle();
-            string faculty = txtBuscador.Text;
+            string searchFacultyCarreer = txtBuscador.Text;
 
             GridView1.DataSource = null;
             GridView1.DataBind();
 
             try
             {
-                List<EBTittle> lstTitle = new List<EBTittle>();
-
-                lstTitle = swLNBlockchainClient.Search_BTitle_Faculty_Carrer_Date(faculty).ToList();
-                if (lstTitle.Count() == 0)
+                if (searchFacultyCarreer.Equals(""))
                 {
-                    lblmensaje.Text = "No se encontro el título";
+                    lblmensaje.Text = "Ingrese Facultad o Carrera, Imbécil !!!";
                 }
                 else
                 {
-                    GridView1.DataSource = lstTitle;
-                    GridView1.DataBind();
-                    GridView1.SelectedIndex = 0;
-                    lblmensaje.Text = "Título encontrado";
+                    List<EBTittle> lstTitle = new List<EBTittle>();
+
+                    lstTitle = swLNBlockchainClient.Search_BTitle_Faculty_Carrer_Date(searchFacultyCarreer).ToList();
+                    if (lstTitle.Count() == 0)
+                    {
+                        lblmensaje.Text = "No se encontro el título";
+                    }
+                    else
+                    {
+                        GridView1.DataSource = lstTitle;
+                        GridView1.DataBind();
+                        GridView1.SelectedIndex = 0;
+                        lblmensaje.Text = "Título encontrado";
+                    }
                 }
             }
             catch (Exception ex)
@@ -62,8 +68,43 @@ namespace WABlockchain.WebForm
             }
         }
 
+        protected void btnSearchDate_Click(object sender, EventArgs e)
+        {
+            DateTime fechaInicio = FechaInicio.SelectedDate;
+            DateTime fechaFin = FechaFin.SelectedDate;
 
+            GridView1.DataSource = null;
+            GridView1.DataBind();
 
+            try
+            {
+                if (fechaFin>fechaInicio)
+                {
+                    List<EBTittle> lstTitle = new List<EBTittle>();
+                    lstTitle = swLNBlockchainClient.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
 
+                    if (lstTitle.Count() == 0)
+                    {
+                        lblmensaje.Text = "No se encontro el título" + FechaInicio.SelectedDate;
+                    }
+                    else
+                    {
+                        GridView1.DataSource = lstTitle;
+                        GridView1.DataBind();
+                        GridView1.SelectedIndex = 0;
+                        lblmensaje.Text = "Título encontrado";
+                    }
+                }
+                else
+                {
+                    lblmensaje.Text = "La fecha final debe ser mayor a la fecha de inicio !!!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                lblmensaje.Text = ex.Message;
+            }
+        }
     }
 }

@@ -178,12 +178,9 @@ public class ADBTitle
         DTOBTitle dTOBTitle = new DTOBTitle();
         try
         {
-
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_S_Search_Faculty_Carreer_Date");
-            // BDSWADBlockchain.AddInParameter(dbCommand, "fullNameT", DbType.String, txt);
             BDSWADBlockchain.AddInParameter(dbCommand, "txt", DbType.String, txt);
-            //BDSWADBlockchain.AddInParameter(dbCommand, "carreer", DbType.String, txt);
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
         }
         catch (Exception)
@@ -198,14 +195,10 @@ public class ADBTitle
         DTOBTitle dTOBTitle = new DTOBTitle();
         try
         {
-
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
             DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_S_Search_Date");
-
-            // BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime, fechaInicio.Date.ToString("yyyyMMdd"));
-            BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime, "2022/06/17");
-            BDSWADBlockchain.AddInParameter(dbCommand, "Fin", DbType.DateTime, "2022/06/19");
-
+            BDSWADBlockchain.AddInParameter(dbCommand, "Inicio", DbType.DateTime, fechaInicio);
+            BDSWADBlockchain.AddInParameter(dbCommand, "Fin", DbType.DateTime, fechaFin);
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
         }
         catch (Exception)
