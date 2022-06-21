@@ -20,6 +20,7 @@ namespace WABlockchain.WebForm
         }
         private void cargarTitulos()
         {
+            //carga los titulos en el grv
             List<EBTittle> lstTitle = new List<EBTittle>();
             lstTitle = swLNBlockchainClient.Obtener_Title_O().ToList();
             grvTitulos.DataSource = lstTitle;
@@ -28,15 +29,11 @@ namespace WABlockchain.WebForm
         }
         protected void btn1_Click(object sender, EventArgs e)
         {
+            //cambia el estado del titulo
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
             swLNBlockchainClient.Actualizar_ITitle_statusTitle(s.ToString());
             cargarTitulos();
-        }
-
-        protected void grvTitulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Errorsito by pedro jaja :(
         }
     }
 }

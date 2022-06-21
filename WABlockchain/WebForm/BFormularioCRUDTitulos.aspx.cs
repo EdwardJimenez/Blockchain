@@ -48,6 +48,7 @@ namespace WABlockchain.WebForm
         }
         private void deshabilitarTextbox()
         {
+            //Esconde los textbox
             this.txtEmail.Visible = false;
             this.txtPassword.Visible = false;
             this.txtCi.Visible = false;
@@ -56,6 +57,7 @@ namespace WABlockchain.WebForm
         }
         private void cargarTitulos()
         {
+            //muestra los titulos en el grv
             List<EBTittle> lstTitle = new List<EBTittle>();
             lstTitle = swLNBlockchainClient.Obtener_Title_O().ToList();
             grvTitulos.DataSource = lstTitle;
@@ -64,17 +66,17 @@ namespace WABlockchain.WebForm
         }
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
+            //inserta un titulo
             string Facultad = txtFacultad.Text;
             string Carrera = txtCarrera.Text;
-            string Fullname = txtNombreCompleto.Text;
+            string nombreCompleto = txtNombreCompleto.Text;
 
 
 
             try
             {
                 string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
-                //string Id_Titulo = swLNBlockchainClient.UltimoID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", Fullname.ToUpper());
+                swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", nombreCompleto.ToUpper());
 
 
                 cargarTitulos();
@@ -87,6 +89,7 @@ namespace WABlockchain.WebForm
         }
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            //elimina el titulo cambiando el estado
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
             swLNBlockchainClient.Eliminar_ITitle_statusTitle(s.ToString());
@@ -96,12 +99,14 @@ namespace WABlockchain.WebForm
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
+            //actualiza los datos del titulo
             swLNBlockchainClient.Actualizar_ITitle(txtEmail.Text,txtCarrera.Text,txtFacultad.Text,txtNombreCompleto.Text);
             cargarTitulos();
         }
 
         protected void Actualizar_Click(object sender, EventArgs e)
         {
+            //envia los datos del titulo a los text boxs para ser editados
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             txtNombreCompleto.Text = grvTitulos.Rows[id].Cells[1].Text;
             txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
@@ -111,6 +116,7 @@ namespace WABlockchain.WebForm
 
         protected void btnPDF_Click(object sender, EventArgs e)
         {
+            //genera un pdf del titulo
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             string nombreCompleto = grvTitulos.Rows[id].Cells[1].Text;
             string carrera = grvTitulos.Rows[id].Cells[3].Text;

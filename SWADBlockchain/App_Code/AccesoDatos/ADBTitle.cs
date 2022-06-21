@@ -177,6 +177,7 @@ public class ADBTitle
         }
         return dTOBTitle;
     }
+
     public DTOBTitle BTittle_O_State7()
     {
         DTOBTitle dTOBTitle = new DTOBTitle();
@@ -264,7 +265,6 @@ public class ADBTitle
         }
         return dtoBTitle;
     }
-    //  Corregir esto!!,esta bien que copies pero no lo subas asi, genera errores en el github
 
     public void Insertar_BTitle_I_idTitle_faculty(EBTittle bTitle)
     {

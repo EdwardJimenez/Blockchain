@@ -172,7 +172,6 @@
     <Content Include="Estilo\Estilos.css" />
     <Content Include="Estilo\EstilosUsuariosNetvalle.css" />
     <Content Include="Estilo\SEstilo.css" />
-    <Content Include="WebForm\BFormularioBuscarTitulos.aspx" />
     <Content Include="WebForm\BFormularioCRUDTitulos.aspx" />
     <Content Include="WebForm\BEstado5.aspx" />
     <Content Include="WebForm\BFormularioListaTitulos.aspx" />
