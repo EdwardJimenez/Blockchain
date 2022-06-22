@@ -26,7 +26,6 @@ namespace WABlockchain.WebForm
                 {
                     try
                     {
-                        //Esto lo tengo que borrar , no es aqui ,es en la webforms de Registrar titulos Pedro Conde
                         IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
                         int IDUser = Convert.ToInt32(Session["idUsuario"]);
                         iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];

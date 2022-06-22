@@ -11,7 +11,11 @@ using System.Web;
 /// </summary>
 public class ADNCareer
 {
-    //Pedro Conde: Estoy usando un procedimiento almacenado creado por mi para probar
+    
+    /// <summary>
+    /// Obtienen los datos de la tabla Carrera para poder visualizarlos
+    /// </summary>
+    /// <returns></returns>
 
     public DTONCareer Obtener_Carrerra()
     {
@@ -29,6 +33,11 @@ public class ADNCareer
         return dTONCareer;
     }
 
+    /// <summary>
+    /// Obtienen los datos de la tabla Carrera mediante su ID de la carrera para poder visualizarse
+    /// </summary>
+    /// <param name="Id_Carrera"></param>
+    /// <returns></returns>
     public DTONCareer Obtener_Carrerra_O_ID_Pedro(string Id_Carrera)
     {
         DTONCareer dTONCareer = new DTONCareer();

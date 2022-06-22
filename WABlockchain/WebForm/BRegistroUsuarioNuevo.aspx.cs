@@ -11,6 +11,11 @@ namespace WABlockchain.WebForm
     public partial class BRegistroUsuarioNuevo : System.Web.UI.Page
     {
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
+        /// <summary>
+        /// A esta pantalla solo ingresa el administrador, se registra los usuarios tanto normales como netvalle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             lblmsg.Visible = false;
@@ -21,6 +26,8 @@ namespace WABlockchain.WebForm
                     if (Session["Rol"].ToString() == "Admin")
                     {
                         CargarRolUser();
+                        // Agarras el id que fue mandada desde la pagina para ver a los usuarios netvalle
+                        // para poder comparar con un metodo y asi comparar sus datos con los "txt" vacios
                         if (Session["idUsuario"] != null)
                         {
                             try
@@ -28,7 +35,7 @@ namespace WABlockchain.WebForm
                                 IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
                                 int IDUser = Convert.ToInt32(Session["idUsuario"]);
                                 iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                                txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();//validar alguito
+                                txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();
                                 txtTelefonos.Text = iusercompleja.Phone.ToString();
                                 txtCorreo.Text = iusercompleja.Mail.ToString();
                                 txtCi.Text = iusercompleja.CI.ToString();
@@ -53,7 +60,7 @@ namespace WABlockchain.WebForm
                 }
             }
         }
-
+        //Registras a los usuarios normales como los Netvalle
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombreEstudiante.Text;
@@ -78,6 +85,7 @@ namespace WABlockchain.WebForm
             {
             }
         }
+        // Aqui se carga los roles que puede tener un usuario para registrarlo
         private void CargarRolUser()
         {
             ddlRol.Items.Clear();

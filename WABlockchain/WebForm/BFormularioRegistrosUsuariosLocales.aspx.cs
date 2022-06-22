@@ -29,7 +29,7 @@ namespace WABlockchain.WebForm
                         IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
                         int IDUser = Convert.ToInt32(Session["idUsuario"]);
                         iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                        txtNombre.Text = iusercompleja.Fullname.ToString();//validar alguito
+                        txtNombre.Text = iusercompleja.Fullname.ToString();
                         txtCellphone.Text = iusercompleja.Phone.ToString();
                         txtEmail.Text = iusercompleja.Mail.ToString();
                         txtCi.Text = iusercompleja.CI.ToString();
