@@ -24,7 +24,7 @@
 <asp:BoundField DataField="CI" HeaderStyle-CssClass="ci" HeaderText="CI" ItemStyle-CssClass="itCi" SortExpression="ci" />
 <asp:BoundField DataField="Mail" HeaderStyle-CssClass="mail" HeaderText="CORREO ELECTRONICO" ItemStyle-CssClass="itMail" SortExpression="mail" />
 <asp:BoundField DataField="ExtCI" HeaderStyle-CssClass="ciextra" HeaderText="CI EXTRA" ItemStyle-CssClass="itCiextra" SortExpression="ciextra" />
-
+<asp:BoundField DataField="SedeName" HeaderStyle-CssClass="sede" HeaderText="SEDE" ItemStyle-CssClass="itSede" SortExpression="sede" />
     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button runat="server" OnClick="btn1_Click"  HeaderText="Enviar" ItemStyle-CssClass="btButton" Text="Enviar"  />

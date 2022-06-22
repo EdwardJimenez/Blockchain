@@ -83,6 +83,15 @@
                     </tr>
                     <tr>
                         <td class="cell">
+                            <asp:Label Text="Sede: " runat="server" Font-Bold="True" />
+                        </td>
+                        <td class="cel">
+                            <asp:TextBox runat="server" ID="txtSede" />
+                            <asp:RequiredFieldValidator ID="vlcSede" runat="server" ControlToValidate="txtSede" ErrorMessage="Debes Ingresar Sede" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell">
                             <asp:Label Text="Telefonos: " runat="server" Font-Bold="True" />
                         </td>
                         <td class="cel">
@@ -123,11 +132,11 @@
                     <asp:Button ID="btnRegistrar" class="btn" runat="server" Text="REGISTRAR USUARIO" OnClick="btnRegistrar_Click" />
                 </div>
                 <div>
-                    <asp:Label runat="server" CssClass="msj" Text="El programa se registró exitosamente" Visible="false"></asp:Label>
+                    <asp:Label ID="lblmsg" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" ForeColor="#CC0000"></asp:Label>
                 </div>
             </div>
             <div>
-                <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" Visible="false"></asp:Label>
+                <asp:Label ID="label9" runat="server" CssClass="msj" Text="El usuario se registró exitosamente" Visible="false"></asp:Label>
             </div>
         </fieldset>
 

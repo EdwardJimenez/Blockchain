@@ -33,10 +33,10 @@ public class SWLNBlockchain : ISWLNBlockchain
         CUserBlockchain cUser = new CUserBlockchain();
         cUser.Insertar_BUser_I_idUser_email(Id_User,email, password,status ,userNetvalle, idrolUser, Fullname,Cellphone, Ci, description,ciExtra);
     }
-    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra)
+    public void Insertar_BUser_I(string Id_User, string email, string password, string status, string userNetvalle, string idrolUser, string Fullname, string Cellphone, string Ci, string description, string ciExtra, string sede)
     {
         CUserBlockchain cUser = new CUserBlockchain();
-        cUser.Insertar_BUser_I(Id_User,email,password,status,userNetvalle,idrolUser,Fullname,Cellphone,Ci,description,ciExtra);
+        cUser.Insertar_BUser_I(Id_User,email,password,status,userNetvalle,idrolUser,Fullname,Cellphone,Ci,description,ciExtra,sede);
     }
     public List<EBUser> Obtener_User_O()
     {
@@ -212,6 +212,24 @@ public List<EBTittle> Obtener_Title_O()
         return eBTitle;
     }
 
+
+    public List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt)
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Search_BTitle_Faculty_Carrer_Date(txt).ToList();
+        return eBTitle;
+    }
+
+    public List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin)
+    {
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        eBTitle = cUserBlockchain.Search_BTitle_Date(fechaInicio, fechaFin).ToList();
+        return eBTitle;
+    }
+
     #endregion
 
     #region RolUser
@@ -303,4 +321,6 @@ public List<EBTittle> Obtener_Title_O()
         lstIUserCareerCompleja = cNetValle.U_Obtener_UserCareerComplejas_O_Person();
         return lstIUserCareerCompleja;
     }
+
+    
 }

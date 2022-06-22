@@ -17,6 +17,7 @@
       <xs:element minOccurs="0" name="IdRolUser" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdUser" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sede" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UserNetvalle" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
     </xs:sequence>

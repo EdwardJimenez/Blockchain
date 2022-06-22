@@ -11,7 +11,20 @@ namespace WABlockchain.PaginaMaestra
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                if(Session["Rol"] == null)
+                {
+                    Session.Remove("Rol");
+                    Response.Redirect("BLogin.aspx");
+                }
+            }
+        }
 
+        protected void btnCloseSession_Click(object sender, EventArgs e)
+        {
+            Session.Remove("Rol");
+            Response.Redirect("BLogin.aspx");
         }
     }
 }

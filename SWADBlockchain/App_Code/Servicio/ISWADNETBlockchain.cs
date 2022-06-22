@@ -38,20 +38,29 @@ public interface ISWADNETBlockchain
     [OperationContract]
     void Insertar_BTitle(EBTittle eBTittle);
 
+
     [OperationContract]
     List<EBTittle> Search_BTitle(string name, string carreer, string faculty);
 
+
+   
+
+    
     [OperationContract]
     List<EBTittle> Obtener_Title_O();
+
 
     [OperationContract]
     List<EBTittle> Obtener_Title_1();
 
+
     [OperationContract]
     List<EBTittle> Obtener_Title_2();
 
+
     [OperationContract]
     void Actualizar_ITitle_statusTitle(EBTittle ebTitle);
+
 
     [OperationContract]
     List<EBTittle> BTittle_O_State2();
@@ -105,7 +114,15 @@ public interface ISWADNETBlockchain
 
     [OperationContract]
     void Actualizar_BTittle_ConfirmarEntrega(EBTittle ebTitle);
-    
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Faculty_Carrer_Date(string txt);
+
+
+    [OperationContract]
+    List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin);
+
 
     #endregion
 

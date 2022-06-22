@@ -16,7 +16,7 @@
 <div class="datos">
 <div>
 <fieldset id="field">
-<legend class="sub">Subir titulo a la BlockChain
+<legend class="sub">LISTA PARA IMPRESION DE TITULOS
     </legend>
 
 <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
@@ -32,7 +32,7 @@
 
 <asp:TemplateField>
 <ItemTemplate>
-<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="Subir" />
+<asp:Button runat="server" OnClick="Actualizar_Click" CommandName="Actualizar" HeaderText="Actualizar" ItemStyle-CssClass="btButton" Text="IMPRIMIR" />
 </ItemTemplate>
 </asp:TemplateField>
 
