@@ -12,9 +12,10 @@ using System.Data;
 /// </summary>
 public class ADBHelper
 {
-    #region Metodos Pulicos
+    #region Metodos Públicos
+
     /// <summary>
-    /// Retorna el ultimo ID segun el nombre de una tabla
+    /// Retorna el ultimo ID según el nombre de una tabla
     /// </summary>
     /// <param name="NombreTabla"></param>
     /// <returns></returns>
@@ -38,8 +39,9 @@ public class ADBHelper
         }
         return ultimoID;
     }
+
     /// <summary>
-    /// Retorna el siguiente ID segun el nombre de una tabla
+    /// Retorna el siguiente ID según el nombre de una tabla
     /// </summary>
     /// <param name="NombreTabla"></param>
     /// <returns></returns>

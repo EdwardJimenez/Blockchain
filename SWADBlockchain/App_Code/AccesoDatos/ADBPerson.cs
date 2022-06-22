@@ -12,13 +12,18 @@ using System.Data;
 public class ADBPerson
 {
     #region METODOS CRUD MEDIANTE PROCEDIMIENTOS ALMACENADOS - PERSONA
+
+    /// <summary>
+    /// Método que realiza la consulta: Select * from Person  retornando los datos encontrados
+    /// </summary>
+    /// <returns></returns>
     public DTOBPerson Obtener_Person_O()
     {
         DTOBPerson dTOBPerson = new DTOBPerson();
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BPerson"); //Select * from Person
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BPerson"); 
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBPerson, "BPerson");
         }
         catch (Exception)
@@ -29,6 +34,11 @@ public class ADBPerson
         return dTOBPerson;
     }
 
+    /// <summary>
+    /// Método que realiza la consulta de devolver el registro de una persona mediante el id y el nombre
+    /// </summary>
+    /// <param name="Id_Person"></param>
+    /// <returns></returns>
     public DTOBPerson Obtener_BPersona_O_idPersona(string Id_Person)
     {
         DTOBPerson dtoBPersona = new DTOBPerson();
@@ -46,6 +56,10 @@ public class ADBPerson
         return dtoBPersona;
     }
 
+    /// <summary>
+    /// Método que realiza la inserción de un nombre completo a la tabla persona
+    /// </summary>
+    /// <param name="bPerson"></param>
     public void Insertar_BPerson_I_FullName(EBPerson bPerson)
     {
         try
@@ -60,8 +74,9 @@ public class ADBPerson
             throw;
         }
     }
+
     /// <summary>
-    /// Actualizar Persona
+    /// Actualizar el nombre de una persona de la tabla: Persona
     /// </summary>
     public void Actualizar_BPersona_A_idPersona_fullName(EBPerson bPerson)
     {

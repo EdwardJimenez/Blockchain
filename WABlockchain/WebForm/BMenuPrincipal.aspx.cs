@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WABlockchain.Class;
 using WABlockchain.SWLNBlockchainService;
 using System.Globalization;
 
@@ -13,10 +12,22 @@ namespace WABlockchain.WebForm
 {
     public partial class BMenuPrincipal : System.Web.UI.Page
     {
-        private static Helper _helper = new Helper();
+        /// <summary>
+        /// Creación de la instancia swLNBlockchainCliente, perteneciente a al servicio de la 
+        /// capa de negocio que nos permite conectar con la capa Acceso a Datos para conectarnos
+        /// con la Base de Datos
+        /// </summary>
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+            ////// Control de usuarios: Inicio de session de acuerdo a 4 roles de usuarios:
+            ///ReadOnly
+            ///Secretaria
+            ///Admin
+            /// VRA
+            /// De acuerdo al usuario con un rol que ingrese al sistema, tiene restricción de visualización
+            /// de ciertos elementos.
+            ///
             if (!IsPostBack) 
             {
                 if (Session["Rol"] != null)
@@ -73,6 +84,20 @@ namespace WABlockchain.WebForm
             }
         }
 
+        /// <summary>
+        /// btnRegistrarUsuario_Click
+        /// btnRegistrarTitulo_Click
+        /// btnRegistrarUsuarioNetvalle_Click
+        /// btnConfirmarTitulo_Click
+        /// btnImprimirTitulo_Click
+        /// btnSolicitarTitulo_Click
+        /// btnEnviarTitulos_Click
+        /// btnRecibirTitulo_Click
+        /// Los eventos de estos botones tienen la función de redireccionar al usuario
+        /// de la página actual a otra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             Response.Redirect("BRegistroUsuarioNuevo.aspx");
@@ -109,6 +134,15 @@ namespace WABlockchain.WebForm
             Response.Redirect("BEstado7.aspx");
         }
 
+
+        /// <summary>
+        /// Boton de Búsqueda por: Facultad y Carrera
+        /// Este evento realiza la busqueda de una facultad y carrera existente mediante un textbox
+        /// El parametro searchFacultyCarreer es enviado al metodo Search_BTitle_Faculty_Carrer_Date 
+        /// de la capa de negocio, una vez encontrado los datos, estos se desplegan en un grid.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnSearch_Click1(object sender, EventArgs e)
         {
             string searchFacultyCarreer = txtBuscador.Text;
@@ -147,6 +181,14 @@ namespace WABlockchain.WebForm
             }
         }
 
+        /// <summary>
+        /// Boton Buscar por Fecha : Este evento realiza una busqueda
+        /// de los titulos de acuerdo al rango de fecha que se seleccione en el calendar, 
+        /// enviando los parámetros fechaInicio y fechaFin al metodo Search_BTitle_Date que se encuentra
+        /// en nuestra capa de negocio. Una vez enviando los parametros se lista en el grid los datos recuperados.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnSearchDate_Click(object sender, EventArgs e)
         {
             DateTime fechaInicio = FechaInicio.SelectedDate;
