@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/MPInicio.Master" AutoEventWireup="true" CodeBehind="BEstado3.aspx.cs" Inherits="WABlockchain.WebForm.BEstado3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../Estilo/EstiloRegistros/EstiloRegistroUsuario.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style10 {
+            text-align: center;
+            margin-left: 78px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -18,7 +25,7 @@
 <fieldset id="field">
 <legend class="sub">LISTA PARA IMPRESION DE TITULOS
     </legend>
-
+    <div style="overflow: auto; height: 250px">
 <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
 <Columns>
 <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
@@ -42,7 +49,7 @@
 </Columns>
 </asp:GridView>
 
-
+        </div>
 
 
 

@@ -16,8 +16,6 @@
                         <td class="cel">
                             <asp:TextBox ID="txtFechaEmision" runat="server" CssClass="finicio" TextMode="Date" />
 
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFechaEmision" ErrorMessage="Requiere la Fecha de emision" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-
                         </td>
                         <asp:Label ID="Label2" runat="server" CssClass="lbl"></asp:Label>
                     </tr>
@@ -29,7 +27,6 @@
                         </td>
                         <td class="cel">
                             <asp:TextBox ID="txtTitulado" runat="server" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTitulado" ErrorMessage="Requiere el Titulado" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -41,38 +38,35 @@
                                 <asp:ListItem Value="A">Acto de Graduacion</asp:ListItem>
                                 <asp:ListItem Value="S">Solicitud Privada</asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlMetodoEntrega" ErrorMessage="Requiere el Metodo de entrega" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                 </table>
             </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label ID="lblmsg" runat="server" ForeColor="#CC0000"></asp:Label>
             <div class="contein">
                 <div class="Registrar">
                     <asp:Button ID="btnRegistrar" runat="server" class="btn" Text="REGISTRAR" OnClick="btnRegistrar_Click" Width="212px" />
                     &nbsp;&nbsp;
                 </div>
-                <div>
-                    
-<asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" OnSelectedIndexChanged="grvTitulos_SelectedIndexChanged">
-<Columns>
-<asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
-<HeaderStyle CssClass="hidden" />
-<ItemStyle CssClass="hidden" />
-<FooterStyle CssClass="hidden" />
-</asp:BoundField>
-<asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="TITULADO" ItemStyle-CssClass="itName" SortExpression="name" />
-<asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
-<asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+                <div style="overflow: auto; height: 250px">
 
-<asp:TemplateField>
-<ItemTemplate>
-<asp:Button runat="server" OnClick="Subir_Click" CommandName="Actualizar" HeaderText="Subir" ItemStyle-CssClass="btButton" Text="Registrar entrega" />
-</ItemTemplate>
-</asp:TemplateField>
-</Columns>
-</asp:GridView>
-
-    
+                    <asp:GridView ID="grvTitulos" CssClass="gridview" style="align-content:center; margin-left: 135px" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
+                                <HeaderStyle CssClass="hidden" />
+                                <ItemStyle CssClass="hidden" />
+                                <FooterStyle CssClass="hidden" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="TITULADO" ItemStyle-CssClass="itName" SortExpression="name" />
+                            <asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
+                            <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button runat="server" OnClick="Subir_Click" CommandName="Actualizar" HeaderText="Subir" ItemStyle-CssClass="btButton" Text="Registrar entrega" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
                 </div>
                 <div>
                     <asp:Label ID="Label9" runat="server" CssClass="msj" Text="El título se registró exitosamente" Visible="false"></asp:Label>

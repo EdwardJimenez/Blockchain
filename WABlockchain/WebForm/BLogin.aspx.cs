@@ -11,10 +11,17 @@ namespace WABlockchain.WebForm
     public partial class BLogin : System.Web.UI.Page
     {
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
-        static int only = 1; //Son variables predeterminadas para igualar el rol obtenido y así asignarle uno
+        /// <summary>
+        /// Son variables staticas predeterminadas para igualar el rol obtenido y así asignarle uno
+        /// </summary>
+        static int only = 1; 
         static int admin = 2;
         static int secretaria = 3;
         static int vra = 4;
+
+        /// <summary>
+        /// Metodo que obtiene el rol y compara las credenciales
+        /// </summary>
         private void CargarRolUser()
         {
             lblError.Visible = false;
@@ -28,6 +35,7 @@ namespace WABlockchain.WebForm
             }
             else
             {
+                //Se almacena en la variable y determina si existe un usuario.
                 int rolUser = this.LRol.Text != "" ? Convert.ToInt32(this.LRol.Text) : 0;
                 if (only == rolUser)
                 {
@@ -64,11 +72,21 @@ namespace WABlockchain.WebForm
         protected void Page_Load(object sender, EventArgs e)
         {
             lblError.Visible = false;
+            if (!IsPostBack)
+            {
+                if (Session["Rol"] != null)
+                {
+                    Response.Redirect("BMenuPrincipal.aspx");
+                }
+            }
         }
-
+        /// <summary>
+        /// Boton que acciona el metodo que compara si estan correctas las credenciales
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnCargar_Click(object sender, EventArgs e)
         {
-            
             CargarRolUser();            
         }
     }
