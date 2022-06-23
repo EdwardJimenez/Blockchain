@@ -49,7 +49,6 @@ namespace WABlockchain.WebForm
         {
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvTitulos.Rows[id].Cells[0].Text);
-
             swLNBlockchainClient.BTittle_update_statusTittle_3(s.ToString());
             cargarTitulos();
         }
