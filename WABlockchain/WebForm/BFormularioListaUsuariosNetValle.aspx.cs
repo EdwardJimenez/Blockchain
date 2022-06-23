@@ -23,6 +23,10 @@ namespace WABlockchain.WebForm
         {
             //Errorsito jaja By pedro 
         }
+
+        /// <summary>
+        /// Carga a los usuarios y a su carrera , facultad respectiva
+        /// </summary>
         private void CargarRequerimientos()
         {
             List<IUserCareerCompleja> lstProgramaRequerimientoCompleja = new List<IUserCareerCompleja>();
@@ -30,6 +34,11 @@ namespace WABlockchain.WebForm
             grvUsersNetvalle.DataSource = lstProgramaRequerimientoCompleja;
             grvUsersNetvalle.DataBind();
         }
+        /// <summary>
+        /// Manda el ID de la persona asignada y lo envia al apartado de Registrar titulos por la secretaria
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn1_Click(object sender, EventArgs e)
         {
 
@@ -38,6 +47,11 @@ namespace WABlockchain.WebForm
             Session["idUsuario"] = s;
             Response.Redirect("BFormularioCRUDTitulos.aspx");
         }
+        /// <summary>
+        /// Es un buscador por medio del nombre de un estudiante
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         protected void txtNombre_TextChanged(object sender, EventArgs e)
         {

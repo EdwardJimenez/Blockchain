@@ -14,6 +14,11 @@ public class CNCareer
     {
         aDNCareer = new ADNCareer();
     }
+    /// <summary>
+    /// Agrega los campos de las entidades de Carrera y los compara con el metodo del procedimiento almacenado
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     public ENCareer Obtener_Carrerra_O_ID_Pedro(string id)
     {
         ENCareer eNCareer = new ENCareer();

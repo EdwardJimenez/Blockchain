@@ -14,7 +14,10 @@ public class CNPerson
         aDNPerson = new ADNPerson();
     }
 
-
+    /// <summary>
+    /// Obtienes el dato de un solo estudiante
+    /// </summary>
+    /// <returns></returns>
     public ENPerson Obtener_Persona_O_Estudiante()
     {
         ENPerson eNPersona = new ENPerson();
@@ -33,6 +36,11 @@ public class CNPerson
         }
         return NPersona;
     }
+
+    /// <summary>
+    /// Obtienes los datos de uba sola persona
+    /// </summary>
+    /// <returns></returns>
     public List<ENPerson> Obtener_Persona_O()
     {
         ENPerson eNPersona = new ENPerson();
@@ -54,6 +62,11 @@ public class CNPerson
         return lstNPersona;
     }
 
+
+    /// <summary>
+    /// Obtienes los datos de una lista de estudiantes
+    /// </summary>
+    /// <returns></returns>
     public List<ENPerson> Obtener_Persona_O_EstudianteL()
     {
         ENPerson eNPersona = new ENPerson();
@@ -74,6 +87,12 @@ public class CNPerson
         }
         return lstNPersona;
     }
+
+
+    /// <summary>
+    /// Obtienes una lista de datos de todas las personas
+    /// </summary>
+    /// <returns></returns>
     public List<ENPerson> Obtener_Persona_O_L()
     {
         ENPerson eNPersona = new ENPerson();
@@ -94,6 +113,12 @@ public class CNPerson
         }
         return lstNPersona;
     }
+
+    /// <summary>
+    /// Obtienes los datos de personas que tengan el Nombre asignado
+    /// </summary>
+    /// <param name="Fullname"></param>
+    /// <returns></returns>
     public List<ENPerson> Obtener_Persona_O_Nombre(string Fullname)
     {
         ENPerson eNPersona = new ENPerson();
@@ -113,6 +138,11 @@ public class CNPerson
         }
         return lstNPersona;
     }
+    /// <summary>
+    /// Obtienes una lista de personas por medio de su ID
+    /// </summary>
+    /// <param name="ID"></param>
+    /// <returns></returns>
     public List<ENPerson> Obtener_Persona_O_ID(int ID)
     {
         ENPerson eNPersona = new ENPerson();

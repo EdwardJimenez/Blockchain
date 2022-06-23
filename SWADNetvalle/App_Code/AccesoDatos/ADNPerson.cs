@@ -12,7 +12,11 @@ using System.Web;
 public class ADNPerson
 {
 
-    //Pedro Conde: Estoy usando un procedimiento almacenado creado por mi para probar
+
+    /// <summary>
+    /// Obtiene los datos de los estudiantes
+    /// </summary>
+    /// <returns></returns>
 
     public DTONPerson Obtener_Persona_O_Estudiante()
     {
@@ -29,6 +33,11 @@ public class ADNPerson
         }
         return dTONPerson;
     }
+    /// <summary>
+    /// Obtiene los datos del estudiante por medio de su nombre
+    /// </summary>
+    /// <param name="Fullname"></param>
+    /// <returns></returns>
     public DTONPerson Obtener_Persona_O_Nombre(string Fullname)
     {
         DTONPerson dTONPerson = new DTONPerson();
@@ -47,7 +56,11 @@ public class ADNPerson
     }
 
 
-
+    /// <summary>
+    /// Obtiene los datos del estudiante por medio de su ID
+    /// </summary>
+    /// <param name="ID"></param>
+    /// <returns></returns>
     public DTONPerson Obtener_Persona_O_ID(int ID)
     {
         DTONPerson dTONPerson = new DTONPerson();
@@ -64,6 +77,10 @@ public class ADNPerson
         }
         return dTONPerson;
     }
+    /// <summary>
+    /// Obtiene los datos de todas las personas 
+    /// </summary>
+    /// <returns></returns>
     public DTONPerson Obtener_Person_O()
     {
         DTONPerson dTONPerson = new DTONPerson();
@@ -82,6 +99,12 @@ public class ADNPerson
     }
 
 
+    /// <summary>
+    /// Obtiene a un usuario por medio de su Email y Contraseña
+    /// </summary>
+    /// <param name="Mail"></param>
+    /// <param name="Password"></param>
+    /// <returns></returns>
 
     public DTONPerson Obtener_Persona_O_Account(string Mail, string Password)
     {
@@ -101,6 +124,11 @@ public class ADNPerson
         return dTONPerson;
     }
 
+    /// <summary>
+    ///  Obtiene los datos de una persona por medio de su Rol
+    /// </summary>
+    /// <param name="Rol"></param>
+    /// <returns></returns>
     public DTONPerson Obtener_Persona_O_Rol(string Rol)
     {
         DTONPerson dTONPerson = new DTONPerson();
@@ -119,6 +147,10 @@ public class ADNPerson
     }
 
 
+    /// <summary>
+    /// Obtiene los datos de los estudiantes para agregarlos a un metodo complejo
+    /// </summary>
+    /// <returns></returns>
     public DTONPerson Obtener_Persona_O_EstudianteCompleto()
     {
         DTONPerson dTONPerson = new DTONPerson();
