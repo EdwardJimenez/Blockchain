@@ -25,7 +25,7 @@ namespace WABlockchain.WebForm
             try
             {
                 string nombreEst;
-                if (txtSegundoApellido.Text != "")
+                if (txtSegundoApellido.Text != "") //revisa si hay un segundo apellido
                 {
                     nombreEst = (txtNombrePersona.Text).Trim() + " " + (txtPrimerApellido.Text).Trim() + " " + (txtSegundoApellido.Text).Trim();
                 }
@@ -35,7 +35,7 @@ namespace WABlockchain.WebForm
                 }
                 List<EBTittle> lstTitle = new List<EBTittle>();
                 lstTitle = swLNBlockchainClient.Search_BTitle(nombreEst, txtCarrera.Text, txtFacultad.Text).ToList();
-                if (lstTitle.Count() == 0)
+                if (lstTitle.Count() == 0) //verifica si se encontro el titulo
                 {
                     lblMensaje.Text = "No se encontro el titulo verifica tus datos";
                 }

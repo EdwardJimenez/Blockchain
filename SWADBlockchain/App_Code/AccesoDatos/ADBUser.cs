@@ -13,17 +13,20 @@ using System.Data;
 /// </summary>
 public class ADBUser
 {
+    /// <summary>
+    /// Obtener los datos de un usuario al momento de ingresar con su cuenta
+    /// </summary>
+    /// <param Correo="email"></param>
+    /// <param Contraseña="password"></param>
+    /// <returns Retorna los datos del usuario ></returns>
     public DTOBUser Obtener_RolUser_O_Search(string email, string password)
     {
-        //
-        //Metodo select por medio del ID
-        //
         DTOBUser dTOBUser = new DTOBUser();
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
 
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O_Search"); //Select rol from User
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BRolUser_O_Search");
             BDSWADBlockchain.AddInParameter(dbCommand, "email", DbType.String, email);
             BDSWADBlockchain.AddInParameter(dbCommand, "password", DbType.String, password);
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBUser, "BUser");
@@ -36,17 +39,18 @@ public class ADBUser
         }
         return dTOBUser;
     }
+    /// <summary>
+    /// Seleciona todos los usuarios
+    /// </summary>
+    /// <returns Retorna una lista de usuarios ></returns>
     public DTOBUser Obtener_User_O()
     {
-        //
-        //Metodo select por medio del ID
-        //
         DTOBUser dTOBUser = new DTOBUser();
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
 
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BUser"); //Select * from User
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BUser");
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBUser, "BUser");
         }
         catch (Exception)
@@ -56,7 +60,11 @@ public class ADBUser
         }
         return dTOBUser;
     }
-
+    /// <summary>
+    /// Obtener los datos de un usuario con su id
+    /// </summary>
+    /// <param IdUsuario="iduser"></param>
+    /// <returns Retorna los datos del usuario segun su id ></returns>
     public DTOBUser Obtener_BUser_O_iduser(string iduser)
     {
         DTOBUser dtoBUser = new DTOBUser();
@@ -73,33 +81,10 @@ public class ADBUser
         }
         return dtoBUser;
     }
-
-    /*public void Insertar_BUser_I_idUser_email(EBUser bUser)
-    {
-        try
-        {
-            Database BDSWADNETIntEx = SBaseDatos.BDSWADBlockchain;
-            DbCommand dbCommand = BDSWADNETIntEx.GetStoredProcCommand("BUser_I_idUser_email");
-            BDSWADNETIntEx.AddInParameter(dbCommand, "IdUser", DbType.String, bUser.IdUser);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "email", DbType.String, bUser.Email);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "password", DbType.String, bUser.Password);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "status", DbType.String, bUser.status);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "userNetvalle", DbType.String, bUser.UserNetvalle);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "IdrolUser", DbType.String, bUser.IdRolUser);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "fullName", DbType.String, bUser.Fullname);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "cellphone", DbType.String, bUser.Cellphone);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "ci", DbType.String, bUser.CI);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "descripcion", DbType.String, bUser.Descripcion);
-            BDSWADNETIntEx.AddInParameter(dbCommand, "ciExtra", DbType.String, bUser.CIExtra);
-            BDSWADNETIntEx.ExecuteNonQuery(dbCommand);
-            
-        }
-        catch (Exception)
-        {
-            throw;
-        }
-    }
-    */
+    /// <summary>
+    /// Insertar usuario
+    /// </summary>
+    /// <param User="bUser"></param>
     public void Insertar_BUser_I(EBUser bUser)
     {
         try
@@ -127,8 +112,9 @@ public class ADBUser
         }
     }
     /// <summary>
-    /// Actualizar Title
+    /// Actualiza el email de un usuario segun el id
     /// </summary>
+    /// <param User="bUser"></param>
     public void Actualizar_BUser_I_idUser_email(EBUser bUser)
     {
         try
