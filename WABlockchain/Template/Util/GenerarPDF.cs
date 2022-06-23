@@ -10,11 +10,19 @@ namespace WABlockchain.Template.Util
 {
     public class GenerarPDF
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public GenerarPDF()
         {
                 
         }
-
+        /// <summary>
+        /// Metodo que Genera el Titulo en base a un Template diseñado, que se almacena en la carpeta Template.
+        /// </summary>
+        /// <param name="fullname"></param>
+        /// <param name="carreer"></param>
+        /// <returns>Ruta del TituloPDF Generado</returns>
         public string GenerarNuevoPDF(string fullname, string carreer)
         {
             string filePath = HttpContext.Current.Request.MapPath("~/Template/");
