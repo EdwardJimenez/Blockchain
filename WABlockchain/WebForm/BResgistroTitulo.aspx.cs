@@ -19,6 +19,7 @@ namespace WABlockchain.WebForm
         private static int s;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 if (Session["Rol"] != null)
@@ -71,19 +72,29 @@ namespace WABlockchain.WebForm
 
             try
             {
-                if (Facultad.Equals("") || Carrera.Equals("") || NombreCompleto.Equals(""))
+                List<EBTittle> lstTitle = new List<EBTittle>();
+                lstTitle = swLNBlockchainClient.Search_BTitle(NombreCompleto, Carrera, Facultad).ToList();
+
+                if (lstTitle.Count() > 0)
                 {
-                    lblmensaje.Text = "Lo campos no deben estar vacíos!!!";
+                    lblmensaje.Text = "Ya existe un registro";
+                    lblmensaje.Visible = true;
                 }
                 else
                 {
-                    string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
-                    swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", NombreCompleto.ToUpper());
-                    cargarTitulos();
-                    lblmensaje.Text = "Registro de Título Exitoso!!!";
-                    LimpiarTitulos();
+                    if (Facultad.Equals("") || Carrera.Equals("") || NombreCompleto.Equals(""))
+                    {
+                        lblmensaje.Text = "Lo campos no deben estar vacíos!!!";
+                    }
+                    else
+                    {
+                        string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
+                        swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", NombreCompleto.ToUpper());    
+                        cargarTitulos();
+                        lblmensaje.Text = "Registro de Título Exitoso!!!";
+                        LimpiarTitulos();
+                    }
                 }
-               
             }
             catch (Exception)
             {
@@ -101,11 +112,21 @@ namespace WABlockchain.WebForm
         }
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
+            string Facultad = txtFacultad.Text;
+            string Carrera = txtCarrera.Text;
+            string NombreCompleto = txtNombre.Text;
             try
             {
-                swLNBlockchainClient.Actualizar_ITitle(txtId.Text, txtCarrera.Text.ToUpper(), txtFacultad.Text.ToUpper(), txtNombre.Text.ToUpper());
-                cargarTitulos();
-                LimpiarTitulos();
+                if (Facultad.Equals("") || Carrera.Equals("") || NombreCompleto.Equals(""))
+                {
+                    lblmensaje.Text = "Lo campos no deben estar vacíos!!!";
+                }
+                else
+                {
+                    swLNBlockchainClient.Actualizar_ITitle(txtId.Text, Carrera.ToUpper(), Facultad.ToUpper(), NombreCompleto.ToUpper());
+                    cargarTitulos();
+                    LimpiarTitulos();
+                }
             }
             catch (Exception)
             {
@@ -126,7 +147,6 @@ namespace WABlockchain.WebForm
         {
             try
             {
-
                 int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
                 string nombreCompleto = grvTitulos.Rows[id].Cells[1].Text;
                 string carrera = grvTitulos.Rows[id].Cells[3].Text;
