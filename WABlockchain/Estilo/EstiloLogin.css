@@ -43,4 +43,5 @@
 .botons, password, cargar {
     text-align: center;
     cursor: pointer;
+    margin-left: 40px;
 }

@@ -60,7 +60,11 @@ namespace WABlockchain.WebForm
                 }
             }
         }
-        //Registras a los usuarios normales como los Netvalle
+        /// <summary>
+        /// Registras a los usuarios normales como los Netvalle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombreEstudiante.Text;
@@ -85,7 +89,9 @@ namespace WABlockchain.WebForm
             {
             }
         }
-        // Aqui se carga los roles que puede tener un usuario para registrarlo
+        /// <summary>
+        /// Aqui se carga los roles que puede tener un usuario para registrarlo
+        /// </summary>// 
         private void CargarRolUser()
         {
             ddlRol.Items.Clear();

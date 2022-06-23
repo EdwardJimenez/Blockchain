@@ -44,6 +44,7 @@ namespace WABlockchain.WebForm
                             btnRecibirTitulo.Visible = false;
                             btnImprimirTitulo.Visible = false;
                             btnEnviarTitulos.Visible = false;
+                            btnEntregaTitulo.Visible = false;
                             break;
                         case "Secretaria":
                             btnRegistrarUsuario.Visible = false;
@@ -54,6 +55,7 @@ namespace WABlockchain.WebForm
                             btnRecibirTitulo.Visible = false;
                             btnImprimirTitulo.Visible = true;
                             btnEnviarTitulos.Visible = true;
+                            btnEntregaTitulo.Visible = true;
                             break;
                         case "Admin":
                             btnRegistrarUsuario.Visible = true;
@@ -64,6 +66,7 @@ namespace WABlockchain.WebForm
                             btnRecibirTitulo.Visible = false;
                             btnImprimirTitulo.Visible = false;
                             btnEnviarTitulos.Visible = false;
+                            btnEntregaTitulo.Visible = false;
                             break;
                         case "VRA":
                             btnRegistrarUsuario.Visible = false;
@@ -74,6 +77,7 @@ namespace WABlockchain.WebForm
                             btnRecibirTitulo.Visible = true;
                             btnImprimirTitulo.Visible = false;
                             btnEnviarTitulos.Visible = false;
+                            btnEntregaTitulo.Visible = false;
                             break;
                     }
                 }
@@ -93,6 +97,7 @@ namespace WABlockchain.WebForm
         /// btnSolicitarTitulo_Click
         /// btnEnviarTitulos_Click
         /// btnRecibirTitulo_Click
+        /// btnEntregaTitulo_Click
         /// Los eventos de estos botones tienen la función de redireccionar al usuario
         /// de la página actual a otra
         /// </summary>
@@ -132,6 +137,10 @@ namespace WABlockchain.WebForm
         protected void btnRecibirTitulo_Click(object sender, EventArgs e)
         {
             Response.Redirect("BEstado7.aspx");
+        }
+        protected void btnEntregaTitulo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("BEntregaTitulos.aspx");
         }
 
 

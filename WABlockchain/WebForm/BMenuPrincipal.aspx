@@ -55,10 +55,11 @@
                 <asp:Button ID="btnRegistrarUsuarioNetvalle" CssClass="btnsep" runat="server" Text="Registrar Usuario Netvalle" Width="198px" OnClick="btnRegistrarUsuarioNetvalle_Click"/>
                 <asp:Button ID="btnRegistrarTitulo" CssClass="btnsep" runat="server" Text="Registrar Titulo" Width="135px" OnClick="btnRegistrarTitulo_Click"/>   
                 <asp:Button ID="btnConfirmarTitulo" CssClass="btnsep" runat="server" Text="Confirmar " Width="135px" OnClick="btnConfirmarTitulo_Click"/>
-                <asp:Button ID="btnSolicitarTitulo" CssClass="btnsep" runat="server" Text="Solicitar" Width="135px" OnClick="btnSolicitarTitulo_Click"/>
                 <asp:Button ID="btnImprimirTitulo" CssClass="btnsep" runat="server" Text="Imprimir" Width="135px" OnClick="btnImprimirTitulo_Click"/>
                 <asp:Button ID="btnEnviarTitulos" CssClass="btnsep" runat="server" Text="Enviar" Width="135px" OnClick="btnEnviarTitulos_Click"/>
                 <asp:Button ID="btnRecibirTitulo" CssClass="btnsep" runat="server" Text="Recibido" Width="135px" OnClick="btnRecibirTitulo_Click"/>
+                <asp:Button ID="btnSolicitarTitulo" CssClass="btnsep" runat="server" Text="Solicitar" Width="135px" OnClick="btnSolicitarTitulo_Click"/>
+                <asp:Button ID="btnEntregaTitulo" CssClass="btnsep" runat="server" Text="Entrega Titulos" Width="135px" OnClick="btnEntregaTitulo_Click"/>
             </div>
         </div>
         <br/>

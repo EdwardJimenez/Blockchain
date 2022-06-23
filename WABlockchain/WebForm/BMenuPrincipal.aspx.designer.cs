@@ -123,15 +123,6 @@ namespace WABlockchain.WebForm
         protected global::System.Web.UI.WebControls.Button btnConfirmarTitulo;
 
         /// <summary>
-        /// Control btnSolicitarTitulo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSolicitarTitulo;
-
-        /// <summary>
         /// Control btnImprimirTitulo.
         /// </summary>
         /// <remarks>
@@ -157,5 +148,23 @@ namespace WABlockchain.WebForm
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRecibirTitulo;
+
+        /// <summary>
+        /// Control btnSolicitarTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSolicitarTitulo;
+
+        /// <summary>
+        /// Control btnEntregaTitulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEntregaTitulo;
     }
 }

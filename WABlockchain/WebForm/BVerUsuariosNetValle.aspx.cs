@@ -35,7 +35,9 @@ namespace WABlockchain.WebForm
                 }
             }
         }
-        //Se carga el grid view para poder visualizar a los usuarios al momento de ingresar a la pagina
+        /// <summary>
+        /// Se carga el grid view para poder visualizar a los usuarios al momento de ingresar a la pagina
+        /// </summary>
         private void CargarRequerimientos()
         {
             List<IUserCareerCompleja> lstProgramaRequerimientoCompleja = new List<IUserCareerCompleja>();
@@ -43,8 +45,12 @@ namespace WABlockchain.WebForm
             grvUsersNetvalle.DataSource = lstProgramaRequerimientoCompleja;
             grvUsersNetvalle.DataBind();
         }
-        //Aqui se agarra el ID de un usuario para poder mandar ese ID a la pantalla de registro de usuarios a la Base de datos 
-        // para poder ser registrado 
+        /// <summary>
+        /// Aqui se agarra el ID de un usuario para poder mandar ese ID a la pantalla de registro de usuarios a la Base de datos
+        /// para poder ser registrado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn1_Click(object sender, EventArgs e)
         {
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;

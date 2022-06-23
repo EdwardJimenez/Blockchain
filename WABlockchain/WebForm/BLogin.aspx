@@ -100,16 +100,16 @@
                     BIENVENIDO<br />
                 </div>
                 <div class="botons">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox CssClass="nombre" ID="txtNombre" placeholder="User Name" runat="server" Height="37px" Width="202px"></asp:TextBox>
-                    <asp:Label ID="LC1" runat="server" Text="Label" Visible="False"></asp:Label>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe ingresar usuario" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-                    <br />
+                    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox CssClass="password" ID="txtPassword" TextMode="Password" placeholder="Password" runat="server" Height="37px" Width="202px"></asp:TextBox>
-                    <asp:Label ID="LRol" runat="server" Text="Label" Visible="False"></asp:Label>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Debe ingresar contraseña" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                     <asp:Label ID="lblError" runat="server" ForeColor="#CC0000"></asp:Label>
+                    <asp:Label ID="LRol" runat="server" Text="Label" Visible="False"></asp:Label>
                     <br />
                     <asp:Button CssClass="cargar" ID="btnCargar" runat="server" Text="Iniciar Sesion" Height="44px" Width="146px" OnClick="btnCargar_Click" />
                 </div>
