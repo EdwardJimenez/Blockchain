@@ -13,13 +13,18 @@ using System.Data;
 public class ADBQr
 {
     #region MÉTODOS CRUD PROCEDIMIENTOS ALMACENADOS - QR
+
+    /// <summary>
+    /// Método que realiza la consulta: Select * from QR, retornando los datos obtenidos
+    /// </summary>
+    /// <returns></returns>
     public DTOBQrt Obtener_Qr_O()
     {
         DTOBQrt dTOBQr = new DTOBQrt();
         try
         {
             Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
-            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BQr"); //Select * from QR
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BQr"); 
             BDSWADBlockchain.LoadDataSet(dbCommand, dTOBQr, "BQr");
         }
         catch (Exception)
@@ -30,6 +35,12 @@ public class ADBQr
         return dTOBQr;
     }
 
+
+    /// <summary>
+    /// Método que realiza la consulta de obtener lo datos de la tabla: Qr, mediante el ID
+    /// </summary>
+    /// <param name="Id_Qr"></param>
+    /// <returns></returns>
     public DTOBQrt Obtener_BQr_O_idQR(string Id_Qr)
     {
         DTOBQrt dTOBQr = new DTOBQrt();
@@ -47,6 +58,11 @@ public class ADBQr
         return dTOBQr;
     }
 
+
+    /// <summary>
+    /// Método que realiza la inserción de datos: registerDate, a la tabla Qr
+    /// </summary>
+    /// <param name="bQr"></param>
     public void Insertar_BQr_I_Qr(EBQr bQr)
     {
         try
@@ -61,8 +77,9 @@ public class ADBQr
             throw;
         }
     }
+
     /// <summary>
-    /// Actualizar QR
+    /// Actualizar la tabla: QR por medio del dato: registerDate
     /// </summary>
     public void Actualizar_BQr_A_idQR_registerDate(EBQr bQR)
     {
