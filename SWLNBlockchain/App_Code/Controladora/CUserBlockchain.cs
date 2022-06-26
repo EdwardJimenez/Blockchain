@@ -456,6 +456,19 @@ public class CUserBlockchain
         }
     }
 
+    public List<EBTittle> Obtener_Title_O_ListGraduates()
+    {
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        try
+        {
+            eBTitle = asBlockchain.Obtener_Title_O_ListGraduates().ToList();
+            return eBTitle;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
 
     #endregion
 

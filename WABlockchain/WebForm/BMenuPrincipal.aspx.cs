@@ -20,6 +20,7 @@ namespace WABlockchain.WebForm
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+            ListarTituladosGeneral();
             ////// Control de usuarios: Inicio de session de acuerdo a 4 roles de usuarios:
             ///ReadOnly
             ///Secretaria
@@ -234,6 +235,17 @@ namespace WABlockchain.WebForm
             {
                 lblmensaje.Text = ex.Message;
             }
+        }
+        /// <summary>
+        /// Carga o lista de los titulados en general
+        /// </summary>
+        private void ListarTituladosGeneral()
+        {
+            List<EBTittle> lstTitle = new List<EBTittle>();
+            lstTitle = swLNBlockchainClient.Obtener_Title_O_ListGraduates().ToList();
+            GridView1.DataSource = lstTitle;
+            GridView1.DataBind();
+            GridView1.SelectedIndex = 0;
         }
     }
 }

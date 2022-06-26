@@ -121,6 +121,9 @@ public interface ISWLNBlockchain
     [OperationContract]
     List<EBTittle> Search_BTitle_Date(DateTime fechaInicio, DateTime fechaFin);
 
+    [OperationContract]
+    List<EBTittle> Obtener_Title_O_ListGraduates();
+
     #endregion
 
     #region RolUser

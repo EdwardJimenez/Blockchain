@@ -216,6 +216,13 @@ public class SWADNETBlockchain : ISWADNETBlockchain
         return lstTitle;
     }
 
+    public List<EBTittle> Obtener_Title_O_ListGraduates()
+    {
+        CBTitle cBTitle = new CBTitle();
+        List<EBTittle> lstTitle = new List<EBTittle>();
+        lstTitle = cBTitle.Obtener_Title_O_ListGraduates();
+        return lstTitle;
+    }
     #endregion
 
     #region Helper
