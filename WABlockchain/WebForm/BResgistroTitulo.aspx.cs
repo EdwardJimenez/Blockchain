@@ -93,7 +93,7 @@ namespace WABlockchain.WebForm
             try
             {
                 List<EBTittle> lstTitle = new List<EBTittle>();
-                lstTitle = swLNBlockchainClient.Search_BTitle(NombreCompleto, Carrera, Facultad).ToList();
+                lstTitle = swLNBlockchainClient.Search_BTitle(NombreCompleto.ToUpper(), Carrera.ToUpper(), Facultad.ToUpper()).ToList();
 
                 if (lstTitle.Count() > 0)
                 {

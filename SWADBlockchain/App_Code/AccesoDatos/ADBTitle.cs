@@ -487,5 +487,23 @@ public class ADBTitle
         }
         return dTOBTitle;
     }
-
+    /// <summary>
+    /// Obtiene la lista de todos los titulados
+    /// </summary>
+    /// <returns>Retorna los datos de los titulados</returns>
+    public DTOBTitle Obtener_Title_O_ListGraduates()
+    {
+        DTOBTitle dTOBTitle = new DTOBTitle();
+        try
+        {
+            Database BDSWADBlockchain = SBaseDatos.BDSWADBlockchain;
+            DbCommand dbCommand = BDSWADBlockchain.GetStoredProcCommand("BTittle_O_ListGraduates");
+            BDSWADBlockchain.LoadDataSet(dbCommand, dTOBTitle, "BTittle");
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        return dTOBTitle;
+    }
 }

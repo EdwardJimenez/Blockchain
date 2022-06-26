@@ -230,6 +230,15 @@ public List<EBTittle> Obtener_Title_O()
         return eBTitle;
     }
 
+    public List<EBTittle> Obtener_Title_O_ListGraduates()
+    {
+
+        List<EBTittle> eBTitle = new List<EBTittle>();
+        CUserBlockchain cUserBlockchain = new CUserBlockchain();
+        eBTitle = cUserBlockchain.Obtener_Title_O_ListGraduates().ToList();
+        return eBTitle;
+    }
+
     #endregion
 
     #region RolUser

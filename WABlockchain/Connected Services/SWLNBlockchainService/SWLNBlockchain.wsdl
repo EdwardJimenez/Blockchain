@@ -199,6 +199,12 @@
   <wsdl:message name="ISWLNBlockchain_Search_BTitle_Date_OutputMessage">
     <wsdl:part name="parameters" element="tns:Search_BTitle_DateResponse" />
   </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_ListGraduates_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Title_O_ListGraduates" />
+  </wsdl:message>
+  <wsdl:message name="ISWLNBlockchain_Obtener_Title_O_ListGraduates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener_Title_O_ListGraduatesResponse" />
+  </wsdl:message>
   <wsdl:message name="ISWLNBlockchain_Obtener_RolUser_O_InputMessage">
     <wsdl:part name="parameters" element="tns:Obtener_RolUser_O" />
   </wsdl:message>
@@ -399,6 +405,10 @@
     <wsdl:operation name="Search_BTitle_Date">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date" message="tns:ISWLNBlockchain_Search_BTitle_Date_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse" message="tns:ISWLNBlockchain_Search_BTitle_Date_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Title_O_ListGraduates">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduates" message="tns:ISWLNBlockchain_Obtener_Title_O_ListGraduates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduatesResponse" message="tns:ISWLNBlockchain_Obtener_Title_O_ListGraduates_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Obtener_RolUser_O">
       <wsdl:input wsaw:Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O" message="tns:ISWLNBlockchain_Obtener_RolUser_O_InputMessage" />
@@ -732,6 +742,15 @@
     </wsdl:operation>
     <wsdl:operation name="Search_BTitle_Date">
       <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Obtener_Title_O_ListGraduates">
+      <soap:operation soapAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduates" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

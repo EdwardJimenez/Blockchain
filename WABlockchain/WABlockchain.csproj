@@ -182,7 +182,6 @@
     <Content Include="WebForm\BResgistroTitulo.aspx" />
     <Content Include="WebForm\BVerUsuariosNetValle.aspx" />
     <Content Include="WebForm\BEstado2.aspx" />
-    <Content Include="WebForm\MainPage.aspx" />
     <Content Include="Estilo\Estilo.css" />
     <Content Include="Estilo\EstiloUsuariosLocales.css" />
     <Content Include="Estilo\SGridView.css" />
@@ -337,13 +336,6 @@
     </Compile>
     <Compile Include="WebForm\BEstado2.aspx.designer.cs">
       <DependentUpon>BEstado2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\MainPage.aspx.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\MainPage.aspx.designer.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

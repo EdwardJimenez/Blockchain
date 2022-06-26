@@ -13,7 +13,7 @@
 <asp:GridView ID="grvUsersNetvalle" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="801px"
     >
 <Columns>
-<asp:BoundField DataField="IDPerson" ItemStyle-CssClass="hidden">
+<asp:BoundField DataField="IDPerson" ItemStyle-CssClass="hidden" Visible="false">
 <HeaderStyle CssClass="hidden" />
 <ItemStyle CssClass="hidden" />
 <FooterStyle CssClass="hidden" />

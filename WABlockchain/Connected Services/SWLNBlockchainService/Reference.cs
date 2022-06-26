@@ -1199,6 +1199,12 @@ namespace WABlockchain.SWLNBlockchainService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Search_BTitle_Date", ReplyAction="http://tempuri.org/ISWLNBlockchain/Search_BTitle_DateResponse")]
         System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_DateAsync(System.DateTime fechaInicio, System.DateTime fechaFin);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduates", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduatesResponse")]
+        WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O_ListGraduates();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduates", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_Title_O_ListGraduatesResponse")]
+        System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Obtener_Title_O_ListGraduatesAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_O", ReplyAction="http://tempuri.org/ISWLNBlockchain/Obtener_RolUser_OResponse")]
         WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O();
         
@@ -1561,6 +1567,14 @@ namespace WABlockchain.SWLNBlockchainService {
         
         public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Search_BTitle_DateAsync(System.DateTime fechaInicio, System.DateTime fechaFin) {
             return base.Channel.Search_BTitle_DateAsync(fechaInicio, fechaFin);
+        }
+        
+        public WABlockchain.SWLNBlockchainService.EBTittle[] Obtener_Title_O_ListGraduates() {
+            return base.Channel.Obtener_Title_O_ListGraduates();
+        }
+        
+        public System.Threading.Tasks.Task<WABlockchain.SWLNBlockchainService.EBTittle[]> Obtener_Title_O_ListGraduatesAsync() {
+            return base.Channel.Obtener_Title_O_ListGraduatesAsync();
         }
         
         public WABlockchain.SWLNBlockchainService.EBRoluser[] Obtener_RolUser_O() {
