@@ -59,7 +59,7 @@ namespace WABlockchain.WebForm
             {
                 lblmsg.Visible = false;
                 string modo = ddlMetodoEntrega.SelectedValue;
-                swLNBlockchainClient.Actualizar_BTittle_ConfirmarEntrega(titulado, fecha, modo);
+                swLNBlockchainClient.Actualizar_BTittle_ConfirmarEntrega(titulado.ToUpper(), fecha, modo.ToUpper());
                 cargarTitulos();
                 CamposDeshabilitados();
             }

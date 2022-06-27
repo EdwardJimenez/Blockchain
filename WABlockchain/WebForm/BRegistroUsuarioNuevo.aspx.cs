@@ -35,12 +35,12 @@ namespace WABlockchain.WebForm
                                 IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
                                 int IDUser = Convert.ToInt32(Session["idUsuario"]);
                                 iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
-                                txtNombreEstudiante.Text = iusercompleja.Fullname.ToString();
+                                txtNombreEstudiante.Text = iusercompleja.Fullname.ToString().ToUpper();
                                 txtTelefonos.Text = iusercompleja.Phone.ToString();
-                                txtCorreo.Text = iusercompleja.Mail.ToString();
-                                txtCi.Text = iusercompleja.CI.ToString();
-                                txtCiextra.Text = iusercompleja.ExtCI.ToString();
-                                txtSede.Text = iusercompleja.SedeName.ToString();
+                                txtCorreo.Text = iusercompleja.Mail.ToString().ToUpper();
+                                txtCi.Text = iusercompleja.CI.ToString().ToUpper();
+                                txtCiextra.Text = iusercompleja.ExtCI.ToString().ToUpper();
+                                txtSede.Text = iusercompleja.SedeName.ToString().ToUpper();
                             }
                             catch (Exception)
                             {
@@ -82,7 +82,7 @@ namespace WABlockchain.WebForm
             try
             {
                 string Id_User = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("User");
-                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email, Password, status, UsuarioNetvalle, ddlRol.SelectedValue, Fullname, Cellphone, CIUser, descripcion, ciExtra, sede);
+                swLNBlockchainClient.Insertar_BUser_I(Id_User, Email.ToUpper(), Password, status, UsuarioNetvalle.ToUpper(), ddlRol.SelectedValue.ToUpper(), Fullname.ToUpper(), Cellphone, CIUser.ToUpper(), descripcion.ToUpper(), ciExtra.ToUpper(), sede.ToUpper());
                 lblmsg.Visible = true;
             }
             catch (Exception)

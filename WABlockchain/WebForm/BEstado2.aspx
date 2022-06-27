@@ -25,7 +25,7 @@
                                         <div style="overflow: auto; height: 250px">
                                             <asp:GridView ID="grvTitulos" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
                                                 <Columns>
-                                                    <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden" Visible="false">
+                                                    <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
                                                         <HeaderStyle CssClass="hidden" />
                                                         <ItemStyle CssClass="hidden" />
                                                         <FooterStyle CssClass="hidden" />

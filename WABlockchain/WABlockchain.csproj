@@ -153,7 +153,6 @@
     <Content Include="WebForm\BEstado6.aspx" />
     <Content Include="WebForm\BEstado7.aspx" />
     <Content Include="WebForm\BFormularioBuscarTtulo.aspx" />
-    <Content Include="WebForm\BFormularioRegistroTitulo.aspx" />
     <Content Include="WebForm\BLogin.aspx" />
     <Content Include="WebForm\BMenuPrincipal.aspx" />
     <Content Include="WebForm\BRegistroUsuarioNuevo.aspx" />
@@ -172,13 +171,10 @@
     <Content Include="Estilo\Estilos.css" />
     <Content Include="Estilo\EstilosUsuariosNetvalle.css" />
     <Content Include="Estilo\SEstilo.css" />
-    <Content Include="WebForm\BFormularioCRUDTitulos.aspx" />
     <Content Include="WebForm\BEstado5.aspx" />
-    <Content Include="WebForm\BFormularioListaTitulos.aspx" />
     <Content Include="WebForm\BFormularioListaUsuariosNetValle.aspx" />
     <Content Include="Imagenes\logoLogin.PNG" />
     <Content Include="Imagenes\lupa1.jpg" />
-    <Content Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx" />
     <Content Include="WebForm\BResgistroTitulo.aspx" />
     <Content Include="WebForm\BVerUsuariosNetValle.aspx" />
     <Content Include="WebForm\BEstado2.aspx" />
@@ -253,13 +249,6 @@
     <Compile Include="WebForm\BFormularioBuscarTtulo.aspx.designer.cs">
       <DependentUpon>BFormularioBuscarTtulo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.cs">
-      <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\BFormularioCRUDTitulos.aspx.designer.cs">
-      <DependentUpon>BFormularioCRUDTitulos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebForm\BEstado5.aspx.cs">
       <DependentUpon>BEstado5.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,33 +256,12 @@
     <Compile Include="WebForm\BEstado5.aspx.designer.cs">
       <DependentUpon>BEstado5.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm\BFormularioListaTitulos.aspx.cs">
-      <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\BFormularioListaTitulos.aspx.designer.cs">
-      <DependentUpon>BFormularioListaTitulos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebForm\BFormularioListaUsuariosNetValle.aspx.cs">
       <DependentUpon>BFormularioListaUsuariosNetValle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm\BFormularioListaUsuariosNetValle.aspx.designer.cs">
       <DependentUpon>BFormularioListaUsuariosNetValle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.cs">
-      <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\BFormularioRegistrosUsuariosLocales.aspx.designer.cs">
-      <DependentUpon>BFormularioRegistrosUsuariosLocales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm\BFormularioRegistroTitulo.aspx.cs">
-      <DependentUpon>BFormularioRegistroTitulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm\BFormularioRegistroTitulo.aspx.designer.cs">
-      <DependentUpon>BFormularioRegistroTitulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm\BLogin.aspx.cs">
       <DependentUpon>BLogin.aspx</DependentUpon>

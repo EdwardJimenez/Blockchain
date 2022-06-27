@@ -69,6 +69,42 @@
                 width: 110px;
             }
 
+#backView {
+    width: 350px;
+    float: left;
+    padding: 10px 0 0 0;
+}
+
+    #backView ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: block;
+    }
+
+        #backView ul li {
+            width: 70px;
+            list-style: none;
+            display: inline;
+            float: left;
+            width: auto;
+            padding: 0px;
+            font-size: 12px;
+        }
+
+            #backView ul li a {
+                float: left;
+                text-decoration: none;
+                padding: 0px 200px 0 10px;
+                margin: 0px 4px 0 4px;
+                color: #fff;
+                text-align: center;
+                height: 31px;
+                line-height: 31px;
+                font-weight: bold;
+                width: 92px;
+            }
+
 .info_Usuario {
     display: block;
     margin: 0;

@@ -14,8 +14,8 @@ namespace WABlockchain.WebForm
         /// <summary>
         /// Son variables staticas predeterminadas para igualar el rol obtenido y así asignarle uno
         /// </summary>
-        static int only = 1; 
-        static int admin = 2;
+        static int admin = 1; 
+        static int only = 2;
         static int secretaria = 3;
         static int vra = 4;
 
@@ -26,7 +26,7 @@ namespace WABlockchain.WebForm
         {
             lblError.Visible = false;
             EBUser Rol = new EBUser();
-            Rol = swLNBlockchainClient.Obtener_RolUser_O_Search(txtNombre.Text, txtPassword.Text);
+            Rol = swLNBlockchainClient.Obtener_RolUser_O_Search(txtNombre.Text.ToUpper(), txtPassword.Text);
 
             this.LRol.Text = Rol.IdRolUser;
             if(txtNombre.Text=="" && txtPassword.Text=="")
@@ -37,16 +37,16 @@ namespace WABlockchain.WebForm
             {
                 //Se almacena en la variable y determina si existe un usuario.
                 int rolUser = this.LRol.Text != "" ? Convert.ToInt32(this.LRol.Text) : 0;
-                if (only == rolUser)
+                if (admin == rolUser)
                 {
                    
-                    Session["Rol"] = "ReadOnly";
+                    Session["Rol"] = "Admin";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
-                else if (admin == rolUser)
+                else if (only == rolUser)
                 {
                     
-                    Session["Rol"] = "Admin";
+                    Session["Rol"] = "ReadOnly";
                     Response.Redirect("BMenuPrincipal.aspx");
                 }
                 else if (secretaria == rolUser)

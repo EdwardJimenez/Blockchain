@@ -8,12 +8,12 @@
     <form id="form2" runat="server">
         <div>
 <fieldset id="field">
-<legend class="sub">Lista de Solicitudes</legend>
+<legend class="sub">Lista de Usuarios NetValle</legend>
   
 <asp:GridView ID="grvUsersNetvalle" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="801px"
     >
 <Columns>
-<asp:BoundField DataField="IDPerson" ItemStyle-CssClass="hidden" Visible="false">
+<asp:BoundField DataField="IDPerson" ItemStyle-CssClass="hidden">
 <HeaderStyle CssClass="hidden" />
 <ItemStyle CssClass="hidden" />
 <FooterStyle CssClass="hidden" />

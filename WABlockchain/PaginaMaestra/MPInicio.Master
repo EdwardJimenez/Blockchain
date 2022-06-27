@@ -15,6 +15,12 @@
     <link href="../Estilo/SEstiloFormulario.css" rel="stylesheet" />
     <link href="../Estilo/Estilo.css" rel="stylesheet" />
     <link href="../Estilo/EstiloUsuariosLocales.css" rel="stylesheet" />
+    <style type="text/css">
+        #backView {
+            height: 33px;
+            width: 140px;
+        }
+    </style>
 </head>
 <body>
     <div id="wrapper">
@@ -26,6 +32,13 @@
                         <ul>
                             <li>
                                 <a id="finishSession" href="../WebForm/BLogin.aspx" runat="server" onserverclick="btnCloseSession_Click">Cerrar Sesion</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="backView">
+                        <ul style="width: 273px; height: 24px">
+                            <li style="width: 277px; height: 26px">
+                                <a id="atras" href="~/WebForm/BMenuPrincipal.aspx" runat="server" onclick="btnAtras_Click">Atras</a>
                             </li>
                         </ul>
                     </div>
@@ -76,7 +89,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                    </div>
             </div>
             <div class="center_content">
                 <table style="width: 750px; text-align: center">

@@ -37,6 +37,24 @@ namespace WABlockchain.WebForm
                     {
                         cargarTitulos();
                         deshabilitarTextbox();
+                        CamposDeshabilitados();
+                        if (Session["idTitulo"] != null)
+                        {
+                            try
+                            {
+                                IUserCareerCompleja iusercompleja = new IUserCareerCompleja();
+                                int IDUser = Convert.ToInt32(Session["idTitulo"]);
+                                iusercompleja = swLNBlockchainClient.U_Obtener_UserCareerComplejas_O_Est_ID(IDUser)[0];
+                                txtNombre.Text = iusercompleja.Fullname.ToString().ToUpper();
+                                txtFacultad.Text = iusercompleja.FacultyName.ToString().ToUpper();
+                                txtCarrera.Text = iusercompleja.CareerName.ToString().ToUpper();
+                            }
+                            catch (Exception)
+                            {
+
+                                throw;
+                            }
+                        }
                     }
                     else
                     {
@@ -86,12 +104,12 @@ namespace WABlockchain.WebForm
         /// <param name="e"></param>
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string Facultad = txtFacultad.Text;
-            string Carrera = txtCarrera.Text;
-            string NombreCompleto = txtNombre.Text;
-
             try
             {
+                string Facultad = txtFacultad.Text;
+                string Carrera = txtCarrera.Text;
+                string NombreCompleto = txtNombre.Text;
+
                 List<EBTittle> lstTitle = new List<EBTittle>();
                 lstTitle = swLNBlockchainClient.Search_BTitle(NombreCompleto.ToUpper(), Carrera.ToUpper(), Facultad.ToUpper()).ToList();
 
@@ -99,17 +117,23 @@ namespace WABlockchain.WebForm
                 {
                     lblmensaje.Text = "Ya existe un registro";
                     lblmensaje.Visible = true;
+                    LimpiarTitulos();
+                    if (lblmensaje.Text.Equals("Ya existe un registro"))
+                    {
+                        Response.Redirect("BFormularioListaUsuariosNetValle.aspx");
+                    }
                 }
                 else
                 {
                     if (Facultad.Equals("") || Carrera.Equals("") || NombreCompleto.Equals(""))
                     {
+                        Response.Redirect("BFormularioListaUsuariosNetValle.aspx");
                         lblmensaje.Text = "Lo campos no deben estar vacíos!!!";
                     }
                     else
                     {
                         string Id_Titulo = swLNBlockchainClient.SiguienteID_O_NombreTablaSinElCaracterI("Tittle");
-                        swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", NombreCompleto.ToUpper());    
+                        swLNBlockchainClient.Insertar_BTitle(Id_Titulo, Facultad.ToUpper(), Carrera.ToUpper(), "1", NombreCompleto.ToUpper());
                         cargarTitulos();
                         lblmensaje.Text = "Registro de Título Exitoso!!!";
                         LimpiarTitulos();
@@ -141,11 +165,12 @@ namespace WABlockchain.WebForm
         /// <param name="e"></param>
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            string Facultad = txtFacultad.Text;
-            string Carrera = txtCarrera.Text;
-            string NombreCompleto = txtNombre.Text;
             try
             {
+                string Facultad = txtFacultad.Text;
+                string Carrera = txtCarrera.Text;
+                string NombreCompleto = txtNombre.Text;
+
                 if (Facultad.Equals("") || Carrera.Equals("") || NombreCompleto.Equals(""))
                 {
                     lblmensaje.Text = "Lo campos no deben estar vacíos!!!";
@@ -153,6 +178,7 @@ namespace WABlockchain.WebForm
                 else
                 {
                     swLNBlockchainClient.Actualizar_ITitle(txtId.Text, Carrera.ToUpper(), Facultad.ToUpper(), NombreCompleto.ToUpper());
+                    CamposDeshabilitados();
                     cargarTitulos();
                     LimpiarTitulos();
                 }
@@ -175,6 +201,7 @@ namespace WABlockchain.WebForm
                 txtFacultad.Text = grvTitulos.Rows[id].Cells[2].Text;
                 txtCarrera.Text = grvTitulos.Rows[id].Cells[3].Text;
                 txtId.Text = grvTitulos.Rows[id].Cells[0].Text;
+                CamposHabilitados();
         }
         /// <summary>
         /// Genera un archivo PDF y lo visualiza.
@@ -205,6 +232,30 @@ namespace WABlockchain.WebForm
                 throw;
             }
         }
+
+        /// <summary>
+        /// Desabilita los campos de entrada de datos
+        /// </summary>
+        private void CamposDeshabilitados()
+        {
+            txtFacultad.Enabled = false;
+            txtCarrera.Enabled = false;
+            txtNombre.Enabled = false;
+            btnActualizar.Enabled = false;
+            btnRegistrar.Enabled = true;
+        }
+        /// <summary>
+        /// Habilita los campos de entrada de datos
+        /// </summary>
+        private void CamposHabilitados()
+        {
+            txtFacultad.Enabled = true;
+            txtCarrera.Enabled = true;
+            txtNombre.Enabled = true;
+            btnActualizar.Enabled = true;
+            btnRegistrar.Enabled = false;
+        }
+
         /// <summary>
         /// Metodo para generar un codigo alfanumerico de 10 digitos.
         /// </summary>
