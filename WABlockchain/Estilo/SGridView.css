@@ -1,0 +1,26 @@
+﻿.gridview {
+    width: 100%;
+}
+
+    .gridview th {
+        color: white;
+        background-color: #64072D;
+        padding: 5px;
+    }
+
+    .gridview tr td {
+        padding: 5px;
+    }
+.hidden {
+    display: none;
+}
+.btButton {
+    text-align: center;
+}
+
+.csButton {
+    cursor: pointer;
+}
+
+
+

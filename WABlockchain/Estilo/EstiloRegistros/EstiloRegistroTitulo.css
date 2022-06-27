@@ -1,0 +1,40 @@
+﻿.container {
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.Registrar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lbl {
+    margin-left:20px;
+}
+
+.gridview{
+    text-align:center;
+}
+.auto-style7 {
+    width: 547px;
+    margin-left: 87.5px;
+}
+
+.auto-style8 {
+    text-align: right;
+    padding: 10px;
+    width: 173px;
+}
+.btn{
+    cursor:pointer;
+}
+.auto-style9 {
+    width: 173px;
+}
+.label{
+    margin-left:3000px;
+}
+.gridview{
+   /* text-align:center;*/
+    margin-left:78px;
+}

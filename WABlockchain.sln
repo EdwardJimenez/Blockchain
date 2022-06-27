@@ -1,9 +1,86 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32414.318
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WABlockchain", "WABlockchain\WABlockchain.csproj", "{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F063329-2A55-4A83-BAA6-C3A4B23687C7} = {5F063329-2A55-4A83-BAA6-C3A4B23687C7}
+		{1F3FA1C2-1120-4906-957F-62BF345AC667} = {1F3FA1C2-1120-4906-957F-62BF345AC667}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADBlockchain", "SWADBlockchain\", "{1F3FA1C2-1120-4906-957F-62BF345AC667}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59383"
+		Debug.AspNetCompiler.PhysicalPath = "SWADBlockchain\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59383\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59383"
+		Release.AspNetCompiler.PhysicalPath = "SWADBlockchain\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59383\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59383"
+		SlnRelativePath = "SWADBlockchain\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWADNetvalle", "SWADNetvalle\", "{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59389"
+		Debug.AspNetCompiler.PhysicalPath = "SWADNetvalle\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59389\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59389"
+		Release.AspNetCompiler.PhysicalPath = "SWADNetvalle\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59389\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59389"
+		SlnRelativePath = "SWADNetvalle\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{1F3FA1C2-1120-4906-957F-62BF345AC667} = {1F3FA1C2-1120-4906-957F-62BF345AC667}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SWLNBlockchain", "SWLNBlockchain\", "{5F063329-2A55-4A83-BAA6-C3A4B23687C7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53675"
+		Debug.AspNetCompiler.PhysicalPath = "SWLNBlockchain\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53675\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53675"
+		Release.AspNetCompiler.PhysicalPath = "SWLNBlockchain\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53675\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53675"
+		SlnRelativePath = "SWLNBlockchain\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{1F3FA1C2-1120-4906-957F-62BF345AC667} = {1F3FA1C2-1120-4906-957F-62BF345AC667}
+		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8} = {AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,11 +92,24 @@ Global
 		{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF512FD0-9AD3-4852-B8BD-BBA1C8BA818B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3FA1C2-1120-4906-957F-62BF345AC667}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8B27DA-C3D6-498A-ADDC-16090F6FB9B8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F063329-2A55-4A83-BAA6-C3A4B23687C7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1FD204E-BC5D-4285-929F-733F6764B615}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
