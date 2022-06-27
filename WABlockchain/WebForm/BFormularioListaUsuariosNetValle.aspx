@@ -7,7 +7,8 @@
 <fieldset id="field">
 <legend class="sub">Lista de Solicitudes</legend>
      <label for="">Buscar por nombre:       <asp:TextBox runat="server" ID="txtNombre" AutoPostBack ="true" OnTextChanged="txtNombre_TextChanged" /></label><br>
-     <asp:label ID="lblTest" runat="server">Tests</asp:label> 
+     <asp:label ID="lblTest" runat="server">Tests</asp:label>
+<div style="overflow: auto; height: 450px">
 <asp:GridView ID="grvUsersNetvalle" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" >
 <Columns>
 <asp:BoundField DataField="IDPerson" ItemStyle-CssClass="hidden">
@@ -29,6 +30,7 @@
                     </asp:TemplateField>
 </Columns>
 </asp:GridView> 
+    </div>
 </fieldset>
 </div>
 

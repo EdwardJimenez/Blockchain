@@ -15,7 +15,24 @@ namespace WABlockchain.WebForm
         SWLNBlockchainClient swLNBlockchainClient = new SWLNBlockchainClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarRequerimientos();
+            if(!IsPostBack)
+            {
+                if (Session["Rol"] != null)
+                {
+                    if (Session["Rol"].ToString() == "Secretaria")
+                    {
+                        CargarRequerimientos();
+                    }
+                    else
+                    {
+                        Response.Redirect("BMenuPrincipal.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("BLogin.aspx");
+                }
+            }
         }
 
 
@@ -41,11 +58,10 @@ namespace WABlockchain.WebForm
         /// <param name="e"></param>
         protected void btn1_Click(object sender, EventArgs e)
         {
-
             int id = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
             int s = int.Parse(grvUsersNetvalle.Rows[id].Cells[0].Text);
-            Session["idUsuario"] = s;
-            Response.Redirect("BFormularioCRUDTitulos.aspx");
+            Session["idTitulo"] = s;
+            Response.Redirect("BResgistroTitulo.aspx");
         }
         /// <summary>
         /// Es un buscador por medio del nombre de un estudiante

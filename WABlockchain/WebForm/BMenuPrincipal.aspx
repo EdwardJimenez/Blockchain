@@ -37,7 +37,7 @@
             <div style="overflow: auto; height: 250px">
             <asp:GridView ID="GridView1" CssClass="gridview" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" Width="536px" Height="208px">
                 <Columns>
-                    <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden" Visible="false">
+                    <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
                         <HeaderStyle CssClass="hidden" />
                         <ItemStyle CssClass="hidden" />
                         <FooterStyle CssClass="hidden" />
@@ -45,7 +45,7 @@
                     <asp:BoundField DataField="fullNameTitulado" HeaderStyle-CssClass="name" HeaderText="NOMBRE COMPLETO" ItemStyle-CssClass="itName" SortExpression="name" />
                     <asp:BoundField DataField="faculty" HeaderStyle-CssClass="college" HeaderText="FACULTAD" ItemStyle-CssClass="itCollege" SortExpression="college" />
                     <asp:BoundField DataField="carreer" HeaderStyle-CssClass="program" HeaderText="CARRERA" ItemStyle-CssClass="itProgram" SortExpression="program" />
-                    <asp:BoundField DataField="registerDate" HeaderStyle-CssClass="program" HeaderText="FECHA" ItemStyle-CssClass="itProgram" SortExpression="program" />
+                    <asp:BoundField DataField="registerDate" HeaderStyle-CssClass="program" HeaderText="FECHA" ItemStyle-CssClass="itProgram" SortExpression="program" Visible="false"/>
                 </Columns>
             </asp:GridView>
                 </div>

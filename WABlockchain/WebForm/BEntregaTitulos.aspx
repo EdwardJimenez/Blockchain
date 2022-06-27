@@ -52,7 +52,7 @@
 
                     <asp:GridView ID="grvTitulos" CssClass="gridview" style="align-content:center; margin-left: 135px" runat="server" CellPadding="10" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
                         <Columns>
-                            <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden" Visible="false">
+                            <asp:BoundField DataField="IdTittles" ItemStyle-CssClass="hidden">
                                 <HeaderStyle CssClass="hidden" />
                                 <ItemStyle CssClass="hidden" />
                                 <FooterStyle CssClass="hidden" />
